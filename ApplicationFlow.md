@@ -28,7 +28,7 @@
        4. User enters information about the new pack member
        5. Picture of new pack member is added and verified by Amazon Rekognition
        6. Servlet is used to create new pack member object from the information entered
-       7. New pack member is added to the database  
+       7. New pack member is added to the database   
 
 ## Search for Playmates
        1. Use clicks on playmates option in the menu bar
