@@ -20,19 +20,10 @@
     2. Pack Member Number
     3. Date
     4. Rating
-    
-## Playdate Table  
-    1. Pack Member Number    
-    2. Pack Leader Number    
-    3. Name    
-    4. Age    
-    5. Sex    
-    6. Breed
-    7. Breed   
-   
-   1. Playdate Number
-    2. Pack Member Number 1
     
+## Playdate Table
+    1. Playdate Number
+    2. Pack Member Number 1
     3. Pack Member Number 2
     4. Date
     5. Location
