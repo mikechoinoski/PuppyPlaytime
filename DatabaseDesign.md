@@ -29,6 +29,7 @@
     5. Location
     6. Message  
     7. Requestee Approval
+    8. Status
     
 ## Location Table
     1. Location Number
