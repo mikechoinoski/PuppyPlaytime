@@ -19,7 +19,7 @@ Dogs can get in trouble if they don't have positive things to keep them busy and
 * Dependency Management
   * Maven
 * CSS 
-  * .less
+  * Bootstrap
 * Data Validation
   * Explore Hibernate's validation
 * Logging
@@ -28,6 +28,7 @@ Dogs can get in trouble if they don't have positive things to keep them busy and
   * AWS
 * Independent Research Topic/s
   * Amazon Rekognition
+  * Google Maps Api
 * Unit Testing
   * JUnit tests to achieve 80%+ code coverage 
 * IDE: IntelliJ IDEA
@@ -42,3 +43,6 @@ Dogs can get in trouble if they don't have positive things to keep them busy and
 ### Time Log
 
 [Time Log](TimeLog.md)
+
+### Project Plan
+[Tasks to Accomplish Weekly](ProjectPlan.md)
