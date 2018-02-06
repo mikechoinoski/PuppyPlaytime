@@ -15,7 +15,7 @@
 ![Ways to play](/Screens/Ways to play.png)
 
 ### Your Pack
-![Log in Screen](/Screens/Log in Screen.png)
-![Your Pack](/Screens/Log in Screen.png)
+![Log in Screen](/Screens/LogInScreen.png)
+![Your Pack](/Screens/YourPack.png)
 
 
