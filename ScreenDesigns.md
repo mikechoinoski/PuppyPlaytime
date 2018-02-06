@@ -4,15 +4,15 @@
 ![Home Page](/Screens/index.png)
 
 ### Playmate Pages
-![Play Mate Search](/Screens/Play Mate Search.png)
-![Play Mates Listings](/Screens/Play Mates.png)
-![Playdate Request](/Screens/Playdate Request.png)
+![Play Mate Search](/Screens/PlaymateSearch.png)
+![Play Mates Listings](/Screens/Playmates.png)
+![Playdate Request](/Screens/PlaydateRequest.png)
 
 ### Play Areas
-![Play Areas](/Screens/Play Areas.png)
+![Play Areas](/Screens/Playareas.png)
 
 ### Ways to play
-![Ways to play](/Screens/Ways to play.png)
+![Ways to play](/Screens/WaysToPlay.png)
 
 ### Your Pack
 ![Log in Screen](/Screens/LogInScreen.png)
