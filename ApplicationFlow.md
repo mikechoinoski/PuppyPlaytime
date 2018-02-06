@@ -44,7 +44,7 @@
        3. User enters information for the playdate
        4. Servlet is used to create playdate object
        5. Email is sent to the requestee (need to research this)
-       6. Playdate is added to the database
+       6. Playdate is added to the database
 
 ## Show Active Playdates
        1. User selects playdates from the menu bar
