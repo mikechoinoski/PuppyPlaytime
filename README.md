@@ -1,4 +1,4 @@
-# Mike Choinoski Individual Project
+# Puppy Playtime (Mike Choinoski Individual Project)
 
 This repository will contain all the files for Mike's individual project.
 
