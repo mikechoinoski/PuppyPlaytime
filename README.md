@@ -35,6 +35,7 @@ Dogs can get in trouble if they don't have positive things to keep them busy and
 
 ### Design
 
-* Coming Soon!
+[Screen Designs](ScreenDesigns.md)
 
-### [Time Log](TimeLog.md)
+### 
+[Time Log](TimeLog.md)
