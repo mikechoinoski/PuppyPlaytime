@@ -1,21 +1,21 @@
 # Screen Design
 
 ### Home Page
-![Home Page](/screens/index.png)
+![Home Page](/Screens/index.png)
 
 ### Playmate Pages
-![Play Mate Search](/screens/Play Mate Search.png)
-![Play Mates Listings](/screens/Play Mates.png)
-![Playdate Request](/screens/Playdate Request.png)
+![Play Mate Search](/Screens/Play Mate Search.png)
+![Play Mates Listings](/Screens/Play Mates.png)
+![Playdate Request](/Screens/Playdate Request.png)
 
 ### Play Areas
-![Play Areas](/screens/Play Areas.png)
+![Play Areas](/Screens/Play Areas.png)
 
 ### Ways to play
-![Ways to play](/screens/Ways to play.png)
+![Ways to play](/Screens/Ways to play.png)
 
 ### Your Pack
-![Log in Screen](/screens/Log in Screen.png)
-![Your Pack](/screens/Log in Screen.png)
+![Log in Screen](/Screens/Log in Screen.png)
+![Your Pack](/Screens/Log in Screen.png)
 
 
