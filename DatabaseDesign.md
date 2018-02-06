@@ -1,4 +1,4 @@
-# Application Flow
+# DataBase Design
 
 ## Pack Leader Table
 	1. Pack Leader Number
@@ -16,16 +16,18 @@
     6. Breed
     
 ## Rating Table
-    1. Pack Member Number
-    2. Date
-    3. Rating
+    1. Rating Token Number
+    2. Pack Member Number
+    3. Date
+    4. Rating
     
 ## Request Table
-    1. Pack Member Number 1
-    2. Pack Member Number 2
-    3. Date
-    4. Location
-    5. Message    
+    1. Request Number
+    2. Pack Member Number 1
+    3. Pack Member Number 2
+    4. Date
+    5. Location
+    6. Message    
     
 ## Location Table
     1. Location Number
