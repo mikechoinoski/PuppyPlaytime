@@ -49,17 +49,38 @@
 - [ ] Incorperate google maps api
 - [ ] Review and incorporate any feedback from Checkpoint 2.
 ### Week 8
-- [ ] Weekly journal entry- [ ] Integration with google maps api- [ ] Add the ways to play table, populate with data, (test, dev and prod dbs)- [ ] Build the ways to play jsp - [ ] Create the ways to play dao- [ ] Create the ways to play dao unit tests- [ ] Prepare for Checkpoint 3: Deployed to AWS, at least one JSP that displays data from the database is implemented. 
-### Week 9- [ ] Weekly journal entry- [ ] Add possible other functionality like cancelling a playdate- [ ] Review and incorporate feedback from Checkpoint 3.- [ ] Carefully review code for standards and best practices - use a code quality tool? 
-### Week 8- [ ] Weekly journal entry- [ ] Implement paging of search results- [ ] Code review
-### Week 9- [ ] Weekly journal entry- [ ] Add password reset/reminder functionality
-### Week 10- [ ] Weekly journal entry- [ ] Unit test all api integrations
-### Week 11 - Team project work week- [ ] Weekly journal entry
-### Week 12 - Team project due- [ ] Weekly journal entry- [ ] Review indie project and create list of todos
-### Week 13- [ ] Weekly journal entry- [ ] Complete todos identified in week 12- [ ] Prepare for week 13 peer code reviews- [ ] Code quality check- [ ] Review rubric to make sure I'm on target
-### Week 14- [ ] Weekly journal entry- [ ] Create final presentation
-### Week 15- [ ] Final Presentation- [ ] Create video- [ ] Finalize all documentation- [ ] Code quality check
-### Week 16- [ ] Weekly journal entry- [ ] Final touches before code complete
+- [ ] Weekly journal entry
+- [ ] Integration with google maps api
+- [ ] Add the ways to play table, populate with data, (test, dev and prod dbs)
+- [ ] Build the ways to play jsp 
+- [ ] Create the ways to play dao
+- [ ] Create the ways to play dao unit tests
+- [ ] Prepare for Checkpoint 3: Deployed to AWS, at least one JSP that displays data from the database is implemented. 
+### Week 9
+- [ ] Weekly journal entry
+- [ ] Add possible other functionality like cancelling a playdate
+- [ ] Review and incorporate feedback from Checkpoint 3.
+- [ ] Carefully review code for standards and best practices - use a code quality tool? 
+### Week 8
+- [ ] Weekly journal entry
+- [ ] Implement paging of search results
+- [ ] Code review
+### Week 9
+- [ ] Weekly journal entry- [ ] Add password reset/reminder functionality
+### Week 10
+- [ ] Weekly journal entry- [ ] Unit test all api integrations
+### Week 11 
+- Team project work week- [ ] Weekly journal entry
+### Week 12 
+- Team project due- [ ] Weekly journal entry- [ ] Review indie project and create list of todos
+### Week 13
+- [ ] Weekly journal entry- [ ] Complete todos identified in week 12- [ ] Prepare for week 13 peer code reviews- [ ] Code quality check- [ ] Review rubric to make sure I'm on target
+### Week 14
+- [ ] Weekly journal entry- [ ] Create final presentation
+### Week 15
+- [ ] Final Presentation- [ ] Create video- [ ] Finalize all documentation- [ ] Code quality check
+### Week 16
+- [ ] Weekly journal entry- [ ] Final touches before code complete
 
 
 
