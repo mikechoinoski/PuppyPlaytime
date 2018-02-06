@@ -26,17 +26,45 @@
        2. Select add new pack member option
        3. Servlet is used to display a jsp with pack member information fields
        4. User enters information about the new pack member
-       5. Servlet is used to create new pack member object from the information entered
-       6. New pack member is added to the database  
+       5. Picture of new pack member is added and verified by Amazon Rekognition
+       6. Servlet is used to create new pack member object from the information entered
+       7. New pack member is added to the database  
 
 ## Search for Playmates
        1. Use clicks on playmates option in the menu bar
-       2.
-
-## Display Playmates
+       2. Servlet brings up a search jsp
+       3. User enters information about the type of playmate wanted
+       4. Servlet is used to fetch results form database
+       5. Objects are created for each dog retrieved
+       6. Jsp is used to show the results
 
 ## Request Playdate
+       1. User selects playmate from the search page
+       2. Servlet is used to bring up the request playdate jsp
+       3. User enters information for the playdate
+       4. Servlet is used to create playdate object
+       5. Email is sent to the requestee (need to research this)
+       6. Playdate is added to the database
+
+## Show Active Playdates
+       1. User selects playdates from the menu bar
+       2. Servlet retrieves playdates from the playdate table
+       3. Objects are created for each playdate
+       4. Jsp is used to show each playdate
+       5. Any un-approved playdates will give the option of yes/no for the approval
+       6. Jsp will show comfirmation message that playdate was approved
 
 ## View play areas
+       1. User selects play areas from the menu bar
+       2. Servlet retrieves locations from database
+       3. Location objects are created
+       4. Locations are mapped to a map using google maps api
+       5. Servlet is used to show a jsp page with locations
 
 ## View ways to play
+       1. User selects ways to play from the menu bar
+       2. Servlet retrieves ways to play from database
+       3. Objects for ways to play are created
+       4. Jsp is used to show the ways to play
+       
+## Friend Add/View?  
