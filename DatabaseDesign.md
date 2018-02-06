@@ -20,14 +20,15 @@
     2. Pack Member Number
     3. Date
     4. Rating
-    
-## Request Table
-    1. Request Number
+    
+## Playdate Table  
+    1. Playdate Number
     2. Pack Member Number 1
     3. Pack Member Number 2
     4. Date
     5. Location
-    6. Message    
+    6. Message  
+    7. Requestee Approval
     
 ## Location Table
     1. Location Number
