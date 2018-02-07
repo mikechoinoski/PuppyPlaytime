@@ -19,7 +19,7 @@ Dogs can get in trouble if they don't have positive things to keep them busy and
 * Dependency Management
   * Maven
 * CSS 
-  * Bootstrap (or Possibly Angular 5)
+  * Bootstrap
 * Data Validation
   * Explore Hibernate's validation
 * Logging
