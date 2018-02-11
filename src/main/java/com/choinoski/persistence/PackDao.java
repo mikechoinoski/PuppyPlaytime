@@ -62,5 +62,64 @@ public class PackDao {
         session.close();
     }
 
+    /** Return a list of all users
+     *
+     * @return All users
+     */
+    public List<Pack> getAll() {
+
+        Session session = sessionFactory.openSession();
+
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<Pack> query = builder.createQuery( Pack.class );
+        Root<Pack> root = query.from( Pack.class );
+        List<Pack> users = session.createQuery( query ).getResultList();
+
+        logger.debug("The list of users " + users);
+        session.close();
+
+        return users;
+    }
+
+    /**
+     * Get user by property (exact match)
+     * sample usage: getByPropertyEqual("lastname", "Curry")
+     */
+    public List<Pack> getByPropertyEqual(String propertyName, String value) {
+        Session session = sessionFactory.openSession();
+
+        logger.debug("Searching for user with " + propertyName + " = " + value);
+
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<Pack> query = builder.createQuery( Pack.class );
+        Root<Pack> root = query.from( Pack.class );
+        query.select(root).where(builder.equal(root.get(propertyName), value));
+        List<Pack> users = session.createQuery( query ).getResultList();
+
+        session.close();
+        return users;
+    }
+
+    /**
+     * Get user by property (like)
+     * sample usage: getByPropertyLike("lastname", "C")
+     */
+    public List<Pack> getByPropertyLike(String propertyName, String value) {
+        Session session = sessionFactory.openSession();
+
+        logger.debug("Searching for user with {} = {}",  propertyName, value);
+
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<Pack> query = builder.createQuery( Pack.class );
+        Root<Pack> root = query.from( Pack.class );
+        Expression<String> propertyPath = root.get(propertyName);
+
+        query.where(builder.like(propertyPath, "%" + value + "%"));
+
+        List<Pack> users = session.createQuery( query ).getResultList();
+        session.close();
+        return users;
+    }    
+
 
 }
