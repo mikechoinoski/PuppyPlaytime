@@ -10,7 +10,11 @@ import org.hibernate.Transaction;
 import javax.persistence.criteria.*;
 import java.util.List;
 
-
+/**
+ * A class to access pack data from a database
+ *
+ * @author mchoinoski
+ */
 public class PackDao {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -28,11 +32,13 @@ public class PackDao {
 
     /**
      * update Pack
-     * @param Pack  Pack to be inserted or updated
+     * @param pack  Pack to be inserted or updated
      */
-    public void saveOrUpdate(Pack Pack) {
+    public void saveOrUpdate(Pack pack) {
         Session session = sessionFactory.openSession();
-        session.saveOrUpdate(Pack);
+        Transaction transaction = session.beginTransaction();
+        session.saveOrUpdate(pack);
+        transaction.commit();
         session.close();
     }
 
@@ -88,16 +94,15 @@ public class PackDao {
     public List<Pack> getByPropertyEqual(String propertyName, String value) {
         Session session = sessionFactory.openSession();
 
-        logger.debug("Searching for user with " + propertyName + " = " + value);
-
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<Pack> query = builder.createQuery( Pack.class );
         Root<Pack> root = query.from( Pack.class );
         query.select(root).where(builder.equal(root.get(propertyName), value));
-        List<Pack> users = session.createQuery( query ).getResultList();
+        List<Pack> packs = session.createQuery( query ).getResultList();
 
         session.close();
-        return users;
+        return packs;
+
     }
 
     /**
@@ -116,9 +121,9 @@ public class PackDao {
 
         query.where(builder.like(propertyPath, "%" + value + "%"));
 
-        List<Pack> users = session.createQuery( query ).getResultList();
+        List<Pack> packs = session.createQuery( query ).getResultList();
         session.close();
-        return users;
+        return packs;
     }    
 
 

@@ -7,9 +7,9 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.ejb.Local;
 import javax.persistence.*;
 /**
- * A class to represent a user.
+ * A class to represent a pack.
  *
- * @author pwaite
+ * @author mchoinoski
  */
 @Entity(name = "Pack")
 @Table(name = "pack") // case sensitive!

@@ -1,0 +1,45 @@
+[DEBUG] 2018-02-12 19:53:57.648 [main] PackDao - Searching for user with pack_name = Number 4
+[DEBUG] 2018-02-12 19:54:48.485 [main] PackDao - Searching for user with pack_name = Number 4
+[DEBUG] 2018-02-12 19:55:13.827 [main] PackDao - Searching for user with pack_name = Number 4
+[DEBUG] 2018-02-12 19:55:33.368 [main] PackDao - Searching for user with pack_name = Number 4
+[DEBUG] 2018-02-12 19:55:50.713 [main] PackDao - Searching for user with pack_name = Number 4
+[DEBUG] 2018-02-12 20:01:12.213 [main] PackDao - Searching for user with pack_name = Number 4
+[DEBUG] 2018-02-12 20:02:48.508 [main] PackDao - Searching for user with pack_name = Number 4
+[DEBUG] 2018-02-12 20:04:07.296 [main] PackDao - Searching for user with pack_name = Number 4
+[DEBUG] 2018-02-12 20:04:07.310 [main] PackDao - Line 1
+[DEBUG] 2018-02-12 20:04:07.317 [main] PackDao - Line 2
+[DEBUG] 2018-02-12 20:04:07.333 [main] PackDao - Line 3
+[DEBUG] 2018-02-12 20:09:47.185 [main] PackDao - Searching for user with pack_name = Number 4
+[DEBUG] 2018-02-12 20:09:47.185 [main] PackDao - Line 1
+[DEBUG] 2018-02-12 20:09:47.198 [main] PackDao - Line 2
+[DEBUG] 2018-02-12 20:09:47.214 [main] PackDao - Line 3
+[DEBUG] 2018-02-12 20:14:17.056 [main] PackDao - Searching for user with pack_name = Number 4
+[DEBUG] 2018-02-12 20:14:17.057 [main] PackDao - Line 1
+[DEBUG] 2018-02-12 20:14:17.060 [main] PackDao - Line 2
+[DEBUG] 2018-02-12 20:14:17.124 [main] PackDao - Line 3
+[DEBUG] 2018-02-12 20:20:16.879 [main] PackDaoTest - Line !!
+[DEBUG] 2018-02-12 20:21:08.573 [main] PackDaoTest - Line !!
+[DEBUG] 2018-02-12 20:21:49.476 [main] PackDaoTest - Line !!
+[DEBUG] 2018-02-12 20:21:49.483 [main] PackDaoTest - Line !2
+[DEBUG] 2018-02-12 20:26:51.333 [main] PackDaoTest - Line !!
+[DEBUG] 2018-02-12 20:26:51.337 [main] PackDaoTest - Line !2
+[DEBUG] 2018-02-12 20:32:09.457 [main] PackDaoTest - Line !!
+[DEBUG] 2018-02-12 20:32:16.991 [main] PackDaoTest - Line !2
+[DEBUG] 2018-02-12 20:38:54.101 [main] PackDaoTest - Line !!
+[DEBUG] 2018-02-12 20:38:54.116 [main] PackDaoTest - Line !2
+[DEBUG] 2018-02-12 20:45:03.930 [main] PackDaoTest - Line !!
+[DEBUG] 2018-02-12 20:45:03.940 [main] PackDaoTest - Line !2
+[DEBUG] 2018-02-12 20:47:26.936 [main] PackDaoTest - Line !!
+[DEBUG] 2018-02-12 20:47:26.946 [main] PackDaoTest - Line !2
+[DEBUG] 2018-02-12 20:56:44.712 [main] PackDao - The list of users [com.choinoski.entity.Pack@35d3ab60, com.choinoski.entity.Pack@10876a6, com.choinoski.entity.Pack@71870da7, com.choinoski.entity.Pack@6dd91637]
+[DEBUG] 2018-02-12 20:56:44.919 [main] PackDaoTest - Line !!
+[DEBUG] 2018-02-12 20:56:44.923 [main] PackDaoTest - Line !2
+[DEBUG] 2018-02-12 20:56:44.965 [main] PackDao - Searching for user with packName = Dawg
+[DEBUG] 2018-02-12 20:57:24.465 [main] PackDao - The list of users [com.choinoski.entity.Pack@49601f82, com.choinoski.entity.Pack@23e44287, com.choinoski.entity.Pack@2b8d084, com.choinoski.entity.Pack@6daf2337]
+[DEBUG] 2018-02-12 20:57:24.640 [main] PackDaoTest - Line !!
+[DEBUG] 2018-02-12 20:57:24.646 [main] PackDaoTest - Line !2
+[DEBUG] 2018-02-12 20:57:24.696 [main] PackDao - Searching for user with packName = Dawg
+[DEBUG] 2018-02-12 21:14:57.285 [main] PackDao - The list of users [com.choinoski.entity.Pack@49601f82, com.choinoski.entity.Pack@23e44287, com.choinoski.entity.Pack@2b8d084, com.choinoski.entity.Pack@6daf2337]
+[DEBUG] 2018-02-12 21:14:57.471 [main] PackDaoTest - Line !!
+[DEBUG] 2018-02-12 21:14:57.476 [main] PackDaoTest - Line !2
+[DEBUG] 2018-02-12 21:14:57.514 [main] PackDao - Searching for user with packName = Dawg
