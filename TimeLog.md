@@ -10,3 +10,6 @@
 | 2/4/18 | Completed work 3 activity and started the exercise | 3 | |
 | 2/5/18 | Completed work 3 exercise and worked on individual project Screen Designs | 3 | |
 | 2/6/18 | Completed project plan and readme info | 2 | |
+| 2/10/18 | Watched week 4 videos and started on Week 4 exercise | 3 | |
+| 2/11/18 | Watched week 5 videos and worked on Week 4 exercise | 2 | |
+| 2/12/18 | Finished week 4 exercise | 3 | |
