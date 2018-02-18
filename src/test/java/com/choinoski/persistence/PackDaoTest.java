@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class PackDaoTest {
     private final Logger logger = LogManager.getLogger(this.getClass());
-    PackDao dao;
+    GenericDao dao;
 
     /**
      * Run set up tasks before each test:
@@ -27,7 +27,7 @@ class PackDaoTest {
      */
     @BeforeEach
     void setUp() {
-        dao = new PackDao();
+        dao = new GenericDao(Pack.class);
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
@@ -39,7 +39,8 @@ class PackDaoTest {
     @Test
     void testGetById() {
 
-        Pack retrievedPack = dao.getById(3);
+
+        Pack retrievedPack = (Pack) dao.getById(3);
         assertNotNull(retrievedPack);
         assertEquals("Cool Dawgs", retrievedPack.getPackName());
 
@@ -51,13 +52,11 @@ class PackDaoTest {
     @Test
     void testSaveOrUpdate() {
         String newPackName = "The Best Pack Ever";
-        Pack packToUpdate = dao.getById(1);
+        Pack packToUpdate = (Pack) dao.getById(1);
         packToUpdate.setPackName(newPackName);
         dao.saveOrUpdate(packToUpdate);
 
-        logger.debug("Line !!");
-        Pack retrievedPack = dao.getById(1);
-        logger.debug("Line !2");
+        Pack retrievedPack = (Pack) dao.getById(1);
         assertEquals(newPackName, retrievedPack.getPackName());
     }
 
@@ -72,7 +71,7 @@ class PackDaoTest {
         int id = dao.insert(newPack);
 
         assertNotEquals(0,id);
-        Pack insertedPack = dao.getById(id);
+        Pack insertedPack = (Pack) dao.getById(id);
         assertEquals("Newest Pack", insertedPack.getPackName());
         assertEquals("pack12321", insertedPack.getLogin());
         assertEquals("trickypassword!", insertedPack.getPassword());
@@ -113,4 +112,5 @@ class PackDaoTest {
         List<Pack> packs = dao.getByPropertyLike("packName", "Dawg");
         assertEquals(1, packs.size());
     }
+
 }

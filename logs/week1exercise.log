@@ -43,3 +43,5 @@
 [DEBUG] 2018-02-12 21:14:57.471 [main] PackDaoTest - Line !!
 [DEBUG] 2018-02-12 21:14:57.476 [main] PackDaoTest - Line !2
 [DEBUG] 2018-02-12 21:14:57.514 [main] PackDao - Searching for user with packName = Dawg
+[DEBUG] 2018-02-13 18:49:40.937 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-02-13 18:55:40.043 [main] GenericDao - Searching for user with packName = Dawg

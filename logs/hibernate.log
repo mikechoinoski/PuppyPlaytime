@@ -1,248 +1,248 @@
-[DEBUG] 2018-02-12 21:14:53.425 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
-[DEBUG] 2018-02-12 21:14:53.449 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
-[DEBUG] 2018-02-12 21:14:53.458 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
-[INFO ] 2018-02-12 21:14:53.707 [main] Version - HHH000412: Hibernate Core {5.2.12.Final}
-[INFO ] 2018-02-12 21:14:53.733 [main] Environment - HHH000206: hibernate.properties not found
-[DEBUG] 2018-02-12 21:14:53.856 [main] LocalXmlResourceResolver - Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
-[DEBUG] 2018-02-12 21:14:53.857 [main] LocalXmlResourceResolver - Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
-[DEBUG] 2018-02-12 21:14:53.872 [main] JaxbCfgProcessor - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
-[DEBUG] 2018-02-12 21:14:54.390 [main] ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
-[DEBUG] 2018-02-12 21:14:54.420 [main] RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
-[INFO ] 2018-02-12 21:14:54.451 [main] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-[DEBUG] 2018-02-12 21:14:54.485 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@4f0f2942
-[DEBUG] 2018-02-12 21:14:54.485 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@4f0f2942
-[DEBUG] 2018-02-12 21:14:54.485 [main] BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@4f0f2942
-[DEBUG] 2018-02-12 21:14:54.485 [main] BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@69504ae9
-[DEBUG] 2018-02-12 21:14:54.486 [main] BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@475c9c31
-[DEBUG] 2018-02-12 21:14:54.486 [main] BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@5276d6ee
-[DEBUG] 2018-02-12 21:14:54.487 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@7dfd3c81
-[DEBUG] 2018-02-12 21:14:54.488 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@7dfd3c81
-[DEBUG] 2018-02-12 21:14:54.488 [main] BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@7dfd3c81
-[DEBUG] 2018-02-12 21:14:54.496 [main] BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@7dfb0c0f
-[DEBUG] 2018-02-12 21:14:54.496 [main] BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@7dfb0c0f
-[DEBUG] 2018-02-12 21:14:54.496 [main] BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@7dfb0c0f
-[DEBUG] 2018-02-12 21:14:54.498 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@2d0399f4
-[DEBUG] 2018-02-12 21:14:54.498 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@2d0399f4
-[DEBUG] 2018-02-12 21:14:54.498 [main] BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@2d0399f4
-[DEBUG] 2018-02-12 21:14:54.499 [main] BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@2254127a
-[DEBUG] 2018-02-12 21:14:54.499 [main] BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@2254127a
-[DEBUG] 2018-02-12 21:14:54.499 [main] BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@2254127a
-[DEBUG] 2018-02-12 21:14:54.500 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@5a7fe64f
-[DEBUG] 2018-02-12 21:14:54.500 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@5a7fe64f
-[DEBUG] 2018-02-12 21:14:54.500 [main] BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@5a7fe64f
-[DEBUG] 2018-02-12 21:14:54.504 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@37313c65
-[DEBUG] 2018-02-12 21:14:54.504 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@37313c65
-[DEBUG] 2018-02-12 21:14:54.507 [main] BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@37313c65
-[DEBUG] 2018-02-12 21:14:54.508 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@5d908d47
-[DEBUG] 2018-02-12 21:14:54.508 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@5d908d47
-[DEBUG] 2018-02-12 21:14:54.508 [main] BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@5d908d47
-[DEBUG] 2018-02-12 21:14:54.509 [main] BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@6f36c2f0
-[DEBUG] 2018-02-12 21:14:54.509 [main] BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@6f36c2f0
-[DEBUG] 2018-02-12 21:14:54.510 [main] BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@3b35a229
-[DEBUG] 2018-02-12 21:14:54.513 [main] BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@3b35a229
-[DEBUG] 2018-02-12 21:14:54.514 [main] BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@7dc3712
-[DEBUG] 2018-02-12 21:14:54.514 [main] BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@7dc3712
-[DEBUG] 2018-02-12 21:14:54.514 [main] BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@5be1d0a4
-[DEBUG] 2018-02-12 21:14:54.515 [main] BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@7d322cad
-[DEBUG] 2018-02-12 21:14:54.524 [main] BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@448c8166
-[DEBUG] 2018-02-12 21:14:54.524 [main] BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@448c8166
-[DEBUG] 2018-02-12 21:14:54.534 [main] BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@13526e59
-[DEBUG] 2018-02-12 21:14:54.534 [main] BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@13526e59
-[DEBUG] 2018-02-12 21:14:54.570 [main] BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@6cc4cdb9
-[DEBUG] 2018-02-12 21:14:54.570 [main] BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@6cc4cdb9
-[DEBUG] 2018-02-12 21:14:54.574 [main] BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@32115b28
-[DEBUG] 2018-02-12 21:14:54.574 [main] BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@32115b28
-[DEBUG] 2018-02-12 21:14:54.578 [main] BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@3214ee6
-[DEBUG] 2018-02-12 21:14:54.578 [main] BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@3214ee6
-[DEBUG] 2018-02-12 21:14:54.581 [main] BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@68746f22
-[DEBUG] 2018-02-12 21:14:54.582 [main] BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@68746f22
-[DEBUG] 2018-02-12 21:14:54.586 [main] BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@2eea88a1
-[DEBUG] 2018-02-12 21:14:54.586 [main] BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@2eea88a1
-[DEBUG] 2018-02-12 21:14:54.587 [main] BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@16612a51
-[DEBUG] 2018-02-12 21:14:54.587 [main] BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@16612a51
-[DEBUG] 2018-02-12 21:14:54.594 [main] BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@7d61eb55
-[DEBUG] 2018-02-12 21:14:54.596 [main] BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@7d61eb55
-[DEBUG] 2018-02-12 21:14:54.604 [main] BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@638ef7ed
-[DEBUG] 2018-02-12 21:14:54.605 [main] BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@638ef7ed
-[DEBUG] 2018-02-12 21:14:54.606 [main] BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@776a6d9b
-[DEBUG] 2018-02-12 21:14:54.606 [main] BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@776a6d9b
-[DEBUG] 2018-02-12 21:14:54.608 [main] BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@1cf56a1c
-[DEBUG] 2018-02-12 21:14:54.608 [main] BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@1cf56a1c
-[DEBUG] 2018-02-12 21:14:54.610 [main] BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@1cf56a1c
-[DEBUG] 2018-02-12 21:14:54.613 [main] BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@264f218
-[DEBUG] 2018-02-12 21:14:54.614 [main] BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@81d9a72
-[DEBUG] 2018-02-12 21:14:54.614 [main] BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@81d9a72
-[DEBUG] 2018-02-12 21:14:54.614 [main] BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@81d9a72
-[DEBUG] 2018-02-12 21:14:54.615 [main] BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@2ca26d77
-[DEBUG] 2018-02-12 21:14:54.617 [main] BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@1ebea008
-[DEBUG] 2018-02-12 21:14:54.617 [main] BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@1ebea008
-[DEBUG] 2018-02-12 21:14:54.618 [main] BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@51bf5add
-[DEBUG] 2018-02-12 21:14:54.618 [main] BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@51bf5add
-[DEBUG] 2018-02-12 21:14:54.618 [main] BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@478db956
-[DEBUG] 2018-02-12 21:14:54.619 [main] BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@478db956
-[DEBUG] 2018-02-12 21:14:54.619 [main] BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@1b410b60
-[DEBUG] 2018-02-12 21:14:54.620 [main] BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@1b410b60
-[DEBUG] 2018-02-12 21:14:54.621 [main] BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@6b0d80ed
-[DEBUG] 2018-02-12 21:14:54.621 [main] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@6b0d80ed
-[DEBUG] 2018-02-12 21:14:54.621 [main] BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@928763c
-[DEBUG] 2018-02-12 21:14:54.622 [main] BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@2f666ebb
-[DEBUG] 2018-02-12 21:14:54.622 [main] BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@2f666ebb
-[DEBUG] 2018-02-12 21:14:54.623 [main] BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@2f666ebb
-[DEBUG] 2018-02-12 21:14:54.623 [main] BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@75c56eb9
-[DEBUG] 2018-02-12 21:14:54.623 [main] BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@75c56eb9
-[DEBUG] 2018-02-12 21:14:54.624 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@75c56eb9
-[DEBUG] 2018-02-12 21:14:54.624 [main] BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@5e17553a
-[DEBUG] 2018-02-12 21:14:54.625 [main] BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@27912e3
-[DEBUG] 2018-02-12 21:14:54.625 [main] BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@30b6ffe0
-[DEBUG] 2018-02-12 21:14:54.625 [main] BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@30b6ffe0
-[DEBUG] 2018-02-12 21:14:54.625 [main] BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@30b6ffe0
-[DEBUG] 2018-02-12 21:14:54.632 [main] BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@24c22fe
-[DEBUG] 2018-02-12 21:14:54.633 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@24c22fe
-[DEBUG] 2018-02-12 21:14:54.633 [main] BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@24c22fe
-[DEBUG] 2018-02-12 21:14:54.638 [main] BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@15a04efb
-[DEBUG] 2018-02-12 21:14:54.639 [main] BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@3336e6b6
-[DEBUG] 2018-02-12 21:14:54.643 [main] BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@7b993c65
-[DEBUG] 2018-02-12 21:14:54.643 [main] BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@7b993c65
-[DEBUG] 2018-02-12 21:14:54.644 [main] BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@4d6025c5
-[DEBUG] 2018-02-12 21:14:54.646 [main] BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@463fd068
-[DEBUG] 2018-02-12 21:14:54.646 [main] BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@463fd068
-[DEBUG] 2018-02-12 21:14:54.648 [main] BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@4bd31064
-[DEBUG] 2018-02-12 21:14:54.648 [main] BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@4bd31064
-[DEBUG] 2018-02-12 21:14:54.649 [main] BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@7354b8c5
-[DEBUG] 2018-02-12 21:14:54.649 [main] BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@11d8ae8b
-[DEBUG] 2018-02-12 21:14:54.654 [main] BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@2fba3fc4
-[DEBUG] 2018-02-12 21:14:54.656 [main] BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@6a57ae10
-[DEBUG] 2018-02-12 21:14:54.656 [main] BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@6a57ae10
-[DEBUG] 2018-02-12 21:14:54.656 [main] BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@28b46423
-[DEBUG] 2018-02-12 21:14:54.656 [main] BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@7fc4780b
-[DEBUG] 2018-02-12 21:14:54.656 [main] BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@3b79fd76
-[DEBUG] 2018-02-12 21:14:54.656 [main] BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@48c76607
-[DEBUG] 2018-02-12 21:14:54.656 [main] BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@43599640
-[DEBUG] 2018-02-12 21:14:54.656 [main] BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@1f81aa00
-[DEBUG] 2018-02-12 21:14:54.658 [main] BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@6b6776cb
-[DEBUG] 2018-02-12 21:14:54.658 [main] BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@1863d2fe
-[INFO ] 2018-02-12 21:14:54.684 [main] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/puppy_playtime_test
-[INFO ] 2018-02-12 21:14:54.684 [main] C3P0ConnectionProvider - HHH10001001: Connection properties: {user=root, password=****}
-[INFO ] 2018-02-12 21:14:54.685 [main] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
-[INFO ] 2018-02-12 21:14:54.914 [main] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
-[DEBUG] 2018-02-12 21:14:55.428 [main] JdbcEnvironmentInitiator - Database ->
+[DEBUG] 2018-02-13 18:55:37.252 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2018-02-13 18:55:37.258 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2018-02-13 18:55:37.266 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[INFO ] 2018-02-13 18:55:37.377 [main] Version - HHH000412: Hibernate Core {5.2.12.Final}
+[INFO ] 2018-02-13 18:55:37.379 [main] Environment - HHH000206: hibernate.properties not found
+[DEBUG] 2018-02-13 18:55:37.426 [main] LocalXmlResourceResolver - Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+[DEBUG] 2018-02-13 18:55:37.427 [main] LocalXmlResourceResolver - Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+[DEBUG] 2018-02-13 18:55:37.439 [main] JaxbCfgProcessor - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+[DEBUG] 2018-02-13 18:55:37.725 [main] ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[DEBUG] 2018-02-13 18:55:37.763 [main] RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[INFO ] 2018-02-13 18:55:37.775 [main] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[DEBUG] 2018-02-13 18:55:37.795 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@1c852c0f
+[DEBUG] 2018-02-13 18:55:37.795 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@1c852c0f
+[DEBUG] 2018-02-13 18:55:37.795 [main] BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@1c852c0f
+[DEBUG] 2018-02-13 18:55:37.796 [main] BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@24c4ddae
+[DEBUG] 2018-02-13 18:55:37.797 [main] BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@4e07b95f
+[DEBUG] 2018-02-13 18:55:37.797 [main] BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@3b79fd76
+[DEBUG] 2018-02-13 18:55:37.798 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@544d57e
+[DEBUG] 2018-02-13 18:55:37.798 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@544d57e
+[DEBUG] 2018-02-13 18:55:37.798 [main] BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@544d57e
+[DEBUG] 2018-02-13 18:55:37.799 [main] BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@26df6e3a
+[DEBUG] 2018-02-13 18:55:37.799 [main] BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@26df6e3a
+[DEBUG] 2018-02-13 18:55:37.800 [main] BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@26df6e3a
+[DEBUG] 2018-02-13 18:55:37.801 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@2d9caaeb
+[DEBUG] 2018-02-13 18:55:37.801 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@2d9caaeb
+[DEBUG] 2018-02-13 18:55:37.801 [main] BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@2d9caaeb
+[DEBUG] 2018-02-13 18:55:37.802 [main] BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@27508c5d
+[DEBUG] 2018-02-13 18:55:37.802 [main] BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@27508c5d
+[DEBUG] 2018-02-13 18:55:37.802 [main] BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@27508c5d
+[DEBUG] 2018-02-13 18:55:37.804 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@404bbcbd
+[DEBUG] 2018-02-13 18:55:37.809 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@404bbcbd
+[DEBUG] 2018-02-13 18:55:37.809 [main] BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@404bbcbd
+[DEBUG] 2018-02-13 18:55:37.811 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@658c5a19
+[DEBUG] 2018-02-13 18:55:37.811 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@658c5a19
+[DEBUG] 2018-02-13 18:55:37.811 [main] BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@658c5a19
+[DEBUG] 2018-02-13 18:55:37.812 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@1187c9e8
+[DEBUG] 2018-02-13 18:55:37.812 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@1187c9e8
+[DEBUG] 2018-02-13 18:55:37.812 [main] BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@1187c9e8
+[DEBUG] 2018-02-13 18:55:37.816 [main] BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@518caac3
+[DEBUG] 2018-02-13 18:55:37.816 [main] BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@518caac3
+[DEBUG] 2018-02-13 18:55:37.817 [main] BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@2a3888c1
+[DEBUG] 2018-02-13 18:55:37.817 [main] BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@2a3888c1
+[DEBUG] 2018-02-13 18:55:37.818 [main] BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@1722011b
+[DEBUG] 2018-02-13 18:55:37.820 [main] BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@1722011b
+[DEBUG] 2018-02-13 18:55:37.822 [main] BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@7cb502c
+[DEBUG] 2018-02-13 18:55:37.823 [main] BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@6a47b187
+[DEBUG] 2018-02-13 18:55:37.823 [main] BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@7c51f34b
+[DEBUG] 2018-02-13 18:55:37.823 [main] BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@7c51f34b
+[DEBUG] 2018-02-13 18:55:37.827 [main] BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@6fa34d52
+[DEBUG] 2018-02-13 18:55:37.827 [main] BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@6fa34d52
+[DEBUG] 2018-02-13 18:55:37.844 [main] BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@6d026701
+[DEBUG] 2018-02-13 18:55:37.844 [main] BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@6d026701
+[DEBUG] 2018-02-13 18:55:37.848 [main] BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@6304101a
+[DEBUG] 2018-02-13 18:55:37.849 [main] BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@6304101a
+[DEBUG] 2018-02-13 18:55:37.851 [main] BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@198d6542
+[DEBUG] 2018-02-13 18:55:37.851 [main] BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@198d6542
+[DEBUG] 2018-02-13 18:55:37.853 [main] BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@662706a7
+[DEBUG] 2018-02-13 18:55:37.853 [main] BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@662706a7
+[DEBUG] 2018-02-13 18:55:37.854 [main] BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@c7045b9
+[DEBUG] 2018-02-13 18:55:37.854 [main] BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@c7045b9
+[DEBUG] 2018-02-13 18:55:37.855 [main] BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@7e19ebf0
+[DEBUG] 2018-02-13 18:55:37.855 [main] BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@7e19ebf0
+[DEBUG] 2018-02-13 18:55:37.857 [main] BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@147a5d08
+[DEBUG] 2018-02-13 18:55:37.857 [main] BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@147a5d08
+[DEBUG] 2018-02-13 18:55:37.859 [main] BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@10f7f7de
+[DEBUG] 2018-02-13 18:55:37.859 [main] BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@10f7f7de
+[DEBUG] 2018-02-13 18:55:37.859 [main] BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@5e3d57c7
+[DEBUG] 2018-02-13 18:55:37.859 [main] BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@5e3d57c7
+[DEBUG] 2018-02-13 18:55:37.861 [main] BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@418c5a9c
+[DEBUG] 2018-02-13 18:55:37.861 [main] BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@418c5a9c
+[DEBUG] 2018-02-13 18:55:37.861 [main] BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@418c5a9c
+[DEBUG] 2018-02-13 18:55:37.862 [main] BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@13d4992d
+[DEBUG] 2018-02-13 18:55:37.863 [main] BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@9573584
+[DEBUG] 2018-02-13 18:55:37.863 [main] BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@9573584
+[DEBUG] 2018-02-13 18:55:37.864 [main] BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@9573584
+[DEBUG] 2018-02-13 18:55:37.864 [main] BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@63eef88a
+[DEBUG] 2018-02-13 18:55:37.865 [main] BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@5a9f4771
+[DEBUG] 2018-02-13 18:55:37.865 [main] BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@5a9f4771
+[DEBUG] 2018-02-13 18:55:37.866 [main] BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@258d79be
+[DEBUG] 2018-02-13 18:55:37.866 [main] BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@258d79be
+[DEBUG] 2018-02-13 18:55:37.866 [main] BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@409c54f
+[DEBUG] 2018-02-13 18:55:37.866 [main] BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@409c54f
+[DEBUG] 2018-02-13 18:55:37.867 [main] BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@48793bef
+[DEBUG] 2018-02-13 18:55:37.867 [main] BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@48793bef
+[DEBUG] 2018-02-13 18:55:37.868 [main] BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@2141a12
+[DEBUG] 2018-02-13 18:55:37.868 [main] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@2141a12
+[DEBUG] 2018-02-13 18:55:37.868 [main] BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@225129c
+[DEBUG] 2018-02-13 18:55:37.884 [main] BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@571c5681
+[DEBUG] 2018-02-13 18:55:37.885 [main] BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@571c5681
+[DEBUG] 2018-02-13 18:55:37.885 [main] BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@571c5681
+[DEBUG] 2018-02-13 18:55:37.885 [main] BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@2d6c53fc
+[DEBUG] 2018-02-13 18:55:37.885 [main] BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@2d6c53fc
+[DEBUG] 2018-02-13 18:55:37.885 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@2d6c53fc
+[DEBUG] 2018-02-13 18:55:37.887 [main] BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@3148f668
+[DEBUG] 2018-02-13 18:55:37.888 [main] BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@59e32960
+[DEBUG] 2018-02-13 18:55:37.889 [main] BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@56c4278e
+[DEBUG] 2018-02-13 18:55:37.889 [main] BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@56c4278e
+[DEBUG] 2018-02-13 18:55:37.889 [main] BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@56c4278e
+[DEBUG] 2018-02-13 18:55:37.890 [main] BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@59cba5a
+[DEBUG] 2018-02-13 18:55:37.890 [main] BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@59cba5a
+[DEBUG] 2018-02-13 18:55:37.890 [main] BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@59cba5a
+[DEBUG] 2018-02-13 18:55:37.893 [main] BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@768fc0f2
+[DEBUG] 2018-02-13 18:55:37.893 [main] BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@3f67593e
+[DEBUG] 2018-02-13 18:55:37.898 [main] BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@4ebff610
+[DEBUG] 2018-02-13 18:55:37.898 [main] BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@4ebff610
+[DEBUG] 2018-02-13 18:55:37.898 [main] BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@95e33cc
+[DEBUG] 2018-02-13 18:55:37.906 [main] BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@35645047
+[DEBUG] 2018-02-13 18:55:37.907 [main] BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@35645047
+[DEBUG] 2018-02-13 18:55:37.910 [main] BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@7d446ed1
+[DEBUG] 2018-02-13 18:55:37.913 [main] BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@7d446ed1
+[DEBUG] 2018-02-13 18:55:37.916 [main] BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@413f69cc
+[DEBUG] 2018-02-13 18:55:37.917 [main] BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@1984b1f
+[DEBUG] 2018-02-13 18:55:37.918 [main] BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@65b104b9
+[DEBUG] 2018-02-13 18:55:37.920 [main] BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@7164ca4c
+[DEBUG] 2018-02-13 18:55:37.920 [main] BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@7164ca4c
+[DEBUG] 2018-02-13 18:55:37.923 [main] BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@3f91b517
+[DEBUG] 2018-02-13 18:55:37.923 [main] BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@68702e03
+[DEBUG] 2018-02-13 18:55:37.923 [main] BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@7a220c9a
+[DEBUG] 2018-02-13 18:55:37.924 [main] BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@2421cc4
+[DEBUG] 2018-02-13 18:55:37.924 [main] BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@30c93896
+[DEBUG] 2018-02-13 18:55:37.924 [main] BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@59a008ba
+[DEBUG] 2018-02-13 18:55:37.925 [main] BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@338c99c8
+[DEBUG] 2018-02-13 18:55:37.925 [main] BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@21ba0741
+[INFO ] 2018-02-13 18:55:37.932 [main] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/puppy_playtime_test
+[INFO ] 2018-02-13 18:55:37.932 [main] C3P0ConnectionProvider - HHH10001001: Connection properties: {user=root, password=****}
+[INFO ] 2018-02-13 18:55:37.932 [main] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
+[INFO ] 2018-02-13 18:55:38.063 [main] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
+[DEBUG] 2018-02-13 18:55:38.150 [main] JdbcEnvironmentInitiator - Database ->
        name : MySQL
     version : 5.7.21-0ubuntu0.16.04.1
       major : 5
       minor : 7
-[DEBUG] 2018-02-12 21:14:55.444 [main] JdbcEnvironmentInitiator - Driver ->
+[DEBUG] 2018-02-13 18:55:38.151 [main] JdbcEnvironmentInitiator - Driver ->
        name : MySQL Connector Java
     version : mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad )
       major : 5
       minor : 1
-[DEBUG] 2018-02-12 21:14:55.444 [main] JdbcEnvironmentInitiator - JDBC version : 4.0
-[INFO ] 2018-02-12 21:14:55.483 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-[DEBUG] 2018-02-12 21:14:55.571 [main] IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in more than one case
-[DEBUG] 2018-02-12 21:14:55.573 [main] IdentifierHelperBuilder - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
-[DEBUG] 2018-02-12 21:14:55.674 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
-[DEBUG] 2018-02-12 21:14:55.675 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
-[DEBUG] 2018-02-12 21:14:55.675 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
-[DEBUG] 2018-02-12 21:14:55.675 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
-[DEBUG] 2018-02-12 21:14:55.677 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
-[DEBUG] 2018-02-12 21:14:55.678 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
-[DEBUG] 2018-02-12 21:14:55.678 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
-[DEBUG] 2018-02-12 21:14:55.683 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
-[DEBUG] 2018-02-12 21:14:55.684 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
-[DEBUG] 2018-02-12 21:14:55.685 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
-[DEBUG] 2018-02-12 21:14:55.685 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
-[DEBUG] 2018-02-12 21:14:55.685 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
-[DEBUG] 2018-02-12 21:14:55.686 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
-[DEBUG] 2018-02-12 21:14:55.686 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
-[DEBUG] 2018-02-12 21:14:55.731 [main] Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
-[DEBUG] 2018-02-12 21:14:55.776 [main] AnnotationBinder - Binding entity from annotated class: com.choinoski.entity.Pack
-[DEBUG] 2018-02-12 21:14:55.801 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
-[DEBUG] 2018-02-12 21:14:55.809 [main] EntityBinder - Import with entity name Pack
-[DEBUG] 2018-02-12 21:14:55.821 [main] EntityBinder - Bind entity com.choinoski.entity.Pack on table pack
-[DEBUG] 2018-02-12 21:14:55.866 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=pack_token_nr, insertable=true, updatable=true, unique=false}
-[DEBUG] 2018-02-12 21:14:55.876 [main] PropertyBinder - MetadataSourceProcessor property packTokenNumber with lazy=false
-[DEBUG] 2018-02-12 21:14:55.881 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:packTokenNumber]
-[DEBUG] 2018-02-12 21:14:55.882 [main] SimpleValueBinder - building SimpleValue for packTokenNumber
-[DEBUG] 2018-02-12 21:14:55.887 [main] PropertyBinder - Building property packTokenNumber
-[DEBUG] 2018-02-12 21:14:55.892 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=login, insertable=true, updatable=true, unique=false}
-[DEBUG] 2018-02-12 21:14:55.892 [main] PropertyBinder - MetadataSourceProcessor property login with lazy=false
-[DEBUG] 2018-02-12 21:14:55.892 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:login]
-[DEBUG] 2018-02-12 21:14:55.892 [main] SimpleValueBinder - building SimpleValue for login
-[DEBUG] 2018-02-12 21:14:55.892 [main] PropertyBinder - Building property login
-[DEBUG] 2018-02-12 21:14:55.898 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=pack_name, insertable=true, updatable=true, unique=false}
-[DEBUG] 2018-02-12 21:14:55.898 [main] PropertyBinder - MetadataSourceProcessor property packName with lazy=false
-[DEBUG] 2018-02-12 21:14:55.898 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:packName]
-[DEBUG] 2018-02-12 21:14:55.898 [main] SimpleValueBinder - building SimpleValue for packName
-[DEBUG] 2018-02-12 21:14:55.898 [main] PropertyBinder - Building property packName
-[DEBUG] 2018-02-12 21:14:55.898 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=password, insertable=true, updatable=true, unique=false}
-[DEBUG] 2018-02-12 21:14:55.898 [main] PropertyBinder - MetadataSourceProcessor property password with lazy=false
-[DEBUG] 2018-02-12 21:14:55.898 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:password]
-[DEBUG] 2018-02-12 21:14:55.899 [main] SimpleValueBinder - building SimpleValue for password
-[DEBUG] 2018-02-12 21:14:55.899 [main] PropertyBinder - Building property password
-[DEBUG] 2018-02-12 21:14:55.906 [main] SimpleValueBinder - Starting fillSimpleValue for packTokenNumber
-[DEBUG] 2018-02-12 21:14:55.906 [main] SimpleValueBinder - Starting fillSimpleValue for login
-[DEBUG] 2018-02-12 21:14:55.906 [main] SimpleValueBinder - Starting fillSimpleValue for packName
-[DEBUG] 2018-02-12 21:14:55.906 [main] SimpleValueBinder - Starting fillSimpleValue for password
-[DEBUG] 2018-02-12 21:14:55.907 [main] PrimaryKey - Forcing column [pack_token_nr] to be non-null as it is part of the primary key for table [pack]
-[DEBUG] 2018-02-12 21:14:55.940 [main] SessionFactoryImpl - Building session factory
-[DEBUG] 2018-02-12 21:14:55.940 [main] Settings - SessionFactory name : null
-[DEBUG] 2018-02-12 21:14:55.940 [main] Settings - Automatic flush during beforeCompletion(): enabled
-[DEBUG] 2018-02-12 21:14:55.941 [main] Settings - Automatic session close at end of transaction: disabled
-[DEBUG] 2018-02-12 21:14:55.941 [main] Settings - Statistics: disabled
-[DEBUG] 2018-02-12 21:14:55.941 [main] Settings - Deleted entity synthetic identifier rollback: disabled
-[DEBUG] 2018-02-12 21:14:55.941 [main] Settings - Default entity-mode: pojo
-[DEBUG] 2018-02-12 21:14:55.941 [main] Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
-[DEBUG] 2018-02-12 21:14:55.941 [main] Settings - Allow initialization of lazy state outside session : disabled
-[DEBUG] 2018-02-12 21:14:55.947 [main] Settings - Using BatchFetchStyle : LEGACY
-[DEBUG] 2018-02-12 21:14:55.947 [main] Settings - Default batch fetch size: -1
-[DEBUG] 2018-02-12 21:14:55.947 [main] Settings - Maximum outer join fetch depth: 2
-[DEBUG] 2018-02-12 21:14:55.949 [main] Settings - Default null ordering: NONE
-[DEBUG] 2018-02-12 21:14:55.949 [main] Settings - Order SQL updates by primary key: disabled
-[DEBUG] 2018-02-12 21:14:55.949 [main] Settings - Order SQL inserts for batching: disabled
-[DEBUG] 2018-02-12 21:14:55.951 [main] Settings - multi-tenancy strategy : NONE
-[DEBUG] 2018-02-12 21:14:55.951 [main] Settings - JTA Track by Thread: enabled
-[DEBUG] 2018-02-12 21:14:55.951 [main] Settings - Query language substitutions: {}
-[DEBUG] 2018-02-12 21:14:55.952 [main] Settings - JPA query language strict compliance: disabled
-[DEBUG] 2018-02-12 21:14:55.952 [main] Settings - Named query checking : enabled
-[DEBUG] 2018-02-12 21:14:55.953 [main] Settings - Second-level cache: enabled
-[DEBUG] 2018-02-12 21:14:55.953 [main] Settings - Second-level query cache: disabled
-[DEBUG] 2018-02-12 21:14:55.953 [main] Settings - Second-level query cache factory: org.hibernate.cache.internal.StandardQueryCacheFactory@3276732
-[DEBUG] 2018-02-12 21:14:55.954 [main] Settings - Second-level cache region prefix: null
-[DEBUG] 2018-02-12 21:14:55.954 [main] Settings - Optimize second-level cache for minimal puts: disabled
-[DEBUG] 2018-02-12 21:14:55.954 [main] Settings - Structured second-level cache entries: disabled
-[DEBUG] 2018-02-12 21:14:55.954 [main] Settings - Second-level cache direct-reference entries: disabled
-[DEBUG] 2018-02-12 21:14:55.954 [main] Settings - Automatic eviction of collection cache: disabled
-[DEBUG] 2018-02-12 21:14:55.954 [main] Settings - JDBC batch size: 15
-[DEBUG] 2018-02-12 21:14:55.954 [main] Settings - JDBC batch updates for versioned data: enabled
-[DEBUG] 2018-02-12 21:14:55.961 [main] Settings - Scrollable result sets: enabled
-[DEBUG] 2018-02-12 21:14:55.961 [main] Settings - Wrap result sets: disabled
-[DEBUG] 2018-02-12 21:14:55.961 [main] Settings - JDBC3 getGeneratedKeys(): enabled
-[DEBUG] 2018-02-12 21:14:55.961 [main] Settings - JDBC result set fetch size: null
-[DEBUG] 2018-02-12 21:14:55.961 [main] Settings - Connection release mode: AFTER_TRANSACTION
-[DEBUG] 2018-02-12 21:14:55.961 [main] Settings - Generate SQL with comments: disabled
-[DEBUG] 2018-02-12 21:14:56.075 [main] SessionFactoryImpl - Session factory constructed with filter configurations : {}
-[DEBUG] 2018-02-12 21:14:56.076 [main] SessionFactoryImpl - Instantiating session factory with properties: {sun.desktop=gnome, awt.toolkit=sun.awt.X11.XToolkit, file.encoding.pkg=sun.io, java.specification.version=1.8, hibernate.c3p0.idle_test_period=3000, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, hibernate.c3p0.min_size=5, java.class.path=/home/student/intellij/lib/idea_rt.jar:/home/student/intellij/plugins/junit/lib/junit-rt.jar:/home/student/intellij/plugins/junit/lib/junit5-rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/deploy.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/cldrdata.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/jaccess.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/jfxrt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/nashorn.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/sunec.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-8-oracle/jre/lib/javaws.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfxswt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/management-agent.jar:/usr/lib/jvm/java-8-oracle/jre/lib/plugin.jar:/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/home/student/IdeaProjects/PuppyPlaytime/target/test-classes:/home/student/IdeaProjects/PuppyPlaytime/target/classes:/home/student/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.0.0/junit-jupiter-engine-5.0.0.jar:/home/student/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/home/student/.m2/repository/org/junit/platform/junit-platform-engine/1.0.0/junit-platform-engine-1.0.0.jar:/home/student/.m2/repository/org/junit/platform/junit-platform-commons/1.0.0/junit-platform-commons-1.0.0.jar:/home/student/.m2/repository/org/opentest4j/opentest4j/1.0.0/opentest4j-1.0.0.jar:/home/student/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.0.0/junit-jupiter-api-5.0.0.jar:/home/student/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/student/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/student/.m2/repository/org/junit/platform/junit-platform-runner/1.0.0/junit-platform-runner-1.0.0.jar:/home/student/.m2/repository/org/junit/platform/junit-platform-launcher/1.0.0/junit-platform-launcher-1.0.0.jar:/home/student/.m2/repository/org/junit/platform/junit-platform-suite-api/1.0.0/junit-platform-suite-api-1.0.0.jar:/home/student/.m2/repository/org/junit/vintage/junit-vintage-engine/4.12.0/junit-vintage-engine-4.12.0.jar:/home/student/.m2/repository/javax/javaee-web-api/7.0/javaee-web-api-7.0.jar:/home/student/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar:/home/student/.m2/repository/org/apache/logging/log4j/log4j-core/2.10.0/log4j-core-2.10.0.jar:/home/student/.m2/repository/org/hibernate/hibernate-core/5.2.12.Final/hibernate-core-5.2.12.Final.jar:/home/student/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/home/student/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/home/student/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar:/home/student/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/student/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.1.Final/jboss-transaction-api_1.2_spec-1.0.1.Final.jar:/home/student/.m2/repository/org/jboss/jandex/2.0.3.Final/jandex-2.0.3.Final.jar:/home/student/.m2/repository/com/fasterxml/classmate/1.3.0/classmate-1.3.0.jar:/home/student/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/home/student/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.0.1.Final/hibernate-commons-annotations-5.0.1.Final.jar:/home/student/.m2/repository/org/hibernate/hibernate-c3p0/5.2.12.Final/hibernate-c3p0-5.2.12.Final.jar:/home/student/.m2/repository/com/mchange/c3p0/0.9.5.2/c3p0-0.9.5.2.jar:/home/student/.m2/repository/com/mchange/mchange-commons-java/0.2.11/mchange-commons-java-0.2.11.jar:/home/student/.m2/repository/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar:/home/student/.m2/repository/jstl/jstl/1.2/jstl-1.2.jar:/home/student/intellij/lib/idea_rt.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, idea.test.cyclic.buffer.size=1048576, java.vendor.url=http://java.oracle.com/, user.timezone=America/Chicago, os.name=Linux, java.vm.specification.version=1.8, user.country=US, sun.java.launcher=SUN_STANDARD, sun.boot.library.path=/usr/lib/jvm/java-8-oracle/jre/lib/amd64, sun.java.command=com.intellij.rt.execution.junit.JUnitStarter -ideVersion5 -junit5 com.choinoski.persistence.PackDaoTest, sun.cpu.endian=little, hibernate.c3p0.max_statements=50, user.home=/home/student, user.language=en, java.specification.vendor=Oracle Corporation, java.home=/usr/lib/jvm/java-8-oracle/jre, file.separator=/, line.separator=
-, hibernate.c3p0.timeout=300, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, sun.boot.class.path=/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes, connection.password=student, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, hibernate.c3p0.max_size=20, java.runtime.version=1.8.0_144-b01, user.name=student, path.separator=:, hibernate.connection.username=root, os.version=4.4.0-112-generic, java.endorsed.dirs=/usr/lib/jvm/java-8-oracle/jre/lib/endorsed, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.url=jdbc:mysql://localhost:3306/puppy_playtime_test, file.encoding=UTF-8, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.connection.driver_class=com.mysql.jdbc.Driver, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, java.io.tmpdir=/tmp, java.version=1.8.0_144, user.dir=/home/student/IdeaProjects/PuppyPlaytime, os.arch=amd64, connection.username=root, java.vm.specification.name=Java Virtual Machine Specification, hibernate.connection.password=****, java.awt.printerjob=sun.print.PSPrinterJob, sun.os.patch.level=unknown, connection.driver_class=com.mysql.jdbc.Driver, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@6fefce9e, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.vm.info=mixed mode, java.vendor=Oracle Corporation, java.vm.version=25.144-b01, hibernate.bytecode.use_reflection_optimizer=false, java.ext.dirs=/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext, sun.io.unicode.encoding=UnicodeLittle, connection.url=jdbc:mysql://localhost:3306/puppy_playtime_test, java.class.version=52.0}
-[DEBUG] 2018-02-12 21:14:56.112 [main] TypeSafeActivator - Unable to acquire Bean Validation ValidatorFactory, skipping activation
-[DEBUG] 2018-02-12 21:14:56.112 [main] JaccIntegrator - Skipping JACC integration as it was not enabled
-[DEBUG] 2018-02-12 21:14:56.120 [main] SessionFactoryImpl - Instantiated session factory
-[DEBUG] 2018-02-12 21:14:56.207 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.choinoski.entity.Pack] is safe
-[DEBUG] 2018-02-12 21:14:56.208 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.choinoski.entity.Pack
-[DEBUG] 2018-02-12 21:14:56.232 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.choinoski.entity.Pack] is safe
-[DEBUG] 2018-02-12 21:14:56.232 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.choinoski.entity.Pack
-[DEBUG] 2018-02-12 21:14:56.341 [main] AbstractEntityPersister - Static SQL for entity: com.choinoski.entity.Pack
-[DEBUG] 2018-02-12 21:14:56.341 [main] AbstractEntityPersister -  Version select: select pack_token_nr from pack where pack_token_nr =?
-[DEBUG] 2018-02-12 21:14:56.341 [main] AbstractEntityPersister -  Snapshot select: select pack_.pack_token_nr, pack_.login as login2_0_, pack_.pack_name as pack_nam3_0_, pack_.password as password4_0_ from pack pack_ where pack_.pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:56.341 [main] AbstractEntityPersister -  Insert 0: insert into pack (login, pack_name, password, pack_token_nr) values (?, ?, ?, ?)
-[DEBUG] 2018-02-12 21:14:56.342 [main] AbstractEntityPersister -  Update 0: update pack set login=?, pack_name=?, password=? where pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:56.342 [main] AbstractEntityPersister -  Delete 0: delete from pack where pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:56.342 [main] AbstractEntityPersister -  Identity insert: insert into pack (login, pack_name, password) values (?, ?, ?)
-[DEBUG] 2018-02-12 21:14:56.371 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@66b72664]
-[DEBUG] 2018-02-12 21:14:56.373 [main] MetamodelGraphWalker - Visiting attribute path : login
-[DEBUG] 2018-02-12 21:14:56.373 [main] MetamodelGraphWalker - Visiting attribute path : packName
-[DEBUG] 2018-02-12 21:14:56.373 [main] MetamodelGraphWalker - Visiting attribute path : password
-[DEBUG] 2018-02-12 21:14:56.374 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-[DEBUG] 2018-02-12 21:14:56.389 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-[DEBUG] 2018-02-12 21:14:56.397 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
+[DEBUG] 2018-02-13 18:55:38.151 [main] JdbcEnvironmentInitiator - JDBC version : 4.0
+[INFO ] 2018-02-13 18:55:38.185 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[DEBUG] 2018-02-13 18:55:38.260 [main] IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in more than one case
+[DEBUG] 2018-02-13 18:55:38.268 [main] IdentifierHelperBuilder - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+[DEBUG] 2018-02-13 18:55:38.332 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[DEBUG] 2018-02-13 18:55:38.333 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[DEBUG] 2018-02-13 18:55:38.333 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2018-02-13 18:55:38.333 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2018-02-13 18:55:38.334 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[DEBUG] 2018-02-13 18:55:38.334 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[DEBUG] 2018-02-13 18:55:38.335 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[DEBUG] 2018-02-13 18:55:38.335 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2018-02-13 18:55:38.339 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[DEBUG] 2018-02-13 18:55:38.339 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[DEBUG] 2018-02-13 18:55:38.340 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[DEBUG] 2018-02-13 18:55:38.340 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[DEBUG] 2018-02-13 18:55:38.340 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2018-02-13 18:55:38.342 [main] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[DEBUG] 2018-02-13 18:55:38.406 [main] Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[DEBUG] 2018-02-13 18:55:38.464 [main] AnnotationBinder - Binding entity from annotated class: com.choinoski.entity.Pack
+[DEBUG] 2018-02-13 18:55:38.511 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2018-02-13 18:55:38.529 [main] EntityBinder - Import with entity name Pack
+[DEBUG] 2018-02-13 18:55:38.531 [main] EntityBinder - Bind entity com.choinoski.entity.Pack on table pack
+[DEBUG] 2018-02-13 18:55:38.578 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=pack_token_nr, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-02-13 18:55:38.580 [main] PropertyBinder - MetadataSourceProcessor property packTokenNumber with lazy=false
+[DEBUG] 2018-02-13 18:55:38.594 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:packTokenNumber]
+[DEBUG] 2018-02-13 18:55:38.595 [main] SimpleValueBinder - building SimpleValue for packTokenNumber
+[DEBUG] 2018-02-13 18:55:38.601 [main] PropertyBinder - Building property packTokenNumber
+[DEBUG] 2018-02-13 18:55:38.617 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=login, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-02-13 18:55:38.617 [main] PropertyBinder - MetadataSourceProcessor property login with lazy=false
+[DEBUG] 2018-02-13 18:55:38.617 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:login]
+[DEBUG] 2018-02-13 18:55:38.617 [main] SimpleValueBinder - building SimpleValue for login
+[DEBUG] 2018-02-13 18:55:38.617 [main] PropertyBinder - Building property login
+[DEBUG] 2018-02-13 18:55:38.620 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=pack_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-02-13 18:55:38.620 [main] PropertyBinder - MetadataSourceProcessor property packName with lazy=false
+[DEBUG] 2018-02-13 18:55:38.620 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:packName]
+[DEBUG] 2018-02-13 18:55:38.621 [main] SimpleValueBinder - building SimpleValue for packName
+[DEBUG] 2018-02-13 18:55:38.621 [main] PropertyBinder - Building property packName
+[DEBUG] 2018-02-13 18:55:38.621 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=password, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-02-13 18:55:38.621 [main] PropertyBinder - MetadataSourceProcessor property password with lazy=false
+[DEBUG] 2018-02-13 18:55:38.621 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:password]
+[DEBUG] 2018-02-13 18:55:38.621 [main] SimpleValueBinder - building SimpleValue for password
+[DEBUG] 2018-02-13 18:55:38.621 [main] PropertyBinder - Building property password
+[DEBUG] 2018-02-13 18:55:38.625 [main] SimpleValueBinder - Starting fillSimpleValue for packTokenNumber
+[DEBUG] 2018-02-13 18:55:38.625 [main] SimpleValueBinder - Starting fillSimpleValue for login
+[DEBUG] 2018-02-13 18:55:38.625 [main] SimpleValueBinder - Starting fillSimpleValue for packName
+[DEBUG] 2018-02-13 18:55:38.625 [main] SimpleValueBinder - Starting fillSimpleValue for password
+[DEBUG] 2018-02-13 18:55:38.629 [main] PrimaryKey - Forcing column [pack_token_nr] to be non-null as it is part of the primary key for table [pack]
+[DEBUG] 2018-02-13 18:55:38.695 [main] SessionFactoryImpl - Building session factory
+[DEBUG] 2018-02-13 18:55:38.696 [main] Settings - SessionFactory name : null
+[DEBUG] 2018-02-13 18:55:38.696 [main] Settings - Automatic flush during beforeCompletion(): enabled
+[DEBUG] 2018-02-13 18:55:38.698 [main] Settings - Automatic session close at end of transaction: disabled
+[DEBUG] 2018-02-13 18:55:38.698 [main] Settings - Statistics: disabled
+[DEBUG] 2018-02-13 18:55:38.698 [main] Settings - Deleted entity synthetic identifier rollback: disabled
+[DEBUG] 2018-02-13 18:55:38.698 [main] Settings - Default entity-mode: pojo
+[DEBUG] 2018-02-13 18:55:38.698 [main] Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[DEBUG] 2018-02-13 18:55:38.698 [main] Settings - Allow initialization of lazy state outside session : disabled
+[DEBUG] 2018-02-13 18:55:38.698 [main] Settings - Using BatchFetchStyle : LEGACY
+[DEBUG] 2018-02-13 18:55:38.698 [main] Settings - Default batch fetch size: -1
+[DEBUG] 2018-02-13 18:55:38.698 [main] Settings - Maximum outer join fetch depth: 2
+[DEBUG] 2018-02-13 18:55:38.698 [main] Settings - Default null ordering: NONE
+[DEBUG] 2018-02-13 18:55:38.698 [main] Settings - Order SQL updates by primary key: disabled
+[DEBUG] 2018-02-13 18:55:38.698 [main] Settings - Order SQL inserts for batching: disabled
+[DEBUG] 2018-02-13 18:55:38.699 [main] Settings - multi-tenancy strategy : NONE
+[DEBUG] 2018-02-13 18:55:38.699 [main] Settings - JTA Track by Thread: enabled
+[DEBUG] 2018-02-13 18:55:38.700 [main] Settings - Query language substitutions: {}
+[DEBUG] 2018-02-13 18:55:38.700 [main] Settings - JPA query language strict compliance: disabled
+[DEBUG] 2018-02-13 18:55:38.700 [main] Settings - Named query checking : enabled
+[DEBUG] 2018-02-13 18:55:38.700 [main] Settings - Second-level cache: enabled
+[DEBUG] 2018-02-13 18:55:38.700 [main] Settings - Second-level query cache: disabled
+[DEBUG] 2018-02-13 18:55:38.700 [main] Settings - Second-level query cache factory: org.hibernate.cache.internal.StandardQueryCacheFactory@66971f6b
+[DEBUG] 2018-02-13 18:55:38.700 [main] Settings - Second-level cache region prefix: null
+[DEBUG] 2018-02-13 18:55:38.700 [main] Settings - Optimize second-level cache for minimal puts: disabled
+[DEBUG] 2018-02-13 18:55:38.700 [main] Settings - Structured second-level cache entries: disabled
+[DEBUG] 2018-02-13 18:55:38.700 [main] Settings - Second-level cache direct-reference entries: disabled
+[DEBUG] 2018-02-13 18:55:38.700 [main] Settings - Automatic eviction of collection cache: disabled
+[DEBUG] 2018-02-13 18:55:38.701 [main] Settings - JDBC batch size: 15
+[DEBUG] 2018-02-13 18:55:38.701 [main] Settings - JDBC batch updates for versioned data: enabled
+[DEBUG] 2018-02-13 18:55:38.701 [main] Settings - Scrollable result sets: enabled
+[DEBUG] 2018-02-13 18:55:38.701 [main] Settings - Wrap result sets: disabled
+[DEBUG] 2018-02-13 18:55:38.701 [main] Settings - JDBC3 getGeneratedKeys(): enabled
+[DEBUG] 2018-02-13 18:55:38.701 [main] Settings - JDBC result set fetch size: null
+[DEBUG] 2018-02-13 18:55:38.701 [main] Settings - Connection release mode: AFTER_TRANSACTION
+[DEBUG] 2018-02-13 18:55:38.704 [main] Settings - Generate SQL with comments: disabled
+[DEBUG] 2018-02-13 18:55:38.827 [main] SessionFactoryImpl - Session factory constructed with filter configurations : {}
+[DEBUG] 2018-02-13 18:55:38.831 [main] SessionFactoryImpl - Instantiating session factory with properties: {sun.desktop=gnome, awt.toolkit=sun.awt.X11.XToolkit, file.encoding.pkg=sun.io, java.specification.version=1.8, hibernate.c3p0.idle_test_period=3000, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, hibernate.c3p0.min_size=5, java.class.path=/home/student/intellij/lib/idea_rt.jar:/home/student/intellij/plugins/junit/lib/junit-rt.jar:/home/student/intellij/plugins/junit/lib/junit5-rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/deploy.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/cldrdata.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/jaccess.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/jfxrt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/nashorn.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/sunec.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-8-oracle/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-8-oracle/jre/lib/javaws.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfxswt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/management-agent.jar:/usr/lib/jvm/java-8-oracle/jre/lib/plugin.jar:/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/home/student/IdeaProjects/PuppyPlaytime/target/test-classes:/home/student/IdeaProjects/PuppyPlaytime/target/classes:/home/student/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.0.0/junit-jupiter-engine-5.0.0.jar:/home/student/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/home/student/.m2/repository/org/junit/platform/junit-platform-engine/1.0.0/junit-platform-engine-1.0.0.jar:/home/student/.m2/repository/org/junit/platform/junit-platform-commons/1.0.0/junit-platform-commons-1.0.0.jar:/home/student/.m2/repository/org/opentest4j/opentest4j/1.0.0/opentest4j-1.0.0.jar:/home/student/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.0.0/junit-jupiter-api-5.0.0.jar:/home/student/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/student/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/student/.m2/repository/org/junit/platform/junit-platform-runner/1.0.0/junit-platform-runner-1.0.0.jar:/home/student/.m2/repository/org/junit/platform/junit-platform-launcher/1.0.0/junit-platform-launcher-1.0.0.jar:/home/student/.m2/repository/org/junit/platform/junit-platform-suite-api/1.0.0/junit-platform-suite-api-1.0.0.jar:/home/student/.m2/repository/org/junit/vintage/junit-vintage-engine/4.12.0/junit-vintage-engine-4.12.0.jar:/home/student/.m2/repository/javax/javaee-web-api/7.0/javaee-web-api-7.0.jar:/home/student/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar:/home/student/.m2/repository/org/apache/logging/log4j/log4j-core/2.10.0/log4j-core-2.10.0.jar:/home/student/.m2/repository/org/hibernate/hibernate-core/5.2.12.Final/hibernate-core-5.2.12.Final.jar:/home/student/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/home/student/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/home/student/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar:/home/student/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/student/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.1.Final/jboss-transaction-api_1.2_spec-1.0.1.Final.jar:/home/student/.m2/repository/org/jboss/jandex/2.0.3.Final/jandex-2.0.3.Final.jar:/home/student/.m2/repository/com/fasterxml/classmate/1.3.0/classmate-1.3.0.jar:/home/student/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/home/student/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.0.1.Final/hibernate-commons-annotations-5.0.1.Final.jar:/home/student/.m2/repository/org/hibernate/hibernate-c3p0/5.2.12.Final/hibernate-c3p0-5.2.12.Final.jar:/home/student/.m2/repository/com/mchange/c3p0/0.9.5.2/c3p0-0.9.5.2.jar:/home/student/.m2/repository/com/mchange/mchange-commons-java/0.2.11/mchange-commons-java-0.2.11.jar:/home/student/.m2/repository/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar:/home/student/.m2/repository/jstl/jstl/1.2/jstl-1.2.jar:/home/student/intellij/lib/coverage-agent.jar:/home/student/intellij/lib/idea_rt.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, idea.test.cyclic.buffer.size=1048576, java.vendor.url=http://java.oracle.com/, user.timezone=America/Chicago, os.name=Linux, java.vm.specification.version=1.8, user.country=US, sun.java.launcher=SUN_STANDARD, sun.boot.library.path=/usr/lib/jvm/java-8-oracle/jre/lib/amd64, sun.java.command=com.intellij.rt.execution.junit.JUnitStarter -ideVersion5 -junit5 com.choinoski.persistence.PackDaoTest, sun.cpu.endian=little, hibernate.c3p0.max_statements=50, user.home=/home/student, user.language=en, java.specification.vendor=Oracle Corporation, java.home=/usr/lib/jvm/java-8-oracle/jre, file.separator=/, line.separator=
+, hibernate.c3p0.timeout=300, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, sun.boot.class.path=/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes:/home/student/intellij/lib/coverage-agent.jar, connection.password=student, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, hibernate.c3p0.max_size=20, java.runtime.version=1.8.0_144-b01, user.name=student, path.separator=:, hibernate.connection.username=root, os.version=4.4.0-112-generic, java.endorsed.dirs=/usr/lib/jvm/java-8-oracle/jre/lib/endorsed, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.url=jdbc:mysql://localhost:3306/puppy_playtime_test, file.encoding=UTF-8, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.connection.driver_class=com.mysql.jdbc.Driver, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, java.io.tmpdir=/tmp, java.version=1.8.0_144, user.dir=/home/student/IdeaProjects/PuppyPlaytime, os.arch=amd64, connection.username=root, java.vm.specification.name=Java Virtual Machine Specification, hibernate.connection.password=****, java.awt.printerjob=sun.print.PSPrinterJob, sun.os.patch.level=unknown, connection.driver_class=com.mysql.jdbc.Driver, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@287f94b1, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.vm.info=mixed mode, java.vendor=Oracle Corporation, java.vm.version=25.144-b01, hibernate.bytecode.use_reflection_optimizer=false, java.ext.dirs=/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext, sun.io.unicode.encoding=UnicodeLittle, connection.url=jdbc:mysql://localhost:3306/puppy_playtime_test, java.class.version=52.0}
+[DEBUG] 2018-02-13 18:55:38.877 [main] TypeSafeActivator - Unable to acquire Bean Validation ValidatorFactory, skipping activation
+[DEBUG] 2018-02-13 18:55:38.877 [main] JaccIntegrator - Skipping JACC integration as it was not enabled
+[DEBUG] 2018-02-13 18:55:38.878 [main] SessionFactoryImpl - Instantiated session factory
+[DEBUG] 2018-02-13 18:55:38.960 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.choinoski.entity.Pack] is safe
+[DEBUG] 2018-02-13 18:55:38.961 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.choinoski.entity.Pack
+[DEBUG] 2018-02-13 18:55:38.987 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.choinoski.entity.Pack] is safe
+[DEBUG] 2018-02-13 18:55:38.987 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.choinoski.entity.Pack
+[DEBUG] 2018-02-13 18:55:39.080 [main] AbstractEntityPersister - Static SQL for entity: com.choinoski.entity.Pack
+[DEBUG] 2018-02-13 18:55:39.082 [main] AbstractEntityPersister -  Version select: select pack_token_nr from pack where pack_token_nr =?
+[DEBUG] 2018-02-13 18:55:39.082 [main] AbstractEntityPersister -  Snapshot select: select pack_.pack_token_nr, pack_.login as login2_0_, pack_.pack_name as pack_nam3_0_, pack_.password as password4_0_ from pack pack_ where pack_.pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:39.082 [main] AbstractEntityPersister -  Insert 0: insert into pack (login, pack_name, password, pack_token_nr) values (?, ?, ?, ?)
+[DEBUG] 2018-02-13 18:55:39.082 [main] AbstractEntityPersister -  Update 0: update pack set login=?, pack_name=?, password=? where pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:39.082 [main] AbstractEntityPersister -  Delete 0: delete from pack where pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:39.082 [main] AbstractEntityPersister -  Identity insert: insert into pack (login, pack_name, password) values (?, ?, ?)
+[DEBUG] 2018-02-13 18:55:39.112 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2fa3be26]
+[DEBUG] 2018-02-13 18:55:39.121 [main] MetamodelGraphWalker - Visiting attribute path : login
+[DEBUG] 2018-02-13 18:55:39.121 [main] MetamodelGraphWalker - Visiting attribute path : packName
+[DEBUG] 2018-02-13 18:55:39.121 [main] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2018-02-13 18:55:39.121 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2018-02-13 18:55:39.137 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2018-02-13 18:55:39.140 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
     - Returns
        - EntityReturnImpl(entity=com.choinoski.entity.Pack, querySpaceUid=<gen:0>, path=com.choinoski.entity.Pack)
     - QuerySpaces
@@ -251,14 +251,14 @@
           - alias suffix - 0_
           - suffixed key columns - {pack_tok1_0_0_}
 
-[DEBUG] 2018-02-12 21:14:56.403 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [NONE]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:56.403 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@27f0ad19]
-[DEBUG] 2018-02-12 21:14:56.403 [main] MetamodelGraphWalker - Visiting attribute path : login
-[DEBUG] 2018-02-12 21:14:56.403 [main] MetamodelGraphWalker - Visiting attribute path : packName
-[DEBUG] 2018-02-12 21:14:56.403 [main] MetamodelGraphWalker - Visiting attribute path : password
-[DEBUG] 2018-02-12 21:14:56.403 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-[DEBUG] 2018-02-12 21:14:56.404 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-[DEBUG] 2018-02-12 21:14:56.404 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
+[DEBUG] 2018-02-13 18:55:39.148 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [NONE]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:39.148 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@28782602]
+[DEBUG] 2018-02-13 18:55:39.148 [main] MetamodelGraphWalker - Visiting attribute path : login
+[DEBUG] 2018-02-13 18:55:39.148 [main] MetamodelGraphWalker - Visiting attribute path : packName
+[DEBUG] 2018-02-13 18:55:39.148 [main] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2018-02-13 18:55:39.148 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2018-02-13 18:55:39.148 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2018-02-13 18:55:39.148 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
     - Returns
        - EntityReturnImpl(entity=com.choinoski.entity.Pack, querySpaceUid=<gen:0>, path=com.choinoski.entity.Pack)
     - QuerySpaces
@@ -267,14 +267,14 @@
           - alias suffix - 0_
           - suffixed key columns - {pack_tok1_0_0_}
 
-[DEBUG] 2018-02-12 21:14:56.404 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [READ]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:56.404 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@38d5b107]
-[DEBUG] 2018-02-12 21:14:56.406 [main] MetamodelGraphWalker - Visiting attribute path : login
-[DEBUG] 2018-02-12 21:14:56.406 [main] MetamodelGraphWalker - Visiting attribute path : packName
-[DEBUG] 2018-02-12 21:14:56.406 [main] MetamodelGraphWalker - Visiting attribute path : password
-[DEBUG] 2018-02-12 21:14:56.406 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-[DEBUG] 2018-02-12 21:14:56.406 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-[DEBUG] 2018-02-12 21:14:56.406 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
+[DEBUG] 2018-02-13 18:55:39.151 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [READ]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:39.151 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@68105edc]
+[DEBUG] 2018-02-13 18:55:39.151 [main] MetamodelGraphWalker - Visiting attribute path : login
+[DEBUG] 2018-02-13 18:55:39.151 [main] MetamodelGraphWalker - Visiting attribute path : packName
+[DEBUG] 2018-02-13 18:55:39.151 [main] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2018-02-13 18:55:39.151 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2018-02-13 18:55:39.151 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2018-02-13 18:55:39.151 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
     - Returns
        - EntityReturnImpl(entity=com.choinoski.entity.Pack, querySpaceUid=<gen:0>, path=com.choinoski.entity.Pack)
     - QuerySpaces
@@ -283,14 +283,14 @@
           - alias suffix - 0_
           - suffixed key columns - {pack_tok1_0_0_}
 
-[DEBUG] 2018-02-12 21:14:56.407 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [UPGRADE]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=? for update
-[DEBUG] 2018-02-12 21:14:56.408 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@44ea608c]
-[DEBUG] 2018-02-12 21:14:56.409 [main] MetamodelGraphWalker - Visiting attribute path : login
-[DEBUG] 2018-02-12 21:14:56.412 [main] MetamodelGraphWalker - Visiting attribute path : packName
-[DEBUG] 2018-02-12 21:14:56.412 [main] MetamodelGraphWalker - Visiting attribute path : password
-[DEBUG] 2018-02-12 21:14:56.412 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-[DEBUG] 2018-02-12 21:14:56.413 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-[DEBUG] 2018-02-12 21:14:56.413 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
+[DEBUG] 2018-02-13 18:55:39.155 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [UPGRADE]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=? for update
+[DEBUG] 2018-02-13 18:55:39.156 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@38b972d7]
+[DEBUG] 2018-02-13 18:55:39.157 [main] MetamodelGraphWalker - Visiting attribute path : login
+[DEBUG] 2018-02-13 18:55:39.158 [main] MetamodelGraphWalker - Visiting attribute path : packName
+[DEBUG] 2018-02-13 18:55:39.158 [main] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2018-02-13 18:55:39.158 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2018-02-13 18:55:39.158 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2018-02-13 18:55:39.158 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
     - Returns
        - EntityReturnImpl(entity=com.choinoski.entity.Pack, querySpaceUid=<gen:0>, path=com.choinoski.entity.Pack)
     - QuerySpaces
@@ -299,14 +299,14 @@
           - alias suffix - 0_
           - suffixed key columns - {pack_tok1_0_0_}
 
-[DEBUG] 2018-02-12 21:14:56.413 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [UPGRADE_NOWAIT]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=? for update
-[DEBUG] 2018-02-12 21:14:56.413 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@450794b4]
-[DEBUG] 2018-02-12 21:14:56.413 [main] MetamodelGraphWalker - Visiting attribute path : login
-[DEBUG] 2018-02-12 21:14:56.413 [main] MetamodelGraphWalker - Visiting attribute path : packName
-[DEBUG] 2018-02-12 21:14:56.413 [main] MetamodelGraphWalker - Visiting attribute path : password
-[DEBUG] 2018-02-12 21:14:56.413 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-[DEBUG] 2018-02-12 21:14:56.413 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-[DEBUG] 2018-02-12 21:14:56.413 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
+[DEBUG] 2018-02-13 18:55:39.158 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [UPGRADE_NOWAIT]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=? for update
+[DEBUG] 2018-02-13 18:55:39.158 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3935e9a8]
+[DEBUG] 2018-02-13 18:55:39.158 [main] MetamodelGraphWalker - Visiting attribute path : login
+[DEBUG] 2018-02-13 18:55:39.158 [main] MetamodelGraphWalker - Visiting attribute path : packName
+[DEBUG] 2018-02-13 18:55:39.158 [main] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2018-02-13 18:55:39.158 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2018-02-13 18:55:39.159 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2018-02-13 18:55:39.159 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
     - Returns
        - EntityReturnImpl(entity=com.choinoski.entity.Pack, querySpaceUid=<gen:0>, path=com.choinoski.entity.Pack)
     - QuerySpaces
@@ -315,14 +315,14 @@
           - alias suffix - 0_
           - suffixed key columns - {pack_tok1_0_0_}
 
-[DEBUG] 2018-02-12 21:14:56.413 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [UPGRADE_SKIPLOCKED]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=? for update
-[DEBUG] 2018-02-12 21:14:56.414 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@30457e14]
-[DEBUG] 2018-02-12 21:14:56.414 [main] MetamodelGraphWalker - Visiting attribute path : login
-[DEBUG] 2018-02-12 21:14:56.414 [main] MetamodelGraphWalker - Visiting attribute path : packName
-[DEBUG] 2018-02-12 21:14:56.414 [main] MetamodelGraphWalker - Visiting attribute path : password
-[DEBUG] 2018-02-12 21:14:56.414 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-[DEBUG] 2018-02-12 21:14:56.414 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-[DEBUG] 2018-02-12 21:14:56.414 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
+[DEBUG] 2018-02-13 18:55:39.159 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [UPGRADE_SKIPLOCKED]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=? for update
+[DEBUG] 2018-02-13 18:55:39.159 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5b56b654]
+[DEBUG] 2018-02-13 18:55:39.159 [main] MetamodelGraphWalker - Visiting attribute path : login
+[DEBUG] 2018-02-13 18:55:39.159 [main] MetamodelGraphWalker - Visiting attribute path : packName
+[DEBUG] 2018-02-13 18:55:39.159 [main] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2018-02-13 18:55:39.159 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2018-02-13 18:55:39.159 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2018-02-13 18:55:39.159 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
     - Returns
        - EntityReturnImpl(entity=com.choinoski.entity.Pack, querySpaceUid=<gen:0>, path=com.choinoski.entity.Pack)
     - QuerySpaces
@@ -331,14 +331,14 @@
           - alias suffix - 0_
           - suffixed key columns - {pack_tok1_0_0_}
 
-[DEBUG] 2018-02-12 21:14:56.414 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [FORCE]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=? for update
-[DEBUG] 2018-02-12 21:14:56.414 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@632aa1a3]
-[DEBUG] 2018-02-12 21:14:56.414 [main] MetamodelGraphWalker - Visiting attribute path : login
-[DEBUG] 2018-02-12 21:14:56.414 [main] MetamodelGraphWalker - Visiting attribute path : packName
-[DEBUG] 2018-02-12 21:14:56.414 [main] MetamodelGraphWalker - Visiting attribute path : password
-[DEBUG] 2018-02-12 21:14:56.414 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-[DEBUG] 2018-02-12 21:14:56.416 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-[DEBUG] 2018-02-12 21:14:56.416 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
+[DEBUG] 2018-02-13 18:55:39.159 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [FORCE]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=? for update
+[DEBUG] 2018-02-13 18:55:39.159 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@534243e4]
+[DEBUG] 2018-02-13 18:55:39.159 [main] MetamodelGraphWalker - Visiting attribute path : login
+[DEBUG] 2018-02-13 18:55:39.159 [main] MetamodelGraphWalker - Visiting attribute path : packName
+[DEBUG] 2018-02-13 18:55:39.159 [main] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2018-02-13 18:55:39.159 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2018-02-13 18:55:39.160 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2018-02-13 18:55:39.160 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
     - Returns
        - EntityReturnImpl(entity=com.choinoski.entity.Pack, querySpaceUid=<gen:0>, path=com.choinoski.entity.Pack)
     - QuerySpaces
@@ -347,14 +347,14 @@
           - alias suffix - 0_
           - suffixed key columns - {pack_tok1_0_0_}
 
-[DEBUG] 2018-02-12 21:14:56.418 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [PESSIMISTIC_READ]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=? lock in share mode
-[DEBUG] 2018-02-12 21:14:56.418 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3b582111]
-[DEBUG] 2018-02-12 21:14:56.418 [main] MetamodelGraphWalker - Visiting attribute path : login
-[DEBUG] 2018-02-12 21:14:56.418 [main] MetamodelGraphWalker - Visiting attribute path : packName
-[DEBUG] 2018-02-12 21:14:56.418 [main] MetamodelGraphWalker - Visiting attribute path : password
-[DEBUG] 2018-02-12 21:14:56.418 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-[DEBUG] 2018-02-12 21:14:56.418 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-[DEBUG] 2018-02-12 21:14:56.419 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
+[DEBUG] 2018-02-13 18:55:39.160 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [PESSIMISTIC_READ]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=? lock in share mode
+[DEBUG] 2018-02-13 18:55:39.160 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@470a9030]
+[DEBUG] 2018-02-13 18:55:39.161 [main] MetamodelGraphWalker - Visiting attribute path : login
+[DEBUG] 2018-02-13 18:55:39.161 [main] MetamodelGraphWalker - Visiting attribute path : packName
+[DEBUG] 2018-02-13 18:55:39.161 [main] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2018-02-13 18:55:39.161 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2018-02-13 18:55:39.161 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2018-02-13 18:55:39.162 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
     - Returns
        - EntityReturnImpl(entity=com.choinoski.entity.Pack, querySpaceUid=<gen:0>, path=com.choinoski.entity.Pack)
     - QuerySpaces
@@ -363,14 +363,14 @@
           - alias suffix - 0_
           - suffixed key columns - {pack_tok1_0_0_}
 
-[DEBUG] 2018-02-12 21:14:56.419 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [PESSIMISTIC_WRITE]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=? for update
-[DEBUG] 2018-02-12 21:14:56.419 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1e8823d2]
-[DEBUG] 2018-02-12 21:14:56.419 [main] MetamodelGraphWalker - Visiting attribute path : login
-[DEBUG] 2018-02-12 21:14:56.419 [main] MetamodelGraphWalker - Visiting attribute path : packName
-[DEBUG] 2018-02-12 21:14:56.421 [main] MetamodelGraphWalker - Visiting attribute path : password
-[DEBUG] 2018-02-12 21:14:56.421 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-[DEBUG] 2018-02-12 21:14:56.421 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-[DEBUG] 2018-02-12 21:14:56.421 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
+[DEBUG] 2018-02-13 18:55:39.162 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [PESSIMISTIC_WRITE]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=? for update
+[DEBUG] 2018-02-13 18:55:39.162 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@27494e46]
+[DEBUG] 2018-02-13 18:55:39.162 [main] MetamodelGraphWalker - Visiting attribute path : login
+[DEBUG] 2018-02-13 18:55:39.162 [main] MetamodelGraphWalker - Visiting attribute path : packName
+[DEBUG] 2018-02-13 18:55:39.163 [main] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2018-02-13 18:55:39.163 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2018-02-13 18:55:39.163 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2018-02-13 18:55:39.163 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
     - Returns
        - EntityReturnImpl(entity=com.choinoski.entity.Pack, querySpaceUid=<gen:0>, path=com.choinoski.entity.Pack)
     - QuerySpaces
@@ -379,14 +379,14 @@
           - alias suffix - 0_
           - suffixed key columns - {pack_tok1_0_0_}
 
-[DEBUG] 2018-02-12 21:14:56.421 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [PESSIMISTIC_FORCE_INCREMENT]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=? for update
-[DEBUG] 2018-02-12 21:14:56.421 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@76b0ae1b]
-[DEBUG] 2018-02-12 21:14:56.422 [main] MetamodelGraphWalker - Visiting attribute path : login
-[DEBUG] 2018-02-12 21:14:56.422 [main] MetamodelGraphWalker - Visiting attribute path : packName
-[DEBUG] 2018-02-12 21:14:56.422 [main] MetamodelGraphWalker - Visiting attribute path : password
-[DEBUG] 2018-02-12 21:14:56.422 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-[DEBUG] 2018-02-12 21:14:56.422 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-[DEBUG] 2018-02-12 21:14:56.422 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
+[DEBUG] 2018-02-13 18:55:39.163 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [PESSIMISTIC_FORCE_INCREMENT]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=? for update
+[DEBUG] 2018-02-13 18:55:39.163 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1e411d81]
+[DEBUG] 2018-02-13 18:55:39.165 [main] MetamodelGraphWalker - Visiting attribute path : login
+[DEBUG] 2018-02-13 18:55:39.165 [main] MetamodelGraphWalker - Visiting attribute path : packName
+[DEBUG] 2018-02-13 18:55:39.166 [main] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2018-02-13 18:55:39.166 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2018-02-13 18:55:39.166 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2018-02-13 18:55:39.166 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
     - Returns
        - EntityReturnImpl(entity=com.choinoski.entity.Pack, querySpaceUid=<gen:0>, path=com.choinoski.entity.Pack)
     - QuerySpaces
@@ -395,14 +395,14 @@
           - alias suffix - 0_
           - suffixed key columns - {pack_tok1_0_0_}
 
-[DEBUG] 2018-02-12 21:14:56.422 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [OPTIMISTIC]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:56.422 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4c432866]
-[DEBUG] 2018-02-12 21:14:56.423 [main] MetamodelGraphWalker - Visiting attribute path : login
-[DEBUG] 2018-02-12 21:14:56.424 [main] MetamodelGraphWalker - Visiting attribute path : packName
-[DEBUG] 2018-02-12 21:14:56.424 [main] MetamodelGraphWalker - Visiting attribute path : password
-[DEBUG] 2018-02-12 21:14:56.424 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-[DEBUG] 2018-02-12 21:14:56.424 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-[DEBUG] 2018-02-12 21:14:56.424 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
+[DEBUG] 2018-02-13 18:55:39.166 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [OPTIMISTIC]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:39.166 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3e6fd0b9]
+[DEBUG] 2018-02-13 18:55:39.166 [main] MetamodelGraphWalker - Visiting attribute path : login
+[DEBUG] 2018-02-13 18:55:39.166 [main] MetamodelGraphWalker - Visiting attribute path : packName
+[DEBUG] 2018-02-13 18:55:39.166 [main] MetamodelGraphWalker - Visiting attribute path : password
+[DEBUG] 2018-02-13 18:55:39.166 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+[DEBUG] 2018-02-13 18:55:39.167 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+[DEBUG] 2018-02-13 18:55:39.167 [main] LoadPlanTreePrinter - LoadPlan(entity=com.choinoski.entity.Pack)
     - Returns
        - EntityReturnImpl(entity=com.choinoski.entity.Pack, querySpaceUid=<gen:0>, path=com.choinoski.entity.Pack)
     - QuerySpaces
@@ -411,25 +411,25 @@
           - alias suffix - 0_
           - suffixed key columns - {pack_tok1_0_0_}
 
-[DEBUG] 2018-02-12 21:14:56.424 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [OPTIMISTIC_FORCE_INCREMENT]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:56.460 [main] Loader - Static select for action ACTION_MERGE on entity com.choinoski.entity.Pack: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:56.461 [main] Loader - Static select for action ACTION_REFRESH on entity com.choinoski.entity.Pack: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:56.487 [main] SchemaManagementToolCoordinator - No actions specified; doing nothing
-[DEBUG] 2018-02-12 21:14:56.487 [main] JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
-[DEBUG] 2018-02-12 21:14:56.487 [main] JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
-[DEBUG] 2018-02-12 21:14:56.490 [main] StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[DEBUG] 2018-02-12 21:14:56.491 [main] NamedQueryRepository - Checking 0 named HQL queries
-[DEBUG] 2018-02-12 21:14:56.491 [main] NamedQueryRepository - Checking 0 named SQL queries
-[DEBUG] 2018-02-12 21:14:56.493 [main] SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@595f4da5
-[DEBUG] 2018-02-12 21:14:56.494 [main] SessionFactoryRegistry - Registering SessionFactory: eb7a1935-f5f1-4c17-b9a9-a79e20b63125 (<unnamed>)
-[DEBUG] 2018-02-12 21:14:56.494 [main] SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
-[DEBUG] 2018-02-12 21:14:56.639 [main] StatisticsInitiator - Statistics initialized [enabled=false]
-[DEBUG] 2018-02-12 21:14:56.688 [main] CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0 from Pack as generatedAlias0 where generatedAlias0.packName=:param0
-[DEBUG] 2018-02-12 21:14:56.701 [main] QueryTranslatorFactoryInitiator - QueryTranslatorFactory : org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@4d6f197e
-[INFO ] 2018-02-12 21:14:56.701 [main] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
-[DEBUG] 2018-02-12 21:14:56.761 [main] QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from com.choinoski.entity.Pack as generatedAlias0 where generatedAlias0.packName=:param0
-[DEBUG] 2018-02-12 21:14:56.768 [main] ErrorCounter - throwQueryException() : no errors
-[DEBUG] 2018-02-12 21:14:56.778 [main] QueryTranslatorImpl - --- HQL AST ---
+[DEBUG] 2018-02-13 18:55:39.167 [main] EntityLoader - Static select for entity com.choinoski.entity.Pack [OPTIMISTIC_FORCE_INCREMENT]: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:39.189 [main] Loader - Static select for action ACTION_MERGE on entity com.choinoski.entity.Pack: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:39.189 [main] Loader - Static select for action ACTION_REFRESH on entity com.choinoski.entity.Pack: select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:39.213 [main] SchemaManagementToolCoordinator - No actions specified; doing nothing
+[DEBUG] 2018-02-13 18:55:39.213 [main] JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
+[DEBUG] 2018-02-13 18:55:39.217 [main] JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+[DEBUG] 2018-02-13 18:55:39.219 [main] StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[DEBUG] 2018-02-13 18:55:39.220 [main] NamedQueryRepository - Checking 0 named HQL queries
+[DEBUG] 2018-02-13 18:55:39.220 [main] NamedQueryRepository - Checking 0 named SQL queries
+[DEBUG] 2018-02-13 18:55:39.221 [main] SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@14faa38c
+[DEBUG] 2018-02-13 18:55:39.226 [main] SessionFactoryRegistry - Registering SessionFactory: fc85489c-e5a4-46a9-bb78-a0b33a407705 (<unnamed>)
+[DEBUG] 2018-02-13 18:55:39.226 [main] SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+[DEBUG] 2018-02-13 18:55:39.342 [main] StatisticsInitiator - Statistics initialized [enabled=false]
+[DEBUG] 2018-02-13 18:55:39.395 [main] CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0 from Pack as generatedAlias0 where generatedAlias0.packName=:param0
+[DEBUG] 2018-02-13 18:55:39.418 [main] QueryTranslatorFactoryInitiator - QueryTranslatorFactory : org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@12a160c2
+[INFO ] 2018-02-13 18:55:39.418 [main] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[DEBUG] 2018-02-13 18:55:39.462 [main] QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from com.choinoski.entity.Pack as generatedAlias0 where generatedAlias0.packName=:param0
+[DEBUG] 2018-02-13 18:55:39.473 [main] ErrorCounter - throwQueryException() : no errors
+[DEBUG] 2018-02-13 18:55:39.477 [main] QueryTranslatorImpl - --- HQL AST ---
  \-[QUERY] Node: 'query'
     +-[SELECT_FROM] Node: 'SELECT_FROM'
     |  +-[FROM] Node: 'from'
@@ -452,17 +452,17 @@
           \-[COLON] Node: ':'
              \-[IDENT] Node: 'param0'
 
-[DEBUG] 2018-02-12 21:14:56.810 [main] HqlSqlBaseWalker - select << begin [level=1, statement=select]
-[DEBUG] 2018-02-12 21:14:56.835 [main] FromElement - FromClause{level=1} : com.choinoski.entity.Pack (generatedAlias0) -> pack0_
-[DEBUG] 2018-02-12 21:14:56.836 [main] FromReferenceNode - Resolved : generatedAlias0 -> pack0_.pack_token_nr
-[DEBUG] 2018-02-12 21:14:56.843 [main] FromReferenceNode - Resolved : generatedAlias0 -> pack0_.pack_token_nr
-[DEBUG] 2018-02-12 21:14:56.849 [main] DotNode - getDataType() : packName -> org.hibernate.type.StringType@7dc3712
-[DEBUG] 2018-02-12 21:14:56.850 [main] FromReferenceNode - Resolved : generatedAlias0.packName -> pack0_.pack_name
-[DEBUG] 2018-02-12 21:14:56.852 [main] HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
-[DEBUG] 2018-02-12 21:14:56.856 [main] HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} pack0_.pack_token_nr ) ( FromClause{level=1} pack pack0_ ) ( where ( = ( pack0_.pack_name pack0_.pack_token_nr packName ) ? ) ) )
-[DEBUG] 2018-02-12 21:14:56.870 [main] JoinProcessor - Using FROM fragment [pack pack0_]
-[DEBUG] 2018-02-12 21:14:56.870 [main] HqlSqlBaseWalker - select >> end [level=1, statement=select]
-[DEBUG] 2018-02-12 21:14:56.871 [main] QueryTranslatorImpl - --- SQL AST ---
+[DEBUG] 2018-02-13 18:55:39.503 [main] HqlSqlBaseWalker - select << begin [level=1, statement=select]
+[DEBUG] 2018-02-13 18:55:39.526 [main] FromElement - FromClause{level=1} : com.choinoski.entity.Pack (generatedAlias0) -> pack0_
+[DEBUG] 2018-02-13 18:55:39.530 [main] FromReferenceNode - Resolved : generatedAlias0 -> pack0_.pack_token_nr
+[DEBUG] 2018-02-13 18:55:39.532 [main] FromReferenceNode - Resolved : generatedAlias0 -> pack0_.pack_token_nr
+[DEBUG] 2018-02-13 18:55:39.536 [main] DotNode - getDataType() : packName -> org.hibernate.type.StringType@1722011b
+[DEBUG] 2018-02-13 18:55:39.536 [main] FromReferenceNode - Resolved : generatedAlias0.packName -> pack0_.pack_name
+[DEBUG] 2018-02-13 18:55:39.540 [main] HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+[DEBUG] 2018-02-13 18:55:39.540 [main] HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} pack0_.pack_token_nr ) ( FromClause{level=1} pack pack0_ ) ( where ( = ( pack0_.pack_name pack0_.pack_token_nr packName ) ? ) ) )
+[DEBUG] 2018-02-13 18:55:39.545 [main] JoinProcessor - Using FROM fragment [pack pack0_]
+[DEBUG] 2018-02-13 18:55:39.546 [main] HqlSqlBaseWalker - select >> end [level=1, statement=select]
+[DEBUG] 2018-02-13 18:55:39.546 [main] QueryTranslatorImpl - --- SQL AST ---
  \-[SELECT] QueryNode: 'SELECT'  querySpaces (pack)
     +-[SELECT_CLAUSE] SelectClause: '{select clause}'
     |  +-[ALIAS_REF] IdentNode: 'pack0_.pack_token_nr as pack_tok1_0_' {alias=generatedAlias0, className=com.choinoski.entity.Pack, tableAlias=pack0_}
@@ -474,54 +474,54 @@
           +-[DOT] DotNode: 'pack0_.pack_name' {propertyName=packName,dereferenceType=PRIMITIVE,getPropertyPath=packName,path=generatedAlias0.packName,tableAlias=pack0_,className=com.choinoski.entity.Pack,classAlias=generatedAlias0}
           |  +-[ALIAS_REF] IdentNode: 'pack0_.pack_token_nr' {alias=generatedAlias0, className=com.choinoski.entity.Pack, tableAlias=pack0_}
           |  \-[IDENT] IdentNode: 'packName' {originalText=packName}
-          \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.StringType@7dc3712}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.StringType@1722011b}
 
-[DEBUG] 2018-02-12 21:14:56.871 [main] ErrorCounter - throwQueryException() : no errors
-[DEBUG] 2018-02-12 21:14:56.880 [main] QueryTranslatorImpl - HQL: select generatedAlias0 from com.choinoski.entity.Pack as generatedAlias0 where generatedAlias0.packName=:param0
-[DEBUG] 2018-02-12 21:14:56.880 [main] QueryTranslatorImpl - SQL: select pack0_.pack_token_nr as pack_tok1_0_, pack0_.login as login2_0_, pack0_.pack_name as pack_nam3_0_, pack0_.password as password4_0_ from pack pack0_ where pack0_.pack_name=?
-[DEBUG] 2018-02-12 21:14:56.880 [main] ErrorCounter - throwQueryException() : no errors
-[DEBUG] 2018-02-12 21:14:56.915 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_, pack0_.login as login2_0_, pack0_.pack_name as pack_nam3_0_, pack0_.password as password4_0_ from pack pack0_ where pack0_.pack_name=?
-[DEBUG] 2018-02-12 21:14:56.946 [main] Loader - Result set row: 0
-[DEBUG] 2018-02-12 21:14:56.962 [main] Loader - Result row: EntityKey[com.choinoski.entity.Pack#4]
-[DEBUG] 2018-02-12 21:14:56.974 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#4]
-[DEBUG] 2018-02-12 21:14:56.976 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#4]
-[DEBUG] 2018-02-12 21:14:56.982 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-[DEBUG] 2018-02-12 21:14:57.041 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:57.049 [main] ResultSetProcessorImpl - Starting ResultSet row #0
-[DEBUG] 2018-02-12 21:14:57.050 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
-[DEBUG] 2018-02-12 21:14:57.053 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#3]
-[DEBUG] 2018-02-12 21:14:57.055 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#3]
-[DEBUG] 2018-02-12 21:14:57.055 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
-[DEBUG] 2018-02-12 21:14:57.055 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.choinoski.entity.Pack#3
-[DEBUG] 2018-02-12 21:14:57.055 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-[DEBUG] 2018-02-12 21:14:57.103 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:57.118 [main] ResultSetProcessorImpl - Starting ResultSet row #0
-[DEBUG] 2018-02-12 21:14:57.118 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
-[DEBUG] 2018-02-12 21:14:57.118 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#2]
-[DEBUG] 2018-02-12 21:14:57.119 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#2]
-[DEBUG] 2018-02-12 21:14:57.119 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
-[DEBUG] 2018-02-12 21:14:57.119 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.choinoski.entity.Pack#2
-[DEBUG] 2018-02-12 21:14:57.119 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-[DEBUG] 2018-02-12 21:14:57.132 [main] TransactionImpl - begin
-[DEBUG] 2018-02-12 21:14:57.173 [main] TransactionImpl - committing
-[DEBUG] 2018-02-12 21:14:57.175 [main] AbstractFlushingEventListener - Processing flush-time cascades
-[DEBUG] 2018-02-12 21:14:57.175 [main] AbstractFlushingEventListener - Dirty checking collections
-[DEBUG] 2018-02-12 21:14:57.177 [main] AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
-[DEBUG] 2018-02-12 21:14:57.177 [main] AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-[DEBUG] 2018-02-12 21:14:57.180 [main] EntityPrinter - Listing entities:
-[DEBUG] 2018-02-12 21:14:57.181 [main] EntityPrinter - com.choinoski.entity.Pack{password=RedBike21, packTokenNumber=2, login=awesomepack21, packName=Awesome Pack!}
-[DEBUG] 2018-02-12 21:14:57.199 [main] SQL - delete from pack where pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:57.212 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-[DEBUG] 2018-02-12 21:14:57.215 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-[DEBUG] 2018-02-12 21:14:57.216 [main] JdbcCoordinatorImpl - HHH000420: Closing un-released batch
-[DEBUG] 2018-02-12 21:14:57.222 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:57.223 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
-[DEBUG] 2018-02-12 21:14:57.223 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.choinoski.entity.Pack#2
-[DEBUG] 2018-02-12 21:14:57.223 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-[DEBUG] 2018-02-12 21:14:57.266 [main] CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0 from Pack as generatedAlias0
-[DEBUG] 2018-02-12 21:14:57.268 [main] QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from com.choinoski.entity.Pack as generatedAlias0
-[DEBUG] 2018-02-12 21:14:57.268 [main] ErrorCounter - throwQueryException() : no errors
-[DEBUG] 2018-02-12 21:14:57.270 [main] QueryTranslatorImpl - --- HQL AST ---
+[DEBUG] 2018-02-13 18:55:39.546 [main] ErrorCounter - throwQueryException() : no errors
+[DEBUG] 2018-02-13 18:55:39.577 [main] QueryTranslatorImpl - HQL: select generatedAlias0 from com.choinoski.entity.Pack as generatedAlias0 where generatedAlias0.packName=:param0
+[DEBUG] 2018-02-13 18:55:39.577 [main] QueryTranslatorImpl - SQL: select pack0_.pack_token_nr as pack_tok1_0_, pack0_.login as login2_0_, pack0_.pack_name as pack_nam3_0_, pack0_.password as password4_0_ from pack pack0_ where pack0_.pack_name=?
+[DEBUG] 2018-02-13 18:55:39.577 [main] ErrorCounter - throwQueryException() : no errors
+[DEBUG] 2018-02-13 18:55:39.604 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_, pack0_.login as login2_0_, pack0_.pack_name as pack_nam3_0_, pack0_.password as password4_0_ from pack pack0_ where pack0_.pack_name=?
+[DEBUG] 2018-02-13 18:55:39.633 [main] Loader - Result set row: 0
+[DEBUG] 2018-02-13 18:55:39.635 [main] Loader - Result row: EntityKey[com.choinoski.entity.Pack#4]
+[DEBUG] 2018-02-13 18:55:39.644 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#4]
+[DEBUG] 2018-02-13 18:55:39.645 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#4]
+[DEBUG] 2018-02-13 18:55:39.654 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2018-02-13 18:55:39.752 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:39.763 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2018-02-13 18:55:39.765 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[DEBUG] 2018-02-13 18:55:39.766 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#3]
+[DEBUG] 2018-02-13 18:55:39.769 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#3]
+[DEBUG] 2018-02-13 18:55:39.769 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2018-02-13 18:55:39.769 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.choinoski.entity.Pack#3
+[DEBUG] 2018-02-13 18:55:39.769 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2018-02-13 18:55:39.801 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:39.803 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2018-02-13 18:55:39.804 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[DEBUG] 2018-02-13 18:55:39.804 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#2]
+[DEBUG] 2018-02-13 18:55:39.804 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#2]
+[DEBUG] 2018-02-13 18:55:39.804 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2018-02-13 18:55:39.804 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.choinoski.entity.Pack#2
+[DEBUG] 2018-02-13 18:55:39.804 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2018-02-13 18:55:39.806 [main] TransactionImpl - begin
+[DEBUG] 2018-02-13 18:55:39.822 [main] TransactionImpl - committing
+[DEBUG] 2018-02-13 18:55:39.823 [main] AbstractFlushingEventListener - Processing flush-time cascades
+[DEBUG] 2018-02-13 18:55:39.823 [main] AbstractFlushingEventListener - Dirty checking collections
+[DEBUG] 2018-02-13 18:55:39.824 [main] AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+[DEBUG] 2018-02-13 18:55:39.824 [main] AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+[DEBUG] 2018-02-13 18:55:39.824 [main] EntityPrinter - Listing entities:
+[DEBUG] 2018-02-13 18:55:39.825 [main] EntityPrinter - com.choinoski.entity.Pack{password=RedBike21, packTokenNumber=2, login=awesomepack21, packName=Awesome Pack!}
+[DEBUG] 2018-02-13 18:55:39.844 [main] SQL - delete from pack where pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:39.852 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2018-02-13 18:55:39.854 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2018-02-13 18:55:39.854 [main] JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+[DEBUG] 2018-02-13 18:55:39.860 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:39.861 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2018-02-13 18:55:39.861 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.choinoski.entity.Pack#2
+[DEBUG] 2018-02-13 18:55:39.862 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2018-02-13 18:55:39.891 [main] CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0 from Pack as generatedAlias0
+[DEBUG] 2018-02-13 18:55:39.893 [main] QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from com.choinoski.entity.Pack as generatedAlias0
+[DEBUG] 2018-02-13 18:55:39.894 [main] ErrorCounter - throwQueryException() : no errors
+[DEBUG] 2018-02-13 18:55:39.897 [main] QueryTranslatorImpl - --- HQL AST ---
  \-[QUERY] Node: 'query'
     \-[SELECT_FROM] Node: 'SELECT_FROM'
        +-[FROM] Node: 'from'
@@ -537,14 +537,14 @@
        \-[SELECT] Node: 'select'
           \-[IDENT] Node: 'generatedAlias0'
 
-[DEBUG] 2018-02-12 21:14:57.270 [main] HqlSqlBaseWalker - select << begin [level=1, statement=select]
-[DEBUG] 2018-02-12 21:14:57.272 [main] FromElement - FromClause{level=1} : com.choinoski.entity.Pack (generatedAlias0) -> pack0_
-[DEBUG] 2018-02-12 21:14:57.272 [main] FromReferenceNode - Resolved : generatedAlias0 -> pack0_.pack_token_nr
-[DEBUG] 2018-02-12 21:14:57.272 [main] HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
-[DEBUG] 2018-02-12 21:14:57.272 [main] HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} pack0_.pack_token_nr ) ( FromClause{level=1} pack pack0_ ) )
-[DEBUG] 2018-02-12 21:14:57.272 [main] JoinProcessor - Using FROM fragment [pack pack0_]
-[DEBUG] 2018-02-12 21:14:57.272 [main] HqlSqlBaseWalker - select >> end [level=1, statement=select]
-[DEBUG] 2018-02-12 21:14:57.272 [main] QueryTranslatorImpl - --- SQL AST ---
+[DEBUG] 2018-02-13 18:55:39.897 [main] HqlSqlBaseWalker - select << begin [level=1, statement=select]
+[DEBUG] 2018-02-13 18:55:39.897 [main] FromElement - FromClause{level=1} : com.choinoski.entity.Pack (generatedAlias0) -> pack0_
+[DEBUG] 2018-02-13 18:55:39.897 [main] FromReferenceNode - Resolved : generatedAlias0 -> pack0_.pack_token_nr
+[DEBUG] 2018-02-13 18:55:39.897 [main] HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+[DEBUG] 2018-02-13 18:55:39.897 [main] HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} pack0_.pack_token_nr ) ( FromClause{level=1} pack pack0_ ) )
+[DEBUG] 2018-02-13 18:55:39.898 [main] JoinProcessor - Using FROM fragment [pack pack0_]
+[DEBUG] 2018-02-13 18:55:39.898 [main] HqlSqlBaseWalker - select >> end [level=1, statement=select]
+[DEBUG] 2018-02-13 18:55:39.898 [main] QueryTranslatorImpl - --- SQL AST ---
  \-[SELECT] QueryNode: 'SELECT'  querySpaces (pack)
     +-[SELECT_CLAUSE] SelectClause: '{select clause}'
     |  +-[ALIAS_REF] IdentNode: 'pack0_.pack_token_nr as pack_tok1_0_' {alias=generatedAlias0, className=com.choinoski.entity.Pack, tableAlias=pack0_}
@@ -552,82 +552,82 @@
     \-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[pack0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
        \-[FROM_FRAGMENT] FromElement: 'pack pack0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=pack,tableAlias=pack0_,origin=null,columns={,className=com.choinoski.entity.Pack}}
 
-[DEBUG] 2018-02-12 21:14:57.275 [main] ErrorCounter - throwQueryException() : no errors
-[DEBUG] 2018-02-12 21:14:57.275 [main] QueryTranslatorImpl - HQL: select generatedAlias0 from com.choinoski.entity.Pack as generatedAlias0
-[DEBUG] 2018-02-12 21:14:57.275 [main] QueryTranslatorImpl - SQL: select pack0_.pack_token_nr as pack_tok1_0_, pack0_.login as login2_0_, pack0_.pack_name as pack_nam3_0_, pack0_.password as password4_0_ from pack pack0_
-[DEBUG] 2018-02-12 21:14:57.275 [main] ErrorCounter - throwQueryException() : no errors
-[DEBUG] 2018-02-12 21:14:57.275 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_, pack0_.login as login2_0_, pack0_.pack_name as pack_nam3_0_, pack0_.password as password4_0_ from pack pack0_
-[DEBUG] 2018-02-12 21:14:57.281 [main] Loader - Result set row: 0
-[DEBUG] 2018-02-12 21:14:57.283 [main] Loader - Result row: EntityKey[com.choinoski.entity.Pack#1]
-[DEBUG] 2018-02-12 21:14:57.283 [main] Loader - Result set row: 1
-[DEBUG] 2018-02-12 21:14:57.283 [main] Loader - Result row: EntityKey[com.choinoski.entity.Pack#2]
-[DEBUG] 2018-02-12 21:14:57.283 [main] Loader - Result set row: 2
-[DEBUG] 2018-02-12 21:14:57.283 [main] Loader - Result row: EntityKey[com.choinoski.entity.Pack#3]
-[DEBUG] 2018-02-12 21:14:57.283 [main] Loader - Result set row: 3
-[DEBUG] 2018-02-12 21:14:57.283 [main] Loader - Result row: EntityKey[com.choinoski.entity.Pack#4]
-[DEBUG] 2018-02-12 21:14:57.284 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#1]
-[DEBUG] 2018-02-12 21:14:57.284 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#1]
-[DEBUG] 2018-02-12 21:14:57.284 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#2]
-[DEBUG] 2018-02-12 21:14:57.284 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#2]
-[DEBUG] 2018-02-12 21:14:57.284 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#3]
-[DEBUG] 2018-02-12 21:14:57.284 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#3]
-[DEBUG] 2018-02-12 21:14:57.284 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#4]
-[DEBUG] 2018-02-12 21:14:57.284 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#4]
-[DEBUG] 2018-02-12 21:14:57.284 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-[DEBUG] 2018-02-12 21:14:57.336 [main] TransactionImpl - begin
-[DEBUG] 2018-02-12 21:14:57.367 [main] ActionQueue - Executing identity-insert immediately
-[DEBUG] 2018-02-12 21:14:57.375 [main] SQL - insert into pack (login, pack_name, password) values (?, ?, ?)
-[DEBUG] 2018-02-12 21:14:57.382 [main] IdentifierGeneratorHelper - Natively generated identity: 9
-[DEBUG] 2018-02-12 21:14:57.384 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
-[DEBUG] 2018-02-12 21:14:57.385 [main] TransactionImpl - committing
-[DEBUG] 2018-02-12 21:14:57.386 [main] AbstractFlushingEventListener - Processing flush-time cascades
-[DEBUG] 2018-02-12 21:14:57.386 [main] AbstractFlushingEventListener - Dirty checking collections
-[DEBUG] 2018-02-12 21:14:57.386 [main] AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
-[DEBUG] 2018-02-12 21:14:57.387 [main] AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-[DEBUG] 2018-02-12 21:14:57.387 [main] EntityPrinter - Listing entities:
-[DEBUG] 2018-02-12 21:14:57.387 [main] EntityPrinter - com.choinoski.entity.Pack{password=trickypassword!, packTokenNumber=9, login=pack12321, packName=Newest Pack}
-[DEBUG] 2018-02-12 21:14:57.391 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-[DEBUG] 2018-02-12 21:14:57.394 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-[DEBUG] 2018-02-12 21:14:57.399 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:57.401 [main] ResultSetProcessorImpl - Starting ResultSet row #0
-[DEBUG] 2018-02-12 21:14:57.401 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
-[DEBUG] 2018-02-12 21:14:57.401 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#9]
-[DEBUG] 2018-02-12 21:14:57.406 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#9]
-[DEBUG] 2018-02-12 21:14:57.406 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
-[DEBUG] 2018-02-12 21:14:57.407 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.choinoski.entity.Pack#9
-[DEBUG] 2018-02-12 21:14:57.407 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-[DEBUG] 2018-02-12 21:14:57.444 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:57.446 [main] ResultSetProcessorImpl - Starting ResultSet row #0
-[DEBUG] 2018-02-12 21:14:57.446 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
-[DEBUG] 2018-02-12 21:14:57.447 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#1]
-[DEBUG] 2018-02-12 21:14:57.447 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#1]
-[DEBUG] 2018-02-12 21:14:57.447 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
-[DEBUG] 2018-02-12 21:14:57.448 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.choinoski.entity.Pack#1
-[DEBUG] 2018-02-12 21:14:57.448 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-[DEBUG] 2018-02-12 21:14:57.450 [main] TransactionImpl - begin
-[DEBUG] 2018-02-12 21:14:57.451 [main] TransactionImpl - committing
-[DEBUG] 2018-02-12 21:14:57.451 [main] AbstractFlushingEventListener - Processing flush-time cascades
-[DEBUG] 2018-02-12 21:14:57.451 [main] AbstractFlushingEventListener - Dirty checking collections
-[DEBUG] 2018-02-12 21:14:57.454 [main] AbstractFlushingEventListener - Flushed: 0 insertions, 1 updates, 0 deletions to 1 objects
-[DEBUG] 2018-02-12 21:14:57.454 [main] AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-[DEBUG] 2018-02-12 21:14:57.454 [main] EntityPrinter - Listing entities:
-[DEBUG] 2018-02-12 21:14:57.454 [main] EntityPrinter - com.choinoski.entity.Pack{password=littlefish2, packTokenNumber=1, login=choinoski, packName=The Best Pack Ever}
-[DEBUG] 2018-02-12 21:14:57.464 [main] SQL - update pack set login=?, pack_name=?, password=? where pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:57.468 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-[DEBUG] 2018-02-12 21:14:57.470 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-[DEBUG] 2018-02-12 21:14:57.471 [main] JdbcCoordinatorImpl - HHH000420: Closing un-released batch
-[DEBUG] 2018-02-12 21:14:57.471 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
-[DEBUG] 2018-02-12 21:14:57.472 [main] ResultSetProcessorImpl - Starting ResultSet row #0
-[DEBUG] 2018-02-12 21:14:57.472 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
-[DEBUG] 2018-02-12 21:14:57.472 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#1]
-[DEBUG] 2018-02-12 21:14:57.472 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#1]
-[DEBUG] 2018-02-12 21:14:57.472 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
-[DEBUG] 2018-02-12 21:14:57.472 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.choinoski.entity.Pack#1
-[DEBUG] 2018-02-12 21:14:57.472 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-[DEBUG] 2018-02-12 21:14:57.518 [main] CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0 from Pack as generatedAlias0 where generatedAlias0.packName like :param0
-[DEBUG] 2018-02-12 21:14:57.519 [main] QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from com.choinoski.entity.Pack as generatedAlias0 where generatedAlias0.packName like :param0
-[DEBUG] 2018-02-12 21:14:57.522 [main] ErrorCounter - throwQueryException() : no errors
-[DEBUG] 2018-02-12 21:14:57.522 [main] QueryTranslatorImpl - --- HQL AST ---
+[DEBUG] 2018-02-13 18:55:39.898 [main] ErrorCounter - throwQueryException() : no errors
+[DEBUG] 2018-02-13 18:55:39.898 [main] QueryTranslatorImpl - HQL: select generatedAlias0 from com.choinoski.entity.Pack as generatedAlias0
+[DEBUG] 2018-02-13 18:55:39.898 [main] QueryTranslatorImpl - SQL: select pack0_.pack_token_nr as pack_tok1_0_, pack0_.login as login2_0_, pack0_.pack_name as pack_nam3_0_, pack0_.password as password4_0_ from pack pack0_
+[DEBUG] 2018-02-13 18:55:39.898 [main] ErrorCounter - throwQueryException() : no errors
+[DEBUG] 2018-02-13 18:55:39.899 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_, pack0_.login as login2_0_, pack0_.pack_name as pack_nam3_0_, pack0_.password as password4_0_ from pack pack0_
+[DEBUG] 2018-02-13 18:55:39.899 [main] Loader - Result set row: 0
+[DEBUG] 2018-02-13 18:55:39.903 [main] Loader - Result row: EntityKey[com.choinoski.entity.Pack#1]
+[DEBUG] 2018-02-13 18:55:39.903 [main] Loader - Result set row: 1
+[DEBUG] 2018-02-13 18:55:39.903 [main] Loader - Result row: EntityKey[com.choinoski.entity.Pack#2]
+[DEBUG] 2018-02-13 18:55:39.904 [main] Loader - Result set row: 2
+[DEBUG] 2018-02-13 18:55:39.904 [main] Loader - Result row: EntityKey[com.choinoski.entity.Pack#3]
+[DEBUG] 2018-02-13 18:55:39.904 [main] Loader - Result set row: 3
+[DEBUG] 2018-02-13 18:55:39.904 [main] Loader - Result row: EntityKey[com.choinoski.entity.Pack#4]
+[DEBUG] 2018-02-13 18:55:39.904 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#1]
+[DEBUG] 2018-02-13 18:55:39.904 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#1]
+[DEBUG] 2018-02-13 18:55:39.904 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#2]
+[DEBUG] 2018-02-13 18:55:39.904 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#2]
+[DEBUG] 2018-02-13 18:55:39.904 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#3]
+[DEBUG] 2018-02-13 18:55:39.904 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#3]
+[DEBUG] 2018-02-13 18:55:39.904 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#4]
+[DEBUG] 2018-02-13 18:55:39.904 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#4]
+[DEBUG] 2018-02-13 18:55:39.904 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2018-02-13 18:55:39.942 [main] TransactionImpl - begin
+[DEBUG] 2018-02-13 18:55:39.948 [main] ActionQueue - Executing identity-insert immediately
+[DEBUG] 2018-02-13 18:55:39.951 [main] SQL - insert into pack (login, pack_name, password) values (?, ?, ?)
+[DEBUG] 2018-02-13 18:55:39.956 [main] IdentifierGeneratorHelper - Natively generated identity: 6
+[DEBUG] 2018-02-13 18:55:39.956 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2018-02-13 18:55:39.956 [main] TransactionImpl - committing
+[DEBUG] 2018-02-13 18:55:39.956 [main] AbstractFlushingEventListener - Processing flush-time cascades
+[DEBUG] 2018-02-13 18:55:39.956 [main] AbstractFlushingEventListener - Dirty checking collections
+[DEBUG] 2018-02-13 18:55:39.958 [main] AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[DEBUG] 2018-02-13 18:55:39.958 [main] AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+[DEBUG] 2018-02-13 18:55:39.958 [main] EntityPrinter - Listing entities:
+[DEBUG] 2018-02-13 18:55:39.958 [main] EntityPrinter - com.choinoski.entity.Pack{password=trickypassword!, packTokenNumber=6, login=pack12321, packName=Newest Pack}
+[DEBUG] 2018-02-13 18:55:39.960 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2018-02-13 18:55:39.960 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2018-02-13 18:55:39.961 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:39.965 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2018-02-13 18:55:39.965 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[DEBUG] 2018-02-13 18:55:39.965 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#6]
+[DEBUG] 2018-02-13 18:55:39.966 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#6]
+[DEBUG] 2018-02-13 18:55:39.966 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2018-02-13 18:55:39.966 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.choinoski.entity.Pack#6
+[DEBUG] 2018-02-13 18:55:39.966 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2018-02-13 18:55:39.996 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:40.000 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2018-02-13 18:55:40.000 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[DEBUG] 2018-02-13 18:55:40.000 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#1]
+[DEBUG] 2018-02-13 18:55:40.000 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#1]
+[DEBUG] 2018-02-13 18:55:40.000 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2018-02-13 18:55:40.002 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.choinoski.entity.Pack#1
+[DEBUG] 2018-02-13 18:55:40.002 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2018-02-13 18:55:40.003 [main] TransactionImpl - begin
+[DEBUG] 2018-02-13 18:55:40.004 [main] TransactionImpl - committing
+[DEBUG] 2018-02-13 18:55:40.004 [main] AbstractFlushingEventListener - Processing flush-time cascades
+[DEBUG] 2018-02-13 18:55:40.004 [main] AbstractFlushingEventListener - Dirty checking collections
+[DEBUG] 2018-02-13 18:55:40.006 [main] AbstractFlushingEventListener - Flushed: 0 insertions, 1 updates, 0 deletions to 1 objects
+[DEBUG] 2018-02-13 18:55:40.006 [main] AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+[DEBUG] 2018-02-13 18:55:40.006 [main] EntityPrinter - Listing entities:
+[DEBUG] 2018-02-13 18:55:40.006 [main] EntityPrinter - com.choinoski.entity.Pack{password=littlefish2, packTokenNumber=1, login=choinoski, packName=The Best Pack Ever}
+[DEBUG] 2018-02-13 18:55:40.006 [main] SQL - update pack set login=?, pack_name=?, password=? where pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:40.011 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2018-02-13 18:55:40.012 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2018-02-13 18:55:40.012 [main] JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+[DEBUG] 2018-02-13 18:55:40.012 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_0_, pack0_.login as login2_0_0_, pack0_.pack_name as pack_nam3_0_0_, pack0_.password as password4_0_0_ from pack pack0_ where pack0_.pack_token_nr=?
+[DEBUG] 2018-02-13 18:55:40.014 [main] ResultSetProcessorImpl - Starting ResultSet row #0
+[DEBUG] 2018-02-13 18:55:40.014 [main] EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[DEBUG] 2018-02-13 18:55:40.014 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#1]
+[DEBUG] 2018-02-13 18:55:40.014 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#1]
+[DEBUG] 2018-02-13 18:55:40.014 [main] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[DEBUG] 2018-02-13 18:55:40.014 [main] AbstractLoadPlanBasedEntityLoader - Done entity load : com.choinoski.entity.Pack#1
+[DEBUG] 2018-02-13 18:55:40.014 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2018-02-13 18:55:40.045 [main] CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0 from Pack as generatedAlias0 where generatedAlias0.packName like :param0
+[DEBUG] 2018-02-13 18:55:40.049 [main] QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from com.choinoski.entity.Pack as generatedAlias0 where generatedAlias0.packName like :param0
+[DEBUG] 2018-02-13 18:55:40.052 [main] ErrorCounter - throwQueryException() : no errors
+[DEBUG] 2018-02-13 18:55:40.052 [main] QueryTranslatorImpl - --- HQL AST ---
  \-[QUERY] Node: 'query'
     +-[SELECT_FROM] Node: 'SELECT_FROM'
     |  +-[FROM] Node: 'from'
@@ -650,17 +650,17 @@
           \-[COLON] Node: ':'
              \-[IDENT] Node: 'param0'
 
-[DEBUG] 2018-02-12 21:14:57.522 [main] HqlSqlBaseWalker - select << begin [level=1, statement=select]
-[DEBUG] 2018-02-12 21:14:57.523 [main] FromElement - FromClause{level=1} : com.choinoski.entity.Pack (generatedAlias0) -> pack0_
-[DEBUG] 2018-02-12 21:14:57.523 [main] FromReferenceNode - Resolved : generatedAlias0 -> pack0_.pack_token_nr
-[DEBUG] 2018-02-12 21:14:57.523 [main] FromReferenceNode - Resolved : generatedAlias0 -> pack0_.pack_token_nr
-[DEBUG] 2018-02-12 21:14:57.523 [main] DotNode - getDataType() : packName -> org.hibernate.type.StringType@7dc3712
-[DEBUG] 2018-02-12 21:14:57.523 [main] FromReferenceNode - Resolved : generatedAlias0.packName -> pack0_.pack_name
-[DEBUG] 2018-02-12 21:14:57.523 [main] HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
-[DEBUG] 2018-02-12 21:14:57.523 [main] HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} pack0_.pack_token_nr ) ( FromClause{level=1} pack pack0_ ) ( where ( like ( pack0_.pack_name pack0_.pack_token_nr packName ) ? ) ) )
-[DEBUG] 2018-02-12 21:14:57.523 [main] JoinProcessor - Using FROM fragment [pack pack0_]
-[DEBUG] 2018-02-12 21:14:57.523 [main] HqlSqlBaseWalker - select >> end [level=1, statement=select]
-[DEBUG] 2018-02-12 21:14:57.523 [main] QueryTranslatorImpl - --- SQL AST ---
+[DEBUG] 2018-02-13 18:55:40.052 [main] HqlSqlBaseWalker - select << begin [level=1, statement=select]
+[DEBUG] 2018-02-13 18:55:40.055 [main] FromElement - FromClause{level=1} : com.choinoski.entity.Pack (generatedAlias0) -> pack0_
+[DEBUG] 2018-02-13 18:55:40.055 [main] FromReferenceNode - Resolved : generatedAlias0 -> pack0_.pack_token_nr
+[DEBUG] 2018-02-13 18:55:40.055 [main] FromReferenceNode - Resolved : generatedAlias0 -> pack0_.pack_token_nr
+[DEBUG] 2018-02-13 18:55:40.055 [main] DotNode - getDataType() : packName -> org.hibernate.type.StringType@1722011b
+[DEBUG] 2018-02-13 18:55:40.056 [main] FromReferenceNode - Resolved : generatedAlias0.packName -> pack0_.pack_name
+[DEBUG] 2018-02-13 18:55:40.056 [main] HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+[DEBUG] 2018-02-13 18:55:40.057 [main] HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} pack0_.pack_token_nr ) ( FromClause{level=1} pack pack0_ ) ( where ( like ( pack0_.pack_name pack0_.pack_token_nr packName ) ? ) ) )
+[DEBUG] 2018-02-13 18:55:40.057 [main] JoinProcessor - Using FROM fragment [pack pack0_]
+[DEBUG] 2018-02-13 18:55:40.057 [main] HqlSqlBaseWalker - select >> end [level=1, statement=select]
+[DEBUG] 2018-02-13 18:55:40.057 [main] QueryTranslatorImpl - --- SQL AST ---
  \-[SELECT] QueryNode: 'SELECT'  querySpaces (pack)
     +-[SELECT_CLAUSE] SelectClause: '{select clause}'
     |  +-[ALIAS_REF] IdentNode: 'pack0_.pack_token_nr as pack_tok1_0_' {alias=generatedAlias0, className=com.choinoski.entity.Pack, tableAlias=pack0_}
@@ -672,15 +672,15 @@
           +-[DOT] DotNode: 'pack0_.pack_name' {propertyName=packName,dereferenceType=PRIMITIVE,getPropertyPath=packName,path=generatedAlias0.packName,tableAlias=pack0_,className=com.choinoski.entity.Pack,classAlias=generatedAlias0}
           |  +-[ALIAS_REF] IdentNode: 'pack0_.pack_token_nr' {alias=generatedAlias0, className=com.choinoski.entity.Pack, tableAlias=pack0_}
           |  \-[IDENT] IdentNode: 'packName' {originalText=packName}
-          \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.StringType@7dc3712}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.StringType@1722011b}
 
-[DEBUG] 2018-02-12 21:14:57.524 [main] ErrorCounter - throwQueryException() : no errors
-[DEBUG] 2018-02-12 21:14:57.526 [main] QueryTranslatorImpl - HQL: select generatedAlias0 from com.choinoski.entity.Pack as generatedAlias0 where generatedAlias0.packName like :param0
-[DEBUG] 2018-02-12 21:14:57.526 [main] QueryTranslatorImpl - SQL: select pack0_.pack_token_nr as pack_tok1_0_, pack0_.login as login2_0_, pack0_.pack_name as pack_nam3_0_, pack0_.password as password4_0_ from pack pack0_ where pack0_.pack_name like ?
-[DEBUG] 2018-02-12 21:14:57.526 [main] ErrorCounter - throwQueryException() : no errors
-[DEBUG] 2018-02-12 21:14:57.526 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_, pack0_.login as login2_0_, pack0_.pack_name as pack_nam3_0_, pack0_.password as password4_0_ from pack pack0_ where pack0_.pack_name like ?
-[DEBUG] 2018-02-12 21:14:57.529 [main] Loader - Result set row: 0
-[DEBUG] 2018-02-12 21:14:57.530 [main] Loader - Result row: EntityKey[com.choinoski.entity.Pack#3]
-[DEBUG] 2018-02-12 21:14:57.530 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#3]
-[DEBUG] 2018-02-12 21:14:57.530 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#3]
-[DEBUG] 2018-02-12 21:14:57.531 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2018-02-13 18:55:40.057 [main] ErrorCounter - throwQueryException() : no errors
+[DEBUG] 2018-02-13 18:55:40.057 [main] QueryTranslatorImpl - HQL: select generatedAlias0 from com.choinoski.entity.Pack as generatedAlias0 where generatedAlias0.packName like :param0
+[DEBUG] 2018-02-13 18:55:40.057 [main] QueryTranslatorImpl - SQL: select pack0_.pack_token_nr as pack_tok1_0_, pack0_.login as login2_0_, pack0_.pack_name as pack_nam3_0_, pack0_.password as password4_0_ from pack pack0_ where pack0_.pack_name like ?
+[DEBUG] 2018-02-13 18:55:40.057 [main] ErrorCounter - throwQueryException() : no errors
+[DEBUG] 2018-02-13 18:55:40.062 [main] SQL - select pack0_.pack_token_nr as pack_tok1_0_, pack0_.login as login2_0_, pack0_.pack_name as pack_nam3_0_, pack0_.password as password4_0_ from pack pack0_ where pack0_.pack_name like ?
+[DEBUG] 2018-02-13 18:55:40.062 [main] Loader - Result set row: 0
+[DEBUG] 2018-02-13 18:55:40.063 [main] Loader - Result row: EntityKey[com.choinoski.entity.Pack#3]
+[DEBUG] 2018-02-13 18:55:40.063 [main] TwoPhaseLoad - Resolving associations for [com.choinoski.entity.Pack#3]
+[DEBUG] 2018-02-13 18:55:40.063 [main] TwoPhaseLoad - Done materializing entity [com.choinoski.entity.Pack#3]
+[DEBUG] 2018-02-13 18:55:40.063 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
