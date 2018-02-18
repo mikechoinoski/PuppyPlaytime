@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
- * The type Order.
+ * The type PackMember.
  */
 @Entity(name = "PackMember")
 @Table(name = "pack_member")
