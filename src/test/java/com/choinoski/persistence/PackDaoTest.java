@@ -39,7 +39,6 @@ class PackDaoTest {
     @Test
     void testGetById() {
 
-
         Pack retrievedPack = (Pack) dao.getById(3);
         assertNotNull(retrievedPack);
         assertEquals("Cool Dawgs", retrievedPack.getPackName());

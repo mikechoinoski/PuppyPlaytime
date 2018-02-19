@@ -3,6 +3,9 @@ package com.choinoski.entity;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.HashSet;
+import java.util.Set;
+
 import org.hibernate.annotations.GenericGenerator;
 import javax.ejb.Local;
 import javax.persistence.*;
@@ -18,14 +21,17 @@ public class Pack {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native",strategy = "native")
-    @Column( name = "pack_token_nr")
-    private int packTokenNumber;
+    @Column( name = "pack_nr")
+    private int packNumber;
 
     @Column( name = "pack_name")
     private String packName;
 
     private String login;
     private String password;
+
+    @OneToMany(mappedBy = "pack", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<PackMember> members = new HashSet<>();
 
     /**
      * Instantiates a new User.
@@ -47,12 +53,12 @@ public class Pack {
         //this.packTokenNumber = packTokenNumber;
     }
 
-    public int getPackTokenNumber() {
-        return packTokenNumber;
+    public int getPackNumber() {
+        return packNumber;
     }
 
-    public void setPackTokenNumber(int packTokenNumber) {
-        this.packTokenNumber = packTokenNumber;
+    public void setPackNumber(int packNumber) {
+        this.packNumber = packNumber;
     }
 
     public String getPackName() {
@@ -79,14 +85,43 @@ public class Pack {
         this.password = password;
     }
 
-    //@Override
-    //public String toString() {
-    //    return "User{" +
-    //            "firstName='" + firstName + '\'' +
-    //            ", lastName='" + lastName + '\'' +
-    //            ", userName='" + userName + '\'' +
-    //            '}';
-    //}
+    /**
+     * Gets orders.
+     *
+     * @return the orders
+     */
+    public Set<PackMember> getMembers() {
+        return members;
+    }
+
+    /**
+     * Sets members.
+     *
+     * @param members the members
+     */
+    public void setOrders(Set<PackMember> members) {
+        this.members = members;
+    }
+
+    /**
+     * Add member.
+     *
+     * @param member the member
+     */
+    public void addMember(PackMember member) {
+        members.add(member);
+        member.setPack(this);
+    }
+
+    /**
+     * Remove member.
+     *
+     * @param member the member
+     */
+    public void removeOrder(PackMember member) {
+        members.remove(member);
+        member.setPack(null);
+    }
 
 
 }

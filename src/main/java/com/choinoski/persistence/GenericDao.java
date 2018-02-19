@@ -10,6 +10,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.SessionFactory;
+import org.hibernate.Session;
 
 /**
  * A generic DAO somewhat inspired by http://rodrigouchoa.wordpress.com
@@ -19,6 +21,7 @@ public class GenericDao<T> {
 
     private Class<T> type;
     private final Logger logger = LogManager.getLogger(this.getClass());
+    SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
     public GenericDao() {
 
@@ -39,8 +42,8 @@ public class GenericDao<T> {
      * @return entity
      */
     public <T> T getById(int id) {
-        Session session = getSession();
-        T entity = (T)getSession().get(type, id);
+        Session session = sessionFactory.openSession();
+        T entity = (T) session.get(type, id);
         session.close();
         return entity;
     }
@@ -50,7 +53,7 @@ public class GenericDao<T> {
      * @param entity the entity to be inserted or updated
      */
     public void saveOrUpdate(T entity) {
-        Session session = getSession();
+        Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         session.saveOrUpdate(entity);
         transaction.commit();
@@ -63,7 +66,7 @@ public class GenericDao<T> {
      */
     public int insert(T entity) {
         int id = 0;
-        Session session = getSession();
+        Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         id = (int)session.save(entity);
         transaction.commit();
@@ -77,7 +80,7 @@ public class GenericDao<T> {
      * @param entity entity to be deleted
      */
     public void delete(T entity) {
-        Session session = getSession();
+        Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         session.delete(entity);
         transaction.commit();
@@ -90,7 +93,7 @@ public class GenericDao<T> {
      * @return the all entities
      */
     public List<T> getAll() {
-        Session session = getSession();
+        Session session = sessionFactory.openSession();
 
         CriteriaBuilder builder = session.getCriteriaBuilder();
 
@@ -107,7 +110,7 @@ public class GenericDao<T> {
      * sample usage: getByPropertyEqual("lastname", "Curry")
      */
     public List<T> getByPropertyEqual(String propertyName, String value) {
-        Session session = getSession();
+        Session session = sessionFactory.openSession();
 
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);
@@ -125,8 +128,7 @@ public class GenericDao<T> {
      * sample usage: getByPropertyLike("lastname", "C")
      */
     public List<T> getByPropertyLike(String propertyName, String value) {
-
-        Session session = getSession();
+        Session session = sessionFactory.openSession();
 
         logger.debug("Searching for user with {} = {}",  propertyName, value);
 
@@ -141,14 +143,6 @@ public class GenericDao<T> {
         session.close();
         return entities;
 
-    }
-
-    /**
-     * Returns an open session from the SessionFactory
-     * @return session
-     */
-    private Session getSession() {
-        return SessionFactoryProvider.getSessionFactory().openSession();
     }
 
 }

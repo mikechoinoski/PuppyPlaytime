@@ -924,7 +924,7 @@
     <table id="233" parent="7" name="pack_member">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="234" parent="232" name="pack_token_nr">
+    <column id="234" parent="232" name="pack_nr">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
@@ -946,18 +946,18 @@
       <DataType>varchar(30)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="238" parent="232" name="pack_pack_token_nr_uindex">
-      <ColNames>pack_token_nr</ColNames>
+    <index id="238" parent="232" name="pack_nr_primary_key">
+      <ColNames>pack_nr</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="239" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>pack_token_nr</ColNames>
+      <ColNames>pack_nr</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="240" parent="232" name="pack_pack_token_nr_uindex">
-      <ColNames>pack_token_nr</ColNames>
-      <UnderlyingIndexName>pack_pack_token_nr_uindex</UnderlyingIndexName>
+    <key id="240" parent="232" name="pack_nr_primary_key">
+      <ColNames>pack_nr</ColNames>
+      <UnderlyingIndexName>pack_nr_primary_key</UnderlyingIndexName>
     </key>
     <column id="241" parent="233" name="pack_member_nr">
       <Position>1</Position>
@@ -966,7 +966,7 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="233" name="pack_token_nr">
+    <column id="242" parent="233" name="pack_token_nr2">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
@@ -1013,7 +1013,7 @@
       <Unique>1</Unique>
     </index>
     <index id="251" parent="233" name="pack_foreign_key">
-      <ColNames>pack_token_nr</ColNames>
+      <ColNames>pack_token_nr2</ColNames>
     </index>
     <key id="252" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1025,10 +1025,12 @@
       <UnderlyingIndexName>pack_member_pack_member_nr_uindex</UnderlyingIndexName>
     </key>
     <foreign-key id="254" parent="233" name="pack_foreign_key">
-      <ColNames>pack_token_nr</ColNames>
+      <ColNames>pack_token_nr2</ColNames>
       <RefSchemaName>puppy_playtime_test</RefSchemaName>
       <RefTableName>pack</RefTableName>
-      <RefColNames>pack_token_nr</RefColNames>
+      <RefColNames>pack_nr</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
   </database-model>
 </dataSource>
