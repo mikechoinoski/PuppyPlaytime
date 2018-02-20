@@ -1,6 +1,5 @@
 package com.choinoski.persistence;
 
-
 import com.choinoski.entity.Pack;
 import com.choinoski.entity.PackMember;
 import org.junit.jupiter.api.BeforeEach;
@@ -34,7 +33,7 @@ class PackMemberDaoTest {
     }
 
     /**
-     * Verifies gets all orders successfully.
+     * Verifies gets all members successfully.
      */
     @Test
     void getAllSuccess() {
@@ -74,9 +73,9 @@ class PackMemberDaoTest {
 
         assertNotEquals(0,id);
         PackMember insertedMember = (PackMember) packMemberDao.getById(id);
-        assertTrue(insertedMember.getName().equals("Scout"));
+        assertTrue(newMember.equals(insertedMember));
         assertNotNull(insertedMember.getPack());
-        assertTrue(insertedMember.getPack().getPackName().equals("Awesome Pack!"));
+        assertTrue(pack.equals(insertedMember.getPack()));
     }
 
 

@@ -1,12 +1,16 @@
 package com.choinoski.persistence;
 
 import com.choinoski.entity.Pack;
+import com.choinoski.entity.PackMember;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import com.choinoski.test.util.Database;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -34,7 +38,7 @@ class PackDaoTest {
     }
 
     /**
-     * Validate the success of getting by id
+     * Verify the success of getting by id
      */
     @Test
     void testGetById() {
@@ -46,7 +50,7 @@ class PackDaoTest {
     }
 
     /**
-     * Validate the success of an update
+     * Verify the success of an update
      */
     @Test
     void testSaveOrUpdate() {
@@ -58,9 +62,9 @@ class PackDaoTest {
         Pack retrievedPack = (Pack) dao.getById(1);
         assertEquals(newPackName, retrievedPack.getPackName());
     }
-
+    
     /**
-     * Validate the success of an insert
+     * Verify the success of an insert
      */
     @Test
     void testInsert() {
@@ -77,7 +81,31 @@ class PackDaoTest {
     }
 
     /**
-     * Validate the success of a delete
+     * Verify the success of an insert with a member
+     */
+    @Test
+    void testInsertWithMember() {
+
+        Pack newPack       = new Pack("The Shih Tzu Pack", "legoandchewy", "youllneverguessit");
+
+        PackMember newMember = new PackMember("Scout", "M", "Golden Retriever", 'F',
+                LocalDate.of(2011, Month.MAY, 9),
+                LocalDateTime.now(), LocalDateTime.now(), newPack);
+
+        newPack.addMember(newMember);
+
+        int id = dao.insert(newPack);
+
+        assertNotEquals(0,id);
+        Pack insertedPack = (Pack) dao.getById(id);
+        assertTrue(newPack.equals(insertedPack));
+        assertEquals(1, insertedPack.getMembers().size());
+
+    }    
+    
+    
+    /**
+     * Verify the success of a delete
      */
     @Test
     void testDelete() {
@@ -86,7 +114,7 @@ class PackDaoTest {
     }
 
     /**
-     * Validate the success of getting all rows
+     * Verify the success of getting all rows
      */
     @Test
     void testGetAll() {
@@ -95,7 +123,7 @@ class PackDaoTest {
     }
 
     /**
-     * Validate the success of getting by specific data in a column
+     * Verify the success of getting by specific data in a column
      */
     @Test
     void testGetByPropertyEqual() {
@@ -104,7 +132,7 @@ class PackDaoTest {
     }
 
     /**
-     * Validate the success of getting by a string that is in a column
+     * Verify the success of getting by a string that is in a column
      */
     @Test
     void testGetByPropertyLike() {

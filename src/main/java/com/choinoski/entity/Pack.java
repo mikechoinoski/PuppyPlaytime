@@ -1,14 +1,12 @@
 package com.choinoski.entity;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 import org.hibernate.annotations.GenericGenerator;
-import javax.ejb.Local;
 import javax.persistence.*;
+
 /**
  * A class to represent a pack.
  *
@@ -42,9 +40,9 @@ public class Pack {
     /**
      * Instantiates a new User.
      *
-     * @param packName  the name of the pack
-     * @param login     the login for the pack
-     * @param password  the password for the pack's login
+     * @param packName the name of the pack
+     * @param login    the login for the pack
+     * @param password the password for the pack's login
      */
     public Pack(String packName, String login , String password) {
         this.packName = packName;
@@ -53,34 +51,74 @@ public class Pack {
         //this.packTokenNumber = packTokenNumber;
     }
 
+    /**
+     * Gets pack number.
+     *
+     * @return the pack number
+     */
     public int getPackNumber() {
         return packNumber;
     }
 
+    /**
+     * Sets pack number.
+     *
+     * @param packNumber the pack number
+     */
     public void setPackNumber(int packNumber) {
         this.packNumber = packNumber;
     }
 
+    /**
+     * Gets pack name.
+     *
+     * @return the pack name
+     */
     public String getPackName() {
         return packName;
     }
 
+    /**
+     * Sets pack name.
+     *
+     * @param packName the pack name
+     */
     public void setPackName(String packName) {
         this.packName = packName;
     }
 
+    /**
+     * Gets login.
+     *
+     * @return the login
+     */
     public String getLogin() {
         return login;
     }
 
+    /**
+     * Sets login.
+     *
+     * @param login the login
+     */
     public void setLogin(String login) {
         this.login = login;
     }
 
+    /**
+     * Gets password.
+     *
+     * @return the password
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * Sets password.
+     *
+     * @param password the password
+     */
     public void setPassword(String password) {
         this.password = password;
     }
@@ -121,6 +159,34 @@ public class Pack {
     public void removeOrder(PackMember member) {
         members.remove(member);
         member.setPack(null);
+    }
+
+    @Override
+    public String toString() {
+        return "Pack{" +
+                "packNumber=" + packNumber +
+                ", packName='" + packName + '\'' +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", members=" + members +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if ( this == o ) {
+            return true;
+        }
+        if ( o == null || getClass() != o.getClass() ) {
+            return false;
+        }
+        Pack pack = (Pack) o;
+        return Objects.equals( packNumber, pack.packNumber );
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash( packNumber );
     }
 
 
