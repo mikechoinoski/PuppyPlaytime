@@ -13,3 +13,5 @@
 | 2/10/18 | Watched week 4 videos and started on Week 4 exercise | 3 | |
 | 2/11/18 | Watched week 5 videos and worked on Week 4 exercise | 2 | |
 | 2/12/18 | Finished week 4 exercise | 3 | |
+| 2/18/18 | Start Week 5 Exercise/ create Generic Dao | 3 | |
+| 2/19/18 | Finish Week 5 Exercise | 2 | |
