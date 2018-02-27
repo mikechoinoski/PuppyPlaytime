@@ -36,7 +36,7 @@ public class PackMember {
     private LocalDateTime lastModifiedDate;
 
     @ManyToOne
-    @JoinColumn(name = "pack_token_nr2",
+    @JoinColumn(name = "pack_nr",
             foreignKey = @ForeignKey(name = "pack_foreign_key"))
     private Pack pack;
 
