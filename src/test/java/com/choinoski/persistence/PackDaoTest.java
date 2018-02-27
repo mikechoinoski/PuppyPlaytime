@@ -89,7 +89,7 @@ class PackDaoTest {
         Pack newPack       = new Pack("The Shih Tzu Pack", "legoandchewy", "youllneverguessit");
 
         PackMember newMember = new PackMember("Scout", "M", "Golden Retriever", 'F',
-                LocalDate.of(2011, Month.MAY, 9),
+                LocalDate.of(2011, Month.MAY, 9),0,
                 LocalDateTime.now(), LocalDateTime.now(), newPack);
 
         newPack.addMember(newMember);

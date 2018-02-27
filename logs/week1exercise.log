@@ -1,2 +1,32 @@
 [DEBUG] 2018-02-19 21:32:34.496 [main] GenericDao - Searching for user with packName = Dawg
 [DEBUG] 2018-02-19 21:32:54.370 [main] GenericDao - Searching for user with breed = B
+[ERROR] 2018-02-26 23:47:14.611 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:47:15.086 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:47:15.907 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:47:16.011 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2018-02-26 23:47:16.021 [main] GenericDao - Searching for user with breed = B
+[ERROR] 2018-02-26 23:47:16.130 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:47:16.199 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:47:16.270 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:48:17.985 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:48:19.056 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:48:19.114 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:48:19.298 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:48:19.453 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:48:19.580 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:48:19.636 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:48:19.708 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2018-02-26 23:48:19.727 [main] GenericDao - Searching for user with packName = Dawg
+[ERROR] 2018-02-26 23:49:21.105 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:50:28.980 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:51:46.877 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:51:47.260 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:51:47.763 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:51:47.866 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2018-02-26 23:51:47.885 [main] GenericDao - Searching for user with breed = B
+[ERROR] 2018-02-26 23:51:48.004 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:51:48.081 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2018-02-26 23:51:48.152 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2018-02-26 23:59:39.806 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-02-26 23:59:59.071 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-02-27 00:00:30.342 [main] GenericDao - Searching for user with breed = B

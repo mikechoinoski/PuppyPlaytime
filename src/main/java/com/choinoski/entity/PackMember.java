@@ -29,6 +29,8 @@ public class PackMember {
     @Column( name = "date_of_birth")
     private LocalDate     dateOfBirth;
 
+    private int           intact;
+
     @Column( name = "create_date")
     private LocalDateTime createDate;
 
@@ -55,17 +57,19 @@ public class PackMember {
      * @param sex              the sex
      * @param dateOfBirth      the date of birth
      * @param createDate       the create date
+     * @param intact           if the pack member is intact
      * @param lastModifiedDate the last modified date
      * @param pack             the pack
      */
-    public PackMember(String name, String size, String breed, char sex, LocalDate dateOfBirth, LocalDateTime createDate,
-                      LocalDateTime lastModifiedDate, Pack pack) {
+    public PackMember(String name, String size, String breed, char sex, LocalDate dateOfBirth, int intact,
+                      LocalDateTime createDate, LocalDateTime lastModifiedDate, Pack pack) {
 
         this.name = name;
         this.size = size;
         this.breed = breed;
         this.sex = sex;
         this.dateOfBirth = dateOfBirth;
+        this.intact = intact;
         this.createDate = createDate;
         this.lastModifiedDate = lastModifiedDate;
         this.pack = pack;
@@ -159,6 +163,24 @@ public class PackMember {
      */
     public void setSex(char sex) {
         this.sex = sex;
+    }
+
+    /**
+     * Gets intact.
+     *
+     * @return the intact
+     */
+    public int getIntact() {
+        return intact;
+    }
+
+    /**
+     * Sets intact.
+     *
+     * @param intact the intact
+     */
+    public void setIntact(int intact) {
+        this.intact = intact;
     }
 
     /**

@@ -15,3 +15,7 @@
 | 2/12/18 | Finished week 4 exercise | 3 | |
 | 2/18/18 | Start Week 5 Exercise/ create Generic Dao | 3 | |
 | 2/19/18 | Finish Week 5 Exercise | 2 | |
+| 2/22/18 | Posted design reviews and dev presentation feedback | 3 | |
+| 2/25/18 | Finished AWS Exercise | 5 | |
+| 2/26/18 | Worked on items for project checkpoint 2 | 3 | |
+| 2/27/18 | Worked on items for project checkpoint 2 | 3 | |

@@ -14,18 +14,18 @@ import com.choinoski.test.util.Database;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * The type PackMember packMemberDao test.
+ * The type PackMember dao test.
  */
 class PackMemberDaoTest {
 
-    GenericDao packMemberDao;
+    GenericDao dao;
 
     /**
-     * Creating the packMemberDao.
+     * Creating the dao.
      */
     @BeforeEach
     void setUp() {
-        packMemberDao = new GenericDao(PackMember.class);
+        dao = new GenericDao(PackMember.class);
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
@@ -37,7 +37,7 @@ class PackMemberDaoTest {
      */
     @Test
     void getAllSuccess() {
-        List<PackMember> members = packMemberDao.getAll();
+        List<PackMember> members = dao.getAll();
         assertEquals(6, members.size());
     }
 
@@ -47,7 +47,7 @@ class PackMemberDaoTest {
      */
     @Test
     void getByIdSuccess() {
-        PackMember retrievedMember = (PackMember) packMemberDao.getById(2);
+        PackMember retrievedMember = (PackMember) dao.getById(2);
         assertNotNull(retrievedMember);
         assertTrue(retrievedMember.getName().equals("Boomer"));
     }
@@ -64,7 +64,7 @@ class PackMemberDaoTest {
         Pack       pack      = (Pack) packDao.getById(packId);
 
         PackMember newMember = new PackMember("Scout", "M", "Golden Retriever", 'F',
-                               LocalDate.of(2011, Month.MAY, 9),
+                               LocalDate.of(2011, Month.MAY, 9),1,
                                LocalDateTime.now(), LocalDateTime.now(), pack);
 
         pack.addMember(newMember);
@@ -72,7 +72,7 @@ class PackMemberDaoTest {
         int id = packDao.insert(newMember);
 
         assertNotEquals(0,id);
-        PackMember insertedMember = (PackMember) packMemberDao.getById(id);
+        PackMember insertedMember = (PackMember) dao.getById(id);
         assertTrue(newMember.equals(insertedMember));
         assertNotNull(insertedMember.getPack());
         assertTrue(pack.equals(insertedMember.getPack()));
@@ -84,8 +84,8 @@ class PackMemberDaoTest {
      */
     @Test
     void deleteSuccess() {
-        packMemberDao.delete(packMemberDao.getById(3));
-        assertNull(packMemberDao.getById(3));
+        dao.delete(dao.getById(3));
+        assertNull(dao.getById(3));
     }
 
     /**
@@ -94,10 +94,10 @@ class PackMemberDaoTest {
     @Test
     void updateSuccess() {
         String description = "Bulldog";
-        PackMember memberToUpdate = (PackMember) packMemberDao.getById(3);
+        PackMember memberToUpdate = (PackMember) dao.getById(3);
         memberToUpdate.setBreed(description);
-        packMemberDao.saveOrUpdate(memberToUpdate);
-        PackMember retrievedMember = (PackMember) packMemberDao.getById(3);
+        dao.saveOrUpdate(memberToUpdate);
+        PackMember retrievedMember = (PackMember) dao.getById(3);
         assertEquals(description, retrievedMember.getBreed());
     }
 
@@ -106,7 +106,7 @@ class PackMemberDaoTest {
      */
     @Test
     void getByPropertyEqualSuccess() {
-        List<PackMember> members = packMemberDao.getByPropertyEqual("breed", "Boxer");
+        List<PackMember> members = dao.getByPropertyEqual("breed", "Boxer");
         assertEquals(1, members.size());
         assertEquals(6, members.get(0).getPackMemberNumber());
     }
@@ -116,7 +116,7 @@ class PackMemberDaoTest {
      */
     @Test
     void getByPropertyLikeSuccess() {
-        List<PackMember> members = packMemberDao.getByPropertyLike("breed", "B");
+        List<PackMember> members = dao.getByPropertyLike("breed", "B");
         assertEquals(4, members.size());
     }
 }
