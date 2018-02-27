@@ -137,7 +137,7 @@ public class Pack {
      *
      * @param members the members
      */
-    public void setOrders(Set<PackMember> members) {
+    public void setMember(Set<PackMember> members) {
         this.members = members;
     }
 
@@ -156,7 +156,7 @@ public class Pack {
      *
      * @param member the member
      */
-    public void removeOrder(PackMember member) {
+    public void removeMember(PackMember member) {
         members.remove(member);
         member.setPack(null);
     }
