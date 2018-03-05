@@ -43,7 +43,7 @@ public class PackMember {
     private Pack pack;
 
     /**
-     * Instantiates a new Order.
+     * Instantiates a new Pack Member.
      */
     public PackMember() {
     }
@@ -274,9 +274,9 @@ public class PackMember {
                 ", breed='" + breed + '\'' +
                 ", sex=" + sex +
                 ", dateOfBirth=" + dateOfBirth +
+                ", intact=" + intact +
                 ", createDate=" + createDate +
                 ", lastModifiedDate=" + lastModifiedDate +
-                ", pack=" + pack +
                 '}';
     }
 
@@ -289,12 +289,21 @@ public class PackMember {
             return false;
         }
         PackMember packMember = (PackMember) o;
-        return Objects.equals( packMemberNumber, packMember.packMemberNumber );
+        return  Objects.equals( packMemberNumber, packMember.packMemberNumber ) &&
+                Objects.equals( name, packMember.name ) &&
+                Objects.equals( size, packMember.size ) &&
+                Objects.equals( breed, packMember.breed ) &&
+                Objects.equals( sex, packMember.sex ) &&
+                Objects.equals( intact, packMember.intact ) &&
+                Objects.equals( dateOfBirth, packMember.dateOfBirth );
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash( packMemberNumber );
+
+        return Objects.hash( packMemberNumber, name, size, breed, sex, intact, dateOfBirth,
+                             createDate, lastModifiedDate);
+
     }
 
 }

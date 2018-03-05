@@ -119,7 +119,7 @@ class PackDaoTest {
     @Test
     void testGetAll() {
         List<Pack> packs = dao.getAll();
-        assertEquals(4, packs.size());
+        assertEquals(5, packs.size());
     }
 
     /**

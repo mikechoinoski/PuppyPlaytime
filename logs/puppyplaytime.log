@@ -12,3 +12,204 @@
 [DEBUG] 2018-02-27 16:59:53.698 [main] GenericDao - Updating com.choinoski.entity.Pack
 [DEBUG] 2018-02-27 16:59:53.712 [main] GenericDao - Selecting rows by 1
 [DEBUG] 2018-02-27 16:59:53.752 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-02-27 20:02:20.833 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-02-27 20:02:21.724 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 20:02:21.798 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-02-27 20:02:21.874 [main] GenericDao - Selecting rows by 5
+[DEBUG] 2018-02-27 20:02:21.932 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 20:02:21.942 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-02-27 20:02:21.981 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 20:02:22.018 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-02-27 20:02:22.099 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-02-27 20:02:22.105 [main] GenericDao - Selecting rows by 6
+[DEBUG] 2018-02-27 20:02:22.147 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-02-27 20:02:22.152 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-02-27 20:02:22.166 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-02-27 20:02:22.207 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-02-27 20:07:22.348 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 20:07:22.626 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-02-27 20:07:22.656 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 20:07:22.711 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-02-27 20:07:23.094 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-02-27 20:07:23.169 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-02-27 20:07:23.243 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 20:07:23.292 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 20:07:23.302 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-02-27 20:07:23.315 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 20:07:23.360 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 20:07:23.366 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-02-27 20:07:23.382 [main] GenericDao - Selecting rows by 8
+[DEBUG] 2018-02-27 20:08:27.848 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 20:08:28.068 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-02-27 20:08:28.110 [main] GenericDao - Selecting rows by 9
+[DEBUG] 2018-02-27 20:09:23.310 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 20:09:23.467 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-02-27 20:09:23.518 [main] GenericDao - Selecting rows by 10
+[DEBUG] 2018-02-27 20:11:34.824 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 20:11:35.055 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-02-27 20:11:35.099 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 20:11:35.136 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-02-27 20:11:35.528 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-02-27 20:11:35.626 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-02-27 20:11:35.695 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 20:11:35.750 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 20:11:35.765 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-02-27 20:11:35.789 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 20:11:35.827 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 20:11:35.844 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-02-27 20:11:35.874 [main] GenericDao - Selecting rows by 11
+[DEBUG] 2018-02-27 20:12:44.782 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 20:12:45.009 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-02-27 20:12:45.044 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 20:12:45.084 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-02-27 20:12:45.558 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-02-27 20:12:45.644 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-02-27 20:12:45.730 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 20:12:45.783 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 20:12:45.802 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-02-27 20:12:45.818 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 20:12:45.867 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 20:12:45.879 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-02-27 20:12:45.905 [main] GenericDao - Selecting rows by 12
+[DEBUG] 2018-02-27 20:24:09.271 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-02-27 20:24:09.863 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 20:24:09.913 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-02-27 20:24:09.970 [main] GenericDao - Selecting rows by 7
+[DEBUG] 2018-02-27 20:24:10.009 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 20:24:10.018 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-02-27 20:24:10.042 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 20:24:10.068 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-02-27 20:24:10.130 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-02-27 20:24:10.135 [main] GenericDao - Selecting rows by 8
+[DEBUG] 2018-02-27 20:24:10.163 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-02-27 20:24:10.167 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-02-27 20:24:10.175 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-02-27 20:24:10.210 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-02-27 20:56:52.363 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-02-27 20:56:52.992 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 20:56:53.045 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-02-27 20:56:53.097 [main] GenericDao - Selecting rows by 9
+[DEBUG] 2018-02-27 20:56:53.132 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 20:56:53.142 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-02-27 20:56:53.166 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 20:56:53.206 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-02-27 20:56:53.284 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-02-27 20:56:53.288 [main] GenericDao - Selecting rows by 10
+[DEBUG] 2018-02-27 20:56:53.329 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-02-27 20:56:53.334 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-02-27 20:56:53.347 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-02-27 20:56:53.376 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-02-27 21:36:23.029 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-02-27 21:36:23.685 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 21:36:23.734 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-02-27 21:36:23.799 [main] GenericDao - Selecting rows by 11
+[DEBUG] 2018-02-27 21:36:23.848 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 21:36:23.858 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-02-27 21:36:23.887 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 21:36:23.917 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-02-27 21:36:23.978 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-02-27 21:36:23.985 [main] GenericDao - Selecting rows by 12
+[DEBUG] 2018-02-27 21:36:24.024 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-02-27 21:36:24.030 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-02-27 21:36:24.043 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-02-27 21:36:24.080 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-02-27 21:36:34.511 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 21:36:34.744 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-02-27 21:36:34.779 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 21:36:34.823 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-02-27 21:36:35.175 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-02-27 21:36:35.238 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-02-27 21:36:35.309 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 21:36:35.346 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 21:36:35.359 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-02-27 21:36:35.374 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-02-27 21:36:35.415 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-02-27 21:36:35.423 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-02-27 21:36:35.439 [main] GenericDao - Selecting rows by 16
+[ERROR] 2018-03-04 21:57:15.145 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`puppy_playtime_test`.`role`, CONSTRAINT `role_pack_login_fk` FOREIGN KEY (`login`) REFERENCES `pack` (`login`))
+[DEBUG] 2018-03-04 21:57:15.152 [main] GenericDao - Searching for user with packName = Number 4
+[ERROR] 2018-03-04 21:57:15.821 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`puppy_playtime_test`.`role`, CONSTRAINT `role_pack_login_fk` FOREIGN KEY (`login`) REFERENCES `pack` (`login`))
+[DEBUG] 2018-03-04 21:57:15.822 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-03-04 21:57:15.867 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`puppy_playtime_test`.`role`, CONSTRAINT `role_pack_login_fk` FOREIGN KEY (`login`) REFERENCES `pack` (`login`))
+[DEBUG] 2018-03-04 21:57:15.893 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-04 21:57:15.976 [main] GenericDao - Selecting rows by 6
+[ERROR] 2018-03-04 21:57:16.056 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`puppy_playtime_test`.`role`, CONSTRAINT `role_pack_login_fk` FOREIGN KEY (`login`) REFERENCES `pack` (`login`))
+[DEBUG] 2018-03-04 21:57:16.056 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-04 21:57:16.079 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-04 21:57:16.119 [main] GenericDao - Selecting rows by 2
+[ERROR] 2018-03-04 21:57:16.147 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`puppy_playtime_test`.`role`, CONSTRAINT `role_pack_login_fk` FOREIGN KEY (`login`) REFERENCES `pack` (`login`))
+[DEBUG] 2018-03-04 21:57:16.148 [main] GenericDao - Selecting all rows from a table
+[ERROR] 2018-03-04 21:57:16.221 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`puppy_playtime_test`.`role`, CONSTRAINT `role_pack_login_fk` FOREIGN KEY (`login`) REFERENCES `pack` (`login`))
+[DEBUG] 2018-03-04 21:57:16.222 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-04 21:57:16.228 [main] GenericDao - Selecting rows by 7
+[ERROR] 2018-03-04 21:57:16.261 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`puppy_playtime_test`.`role`, CONSTRAINT `role_pack_login_fk` FOREIGN KEY (`login`) REFERENCES `pack` (`login`))
+[DEBUG] 2018-03-04 21:57:16.261 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-04 21:57:16.266 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-04 21:57:16.277 [main] GenericDao - Selecting rows by 1
+[ERROR] 2018-03-04 21:57:16.299 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`puppy_playtime_test`.`role`, CONSTRAINT `role_pack_login_fk` FOREIGN KEY (`login`) REFERENCES `pack` (`login`))
+[DEBUG] 2018-03-04 21:57:16.301 [main] GenericDao - Searching for user with packName = Dawg
+[ERROR] 2018-03-04 21:57:16.456 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`puppy_playtime_test`.`role`, CONSTRAINT `role_pack_login_fk` FOREIGN KEY (`login`) REFERENCES `pack` (`login`))
+[DEBUG] 2018-03-04 21:57:16.460 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-03-04 21:57:16.488 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`puppy_playtime_test`.`role`, CONSTRAINT `role_pack_login_fk` FOREIGN KEY (`login`) REFERENCES `pack` (`login`))
+[DEBUG] 2018-03-04 21:57:16.489 [main] GenericDao - Selecting all rows from a table
+[ERROR] 2018-03-04 21:57:16.524 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`puppy_playtime_test`.`role`, CONSTRAINT `role_pack_login_fk` FOREIGN KEY (`login`) REFERENCES `pack` (`login`))
+[DEBUG] 2018-03-04 21:57:16.525 [main] GenericDao - Searching for user with breed = Boxer
+[ERROR] 2018-03-04 21:57:16.554 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`puppy_playtime_test`.`role`, CONSTRAINT `role_pack_login_fk` FOREIGN KEY (`login`) REFERENCES `pack` (`login`))
+[DEBUG] 2018-03-04 21:57:16.554 [main] GenericDao - Searching for user with breed = B
+[ERROR] 2018-03-04 21:57:16.583 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`puppy_playtime_test`.`role`, CONSTRAINT `role_pack_login_fk` FOREIGN KEY (`login`) REFERENCES `pack` (`login`))
+[DEBUG] 2018-03-04 21:57:16.584 [main] GenericDao - Selecting rows by 2
+[ERROR] 2018-03-04 21:57:16.613 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`puppy_playtime_test`.`role`, CONSTRAINT `role_pack_login_fk` FOREIGN KEY (`login`) REFERENCES `pack` (`login`))
+[DEBUG] 2018-03-04 21:57:16.614 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-03-04 21:57:16.637 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`puppy_playtime_test`.`role`, CONSTRAINT `role_pack_login_fk` FOREIGN KEY (`login`) REFERENCES `pack` (`login`))
+[DEBUG] 2018-03-04 21:57:16.646 [main] GenericDao - Selecting rows by 2
+[ERROR] 2018-03-04 22:06:51.966 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`puppy_playtime_test`.`role`, CONSTRAINT `role_pack_login_fk` FOREIGN KEY (`login`) REFERENCES `pack` (`login`))
+[DEBUG] 2018-03-04 22:06:51.971 [main] GenericDao - Selecting all rows from a table
+[ERROR] 2018-03-04 22:07:42.886 [main] Database - java.sql.SQLException: Can not issue empty query.
+[DEBUG] 2018-03-04 22:07:42.893 [main] GenericDao - Selecting all rows from a table
+[ERROR] 2018-03-04 22:08:43.041 [main] Database - java.sql.SQLException: Can not issue empty query.
+[DEBUG] 2018-03-04 22:08:43.052 [main] GenericDao - Selecting all rows from a table
+[ERROR] 2018-03-04 22:12:41.950 [main] Database - java.sql.SQLException: Can not issue empty query.
+[DEBUG] 2018-03-04 22:12:41.960 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-04 22:18:00.267 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-04 22:18:25.269 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-04 22:18:45.381 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-04 22:18:45.758 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-04 22:18:45.815 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-04 22:18:45.882 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-04 22:18:46.473 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-04 22:18:46.580 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-04 22:18:46.713 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-04 22:18:46.784 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-04 22:18:46.811 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-04 22:18:46.841 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-04 22:18:46.905 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-04 22:18:46.922 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-04 22:18:46.948 [main] GenericDao - Selecting rows by 18
+[DEBUG] 2018-03-04 22:20:08.258 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-04 22:20:09.198 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-04 22:20:09.303 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-04 22:20:09.407 [main] GenericDao - Selecting rows by 8
+[DEBUG] 2018-03-04 22:20:09.485 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-04 22:20:09.535 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-04 22:20:09.598 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-04 22:20:09.661 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-04 22:20:09.797 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-04 22:20:09.806 [main] GenericDao - Selecting rows by 9
+[DEBUG] 2018-03-04 22:20:09.876 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-04 22:20:09.885 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-04 22:20:09.901 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-04 22:20:09.968 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-04 22:24:03.695 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-04 22:24:04.568 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-04 22:24:04.675 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-04 22:24:04.796 [main] GenericDao - Selecting rows by 10
+[DEBUG] 2018-03-04 22:24:04.866 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-04 22:24:04.888 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-04 22:24:04.919 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-04 22:24:04.986 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-04 22:24:05.136 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-04 22:24:05.144 [main] GenericDao - Selecting rows by 11
+[DEBUG] 2018-03-04 22:24:05.219 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-04 22:24:05.231 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-04 22:24:05.249 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-04 22:24:05.361 [main] GenericDao - Searching for user with packName = Dawg

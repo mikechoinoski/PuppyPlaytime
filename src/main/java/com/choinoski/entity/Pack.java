@@ -181,12 +181,17 @@ public class Pack {
             return false;
         }
         Pack pack = (Pack) o;
-        return Objects.equals( packNumber, pack.packNumber );
+        return  Objects.equals( packNumber, pack.packNumber ) &&
+                Objects.equals( packName, pack.packName )     &&
+                Objects.equals( login, pack.login )           &&
+                Objects.equals( password, pack.password );
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash( packNumber );
+
+        return Objects.hash( packNumber, packName );
+
     }
 
 
