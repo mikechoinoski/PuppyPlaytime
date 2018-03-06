@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Your Pack Page</title>
+    <title>Not Authorized</title>
 </head>
 <body>
-Successful Login to Your Pack!
+You are not authorized for this page! Please Leave...
 </body>
 </html>

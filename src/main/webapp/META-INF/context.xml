@@ -1,8 +1,8 @@
 <Context docBase="puppyPlaytime" path="/puppyPlaytime" reloadable="true">
     <Realm className="org.apache.catalina.realm.JDBCRealm"
            driverName="com.mysql.jdbc.Driver"
-           connectionURL="jdbc:mysql://localhost:3306/sample?user=tomcat&amp;password=tomcat"
+           connectionURL="jdbc:mysql://localhost:3306/puppy_playtime_test?user=tomcat&amp;password=tomcat"
            userTable="pack" userNameCol="login" userCredCol="password"
-           userRoleTable="role" roleNameCol="name" >
+           userRoleTable="role" roleNameCol="role_name" >
     </Realm>
 </Context>

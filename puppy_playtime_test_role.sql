@@ -1,0 +1,5 @@
+INSERT INTO puppy_playtime_test.role (roleId, createDate, role_name, updateDate, login) VALUES (1, '2018-03-06 01:33:03', 'admin', '2018-03-06 01:33:03', 'admin');
+INSERT INTO puppy_playtime_test.role (roleId, createDate, role_name, updateDate, login) VALUES (2, '2018-03-06 01:33:03', 'user', '2018-03-06 01:33:03', 'choinoski');
+INSERT INTO puppy_playtime_test.role (roleId, createDate, role_name, updateDate, login) VALUES (3, '2018-03-06 01:33:03', 'user', '2018-03-06 01:33:03', 'awesomepack21');
+INSERT INTO puppy_playtime_test.role (roleId, createDate, role_name, updateDate, login) VALUES (4, '2018-03-06 01:33:03', 'user', '2018-03-06 01:33:03', 'nextdoorpack01');
+INSERT INTO puppy_playtime_test.role (roleId, createDate, role_name, updateDate, login) VALUES (5, '2018-03-06 01:33:03', 'user', '2018-03-06 01:33:03', 'anotherPack');

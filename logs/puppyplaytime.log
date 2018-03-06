@@ -213,3 +213,747 @@
 [DEBUG] 2018-03-04 22:24:05.231 [main] GenericDao - Updating com.choinoski.entity.Pack
 [DEBUG] 2018-03-04 22:24:05.249 [main] GenericDao - Selecting rows by 1
 [DEBUG] 2018-03-04 22:24:05.361 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 21:14:26.114 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 21:14:27.179 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:14:27.245 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:14:27.331 [main] GenericDao - Selecting rows by 6
+[DEBUG] 2018-03-05 21:14:27.421 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:14:27.445 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:14:27.501 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:14:27.539 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:14:27.750 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:14:27.757 [main] GenericDao - Selecting rows by 7
+[DEBUG] 2018-03-05 21:14:27.806 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:14:27.816 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:14:27.844 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:14:27.893 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 21:14:28.089 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:14:28.113 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:14:28.120 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:14:28.153 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:14:28.271 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 21:14:28.423 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 21:14:28.516 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:14:28.565 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:14:28.577 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:14:28.590 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:14:28.715 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:14:28.733 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:14:28.742 [main] GenericDao - Selecting rows by 8
+[DEBUG] 2018-03-05 21:20:55.761 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 21:20:56.488 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:20:56.556 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:20:56.632 [main] GenericDao - Selecting rows by 8
+[DEBUG] 2018-03-05 21:20:56.696 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:20:56.737 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:20:56.773 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:20:56.799 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:20:56.864 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:20:56.870 [main] GenericDao - Selecting rows by 9
+[DEBUG] 2018-03-05 21:20:56.899 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:20:56.907 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:20:56.922 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:20:56.957 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 21:20:57.121 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:20:57.152 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:20:57.170 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:20:57.198 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:20:57.298 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 21:20:57.480 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 21:20:57.571 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:20:57.666 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:20:57.678 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:20:57.688 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:20:57.729 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:20:57.742 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:20:57.757 [main] GenericDao - Selecting rows by 10
+[DEBUG] 2018-03-05 21:39:16.637 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 21:39:17.457 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:39:17.518 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:39:17.591 [main] GenericDao - Selecting rows by 10
+[DEBUG] 2018-03-05 21:39:17.699 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:39:17.719 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:39:17.762 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:39:17.795 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:39:17.885 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:39:17.893 [main] GenericDao - Selecting rows by 11
+[DEBUG] 2018-03-05 21:39:17.932 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:39:17.939 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:39:17.959 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:39:18.028 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 21:39:18.169 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:39:18.231 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:39:18.251 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:39:18.296 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:39:18.384 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 21:39:18.446 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 21:39:18.542 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:39:18.573 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:39:18.579 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:39:18.585 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:39:18.636 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:39:18.650 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:39:18.658 [main] GenericDao - Selecting rows by 12
+[DEBUG] 2018-03-05 21:46:10.382 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 21:46:11.134 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:46:11.210 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:46:11.279 [main] GenericDao - Selecting rows by 12
+[DEBUG] 2018-03-05 21:46:11.343 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:46:11.381 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:46:11.418 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:46:11.452 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:46:11.539 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:46:11.546 [main] GenericDao - Selecting rows by 13
+[DEBUG] 2018-03-05 21:46:11.580 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:46:11.587 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:46:11.606 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:46:11.670 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 21:46:11.833 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:46:11.851 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:46:11.861 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:46:11.889 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:46:11.968 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 21:46:12.048 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 21:46:12.170 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:46:12.214 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:46:12.233 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:46:12.246 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:46:12.298 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:46:12.308 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:46:12.317 [main] GenericDao - Selecting rows by 14
+[DEBUG] 2018-03-05 21:47:35.123 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 21:47:35.897 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:47:35.964 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:47:36.023 [main] GenericDao - Selecting rows by 14
+[DEBUG] 2018-03-05 21:47:36.071 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:47:36.094 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:47:36.140 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:47:36.166 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:47:36.244 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:47:36.253 [main] GenericDao - Selecting rows by 15
+[DEBUG] 2018-03-05 21:47:36.283 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:47:36.291 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:47:36.309 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:47:36.347 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 21:47:36.520 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:47:36.535 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:47:36.545 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:47:36.573 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:47:36.645 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 21:47:36.717 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 21:47:36.849 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:47:36.886 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:47:36.900 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:47:36.906 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:47:36.955 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:47:36.970 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:47:36.977 [main] GenericDao - Selecting rows by 16
+[DEBUG] 2018-03-05 21:48:57.261 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 21:48:58.026 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:48:58.089 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:48:58.159 [main] GenericDao - Selecting rows by 16
+[DEBUG] 2018-03-05 21:48:58.206 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:48:58.239 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:48:58.273 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:48:58.299 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:48:58.386 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:48:58.395 [main] GenericDao - Selecting rows by 17
+[DEBUG] 2018-03-05 21:48:58.426 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:48:58.434 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:48:58.450 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:48:58.488 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 21:48:58.625 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:48:58.643 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:48:58.651 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:48:59.168 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:48:59.246 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 21:48:59.306 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 21:48:59.437 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:48:59.480 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:48:59.492 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:48:59.499 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:48:59.542 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:48:59.558 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:48:59.567 [main] GenericDao - Selecting rows by 18
+[DEBUG] 2018-03-05 21:51:30.935 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 21:51:31.629 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:51:31.681 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:51:31.751 [main] GenericDao - Selecting rows by 18
+[DEBUG] 2018-03-05 21:51:31.806 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:51:31.851 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:51:31.906 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:51:31.933 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:51:32.025 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:51:32.038 [main] GenericDao - Selecting rows by 19
+[DEBUG] 2018-03-05 21:51:32.066 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:51:32.071 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:51:32.090 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:51:32.130 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 21:51:32.271 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:51:32.296 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:51:32.307 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:51:32.332 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:51:32.394 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 21:51:32.444 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 21:51:32.601 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:51:32.639 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:51:32.650 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:51:32.659 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:51:32.707 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:51:32.720 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:51:32.731 [main] GenericDao - Selecting rows by 20
+[DEBUG] 2018-03-05 21:56:42.041 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 21:56:42.750 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:56:42.798 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:56:42.857 [main] GenericDao - Selecting rows by 20
+[DEBUG] 2018-03-05 21:56:42.898 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:56:42.911 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:56:42.939 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:56:42.986 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:56:43.057 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:56:43.065 [main] GenericDao - Selecting rows by 21
+[DEBUG] 2018-03-05 21:56:43.091 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:56:43.098 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:56:43.109 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:56:43.158 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 21:56:43.308 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:56:43.330 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:56:43.337 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:56:43.361 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:56:43.423 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 21:56:43.476 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 21:56:43.607 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:56:43.654 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:56:43.668 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:56:43.676 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:56:43.710 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:56:43.722 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:56:43.734 [main] GenericDao - Selecting rows by 22
+[DEBUG] 2018-03-05 21:59:04.651 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 21:59:05.368 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:59:05.417 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:59:05.482 [main] GenericDao - Selecting rows by 22
+[DEBUG] 2018-03-05 21:59:05.523 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:59:05.537 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:59:05.590 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:59:05.625 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:59:05.711 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:59:05.718 [main] GenericDao - Selecting rows by 23
+[DEBUG] 2018-03-05 21:59:05.747 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:59:05.751 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 21:59:05.765 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 21:59:05.797 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 21:59:05.919 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:59:05.938 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:59:05.953 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:59:05.990 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 21:59:06.113 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 21:59:06.173 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 21:59:06.234 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:59:06.308 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:59:06.316 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:59:06.335 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 21:59:06.365 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 21:59:06.374 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 21:59:06.382 [main] GenericDao - Selecting rows by 24
+[DEBUG] 2018-03-05 22:07:48.324 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 22:07:49.096 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:07:49.164 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:07:49.245 [main] GenericDao - Selecting rows by 24
+[DEBUG] 2018-03-05 22:07:49.323 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:07:49.342 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:07:49.385 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:07:49.411 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 22:07:49.484 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:07:49.490 [main] GenericDao - Selecting rows by 25
+[DEBUG] 2018-03-05 22:07:49.525 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 22:07:49.536 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:07:49.555 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 22:07:49.622 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 22:07:49.774 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:07:49.802 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:07:49.811 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:07:49.849 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 22:07:49.927 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 22:07:50.056 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 22:07:50.215 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:07:50.275 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:07:50.292 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:07:50.305 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:07:50.352 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:07:50.366 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:07:50.376 [main] GenericDao - Selecting rows by 26
+[DEBUG] 2018-03-05 22:15:30.502 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 22:15:31.243 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:15:31.304 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:15:31.367 [main] GenericDao - Selecting rows by 26
+[DEBUG] 2018-03-05 22:15:31.409 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:15:31.420 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:15:31.493 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:15:31.534 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 22:15:31.621 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:15:31.628 [main] GenericDao - Selecting rows by 27
+[DEBUG] 2018-03-05 22:15:31.663 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 22:15:31.671 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:15:31.690 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 22:15:31.785 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 22:15:31.895 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:15:31.907 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:15:31.937 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:15:31.993 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 22:15:32.064 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 22:15:32.110 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 22:15:32.191 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:15:32.252 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:15:32.264 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:15:32.269 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:15:32.306 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:15:32.315 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:15:32.324 [main] GenericDao - Selecting rows by 28
+[DEBUG] 2018-03-05 22:16:47.888 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 22:16:48.641 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:16:48.694 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:16:48.762 [main] GenericDao - Selecting rows by 28
+[DEBUG] 2018-03-05 22:16:48.807 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:16:48.831 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:16:48.904 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:16:48.938 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 22:16:49.032 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:16:49.045 [main] GenericDao - Selecting rows by 29
+[DEBUG] 2018-03-05 22:16:49.080 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 22:16:49.090 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:16:49.117 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 22:16:49.225 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 22:16:49.375 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:16:49.423 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:16:49.464 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:16:49.503 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 22:16:49.578 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 22:16:49.649 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 22:16:49.740 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:16:49.773 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:16:49.782 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:16:49.788 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:16:49.821 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:16:49.830 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:16:49.838 [main] GenericDao - Selecting rows by 30
+[DEBUG] 2018-03-05 22:18:34.105 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 22:18:34.837 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:18:34.897 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:18:34.962 [main] GenericDao - Selecting rows by 30
+[DEBUG] 2018-03-05 22:18:35.007 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:18:35.018 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:18:35.093 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:18:35.116 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 22:18:35.187 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:18:35.197 [main] GenericDao - Selecting rows by 31
+[DEBUG] 2018-03-05 22:18:35.239 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 22:18:35.245 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:18:35.262 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 22:18:35.313 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 22:18:35.479 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:18:35.495 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:18:35.505 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:18:35.529 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 22:18:35.599 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 22:18:35.643 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 22:18:35.797 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:18:35.835 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:18:35.848 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:18:35.862 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:18:35.913 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:18:35.923 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:18:35.936 [main] GenericDao - Selecting rows by 32
+[DEBUG] 2018-03-05 22:38:43.203 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 22:38:44.223 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:38:44.277 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:38:44.345 [main] GenericDao - Selecting rows by 32
+[DEBUG] 2018-03-05 22:38:44.403 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:38:44.432 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:38:44.564 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 22:38:44.666 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:38:44.678 [main] GenericDao - Selecting rows by 33
+[DEBUG] 2018-03-05 22:38:44.730 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 22:38:44.750 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:38:44.793 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 22:38:44.851 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 22:38:45.050 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:38:45.109 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:38:45.144 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:38:45.183 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 22:38:45.252 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 22:38:45.294 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 22:38:45.354 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:38:45.419 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:38:45.436 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:38:45.446 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:38:45.478 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:38:45.491 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:38:45.499 [main] GenericDao - Selecting rows by 34
+[DEBUG] 2018-03-05 22:49:13.418 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 22:49:14.451 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:49:14.550 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:49:14.682 [main] GenericDao - Selecting rows by 34
+[DEBUG] 2018-03-05 22:49:14.763 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:49:14.777 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:49:14.980 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 22:49:15.092 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:49:15.112 [main] GenericDao - Selecting rows by 35
+[DEBUG] 2018-03-05 22:49:15.197 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 22:49:15.219 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:49:15.250 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 22:49:15.395 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 22:49:15.798 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:49:15.847 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:49:15.872 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:49:16.013 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 22:49:16.308 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 22:49:16.474 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 22:49:16.653 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:49:16.782 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:49:16.806 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:49:16.843 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:49:16.929 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:49:16.984 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:49:17.016 [main] GenericDao - Selecting rows by 36
+[DEBUG] 2018-03-05 22:54:10.593 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:54:10.919 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:54:10.962 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:54:11.020 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 22:54:11.607 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 22:54:11.745 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 22:54:11.884 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:54:11.972 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:54:11.992 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:54:12.018 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:54:12.121 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:54:12.139 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 22:54:12.171 [main] GenericDao - Selecting rows by 37
+[DEBUG] 2018-03-05 22:54:37.073 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 22:54:37.878 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 22:54:38.007 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:54:38.116 [main] GenericDao - Selecting rows by 36
+[DEBUG] 2018-03-05 22:54:38.205 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 22:54:38.234 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:54:38.451 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 22:54:38.655 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:54:38.665 [main] GenericDao - Selecting rows by 37
+[DEBUG] 2018-03-05 22:54:38.713 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 22:54:38.730 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 22:54:38.749 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 22:54:38.828 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 23:08:43.396 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:09:28.564 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:14:22.635 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:20:43.535 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:31:01.666 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:35:46.710 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 23:35:48.024 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:35:48.144 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:35:48.259 [main] GenericDao - Selecting rows by 38
+[DEBUG] 2018-03-05 23:35:48.394 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:35:48.419 [main] GenericDao - Deleting from com.choinoski.entity.Role
+[DEBUG] 2018-03-05 23:35:48.466 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:35:48.559 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 23:35:48.723 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:35:48.740 [main] GenericDao - Selecting rows by 39
+[DEBUG] 2018-03-05 23:35:48.792 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 23:35:48.807 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:35:48.833 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 23:35:48.903 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 23:36:13.567 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:36:13.884 [main] GenericDao - Deleting from com.choinoski.entity.Role
+[DEBUG] 2018-03-05 23:36:13.939 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:37:33.448 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:37:33.746 [main] GenericDao - Selecting rows by 40
+[DEBUG] 2018-03-05 23:42:35.813 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:42:36.178 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 23:42:36.265 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:42:36.339 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 23:42:36.927 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 23:42:37.063 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 23:42:37.214 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:42:37.327 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:42:37.343 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 23:42:37.375 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:42:37.440 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:42:37.459 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 23:42:37.480 [main] GenericDao - Selecting rows by 40
+[DEBUG] 2018-03-05 23:43:24.930 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:43:25.253 [main] GenericDao - Deleting from com.choinoski.entity.Role
+[DEBUG] 2018-03-05 23:44:19.902 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:44:20.288 [main] GenericDao - Deleting from com.choinoski.entity.Role
+[DEBUG] 2018-03-05 23:44:20.342 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:45:01.592 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:45:01.939 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:45:02.008 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:45:21.322 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:45:21.658 [main] GenericDao - Selecting rows by 41
+[DEBUG] 2018-03-05 23:46:09.824 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 23:46:10.520 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:46:10.669 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:46:10.835 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:46:10.893 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 23:46:10.952 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:46:11.026 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 23:46:11.079 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 23:48:08.747 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 23:48:09.546 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:48:09.666 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:48:09.743 [main] GenericDao - Selecting rows by 44
+[DEBUG] 2018-03-05 23:48:09.819 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:48:09.892 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:48:09.939 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:48:09.981 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 23:48:10.135 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:48:10.142 [main] GenericDao - Selecting rows by 45
+[DEBUG] 2018-03-05 23:48:10.206 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 23:48:10.223 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:48:10.242 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 23:48:10.302 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 23:49:37.026 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:49:37.350 [main] GenericDao - Selecting rows by 46
+[DEBUG] 2018-03-05 23:50:16.232 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:50:56.962 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:51:23.045 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:51:23.345 [main] GenericDao - Selecting rows by 49
+[DEBUG] 2018-03-05 23:54:18.053 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:56:06.380 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 23:56:07.141 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:56:07.194 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:56:07.278 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:56:07.294 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:56:07.342 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:56:07.393 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 23:56:07.501 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:56:07.512 [main] GenericDao - Selecting rows by 52
+[DEBUG] 2018-03-05 23:56:07.564 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 23:56:07.577 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:56:07.645 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 23:56:07.686 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-05 23:56:07.822 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:56:07.845 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 23:56:07.852 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:56:07.931 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 23:56:08.084 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 23:56:08.152 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 23:56:08.323 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:56:08.373 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:56:08.386 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 23:56:08.392 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:56:08.422 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:56:08.436 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 23:56:08.440 [main] GenericDao - Selecting rows by 46
+[DEBUG] 2018-03-05 23:57:11.874 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:57:12.323 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 23:57:12.374 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:57:12.453 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 23:57:13.021 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-05 23:57:13.148 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-05 23:57:13.267 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:57:13.357 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:57:13.390 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 23:57:13.428 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:57:13.512 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:57:13.554 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-05 23:57:13.617 [main] GenericDao - Selecting rows by 47
+[DEBUG] 2018-03-05 23:57:34.570 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-05 23:57:36.109 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-05 23:57:36.218 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:57:36.342 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:57:36.361 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:57:36.428 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-05 23:57:36.495 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-05 23:57:36.663 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:57:36.675 [main] GenericDao - Selecting rows by 54
+[DEBUG] 2018-03-05 23:57:36.757 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 23:57:36.773 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-05 23:57:36.785 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-05 23:57:36.861 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-06 00:01:59.926 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-06 00:02:00.572 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 00:02:00.642 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:02:00.730 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 00:02:00.778 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:02:00.810 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 00:02:00.840 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-06 00:02:00.996 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:02:01.050 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-06 00:02:01.088 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:02:01.102 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-06 00:02:01.135 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-06 00:02:01.248 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 00:02:01.264 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 00:02:01.270 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 00:02:01.310 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-06 00:02:01.475 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-06 00:02:01.536 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-06 00:02:01.663 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 00:02:01.735 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 00:02:01.746 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 00:02:01.754 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 00:02:01.781 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 00:02:01.790 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 00:02:01.796 [main] GenericDao - Selecting rows by 50
+[DEBUG] 2018-03-06 00:03:30.299 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-06 00:03:31.306 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 00:03:31.383 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:03:31.555 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 00:03:31.573 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:03:31.628 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 00:03:31.679 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-06 00:03:31.870 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:03:31.932 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-06 00:03:31.956 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:03:31.976 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-06 00:03:32.027 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-06 00:03:32.196 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 00:03:32.218 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 00:03:32.224 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 00:03:32.263 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-06 00:03:32.467 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-06 00:03:32.607 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-06 00:03:32.871 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 00:03:33.036 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 00:03:33.073 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 00:03:33.101 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 00:03:33.198 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 00:03:33.238 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 00:03:33.255 [main] GenericDao - Selecting rows by 52
+[DEBUG] 2018-03-06 00:06:25.563 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:06:25.837 [main] GenericDao - Selecting rows by 59
+[DEBUG] 2018-03-06 00:37:42.072 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:37:42.477 [main] GenericDao - Selecting rows by 60
+[DEBUG] 2018-03-06 00:40:06.962 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:40:07.307 [main] GenericDao - Selecting rows by 61
+[DEBUG] 2018-03-06 00:43:44.331 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:44:34.570 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:44:34.904 [main] GenericDao - Selecting rows by 62
+[DEBUG] 2018-03-06 00:50:37.387 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:50:38.001 [main] GenericDao - Selecting rows by 63
+[DEBUG] 2018-03-06 00:50:58.560 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-06 00:50:59.957 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 00:51:00.272 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:51:00.407 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 00:51:00.421 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:51:00.452 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 00:51:00.544 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-06 00:51:00.750 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:51:00.811 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-06 00:51:00.840 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:51:00.862 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-06 00:51:00.919 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-06 00:53:12.376 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 00:53:12.785 [main] GenericDao - Selecting rows by 66
+[DEBUG] 2018-03-06 01:03:45.828 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:03:46.136 [main] GenericDao - Selecting rows by 67
+[DEBUG] 2018-03-06 01:13:04.247 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:16:47.288 [main] GenericDao - Selecting rows by 68
+[DEBUG] 2018-03-06 01:17:23.633 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:19:37.024 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:20:18.054 [main] GenericDao - Selecting rows by 68
+[DEBUG] 2018-03-06 01:22:28.566 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:26:52.766 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:27:30.519 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-06 01:27:31.241 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:27:31.330 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:27:31.407 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 01:27:31.447 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:27:31.486 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 01:27:31.533 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-06 01:27:32.332 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:27:32.376 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-06 01:27:32.393 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:27:32.414 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-06 01:27:32.448 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-06 01:27:32.612 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:27:32.636 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 01:27:32.645 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:27:32.679 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-06 01:27:32.836 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-06 01:27:32.901 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-06 01:27:32.979 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 01:27:33.055 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:27:33.068 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 01:27:33.074 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:27:33.106 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 01:27:33.121 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 01:27:33.128 [main] GenericDao - Selecting rows by 55
+[DEBUG] 2018-03-06 01:30:14.746 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:33:03.802 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:49:11.283 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:49:42.394 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-06 01:49:43.090 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:49:43.161 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:49:43.251 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 01:49:43.307 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:49:43.350 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 01:49:43.393 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-06 01:49:43.510 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:49:43.561 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-06 01:49:43.592 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:49:43.621 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-06 01:49:43.660 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-06 01:49:43.763 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:49:43.779 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 01:49:43.785 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:49:43.814 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-06 01:49:43.976 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-06 01:49:44.043 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-06 01:49:44.148 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 01:49:44.243 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:49:44.259 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 01:49:44.268 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:49:44.307 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 01:49:44.330 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 01:49:44.339 [main] GenericDao - Selecting rows by 57
+[DEBUG] 2018-03-06 01:52:23.629 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-06 01:52:24.382 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:52:24.448 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:52:24.551 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 01:52:24.586 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:52:24.646 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 01:52:24.686 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-06 01:52:24.833 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:52:24.928 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-06 01:52:24.943 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:52:24.965 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-06 01:52:25.011 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-06 01:52:25.129 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:52:25.151 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 01:52:25.158 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:52:25.187 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-06 01:52:25.329 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-06 01:52:25.386 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-06 01:52:25.451 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 01:52:25.494 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:52:25.505 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 01:52:25.527 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:52:25.598 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 01:52:25.618 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 01:52:25.628 [main] GenericDao - Selecting rows by 59
+[DEBUG] 2018-03-06 01:59:01.173 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-06 01:59:01.920 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:59:02.012 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:59:02.152 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 01:59:02.171 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:59:02.201 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 01:59:02.239 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-06 01:59:02.441 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:59:02.489 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-06 01:59:02.503 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 01:59:02.523 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-06 01:59:02.564 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-06 01:59:02.725 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:59:02.750 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 01:59:02.756 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:59:02.787 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-06 01:59:02.965 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-06 01:59:03.082 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-06 01:59:03.180 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 01:59:03.222 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:59:03.240 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 01:59:03.252 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-06 01:59:03.321 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-06 01:59:03.338 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-06 01:59:03.344 [main] GenericDao - Selecting rows by 61

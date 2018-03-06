@@ -1,5 +1,6 @@
 package com.choinoski.entity;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -14,7 +15,7 @@ import javax.persistence.*;
  */
 @Entity(name = "Pack")
 @Table(name = "pack") // case sensitive!
-public class Pack {
+public class Pack implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
@@ -29,7 +30,10 @@ public class Pack {
     private String password;
 
     @OneToMany(mappedBy = "pack", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<PackMember> members = new HashSet<>();
+    private Set<PackMember> members = new HashSet<PackMember>();
+
+    @OneToMany(mappedBy = "pack", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Role> roles = new HashSet<Role>();
 
     /**
      * Instantiates a new User.
@@ -149,6 +153,14 @@ public class Pack {
     public void addMember(PackMember member) {
         members.add(member);
         member.setPack(this);
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 
     /**
