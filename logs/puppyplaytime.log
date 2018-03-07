@@ -957,3 +957,17 @@
 [DEBUG] 2018-03-06 01:59:03.321 [main] GenericDao - Selecting rows by 2
 [DEBUG] 2018-03-06 01:59:03.338 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
 [DEBUG] 2018-03-06 01:59:03.344 [main] GenericDao - Selecting rows by 61
+[DEBUG] 2018-03-06 18:37:50.611 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 18:37:50.875 [main] GenericDao - Selecting rows by 6
+[DEBUG] 2018-03-06 18:38:21.321 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 18:38:21.624 [main] GenericDao - Selecting rows by 7
+[DEBUG] 2018-03-06 18:59:29.930 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 18:59:30.163 [main] GenericDao - Selecting rows by 8
+[DEBUG] 2018-03-06 19:11:24.362 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 19:11:24.592 [main] GenericDao - Selecting rows by 9
+[DEBUG] 2018-03-06 19:19:11.028 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 19:19:11.270 [main] GenericDao - Selecting rows by 10
+[DEBUG] 2018-03-06 19:30:54.315 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 19:30:54.548 [main] GenericDao - Selecting rows by 11
+[DEBUG] 2018-03-06 20:27:33.438 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-06 20:27:33.737 [main] GenericDao - Selecting rows by 12

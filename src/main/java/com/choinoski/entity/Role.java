@@ -4,6 +4,7 @@ import com.choinoski.util.TimestampAttributeConverter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -29,10 +30,19 @@ public class Role {
     @Convert(converter = TimestampAttributeConverter.class)
     private LocalDateTime updateDate;
 
+    private String    login;
 
     @ManyToOne
-    @JoinColumn(name="login", referencedColumnName = "login", nullable = false)
+    @JoinColumn(name = "pack_nr",
+            foreignKey = @ForeignKey(name = "pack_foreign_key"))
     private Pack pack;
+
+    //@Column( name = "pack_nr")
+    //private int packNumber;
+
+    //@ManyToOne(fetch = FetchType.LAZY)
+    //@JoinColumn(name = "login", referencedColumnName = "login")
+    //private Pack pack;
 
     public Role() {
 
@@ -59,6 +69,14 @@ public class Role {
 
     public void setCreateDate(LocalDateTime createDate) {
         this.createDate = createDate;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public String getRoleName() {
@@ -92,6 +110,7 @@ public class Role {
                 ", createDate=" + createDate +
                 ", roleName='" + roleName + '\'' +
                 ", updateDate=" + updateDate +
+                ", login='" + login + '\'' +
                 '}';
     }
 
@@ -103,14 +122,16 @@ public class Role {
         return roldId == role.roldId &&
                 Objects.equals(createDate, role.createDate) &&
                 Objects.equals(roleName, role.roleName) &&
-                Objects.equals(updateDate, role.updateDate);
+                Objects.equals(updateDate, role.updateDate) &&
+                Objects.equals(login, role.login);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(roldId, createDate, roleName, updateDate);
+        return Objects.hash(roldId, createDate, roleName, updateDate, login);
     }
+
 }
 
 

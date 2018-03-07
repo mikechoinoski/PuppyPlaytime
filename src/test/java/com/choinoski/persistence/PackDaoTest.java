@@ -75,10 +75,10 @@ class PackDaoTest {
         int id = dao.insert(newPack);
 
         assertNotEquals(0,id);
-        //Pack insertedPack = (Pack) dao.getById(id);
-        //assertEquals("Newest Pack", insertedPack.getPackName());
-        //assertEquals("pack12321", insertedPack.getLogin());
-        //assertEquals("trickypassword!", insertedPack.getPassword());
+        Pack insertedPack = (Pack) dao.getById(id);
+        assertEquals("Newest Pack", insertedPack.getPackName());
+        assertEquals("pack12321", insertedPack.getLogin());
+        assertEquals("trickypassword!", insertedPack.getPassword());
     }
 
     /**
@@ -98,9 +98,9 @@ class PackDaoTest {
         int id = dao.insert(newPack);
 
         assertNotEquals(0,id);
-        //Pack insertedPack = (Pack) dao.getById(id);
-        //assertTrue(newPack.equals(insertedPack));
-        //assertEquals(1, insertedPack.getMembers().size());
+        Pack insertedPack = (Pack) dao.getById(id);
+        assertTrue(newPack.equals(insertedPack));
+        assertEquals(1, insertedPack.getMembers().size());
 
     }    
     

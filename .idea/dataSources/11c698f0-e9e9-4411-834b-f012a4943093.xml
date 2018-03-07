@@ -1022,7 +1022,7 @@
       <ColNames>pack_nr</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="257" parent="233" name="pack_login_uindex">
+    <index id="257" parent="233" name="pack_login_pk">
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
@@ -1035,9 +1035,9 @@
       <ColNames>pack_nr</ColNames>
       <UnderlyingIndexName>pack_nr_primary_key</UnderlyingIndexName>
     </key>
-    <key id="260" parent="233" name="pack_login_uindex">
+    <key id="260" parent="233" name="pack_login_pk">
       <ColNames>login</ColNames>
-      <UnderlyingIndexName>pack_login_uindex</UnderlyingIndexName>
+      <UnderlyingIndexName>pack_login_pk</UnderlyingIndexName>
     </key>
     <column id="261" parent="234" name="pack_leader_nr">
       <Position>1</Position>
@@ -1546,24 +1546,34 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="359" parent="242" name="userName_UNIQUE">
+    <column id="359" parent="242" name="pack_nr">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="360" parent="242" name="role_pack_login_fk">
       <ColNames>login</ColNames>
-      <Unique>1</Unique>
     </index>
-    <key id="360" parent="242" name="PRIMARY">
+    <index id="361" parent="242" name="role_pack_pack_nr_fk">
+      <ColNames>pack_nr</ColNames>
+    </index>
+    <key id="362" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>roleId</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="361" parent="242" name="userName_UNIQUE">
-      <ColNames>login</ColNames>
-      <UnderlyingIndexName>userName_UNIQUE</UnderlyingIndexName>
-    </key>
-    <foreign-key id="362" parent="242" name="role_pack_login_fk">
+    <foreign-key id="363" parent="242" name="role_pack_login_fk">
       <ColNames>login</ColNames>
       <RefSchemaName>puppy_playtime_test</RefSchemaName>
       <RefTableName>pack</RefTableName>
       <RefColNames>login</RefColNames>
+    </foreign-key>
+    <foreign-key id="364" parent="242" name="role_pack_pack_nr_fk">
+      <ColNames>pack_nr</ColNames>
+      <RefSchemaName>puppy_playtime_test</RefSchemaName>
+      <RefTableName>pack</RefTableName>
+      <RefColNames>pack_nr</RefColNames>
     </foreign-key>
   </database-model>
 </dataSource>

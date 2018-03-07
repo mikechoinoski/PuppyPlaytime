@@ -32,7 +32,8 @@ public class Pack implements Serializable {
     @OneToMany(mappedBy = "pack", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<PackMember> members = new HashSet<PackMember>();
 
-    @OneToMany(mappedBy = "pack", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "pack", cascade = CascadeType.ALL,
+                  orphanRemoval = true, fetch = FetchType.EAGER, targetEntity = Role.class)
     private Set<Role> roles = new HashSet<Role>();
 
     /**
