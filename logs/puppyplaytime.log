@@ -971,3 +971,221 @@
 [DEBUG] 2018-03-06 19:30:54.548 [main] GenericDao - Selecting rows by 11
 [DEBUG] 2018-03-06 20:27:33.438 [main] GenericDao - Inserting into com.choinoski.entity.Pack
 [DEBUG] 2018-03-06 20:27:33.737 [main] GenericDao - Selecting rows by 12
+[ERROR] 2018-03-18 15:53:56.943 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:53:56.949 [main] GenericDao - Searching for user with packName = Number 4
+[ERROR] 2018-03-18 15:53:57.515 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:53:57.515 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-03-18 15:53:57.550 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:53:57.551 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 15:53:57.602 [main] GenericDao - Selecting rows by 13
+[ERROR] 2018-03-18 15:53:57.622 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:53:57.622 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-18 15:53:57.632 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 15:53:57.688 [main] GenericDao - Selecting rows by 2
+[ERROR] 2018-03-18 15:53:57.702 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:53:57.703 [main] GenericDao - Selecting all rows from a table
+[ERROR] 2018-03-18 15:53:57.861 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:53:57.861 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[ERROR] 2018-03-18 15:53:57.894 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:53:57.894 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-18 15:53:57.914 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 15:53:57.930 [main] GenericDao - Selecting rows by 1
+[ERROR] 2018-03-18 15:53:57.944 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:53:57.944 [main] GenericDao - Searching for user with packName = Dawg
+[ERROR] 2018-03-18 15:53:58.015 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:53:58.016 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-03-18 15:53:58.024 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:53:58.025 [main] GenericDao - Selecting all rows from a table
+[ERROR] 2018-03-18 15:53:58.050 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:53:58.051 [main] GenericDao - Searching for user with breed = Boxer
+[ERROR] 2018-03-18 15:53:58.126 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:53:58.126 [main] GenericDao - Searching for user with breed = B
+[ERROR] 2018-03-18 15:53:58.207 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:53:58.207 [main] GenericDao - Selecting rows by 2
+[ERROR] 2018-03-18 15:53:58.222 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:53:58.222 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-03-18 15:53:58.231 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:53:58.232 [main] GenericDao - Selecting rows by 2
+[ERROR] 2018-03-18 15:55:09.287 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:55:09.291 [main] GenericDao - Searching for user with packName = Number 4
+[ERROR] 2018-03-18 15:55:09.804 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:55:09.808 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-03-18 15:55:09.841 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:55:09.841 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[ERROR] 2018-03-18 15:55:09.900 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:55:09.900 [main] GenericDao - Selecting rows by 2
+[ERROR] 2018-03-18 15:55:09.912 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:55:09.913 [main] GenericDao - Selecting all rows from a table
+[ERROR] 2018-03-18 15:55:09.966 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:55:09.966 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[ERROR] 2018-03-18 15:55:09.983 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:55:09.983 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-18 15:55:09.999 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 15:55:10.094 [main] GenericDao - Selecting rows by 1
+[ERROR] 2018-03-18 15:55:10.120 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:55:10.120 [main] GenericDao - Searching for user with packName = Dawg
+[ERROR] 2018-03-18 15:55:10.188 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:55:10.188 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-03-18 15:55:10.197 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:55:10.200 [main] GenericDao - Selecting all rows from a table
+[ERROR] 2018-03-18 15:55:10.244 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:55:10.244 [main] GenericDao - Searching for user with breed = Boxer
+[ERROR] 2018-03-18 15:55:10.264 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:55:10.264 [main] GenericDao - Searching for user with breed = B
+[ERROR] 2018-03-18 15:55:10.292 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:55:10.292 [main] GenericDao - Selecting rows by 2
+[ERROR] 2018-03-18 15:55:10.301 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:55:10.301 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-03-18 15:55:10.308 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 15:55:10.308 [main] GenericDao - Selecting rows by 2
+[ERROR] 2018-03-18 16:02:28.064 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 16:02:28.070 [main] GenericDao - Searching for user with packName = Number 4
+[ERROR] 2018-03-18 16:02:28.692 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 16:02:28.693 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-03-18 16:02:28.747 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 16:02:28.748 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[ERROR] 2018-03-18 16:02:28.864 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 16:02:28.864 [main] GenericDao - Selecting rows by 2
+[ERROR] 2018-03-18 16:02:28.900 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 16:02:28.900 [main] GenericDao - Selecting all rows from a table
+[ERROR] 2018-03-18 16:02:29.016 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 16:02:29.016 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[ERROR] 2018-03-18 16:02:29.065 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 16:02:29.065 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-18 16:02:29.090 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 16:02:29.174 [main] GenericDao - Selecting rows by 1
+[ERROR] 2018-03-18 16:02:29.205 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 16:02:29.205 [main] GenericDao - Searching for user with packName = Dawg
+[ERROR] 2018-03-18 16:03:12.008 [main] Database - java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+[DEBUG] 2018-03-18 16:03:12.012 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 16:05:25.305 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-18 16:05:25.904 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 16:05:25.954 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 16:05:26.021 [main] GenericDao - Selecting rows by 19
+[DEBUG] 2018-03-18 16:05:26.065 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-18 16:05:26.073 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 16:05:26.099 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-18 16:05:26.129 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 16:05:26.219 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 16:05:26.223 [main] GenericDao - Selecting rows by 20
+[DEBUG] 2018-03-18 16:05:26.258 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-18 16:05:26.262 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 16:05:26.277 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-18 16:05:26.318 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-18 16:05:38.969 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 16:05:39.227 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-18 16:05:39.262 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 16:05:39.311 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 16:05:39.714 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-18 16:05:39.786 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-18 16:05:39.871 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-18 16:05:39.927 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 16:05:39.933 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-18 16:05:39.946 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 16:05:40.005 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-18 16:05:40.027 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-18 16:05:40.051 [main] GenericDao - Selecting rows by 9
+[DEBUG] 2018-03-18 16:11:06.364 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-18 16:11:06.914 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 16:11:06.960 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 16:11:06.993 [main] GenericDao - Selecting rows by 21
+[DEBUG] 2018-03-18 16:11:07.041 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-18 16:11:07.048 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 16:11:07.064 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-18 16:11:07.113 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 16:11:07.202 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 16:11:07.206 [main] GenericDao - Selecting rows by 22
+[DEBUG] 2018-03-18 16:11:07.238 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-18 16:11:07.241 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 16:11:07.255 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-18 16:11:07.289 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-18 16:11:07.379 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 16:11:07.408 [main] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-03-18 16:11:07.426 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 16:11:07.495 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 16:11:07.554 [main] GenericDao - Searching for user with breed = Boxer
+[DEBUG] 2018-03-18 16:11:07.593 [main] GenericDao - Searching for user with breed = B
+[DEBUG] 2018-03-18 16:11:07.641 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-18 16:11:07.712 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 16:11:07.740 [main] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-03-18 16:11:07.748 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 16:11:07.789 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-18 16:11:07.796 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-03-18 16:11:07.803 [main] GenericDao - Selecting rows by 11
+[DEBUG] 2018-03-18 17:10:56.671 [http-nio-8080-exec-2] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 17:11:22.658 [http-nio-8080-exec-4] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 17:11:27.203 [http-nio-8080-exec-5] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 17:11:36.973 [http-nio-8080-exec-6] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 17:15:15.479 [http-nio-8080-exec-3] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 17:15:32.946 [http-nio-8080-exec-8] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 17:15:35.302 [http-nio-8080-exec-9] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 17:15:43.018 [http-nio-8080-exec-10] GenericDao - Searching for user with size = Odo
+[DEBUG] 2018-03-18 17:27:40.261 [http-nio-8080-exec-4] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 17:27:45.131 [http-nio-8080-exec-5] GenericDao - Searching for user with sex = 
+[DEBUG] 2018-03-18 19:39:56.282 [http-nio-8080-exec-4] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 19:53:01.690 [http-nio-8080-exec-3] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 20:15:32.683 [http-nio-8080-exec-3] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 20:20:59.280 [http-nio-8080-exec-2] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 20:26:13.606 [http-nio-8080-exec-2] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 20:29:38.949 [http-nio-8080-exec-10] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 20:30:44.921 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-18 20:30:46.572 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 20:30:46.752 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 20:30:47.001 [main] GenericDao - Selecting rows by 6
+[DEBUG] 2018-03-18 20:30:47.128 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-18 20:30:47.167 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 20:30:47.258 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-18 20:30:47.370 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 20:30:47.720 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 20:30:47.763 [main] GenericDao - Selecting rows by 7
+[DEBUG] 2018-03-18 20:30:47.884 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-18 20:30:47.914 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 20:30:47.979 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-18 20:30:48.083 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-18 20:31:22.216 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-18 20:31:23.849 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 20:31:23.951 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 20:31:24.143 [main] GenericDao - Selecting rows by 8
+[DEBUG] 2018-03-18 20:31:24.180 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-18 20:31:24.223 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 20:31:24.261 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-18 20:31:24.305 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 20:31:24.471 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 20:31:24.505 [main] GenericDao - Selecting rows by 9
+[DEBUG] 2018-03-18 20:31:24.527 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-18 20:31:24.573 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 20:31:24.618 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-18 20:31:24.673 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-18 20:33:00.766 [main] GenericDao - Searching for user with packName = Number 4
+[DEBUG] 2018-03-18 20:33:01.808 [main] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 20:33:01.899 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 20:33:02.014 [main] GenericDao - Selecting rows by 10
+[DEBUG] 2018-03-18 20:33:02.102 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-18 20:33:02.112 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 20:33:02.169 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-03-18 20:33:02.234 [main] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 20:33:02.418 [main] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 20:33:02.440 [main] GenericDao - Selecting rows by 11
+[DEBUG] 2018-03-18 20:33:02.497 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-18 20:33:02.512 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-03-18 20:33:02.543 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-03-18 20:33:02.601 [main] GenericDao - Searching for user with packName = Dawg
+[DEBUG] 2018-03-18 20:34:36.508 [http-nio-8080-exec-10] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 20:36:31.114 [http-nio-8080-exec-10] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 20:36:31.663 [http-nio-8080-exec-10] SearchMembers - Pack name: Cool Dawgs
+[DEBUG] 2018-03-18 20:38:42.300 [http-nio-8080-exec-10] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 20:38:58.718 [http-nio-8080-exec-10] SearchMembers - Pack name: Cool Dawgs
+[DEBUG] 2018-03-18 20:46:23.365 [http-nio-8080-exec-3] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 20:46:23.739 [http-nio-8080-exec-3] SearchMembers - Pack name: Cool Dawgs
+[DEBUG] 2018-03-18 20:47:58.209 [http-nio-8080-exec-10] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 20:47:58.787 [http-nio-8080-exec-10] SearchMembers - Pack name: Cool Dawgs
+[DEBUG] 2018-03-18 20:47:58.789 [http-nio-8080-exec-10] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-03-18 20:48:24.580 [http-nio-8080-exec-4] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 20:48:24.611 [http-nio-8080-exec-4] SearchMembers - Pack name: Cool Dawgs
+[DEBUG] 2018-03-18 20:48:24.612 [http-nio-8080-exec-4] GenericDao - Searching for user with sex = M
+[DEBUG] 2018-03-18 20:48:37.109 [http-nio-8080-exec-5] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 20:48:37.129 [http-nio-8080-exec-5] SearchMembers - Pack name: Cool Dawgs
+[DEBUG] 2018-03-18 20:48:37.135 [http-nio-8080-exec-5] GenericDao - Searching for user with size = S
+[DEBUG] 2018-03-18 20:48:47.296 [http-nio-8080-exec-6] GenericDao - Selecting rows by 3
+[DEBUG] 2018-03-18 20:48:47.320 [http-nio-8080-exec-6] SearchMembers - Pack name: Cool Dawgs
+[DEBUG] 2018-03-18 20:48:47.320 [http-nio-8080-exec-6] GenericDao - Searching for user with sex = M
