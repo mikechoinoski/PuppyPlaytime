@@ -1,8 +1,14 @@
-<html>
+<!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<html lang="en">
+<c:import url="/head.jsp" />
 <body>
-<h2>Puppy Playtime Home Page</h2>
-<a href="yourPack.jsp">Your Pack (user only)</a><br><br>
-<a href="admin.jsp">Admin Page (admin only)</a>
-<a href="searchMembers">Search Members</a>
+
+    <c:import url="/menu.jsp" />
+
+    <c:import url="/main.jsp" />
+
+    <c:import url="/footer.jsp" />
+
 </body>
 </html>

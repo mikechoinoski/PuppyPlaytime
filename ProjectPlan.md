@@ -38,28 +38,28 @@
 - [x] Create class diagram
 - [x] Prepare for Checkpoint 2: Database designed and created, at least one DAO implemented with Hibernate, DAO is unit tested, Log4J is implemented (no System.out.printlns), class design and any other diagrams you plan to use have been created. 
 ### Week 7
-- [ ] Weekly journal entry
-- [ ] Set up authentication locally
-- [ ] Set up authentication on AWS
-- [ ] Deploy project to AWS
-- [ ] Create layout template that will be used for all of the pages
-- [ ] Set up index server and jsp
-- [ ] Review and incorporate any feedback from Checkpoint 2.
+- [x] Weekly journal entry
+- [x] Set up authentication locally
+- [x] Set up authentication on AWS
+- [x] Deploy project to AWS
+- [x] Create layout template that will be used for all of the pages
+- [x] Set up index server and jsp
+- [x] Review and incorporate any feedback from Checkpoint 2.
 ### Week 8
-- [ ] Weekly journal entry
-- [ ] Add the Pack Leader entity
-- [ ] Create Pack Leader unit tests
-- [ ] Create login servlet and jsp
-- [ ] Create add new pack servlet and jsp
-- [ ] Create pack information servlet and page
-- [ ] Research and add amazon rekognition
-- [ ] Unit test amazon rekognition
-- [ ] Add password reset/reminder functionality
+- [x] Weekly journal entry
+- [x] Add the Pack Leader entity
+- [x] Create Pack Leader unit tests
+- [x] Create login servlet and jsp
 ### Week 10
 - [ ] Weekly journal entry
 - [ ] Add the Playmate entity
 - [ ] Create Playmate unit tests
 - [ ] Add Playmate servlet and jsp
+- [ ] Create add new pack servlet and jsp
+- [ ] Create pack information servlet and page
+- [ ] Research and add amazon rekognition
+- [ ] Unit test amazon rekognition
+- [ ] Add password reset/reminder functionality
 ### Week 11 
 - Team project work week
 - [ ] Weekly journal entry

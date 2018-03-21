@@ -19,3 +19,7 @@
 | 2/25/18 | Finished AWS Exercise | 5 | |
 | 2/26/18 | Worked on items for project checkpoint 2 | 3 | |
 | 2/27/18 | Worked on items for project checkpoint 2 | 3 | |
+| 3/4/18 | Worked on Authentication Exercise | 3 | |
+| 3/5/18 | Finished on Authentication Exercise | 3 | |
+| 3/18/18 | Worked on items for project checkpoint 3 | 7 | |
+| 3/19/18 | Finished Week 8 activities | 5 | |

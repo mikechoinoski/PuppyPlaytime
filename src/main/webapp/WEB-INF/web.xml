@@ -67,20 +67,6 @@
     <role-name>user</role-name>
   </security-role>
 
-  <error-page>
-    <error-code>404</error-code>
-    <location>/generalError.jsp</location>
-  </error-page>
-  <error-page>
-    <error-code>403</error-code>
-    <location>/generalError.jsp</location>
-  </error-page>
-  <error-page>
-    <error-code>500</error-code>
-    <location>/generalError.jsp</location>
-  </error-page>
-
-
 </web-app>
 
   <!-- Servlet Filters ================================================ -->
