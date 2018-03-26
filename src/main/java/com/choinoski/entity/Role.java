@@ -1,6 +1,7 @@
 package com.choinoski.entity;
 
 import com.choinoski.util.TimestampAttributeConverter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -35,6 +36,7 @@ public class Role {
     @ManyToOne
     @JoinColumn(name = "pack_nr",
             foreignKey = @ForeignKey(name = "pack_foreign_key"))
+    @JsonIgnore
     private Pack pack;
 
     //@Column( name = "pack_nr")
@@ -111,7 +113,7 @@ public class Role {
                 ", roleName='" + roleName + '\'' +
                 ", updateDate=" + updateDate +
                 ", login='" + login + '\'' +
-                '}';
+                "}";
     }
 
     @Override

@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
@@ -30,6 +31,7 @@ public class Pack implements Serializable {
     private String password;
 
     @OneToMany(mappedBy = "pack", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @JsonIgnore
     private Set<PackMember> members = new HashSet<PackMember>();
 
     @OneToMany(mappedBy = "pack", cascade = CascadeType.ALL,
@@ -179,9 +181,6 @@ public class Pack implements Serializable {
         return "Pack{" +
                 "packNumber=" + packNumber +
                 ", packName='" + packName + '\'' +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                ", members=" + members +
                 '}';
     }
 
