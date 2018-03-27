@@ -31,26 +31,20 @@ public class RetrieveUserData {
         GenericDao packDao  = new GenericDao(Pack.class);
         List<Pack> packs    = packDao.getAll();
 
-        GenericDao roleDao  = new GenericDao(Role.class);
-        List<Role> roles    = roleDao.getAll();
+        String     output   = "[";
 
-        String     output   = "";
+        int        count    = 0;
 
-        output = "[" + mapper.writerWithDefaultPrettyPrinter().writeValueAsString(packDao.getById(1)) + "," +
-                mapper.writerWithDefaultPrettyPrinter().writeValueAsString(packDao.getById(2)) + "]";
+        for (Pack currentPack : packs)
+        {
+            count = count + 1;
+            if (count == packs.size()) {
+                output = output + mapper.writerWithDefaultPrettyPrinter().writeValueAsString(currentPack) + "]";
+            } else {
+                output = output + mapper.writerWithDefaultPrettyPrinter().writeValueAsString(currentPack) + ",";
+            }
 
-        //for (Pack currentPack : packs)
-        //{
-        //    output = output + mapper.writerWithDefaultPrettyPrinter().writeValueAsString(currentPack) + ",";
-        //}
-        //}
-
-        //for (Role currentRole : roles)
-       // {
-        //    output = output + mapper.writeValueAsString(currentRole);
-       // }
-
-        System.out.println(output);
+        }
 
         return Response.ok(output, MediaType.APPLICATION_JSON).build();
     }
