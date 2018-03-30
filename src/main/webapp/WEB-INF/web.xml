@@ -67,6 +67,25 @@
     <role-name>user</role-name>
   </security-role>
 
+    <servlet>
+        <description></description>
+        <display-name>UploadServlet</display-name>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>com.choinoski.controller.UploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/UploadServlet</url-pattern>
+    </servlet-mapping>
+
+  <!-- ********************************************************************* -->
+  <!-- Home Page *********************************************************** -->
+  <!-- ********************************************************************* -->
+
+  <welcome-file-list>
+    <welcome-file>/jsp/index.jsp</welcome-file>
+  </welcome-file-list>
+
 </web-app>
 
   <!-- Servlet Filters ================================================ -->

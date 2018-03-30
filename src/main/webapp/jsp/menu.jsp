@@ -12,4 +12,4 @@
     </div>
     <div class="logo"><img src="images/logo2.png"></div>
     <div class="image"></div>
-    <div class="leftcontent">
+    <div class="content">
