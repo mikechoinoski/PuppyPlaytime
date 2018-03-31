@@ -15,12 +15,12 @@ import com.amazonaws.services.rekognition.model.Label;
 import com.amazonaws.services.rekognition.model.S3Object;
 import java.util.List;
 
-public class DetectLabels {
+public class TestDetect {
 
-    public static void main(String[] args) throws Exception {
+    private String bucket = "puppyplaytimebucket";
+    private AmazonRekognition rekognitionClient;
 
-        String photo = "dog1.jpg";
-        String bucket = "puppyplaytimebucket";
+    public void setup() {
 
         AWSCredentials credentials;
         try {
@@ -31,23 +31,33 @@ public class DetectLabels {
                     + "location (/Users/userid/.aws/credentials), and is in a valid format.", e);
         }
 
-        AmazonRekognition rekognitionClient = AmazonRekognitionClientBuilder
+        rekognitionClient = AmazonRekognitionClientBuilder
                 .standard()
                 .withRegion(Regions.US_EAST_2)
                 .withCredentials(new AWSStaticCredentialsProvider(credentials))
                 .build();
+
+    }
+
+    public void comparePictures(String photo1, String photo2, float percent) throws Exception {
+
+
+    public void displayPictureLabels(String photo, float percent) throws Exception {
+
+        setup();
 
         DetectLabelsRequest request = new DetectLabelsRequest()
                 .withImage(new Image()
                         .withS3Object(new S3Object()
                                 .withName(photo).withBucket(bucket)))
                 .withMaxLabels(10)
-                .withMinConfidence(75F);
+                .withMinConfidence(percent);
 
         try {
             DetectLabelsResult result = rekognitionClient.detectLabels(request);
             List <Label> labels = result.getLabels();
 
+            System.out.println("------------------------------------------");
             System.out.println("Detected labels for " + photo);
             for (Label label: labels) {
                 System.out.println(label.getName() + ": " + label.getConfidence().toString());
@@ -55,5 +65,23 @@ public class DetectLabels {
         } catch(AmazonRekognitionException e) {
             e.printStackTrace();
         }
+
+    }
+
+
+
+    public static void main(String[] args) throws Exception {
+        TestDetect currentDetect = new TestDetect();
+
+        currentDetect.displayPictureLabels("OdoandBone.jpg",75);
+
+        currentDetect.displayPictureLabels("angrycostumedog.jpg",75);
+
+        currentDetect.displayPictureLabels("3ddog.jpg",50);
+        currentDetect.displayPictureLabels("ScoobyDoo.jpg",50);
+
+
+
     }
 }
+
