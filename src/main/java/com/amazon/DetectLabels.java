@@ -24,7 +24,7 @@ public class DetectLabels {
 
         AWSCredentials credentials;
         try {
-            credentials = new ProfileCredentialsProvider().getCredentials();
+            credentials = new ProfileCredentialsProvider("AdminUser").getCredentials();
         } catch(Exception e) {
             throw new AmazonClientException("Cannot load the credentials from the credential profiles file. "
                     + "Please make sure that your credentials file is at the correct "
