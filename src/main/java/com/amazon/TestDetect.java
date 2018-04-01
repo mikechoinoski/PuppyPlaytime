@@ -102,7 +102,7 @@ public class TestDetect {
 
         DetectLabelsRequest request = new DetectLabelsRequest()
                 .withImage(new Image().withS3Object(new S3Object().withName(photo).withBucket(bucket)))
-                .withMaxLabels(10)
+                .withMaxLabels(20)
                 .withMinConfidence(percent);
 
         try {
@@ -125,13 +125,14 @@ public class TestDetect {
         TestDetect currentDetect = new TestDetect();
 
         currentDetect.setup();
-        currentDetect.comparePictures("aaron1.jpg","aaron2.jpg",70);
-        currentDetect.displayPictureLabels("OdoandBone.jpg",25);
+        currentDetect.comparePictures("aaron1.jpg","aaron2.jpg",50);
+        currentDetect.displayPictureLabels("OdoandBone.jpg",1);
 
         currentDetect.displayPictureLabels("angrycostumedog.jpg",75);
 
-        currentDetect.displayPictureLabels("3ddog.jpg",50);
-        currentDetect.displayPictureLabels("ScoobyDoo.jpg",50);
+        currentDetect.displayPictureLabels("3ddog.jpg",25);
+        currentDetect.displayPictureLabels("ScoobyDoo.jpg",1);
+        currentDetect.displayPictureLabels("realisticCgi.jpg",50);
 
         }
 
