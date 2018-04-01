@@ -125,7 +125,7 @@ public class TestDetect {
         TestDetect currentDetect = new TestDetect();
 
         currentDetect.setup();
-        currentDetect.comparePictures("aaron1.jpg","aaron2.jpg",50);
+        currentDetect.comparePictures("aaron2.jpg","aaronHelmet.jpg",1);
         currentDetect.displayPictureLabels("OdoandBone.jpg",1);
 
         currentDetect.displayPictureLabels("angrycostumedog.jpg",75);
