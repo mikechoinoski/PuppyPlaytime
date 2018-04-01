@@ -34,7 +34,7 @@
 
 <br><br><br>
 
-<h3><u>Would you like to meet new packs?</u></h3><br>
+<h3><u>Would you like to meet new packs??!?!?!</u></h3><br>
 <h3><a href="createNewPack">Create you pack today and come visit our Playground!</a></h3>
 </center>
 <c:import url="/jsp/page_bottom.jsp" />
