@@ -21,10 +21,10 @@ import java.io.IOException;
  * @since  November 19, 2017
  */
 @WebServlet(
-        name = "insertNewPack",
-        urlPatterns = { "/insertNewPack" }
+        name = "yourPack",
+        urlPatterns = { "/yourPack" }
 )
-public class CreatePackInsertServlet extends HttpServlet {
+public class YourPack extends HttpServlet {
 
     /**
      *  Handles HTTP GET requests. Sets data for the HTTP request
@@ -35,7 +35,7 @@ public class CreatePackInsertServlet extends HttpServlet {
      *@exception ServletException if there is a Servlet failure
      *@exception IOException if there is an IO failure
      */
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         GenericDao dao = new GenericDao(Pack.class);
@@ -43,19 +43,15 @@ public class CreatePackInsertServlet extends HttpServlet {
         ServletContext servletContext = getServletContext();
         HttpSession    session        = request.getSession();
 
-        Pack   newPack   = new Pack(request.getParameter("packName"),
-                request.getParameter("firstName"),
-                request.getParameter("lastName"),
-                request.getParameter("address"),
-                request.getParameter("phoneNumber"),
-                request.getParameter("emailAddress"),
-                request.getParameter("password"));
+        int id = (int) session.getAttribute("packId");
 
-        int id = dao.insert(newPack);
+        Pack userPack = (Pack) dao.getById(id);
 
-        session.setAttribute("packId", id);
+        session.setAttribute("packName", userPack.getPackName());
+        session.setAttribute("firstName", userPack.getPackName());
+        session.setAttribute("lastName", userPack.getPackName());
 
-        String url = "/insertNewPack";
+        String url = "/jsp/YourPack.jsp";
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);
