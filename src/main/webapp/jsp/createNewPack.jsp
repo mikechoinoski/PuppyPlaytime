@@ -6,7 +6,10 @@
 
 <br><br>
 
-<form method="post" action="UploadServlet" enctype="multipart/form-data">
+<h2>Create Your Pack</h2>
+<br><br>
+
+<form method="post" action="insertNewPack" enctype="multipart/form-data">
     <table>
         <tr>
             <td>Pack Name:</td>

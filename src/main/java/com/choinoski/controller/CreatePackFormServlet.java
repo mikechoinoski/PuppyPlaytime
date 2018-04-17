@@ -16,7 +16,7 @@ import javax.servlet.annotation.*;
         name = "createNewPack",
         urlPatterns = { "/createNewPack" }
 )
-public class createNewPack extends HttpServlet {
+public class CreatePackFormServlet extends HttpServlet {
 
     /**
      *  Handles HTTP GET requests. Sets data for the HTTP request

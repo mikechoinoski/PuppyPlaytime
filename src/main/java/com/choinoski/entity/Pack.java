@@ -27,7 +27,20 @@ public class Pack implements Serializable {
     @Column( name = "pack_name")
     private String packName;
 
-    private String login;
+    @Column( name = "first_name")
+    private String firstName;
+
+    @Column( name = "last_name")
+    private String lastName;
+
+    private String address;
+
+    @Column(name = "email_address")
+    private String emailAddress;
+
+    @Column(name = "phone_number")
+    private String phoneNumber;
+
     private String password;
 
     @OneToMany(mappedBy = "pack", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
@@ -38,94 +51,81 @@ public class Pack implements Serializable {
                   orphanRemoval = true, fetch = FetchType.EAGER, targetEntity = Role.class)
     private Set<Role> roles = new HashSet<Role>();
 
-    /**
-     * Instantiates a new User.
-     */
     public Pack() {
+
     }
 
-    /**
-     * Instantiates a new User.
-     *
-     * @param packName the name of the pack
-     * @param login    the login for the pack
-     * @param password the password for the pack's login
-     */
-    public Pack(String packName, String login , String password) {
+    public Pack(String packName, String firstName, String lastName, String address, String emailAddress,
+                String phoneNumber, String password) {
         this.packName = packName;
-        this.login  = login ;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.emailAddress = emailAddress;
+        this.phoneNumber = phoneNumber;
         this.password = password;
-        //this.packTokenNumber = packTokenNumber;
     }
 
-    /**
-     * Gets pack number.
-     *
-     * @return the pack number
-     */
     public int getPackNumber() {
         return packNumber;
     }
 
-    /**
-     * Sets pack number.
-     *
-     * @param packNumber the pack number
-     */
     public void setPackNumber(int packNumber) {
         this.packNumber = packNumber;
     }
 
-    /**
-     * Gets pack name.
-     *
-     * @return the pack name
-     */
     public String getPackName() {
         return packName;
     }
 
-    /**
-     * Sets pack name.
-     *
-     * @param packName the pack name
-     */
     public void setPackName(String packName) {
         this.packName = packName;
     }
 
-    /**
-     * Gets login.
-     *
-     * @return the login
-     */
-    public String getLogin() {
-        return login;
+    public String getFirstName() {
+        return firstName;
     }
 
-    /**
-     * Sets login.
-     *
-     * @param login the login
-     */
-    public void setLogin(String login) {
-        this.login = login;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    /**
-     * Gets password.
-     *
-     * @return the password
-     */
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
     public String getPassword() {
         return password;
     }
 
-    /**
-     * Sets password.
-     *
-     * @param password the password
-     */
     public void setPassword(String password) {
         this.password = password;
     }
@@ -175,36 +175,5 @@ public class Pack implements Serializable {
         members.remove(member);
         member.setPack(null);
     }
-
-    @Override
-    public String toString() {
-        return "Pack{" +
-                "packNumber=" + packNumber +
-                ", packName='" + packName + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if ( this == o ) {
-            return true;
-        }
-        if ( o == null || getClass() != o.getClass() ) {
-            return false;
-        }
-        Pack pack = (Pack) o;
-        return  Objects.equals( packNumber, pack.packNumber ) &&
-                Objects.equals( packName, pack.packName )     &&
-                Objects.equals( login, pack.login )           &&
-                Objects.equals( password, pack.password );
-    }
-
-    @Override
-    public int hashCode() {
-
-        return Objects.hash( packNumber, packName );
-
-    }
-
 
 }
