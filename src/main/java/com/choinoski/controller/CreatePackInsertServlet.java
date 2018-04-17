@@ -33,10 +33,13 @@ public class CreatePackInsertServlet extends HttpServlet {
      *@exception ServletException if there is a Servlet failure
      *@exception IOException if there is an IO failure
      */
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        GenericDao packDao = new GenericDao(Pack.class);
+        GenericDao dao = new GenericDao(Pack.class);
+
+        String packName = request.getParameter("packName");
+        String firstName = request.getParameter("firstName");
 
         Pack       newPack = new Pack(request.getParameter("packName"),
                 request.getParameter("firstName"),
@@ -46,10 +49,9 @@ public class CreatePackInsertServlet extends HttpServlet {
                 request.getParameter("emailAddress"),
                 request.getParameter("password"));
 
+        int id = dao.insert(newPack);
 
-
-
-        String url = "/jsp/createNewPack.jsp";
+        String url = "/jsp/YourPack.jsp";
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);

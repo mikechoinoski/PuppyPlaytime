@@ -67,42 +67,42 @@ class PackDaoTest {
     /**
      * Verify the success of an insert
      */
-    @Test
-    void testInsert() {
+    //@Test
+    //void testInsert() {
 
-        Pack newPack = new Pack("Newest Pack", "pack12321", "trickypassword!");
+     //   Pack newPack = new Pack("Newest Pack", "pack12321", "trickypassword!");
 
-        int id = dao.insert(newPack);
+     //   int id = dao.insert(newPack);
 
-        assertNotEquals(0,id);
-        Pack insertedPack = (Pack) dao.getById(id);
-        assertEquals("Newest Pack", insertedPack.getPackName());
-        assertEquals("pack12321", insertedPack.getLogin());
-        assertEquals("trickypassword!", insertedPack.getPassword());
-    }
+     //   assertNotEquals(0,id);
+    //    Pack insertedPack = (Pack) dao.getById(id);
+     //   assertEquals("Newest Pack", insertedPack.getPackName());
+    //   assertEquals("pack12321", insertedPack.getLogin());
+    //    assertEquals("trickypassword!", insertedPack.getPassword());
+    //}
 
     /**
      * Verify the success of an insert with a member
      */
-    @Test
-    void testInsertWithMember() {
+    //@Test
+    //void testInsertWithMember() {
 
-        Pack newPack       = new Pack("The Shih Tzu Pack", "legoandchewy", "youllneverguessit");
+    //    Pack newPack       = new Pack("The Shih Tzu Pack", "legoandchewy", "youllneverguessit");
 
-        PackMember newMember = new PackMember("Scout", "M", "Golden Retriever", 'F',
-                LocalDate.of(2011, Month.MAY, 9),0,
-                LocalDateTime.now(), LocalDateTime.now(), newPack);
+    //    PackMember newMember = new PackMember("Scout", "M", "Golden Retriever", 'F',
+    //            LocalDate.of(2011, Month.MAY, 9),0,
+    //            LocalDateTime.now(), LocalDateTime.now(), newPack);
 
-        newPack.addMember(newMember);
+    //    newPack.addMember(newMember);
 
-        int id = dao.insert(newPack);
+    //    int id = dao.insert(newPack);
 
-        assertNotEquals(0,id);
-        Pack insertedPack = (Pack) dao.getById(id);
-        assertTrue(newPack.equals(insertedPack));
-        assertEquals(1, insertedPack.getMembers().size());
+     //   assertNotEquals(0,id);
+     //   Pack insertedPack = (Pack) dao.getById(id);
+     //   assertTrue(newPack.equals(insertedPack));
+    //    assertEquals(1, insertedPack.getMembers().size());
 
-    }    
+    //}
     
     
     /**

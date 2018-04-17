@@ -9,7 +9,7 @@
 <h2>Create Your Pack</h2>
 <br><br>
 
-<form method="post" action="insertNewPack" enctype="multipart/form-data">
+<form method="post" action="insertNewPack">
     <table>
         <tr>
             <td>Pack Name:</td>
