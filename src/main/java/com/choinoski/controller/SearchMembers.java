@@ -34,14 +34,13 @@ public class SearchMembers extends HttpServlet {
         String currentSearchType     = req.getParameter("searchType");
         String currentSearchTerm     = req.getParameter("searchTerm");
         GenericDao memberDao         = new GenericDao(PackMember.class);
-        GenericDao packDao           = new GenericDao(Pack.class);
         List<PackMember> packMembers = null;
 
-        Pack retrievedPack = (Pack) packDao.getById(3);
+        //Pack retrievedPack = (Pack) packDao.getById(3);
 
-        logger.debug("Pack name: " + retrievedPack.getPackName());
+        //logger.debug("Pack name: " + retrievedPack.getPackName());
 
-        req.setAttribute("testPack", retrievedPack);
+        //req.setAttribute("testPack", retrievedPack);
 
         if(currentSearchType == null) {
             packMembers = memberDao.getAll();
@@ -57,7 +56,7 @@ public class SearchMembers extends HttpServlet {
             req.setAttribute("members", packMembers);
         }
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/members.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/jsp/members.jsp");
         dispatcher.forward(req, resp);
     }
 }

@@ -1,13 +1,12 @@
-<%@include file="jsp/head.jsp"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="com.choinoski.entity.PackMember" %>
 
-<html><body>
+<c:import url="/jsp/page_top.jsp" />
+<center>
 
-<div class="container-fluid">
     <h2>Search Results: </h2>
 
     <form action="searchMembers" class="form-inline"/>
+    <table>
     <tr>
         <td colspan=2><u>Results to Return:</u></td>
     </tr>
@@ -37,26 +36,22 @@
     <table>
         <tr>
             <th width="100">Name</th>
-            <th width="200">Size</th>
-            <th width="200">Breed</th>
-            <th width="100">Gender</th>
-            <th width="100">Intact</th>
+            <th width="50">Size</th>
+            <th width="100">Breed</th>
+            <th width="50">Gender</th>
+            <th width="50">Intact</th>
         </tr>
         <c:forEach var="currentUser" items="${members}">
             <tr>
-                <td width="100">${currentUser.name}</td>
-                <td width="200">${currentUser.size}</td>
-                <td width="200">${currentUser.breed}</td>
-                <td width="100">${currentUser.sex}</td>
-                <td width="100">${currentUser.intact}</td>
+                <td width="100" align="center">${currentUser.name}</td>
+                <td width="50" align="center">${currentUser.size}</td>
+                <td width="100" align="center">${currentUser.breed}</td>
+                <td width="50" align="center">${currentUser.sex}</td>
+                <td width="50" align="center">${currentUser.intact}</td>
             </tr>
         </c:forEach>
     </table>
 
-    <br><br>
-    Hi There!! ${testPack.packName}.
+</center>
 
-</div>
-
-</body>
-</html>
+<c:import url="/jsp/page_bottom.jsp" />

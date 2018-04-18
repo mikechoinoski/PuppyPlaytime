@@ -55,7 +55,7 @@ public class CreatePackInsertServlet extends HttpServlet {
 
         session.setAttribute("packId", id);
 
-        String url = "/insertNewPack";
+        String url = "/yourPack";
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);

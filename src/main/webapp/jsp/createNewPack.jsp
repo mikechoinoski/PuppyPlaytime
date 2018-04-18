@@ -4,8 +4,6 @@
 
 <center>
 
-<br><br>
-
 <h2>Create Your Pack</h2>
 <br><br>
 

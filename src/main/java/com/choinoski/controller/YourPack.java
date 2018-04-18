@@ -22,10 +22,9 @@ import java.io.IOException;
  */
 @WebServlet(
         name = "yourPack",
-        urlPatterns = { "/yourPack" }
+        urlPatterns = { "/yourPack2" }
 )
 public class YourPack extends HttpServlet {
-
     /**
      *  Handles HTTP GET requests. Sets data for the HTTP request
      *  data. Forwards data to a JSP to display.
@@ -47,15 +46,47 @@ public class YourPack extends HttpServlet {
 
         Pack userPack = (Pack) dao.getById(id);
 
-        session.setAttribute("packName", userPack.getPackName());
-        session.setAttribute("firstName", userPack.getPackName());
-        session.setAttribute("lastName", userPack.getPackName());
+        session.setAttribute("userPack", userPack);
 
-        String url = "/jsp/YourPack.jsp";
+        //String url = "/jsp/yourPack.jsp";
+        String url = "jsp/yourPack.jsp";
+        response.sendRedirect(url);
 
-        RequestDispatcher dispatcher =
-                getServletContext().getRequestDispatcher(url);
-        dispatcher.forward(request, response);
+        //RequestDispatcher dispatcher =
+        //        getServletContext().getRequestDispatcher(url);
+        //dispatcher.forward(request, response);
+
+    }
+    /**
+     *  Handles HTTP GET requests. Sets data for the HTTP request
+     *  data. Forwards data to a JSP to display.
+     *
+     *@param request the HttpServletRequest object
+     *@param response the HttpServletResponse object
+     *@exception ServletException if there is a Servlet failure
+     *@exception IOException if there is an IO failure
+     */
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        GenericDao dao = new GenericDao(Pack.class);
+
+        ServletContext servletContext = getServletContext();
+        HttpSession    session        = request.getSession();
+
+        int id = (int) session.getAttribute("packId");
+
+        Pack userPack = (Pack) dao.getById(id);
+
+        session.setAttribute("userPack", userPack);
+
+        //String url = "/jsp/yourPack.jsp";
+        String url = "jsp/yourPack.jsp";
+        response.sendRedirect(url);
+
+        //RequestDispatcher dispatcher =
+        //        getServletContext().getRequestDispatcher(url);
+        //dispatcher.forward(request, response);
 
     }
 
