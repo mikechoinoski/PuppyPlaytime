@@ -1007,7 +1007,7 @@
     </column>
     <column id="254" parent="235" name="pack_name">
       <Position>2</Position>
-      <DataType>text|0</DataType>
+      <DataType>varchar(30)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="255" parent="235" name="first_name">
@@ -1488,7 +1488,7 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="348" parent="243" name="login">
+    <column id="348" parent="243" name="pack_name">
       <Position>5</Position>
       <DataType>varchar(30)|0</DataType>
       <NotNull>1</NotNull>
@@ -1501,7 +1501,7 @@
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="350" parent="243" name="role_pack_login_fk">
-      <ColNames>login</ColNames>
+      <ColNames>pack_name</ColNames>
     </index>
     <index id="351" parent="243" name="role_pack_pack_nr_fk">
       <ColNames>pack_nr</ColNames>

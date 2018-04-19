@@ -31,8 +31,8 @@
   <login-config>
     <auth-method>FORM</auth-method>
     <form-login-config>
-      <form-login-page>/login.jsp</form-login-page>
-      <form-error-page>/loginError.jsp</form-error-page>
+      <form-login-page>/jsp/login.jsp</form-login-page>
+      <form-error-page>/jsp/loginError.jsp</form-error-page>
     </form-login-config>
   </login-config>
 
@@ -52,7 +52,7 @@
     <web-resource-collection>
       <web-resource-name>RequiresUserRole</web-resource-name>
       <url-pattern>/yourPack</url-pattern>
-      <url-pattern>/yourPack.jsp</url-pattern>
+      <url-pattern>/jsp/yourPack.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>user</role-name>
@@ -83,7 +83,7 @@
   <!-- ********************************************************************* -->
 
   <welcome-file-list>
-    <welcome-file>/jsp/index.jsp</welcome-file>
+    <welcome-file>/jsp/yourPack.jsp</welcome-file>
   </welcome-file-list>
 
 </web-app>

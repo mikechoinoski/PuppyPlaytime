@@ -22,7 +22,7 @@ import java.io.IOException;
  */
 @WebServlet(
         name = "yourPack",
-        urlPatterns = { "/yourPack2" }
+        urlPatterns = { "/yourPack" }
 )
 public class YourPack extends HttpServlet {
     /**
@@ -48,14 +48,13 @@ public class YourPack extends HttpServlet {
 
         session.setAttribute("userPack", userPack);
 
-        //String url = "/jsp/yourPack.jsp";
-        String url = "jsp/yourPack.jsp";
-        response.sendRedirect(url);
+        String url = "/jsp/yourPack.jsp";
 
-        //RequestDispatcher dispatcher =
-        //        getServletContext().getRequestDispatcher(url);
-        //dispatcher.forward(request, response);
-
+        RequestDispatcher dispatcher =
+                getServletContext().getRequestDispatcher(url);
+        dispatcher.forward(request, response);
+        //String url = "jsp/yourPack.jsp";
+        //response.sendRedirect(url);
     }
     /**
      *  Handles HTTP GET requests. Sets data for the HTTP request
@@ -80,13 +79,14 @@ public class YourPack extends HttpServlet {
 
         session.setAttribute("userPack", userPack);
 
-        //String url = "/jsp/yourPack.jsp";
-        String url = "jsp/yourPack.jsp";
-        response.sendRedirect(url);
+        String url = "/jsp/yourPack.jsp";
 
-        //RequestDispatcher dispatcher =
-        //        getServletContext().getRequestDispatcher(url);
-        //dispatcher.forward(request, response);
+        RequestDispatcher dispatcher =
+                getServletContext().getRequestDispatcher(url);
+        dispatcher.forward(request, response);
+
+        //String url = "jsp/yourPack.jsp";
+        //response.sendRedirect(url);
 
     }
 
