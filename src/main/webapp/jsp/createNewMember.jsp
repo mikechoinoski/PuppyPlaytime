@@ -12,27 +12,38 @@
     <table>
         <tr>
             <td>Name</td>
-            <td><input type="text" name="memberName"></td>
+            <td>
+                <input type="text" name="memberName">
+            </td>
         </tr>
         <tr>
             <td>Weight</td>
-            <td><input type="text" name="memberWeight"></td>
+            <td>
+                <input type="text" name="memberWeight">
+            </td>
         </tr>
         <tr>
             <td>Breed</td>
-            <td><input type="text" name="memberBreed"></td>
+            <td>
+                <input type="text" name="memberBreed">
+            </td>
         </tr>
         <tr>
             <td>Gender</td>
-            <td><input type="text" name="memberGender"></td>
+            <td>
+                <input type="text" name="memberGender">
+            </td>
         </tr>
         <tr>
             <td>Date of Birth</td>
-            <td><input type="text" name="memberDateOfBirth"></td>
+                <input type="date" name="memberDateOfBirth">
+            </td>
         </tr>
         <tr>
             <td>Intact</td>
-            <td><input type="text" name="memberIntact"></td>
+            <td>
+                <input type="text" name="memberIntact">
+            </td>
         </tr>
     </table>
     <br><br>

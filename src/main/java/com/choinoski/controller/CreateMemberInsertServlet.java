@@ -8,6 +8,8 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
+import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
+
 /**
  *  This servlet sets HTTP request data and forwards it to a JSP
  *  to display data.
@@ -38,34 +40,41 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
         Pack userPack = (Pack) session.getAttribute("userPack");
 
-        String intactData = request.getParameter("memberIntact");
-        String genderData = request.getParameter("memberGender");
+        String intactData = toUpperCase(request.getParameter("memberIntact"));
+        String genderData = toUpperCase(request.getParameter("memberGender"));
 
         boolean memberIntact = false;
         char    maleOrFemale = ' ';
 
-        if (intactData.equals("Yes") || intactData.equals("Y") || intactData.equals("yes")) {
+        boolean noErrorsFound =  true;
+
+        if (intactData.equals("y") || intactData.equals("yes")) {
             memberIntact = true;
         }
 
-        if (genderData.equals("Male") || genderData.equals("Male") ) {
-            memberIntact = true;
+        if (genderData.equals("male") || genderData.equals("m")) {
+            maleOrFemale = 'M';
+        } else if (genderData.equals("female") || genderData.equals("f")) {
+            maleOrFemale = 'M';
+        } else {
+            noErrorsFound = false;
         }
 
-        PackMember  newMember   = new PackMember(request.getParameter("packName"),
-                request.getParameter("memberName"),
-                request.getParameter("memberWeight"),
-                request.getParameter("memberBreed"),
-                ,
-                request.getParameter("memberDateOfBirth"),
-                memberIntact);
+        if (noErrorsFound) {
+            //PackMember  newMember   = new PackMember(request.getParameter("packName"),
+            //        request.getParameter("memberName"),
+            //        request.getParameter("memberWeight"),
+            //        request.getParameter("memberBreed"),
+            //        maleOrFemale,
+            //       request.getParameter("memberDateOfBirth"),
+            //        memberIntact);
 
-        userPack.addMember(newMember);
+            //userPack.addMember(newMember);
+        }
 
-        session.setAttribute("packId", id);
-        String url = "/jsp/createNewMember.jsp";
+        String url = "/yourPack";
 
-        RequestDispatcher  dispatcher =
+        RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
 
