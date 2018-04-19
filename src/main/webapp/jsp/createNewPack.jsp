@@ -4,7 +4,6 @@
 
 <div class="image"></div>
 <div class="content">
-    <br>
 <center>
 
 <h2>Create Your Pack</h2>

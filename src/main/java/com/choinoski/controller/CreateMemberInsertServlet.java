@@ -19,7 +19,7 @@ import javax.servlet.annotation.*;
         name = "createNewMember",
         urlPatterns = { "/createNewMember" }
 )
-public class CreateMemberFormServlet extends HttpServlet {
+public class CreateMemberInsertServlet extends HttpServlet {
 
     /**
      *  Handles HTTP GET requests. Sets data for the HTTP request
@@ -33,6 +33,36 @@ public class CreateMemberFormServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        ServletContext servletContext = getServletContext();
+        HttpSession    session        = request.getSession();
+
+        Pack userPack = (Pack) session.getAttribute("userPack");
+
+        String intactData = request.getParameter("memberIntact");
+        String genderData = request.getParameter("memberGender");
+
+        boolean memberIntact = false;
+        char    maleOrFemale = ' ';
+
+        if (intactData.equals("Yes") || intactData.equals("Y") || intactData.equals("yes")) {
+            memberIntact = true;
+        }
+
+        if (genderData.equals("Male") || genderData.equals("Male") ) {
+            memberIntact = true;
+        }
+
+        PackMember  newMember   = new PackMember(request.getParameter("packName"),
+                request.getParameter("memberName"),
+                request.getParameter("memberWeight"),
+                request.getParameter("memberBreed"),
+                ,
+                request.getParameter("memberDateOfBirth"),
+                memberIntact);
+
+        userPack.addMember(newMember);
+
+        session.setAttribute("packId", id);
         String url = "/jsp/createNewMember.jsp";
 
         RequestDispatcher  dispatcher =
