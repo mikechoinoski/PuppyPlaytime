@@ -31,6 +31,7 @@ public class Role {
     @Convert(converter = TimestampAttributeConverter.class)
     private LocalDateTime updateDate;
 
+    @Column( name = "pack_name")
     private String    login;
 
     @ManyToOne

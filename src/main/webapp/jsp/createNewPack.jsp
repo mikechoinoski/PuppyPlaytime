@@ -2,6 +2,9 @@
 
 <c:import url="/jsp/page_top.jsp" />
 
+<div class="image"></div>
+<div class="content">
+    <br>
 <center>
 
 <h2>Create Your Pack</h2>

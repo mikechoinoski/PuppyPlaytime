@@ -2,6 +2,9 @@
 
 <c:import url="/jsp/page_top.jsp" />
 
+<div class="image2"></div>
+<div class="content">
+    <br>
 <center>
 
     <h2>Welcome to Puppy Playtime!</h2>

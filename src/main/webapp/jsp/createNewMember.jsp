@@ -2,30 +2,40 @@
 
 <c:import url="/jsp/page_top.jsp" />
 
+<div class="image"></div>
+<div class="content">
+    <br>
 <center>
 
     <form method="post" action="UploadServlet" enctype="multipart/form-data">
+    <table>
         <tr>
-            <td></td>
-            <td></td>
+            <td>Name</td>
+            <td><input type="text" name="name"></td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
+            <td>Weight</td>
+            <td><input type="text" name="weight"></td>
         </tr>
-        Name:<br>
-        <input type="text" name="name"><br>
-        Weight:<br>
-        <input type="text" name="weight">
-        Breed:<br>
-        <input type="text" name="breed">
-        Gender:<br>
-        <input type="text" name="gender">
-        Date of Birth:<br>
-        <input type="text" name="dateOfBirth">
-        Intact:<br>
-        <input type="text" name="intact">
-        Select file to upload:
+        <tr>
+            <td>Breed</td>
+            <td><input type="text" name="breed"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><input type="text" name="gender"></td>
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            <td><input type="text" name="dateOfBirth"></td>
+        </tr>
+        <tr>
+            <td>Intact</td>
+            <td><input type="text" name="intact"></td>
+        </tr>
+    </table>
+    <br><br>
+        <u>Add a Picture</u><br>
         <input type="file" name="dataFile" id="fileChooser"/><br/><br/>
         <input type="submit" value="Upload" />
     </form>

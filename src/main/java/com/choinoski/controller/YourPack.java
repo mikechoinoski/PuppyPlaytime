@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
 /**
  *  This servlet sets HTTP request data and forwards it to a JSP
@@ -41,10 +42,18 @@ public class YourPack extends HttpServlet {
 
         ServletContext servletContext = getServletContext();
         HttpSession    session        = request.getSession();
+        Pack userPack = null;
+        //java.security.Principal getUserPrincipal();
+        //isUserInRole(java.lang.String role);
+        //getRemoteUser();
 
-        int id = (int) session.getAttribute("packId");
+        String packName = request.getUserPrincipal().getName();
 
-        Pack userPack = (Pack) dao.getById(id);
+        List<Pack> packs = dao.getByPropertyEqual("packName",packName);
+
+        if (packs.size() == 1) {
+            userPack = packs.get(0);
+        }
 
         session.setAttribute("userPack", userPack);
 

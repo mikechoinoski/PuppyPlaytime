@@ -5,7 +5,7 @@ body {
     background-attachment: fixed;
     width:780px;
     color: #717272;
-    font-size: 11px;
+    font-size: 14px;
     font-family: Verdana, sans-serif;
     padding:10px auto 0 auto;
     margin:auto;
@@ -51,7 +51,10 @@ A.footerl:hover {
     float: right;
     text-align: left;
     background-color: #FFF;
-    padding: 34px 15px 13px 15px;
+    padding-top: 33px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 18px;
 }
 
 .logo {
@@ -63,6 +66,16 @@ A.footerl:hover {
 }
 
 .image {
+    border-bottom: 4px solid #000000;
+    background: url(../images/dogGroupEdit.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 150px;
+}
+
+.image2 {
     border-bottom: 4px solid #000000;
     background: url(../images/formated_dogs.jpg);
     background-size: cover;

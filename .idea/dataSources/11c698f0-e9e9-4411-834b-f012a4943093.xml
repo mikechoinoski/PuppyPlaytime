@@ -1500,7 +1500,7 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="350" parent="243" name="role_pack_login_fk">
+    <index id="350" parent="243" name="role_pack_name_index">
       <ColNames>pack_name</ColNames>
     </index>
     <index id="351" parent="243" name="role_pack_pack_nr_fk">
