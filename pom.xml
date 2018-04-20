@@ -105,7 +105,7 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>5.2.12.Final</version>
+      <version>5.2.3.Final</version>
     </dependency>
 
     <!-- c3p0 - used to handle connection pooling with hibernate -->
@@ -114,6 +114,12 @@
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-c3p0</artifactId>
       <version>5.2.12.Final</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>1.4.194</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->

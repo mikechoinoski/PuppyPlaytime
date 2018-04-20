@@ -1,14 +1,19 @@
 package com.choinoski.controller;
 
 import com.choinoski.entity.Pack;
-import com.choinoski.entity.PackMember;
 
 import java.io.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
 import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
+
+import com.choinoski.entity.PackMember;
+
+
 
 /**
  *  This servlet sets HTTP request data and forwards it to a JSP
@@ -46,31 +51,34 @@ public class CreateMemberInsertServlet extends HttpServlet {
         boolean memberIntact = false;
         char    maleOrFemale = ' ';
 
+        LocalDate memberDob = LocalDate.parse(request.getParameter("memberDateOfBirth"),
+                DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+
         boolean noErrorsFound =  true;
 
-        if (intactData.equals("y") || intactData.equals("yes")) {
+        if (intactData.equals("yes")) {
             memberIntact = true;
         }
 
-        if (genderData.equals("male") || genderData.equals("m")) {
-            maleOrFemale = 'M';
-        } else if (genderData.equals("female") || genderData.equals("f")) {
-            maleOrFemale = 'M';
+        if (genderData.equals("male")) {
+            maleOrFemale = 'm';
+        } else if (genderData.equals("female")) {
+            maleOrFemale = 'f';
         } else {
             noErrorsFound = false;
         }
 
-        //if (noErrorsFound) {
-            //PackMember  newMember   = new PackMember(request.getParameter("packName"),
-            //        request.getParameter("memberName"),
-            //        request.getParameter("memberWeight"),
-            //        request.getParameter("memberBreed"),
-            //        maleOrFemale,
-            //       request.getParameter("memberDateOfBirth"),
-            //        memberIntact);
+        if (noErrorsFound) {
+            PackMember newMember = new PackMember(request.getParameter("packName"),
+                    request.getParameter("memberName"),
+                    request.getParameter("memberWeight"),
+                    request.getParameter("memberBreed"),
+                    maleOrFemale,
+                    memberDob,
+                    memberIntact);
 
-            //userPack.addMember(newMember);
-        //}
+            userPack.addMember(newMember);
+        }
 
         String url = "/yourPack";
 

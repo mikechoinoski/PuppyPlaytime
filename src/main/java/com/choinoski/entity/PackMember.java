@@ -1,5 +1,6 @@
 package com.choinoski.entity;
 
+import org.hibernate.annotations.GenerationTime;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
@@ -36,9 +37,13 @@ public class PackMember {
     public boolean intact;
 
     @Column( name = "create_date")
+    @Temporal( value = TemporalType.TIMESTAMP )
+    @org.hibernate.annotations.Generated(value= GenerationTime.ALWAYS)
     private LocalDateTime createDate;
 
     @Column( name = "last_modified_date")
+    @Temporal( value = TemporalType.TIMESTAMP )
+    @org.hibernate.annotations.Generated(value= GenerationTime.ALWAYS)
     private LocalDateTime lastModifiedDate;
 
     @ManyToOne
