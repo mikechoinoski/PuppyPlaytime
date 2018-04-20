@@ -1,13 +1,14 @@
 package com.choinoski.entity;
 
-import org.hibernate.annotations.GenerationTime;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Type;
+import org.hibernate.annotations.*;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
+import javax.persistence.Table;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
+import java.util.Date;
 import java.util.Objects;
 
 /**
@@ -36,15 +37,15 @@ public class PackMember {
     @Type(type = "org.hibernate.type.NumericBooleanType")
     public boolean intact;
 
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     @Column( name = "create_date")
-    @Temporal( value = TemporalType.TIMESTAMP )
-    @org.hibernate.annotations.Generated(value= GenerationTime.ALWAYS)
-    private LocalDateTime createDate;
+    private Date createDate;
 
+    @UpdateTimestamp
+    @Temporal( TemporalType.TIMESTAMP )
     @Column( name = "last_modified_date")
-    @Temporal( value = TemporalType.TIMESTAMP )
-    @org.hibernate.annotations.Generated(value= GenerationTime.ALWAYS)
-    private LocalDateTime lastModifiedDate;
+    private Date lastModifiedDate;
 
     @ManyToOne
     @JoinColumn(name = "pack_nr",
@@ -207,7 +208,7 @@ public class PackMember {
      *
      * @return the create date
      */
-    public LocalDateTime getCreateDate() {
+    public Date getCreateDate() {
         return createDate;
     }
 
@@ -216,7 +217,7 @@ public class PackMember {
      *
      * @param createDate the create date
      */
-    public void setCreateDate(LocalDateTime createDate) {
+    public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 
@@ -225,7 +226,7 @@ public class PackMember {
      *
      * @return the last modified date
      */
-    public LocalDateTime getLastModifiedDate() {
+    public Date getLastModifiedDate() {
         return lastModifiedDate;
     }
 
@@ -234,7 +235,7 @@ public class PackMember {
      *
      * @param lastModifiedDate the last modified date
      */
-    public void setLastModifiedDate(LocalDateTime lastModifiedDate) {
+    public void setLastModifiedDate(Date lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
     }
 

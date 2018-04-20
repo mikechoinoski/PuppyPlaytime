@@ -5,6 +5,7 @@ import com.choinoski.entity.Pack;
 import java.io.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -12,7 +13,7 @@ import javax.servlet.annotation.*;
 import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
 
 import com.choinoski.entity.PackMember;
-
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 
 /**
@@ -48,6 +49,14 @@ public class CreateMemberInsertServlet extends HttpServlet {
         String intactData = toUpperCase(request.getParameter("memberIntact"));
         String genderData = toUpperCase(request.getParameter("memberGender"));
 
+        boolean uploadPicture = false;
+
+        boolean isMultipart = ServletFileUpload.isMultipartContent(request);
+
+        if (isMultipart) {
+            uploadPicture = true;
+        }
+
         boolean memberIntact = false;
         char    maleOrFemale = ' ';
 
@@ -67,6 +76,15 @@ public class CreateMemberInsertServlet extends HttpServlet {
         } else {
             noErrorsFound = false;
         }
+
+        // Create a new file upload handler
+        ServletFileUpload upload = new ServletFileUpload(factory);
+
+        // Set overall request size constraint
+        upload.setSizeMax(MAX_REQUEST_SIZE);
+        List items = upload.parseRequest(request);
+
+
 
         if (noErrorsFound) {
             PackMember newMember = new PackMember(request.getParameter("packName"),

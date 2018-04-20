@@ -1,34 +1,27 @@
-package com.choinoski.controller;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.Iterator;
-import java.util.List;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+package com.choinoski.util;
 
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-/**
- * Servlet implementation class UploadServlet
- *
- */
-public class UploadServlet extends HttpServlet {
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.util.Iterator;
+import java.util.List;
+
+public class FileUtilities {
     private static final long serialVersionUID = 1L;
 
     private static final int MAX_MEMORY_SIZE = 1024 * 1024 * 2;
     private static final int MAX_REQUEST_SIZE = 1024 * 1024;
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public FileUtilities() {
 
-        // Check that we have a file upload request
+    }
 
+    public boolean uploadFile(String folderLocation, HttpServletRequest request) {
 
         // Create a factory for disk-based file items
         DiskFileItemFactory factory = new DiskFileItemFactory();
@@ -43,7 +36,7 @@ public class UploadServlet extends HttpServlet {
         factory.setRepository(new File(System.getProperty("java.io.tmpdir")));
 
         // constructs the folder where uploaded file will be stored
-        String uploadFolder = "/home/student/IdeaProjects/PuppyPlaytime/uploaded_pictures";
+        //String uploadFolder = "/home/student/IdeaProjects/PuppyPlaytime/uploaded_pictures";
 
         // Create a new file upload handler
         ServletFileUpload upload = new ServletFileUpload(factory);
@@ -60,7 +53,7 @@ public class UploadServlet extends HttpServlet {
 
                 if (!item.isFormField()) {
                     String fileName = new File(item.getName()).getName();
-                    String filePath = uploadFolder + File.separator + fileName;
+                    String filePath = folderLocation + File.separator + fileName;
                     File uploadedFile = new File(filePath);
                     System.out.println(filePath);
                     // saves the file to upload directory
@@ -68,16 +61,15 @@ public class UploadServlet extends HttpServlet {
                 }
             }
 
-            // displays done.jsp page after upload finished
-            getServletContext().getRequestDispatcher("/done.jsp").forward(
-                    request, response);
+            return true;
 
         } catch (FileUploadException ex) {
             throw new ServletException(ex);
         } catch (Exception ex) {
             throw new ServletException(ex);
         }
-
     }
+
+
 
 }
