@@ -63,9 +63,8 @@ class PackMemberDaoTest {
         GenericDao packDao   = new GenericDao(Pack.class);
         Pack       pack      = (Pack) packDao.getById(packId);
 
-        PackMember newMember = new PackMember("Scout", "M", "Golden Retriever", 'F',
-                               LocalDate.of(2011, Month.MAY, 9),1,
-                               LocalDateTime.now(), LocalDateTime.now(), pack);
+        PackMember newMember = new PackMember("Scout", "80","M", "Golden Retriever", 'F',
+                               LocalDate.of(2011, Month.MAY, 9),true);
 
         pack.addMember(newMember);
 

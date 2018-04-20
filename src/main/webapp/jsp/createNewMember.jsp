@@ -12,44 +12,64 @@
     <table>
         <tr>
             <td>Name</td>
-            <td>
+            <td align="center">
                 <input type="text" name="memberName">
             </td>
         </tr>
         <tr>
-            <td>Weight</td>
-            <td>
-                <input type="text" name="memberWeight">
-            </td>
-        </tr>
-        <tr>
             <td>Breed</td>
-            <td>
+            <td align="center">
                 <input type="text" name="memberBreed">
             </td>
         </tr>
         <tr>
-            <td>Gender</td>
-            <td>
-                <input type="text" name="memberGender">
+            <td>Weight</td>
+            <td align="center">
+                <input type="number" name="memberWeight" min="0" max="300">
             </td>
         </tr>
         <tr>
             <td>Date of Birth</td>
+            <td align="center">
                 <input type="date" name="memberDateOfBirth">
             </td>
         </tr>
         <tr>
-            <td>Intact</td>
-            <td>
-                <input type="text" name="memberIntact">
+            <td>Gender</td>
+            <td align="center">
+                <label for="memberGenderMale">Male</label>
+                <input type="radio" id="memberGenderMale" name="memberGender" value="male"/>
+                <label for="memberGenderFemale">Female</label>
+                <input type="radio" id=memberGenderFemale name="memberGender" value="female" />
             </td>
+        </tr>
+        <tr>
+            <td>Intact</td>
+            <td align="center">
+                <label for="memberIntactYes">Yes</label>
+                <input type="radio" id="memberIntactYes" name="memberIntact" value="yes"/>
+                <label for="memberIntactNo">No</label>
+                <input type="radio" id="memberIntactNo" name="memberIntact" value="no" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><br></td>
+        </tr>
+        <tr>
+            <td>Picture</td>
+            <td align="center">
+                <input type="file" name="dataFile" id="fileChooser"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><br></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><input type="submit" value="All done!" /></td>
         </tr>
     </table>
     <br><br>
-        <u>Add a Picture</u><br>
-        <input type="file" name="dataFile" id="fileChooser"/><br/><br/>
-        <input type="submit" value="Upload" />
+
     </form>
 
 </center>

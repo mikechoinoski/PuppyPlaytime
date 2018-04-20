@@ -60,7 +60,7 @@ public class CreateMemberInsertServlet extends HttpServlet {
             noErrorsFound = false;
         }
 
-        if (noErrorsFound) {
+        //if (noErrorsFound) {
             //PackMember  newMember   = new PackMember(request.getParameter("packName"),
             //        request.getParameter("memberName"),
             //        request.getParameter("memberWeight"),
@@ -70,7 +70,7 @@ public class CreateMemberInsertServlet extends HttpServlet {
             //        memberIntact);
 
             //userPack.addMember(newMember);
-        }
+        //}
 
         String url = "/yourPack";
 
