@@ -42,7 +42,7 @@
     <br>
 
     <form form method="post" action="DeleteMember">
-    <table>
+    <table cellspacing="3">
         <tr>
             <th width="100">Name</th>
             <th width="50">Age</th>
@@ -55,16 +55,24 @@
         <c:forEach var="userMembers" items="${userPack.members}">
             <tr>
                 <td width="100" align="center">
-                    <input type="text" name="fname" placeholder=${userMembers.name} size="10">
+                    <input type="text" name="fname" placeholder=${userMembers.name} style="width:100px">
+                </td>
+                <td width="40" align="center">
+                    <input type="text" name="fname" placeholder=${userMembers.age} style="width:40px">
+                </td>
+                <td width="40" align="center">
+                    <input type="text" name="fname" placeholder=${userMembers.size} style="width:40px">
+                </td>
+                <td width="100" align="center">
+                    <input type="text" name="fname" placeholder=${userMembers.breed} style="width:100px">
                 </td>
                 <td width="50" align="center">
-                    <input type="text" name="fname" placeholder=${userMembers.age} size="5">
+                    <input type="text" name="fname" placeholder=${userMembers.sex} style="width:50px">
                 </td>
-                <td width="50" align="center">${userMembers.size}</td>
-                <td width="100" align="center">${userMembers.breed}</td>
-                <td width="50" align="center">${userMembers.sex}</td>
-                <td width="100" align="center">${userMembers.intact}</td>
-                <td width="100" align="center">
+                <td width="50" align="center">
+                    <input type="text" name="fname" placeholder=${userMembers.intact} style="width:50px">
+                </td>
+                <td width="50" align="center">
                     <input type="checkbox" name="MemberToDelete" value=${userMembers.packMemberNumber}>
                 </td>
             </tr>
