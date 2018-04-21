@@ -58,11 +58,9 @@ public class PackMember {
     public PackMember() {
     }
 
-    public PackMember(String name, String weight, String size, String breed, char sex,
-                      LocalDate dateOfBirth, boolean intact) {
+    public PackMember(String name, String weight, String breed, char sex, LocalDate dateOfBirth, boolean intact) {
         this.name = name;
         this.weight = weight;
-        this.size = size;
         this.breed = breed;
         this.sex = sex;
         this.dateOfBirth = dateOfBirth;
