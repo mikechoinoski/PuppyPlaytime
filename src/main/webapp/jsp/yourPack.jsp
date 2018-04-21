@@ -44,36 +44,45 @@
     <form form method="post" action="DeleteMember">
     <table cellspacing="3">
         <tr>
+            <th width="100"></th>
             <th width="100">Name</th>
-            <th width="50">Age</th>
-            <th width="50">Size</th>
+            <th width="120">Birth Date</th>
+            <th width="50">Weight</th>
             <th width="100">Breed</th>
             <th width="50">Gender</th>
-            <th width="50">Intact</th>
-            <th width="50"><font color="red">Delete</font></th>
+            <th width="40">Intact</th>
+            <th width="50"><font color="red">Remove</font></th>
         </tr>
         <c:forEach var="userMembers" items="${userPack.members}">
             <tr>
                 <td width="100" align="center">
-                    <input type="text" name="fname" placeholder=${userMembers.name} style="width:100px">
-                </td>
-                <td width="40" align="center">
-                    <input type="text" name="fname" placeholder=${userMembers.age} style="width:40px">
-                </td>
-                <td width="40" align="center">
-                    <input type="text" name="fname" placeholder=${userMembers.size} style="width:40px">
+                    <img src="./uploadedPhotos/dogPhoto.jpg" height="100" width="100">
                 </td>
                 <td width="100" align="center">
-                    <input type="text" name="fname" placeholder=${userMembers.breed} style="width:100px">
+                    <input type="text" name="memberName${userMembers.packMemberNumber}" value=${userMembers.name} style="width:100px">
+                </td>
+                <td width="120" align="center">
+                    <input type="date" name="memberDOB${userMembers.packMemberNumber}"
+                           style="width:120px" value=${userMembers.dateOfBirth}>
+                </td>
+                <td width="40" align="center">
+                    <input type="number" name="memberWeight${userMembers.packMemberNumber}" min="0" max="300"
+                           value=${userMembers.weight} style="width:40px">
+                </td>
+                <td width="100" align="center">
+                    <input type="text" name="memberBreed${userMembers.packMemberNumber}"
+                           value=${userMembers.breed} style="width:100px">
                 </td>
                 <td width="50" align="center">
-                    <input type="text" name="fname" placeholder=${userMembers.sex} style="width:50px">
+                    <input type="text" name="memberGender${userMembers.packMemberNumber}"
+                           value=${userMembers.sex} style="width:50px">
+                </td>
+                <td width="40" align="center">
+                    <input type="text" name="memberIntact${userMembers.packMemberNumber}"
+                           value=${userMembers.intact} style="width:40px">
                 </td>
                 <td width="50" align="center">
-                    <input type="text" name="fname" placeholder=${userMembers.intact} style="width:50px">
-                </td>
-                <td width="50" align="center">
-                    <input type="checkbox" name="MemberToDelete" value=${userMembers.packMemberNumber}>
+                    <input type="checkbox" name="MemberToRemove" value=${userMembers.packMemberNumber}>
                 </td>
             </tr>
         </c:forEach>

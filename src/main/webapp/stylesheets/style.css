@@ -136,3 +136,17 @@ h3 {
     padding-bottom: 8px;
     padding-left: 8px;
 }
+
+.dateclass {
+    width: 100%;
+}
+
+.dateclass.placeholderclass::before {
+    width: 100%;
+    content: attr(placeholder);
+}
+
+.dateclass.placeholderclass:hover::before {
+    width: 0%;
+    content: "";
+}
