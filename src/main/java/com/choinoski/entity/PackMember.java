@@ -1,5 +1,6 @@
 package com.choinoski.entity;
 
+import com.choinoski.persistence.GenericDao;
 import org.hibernate.annotations.*;
 
 import javax.persistence.*;
@@ -25,8 +26,7 @@ public class PackMember {
     private int packMemberNumber;
 
     private String        name;
-    private String        weight;
-    private String        size;
+    private int           weight;
     private String        breed;
     private char          sex;
 
@@ -52,19 +52,31 @@ public class PackMember {
             foreignKey = @ForeignKey(name = "pack_foreign_key"))
     private Pack pack;
 
+    @Transient
+    private int age;
+
+    @Transient
+    private String size;
+
     /**
      * Instantiates a new Pack Member.
      */
     public PackMember() {
     }
 
-    public PackMember(String name, String weight, String breed, char sex, LocalDate dateOfBirth, boolean intact) {
+    public PackMember(String name, int weight, String breed, char sex, LocalDate dateOfBirth, boolean intact) {
+
+        String size;
+
         this.name = name;
         this.weight = weight;
         this.breed = breed;
         this.sex = sex;
         this.dateOfBirth = dateOfBirth;
         this.intact = intact;
+
+        calculateSize();
+        calculateAge();
     }
 
     /**
@@ -103,11 +115,11 @@ public class PackMember {
         this.name = name;
     }
 
-    public String getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    public void setWeight(String weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
@@ -122,11 +134,19 @@ public class PackMember {
 
     /**
      * Sets size.
-     *
-     * @param size the size
      */
-    public void setSize(String size) {
-        this.size = size;
+    private void calculateSize() {
+        if (weight < 10) {
+            size = "XS";
+        } else if (weight < 25) {
+            size = "S";
+        } else if (weight < 60) {
+            size = "M";
+        } else if (weight < 110) {
+            size = "L";
+        } else {
+            size = "XL";
+        }
     }
 
     /**
@@ -173,14 +193,18 @@ public class PackMember {
         this.intact = intact;
     }
 
-    /**
+        /**
      * Gets age.
      *
      * @return the age
      */
     public int getAge() {
 
-        return (int) ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
+        return age;
+    }
+
+    private void calculateAge() {
+        age = (int) ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
     }
 
     /**

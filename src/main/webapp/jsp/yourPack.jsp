@@ -37,6 +37,30 @@
         </tr>
     </table>
 
+    <br>
+    <h3>Pack Members</h3>
+    <br>
+
+    <table>
+        <tr>
+            <th width="100">Name</th>
+            <th width="50">Size</th>
+            <th width="100">Breed</th>
+            <th width="50">Gender</th>
+            <th width="50">Intact</th>
+        </tr>
+        <c:forEach var="userPack" items="${members}">
+            <tr>
+                <td width="100" align="center">${currentUser.name}</td>
+                <td width="50" align="center">${currentUser.age}</td>
+                <td width="50" align="center">${currentUser.size}</td>
+                <td width="100" align="center">${currentUser.breed}</td>
+                <td width="50" align="center">${currentUser.sex}</td>
+                <td width="50" align="center">${currentUser.intact}</td>
+            </tr>
+        </c:forEach>
+    </table>
+
     <br><br>
     <h3><a href="createNewMember">Add a New Pack Member</a></h3>
 
