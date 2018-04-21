@@ -5,7 +5,9 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+import com.choinoski.persistence.GenericDao;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
@@ -50,6 +52,9 @@ public class Pack implements Serializable {
     @OneToMany(mappedBy = "pack", cascade = CascadeType.ALL,
                   orphanRemoval = true, fetch = FetchType.EAGER, targetEntity = Role.class)
     private Set<Role> roles = new HashSet<Role>();
+
+    @Transient
+    private GenericDao dao = null;
 
     public Pack() {
 
@@ -154,8 +159,11 @@ public class Pack implements Serializable {
      * @param member the member
      */
     public void addMember(PackMember member) {
-        members.add(member);
-        member.setPack(this);
+        dao = new GenericDao(PackMember.class);
+        int id = dao.insert(member);
+        PackMember newMember = (PackMember) dao.getById(id);
+        members.add(newMember);
+        newMember.setPack(this);
     }
 
     public Set<Role> getRoles() {

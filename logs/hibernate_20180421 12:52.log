@@ -1,0 +1,414 @@
+[DEBUG] 2018-04-21 12:52:17.486 [http-nio-8080-exec-7] IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2018-04-21 12:52:17.548 [http-nio-8080-exec-7] IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[DEBUG] 2018-04-21 12:52:17.561 [http-nio-8080-exec-7] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[INFO ] 2018-04-21 12:52:17.882 [http-nio-8080-exec-7] Version - HHH000412: Hibernate Core {5.2.3.Final}
+[INFO ] 2018-04-21 12:52:17.885 [http-nio-8080-exec-7] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2018-04-21 12:52:17.887 [http-nio-8080-exec-7] Environment - HHH000021: Bytecode provider name : javassist
+[DEBUG] 2018-04-21 12:52:18.049 [http-nio-8080-exec-7] LocalXmlResourceResolver - Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+[DEBUG] 2018-04-21 12:52:18.054 [http-nio-8080-exec-7] LocalXmlResourceResolver - Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+[DEBUG] 2018-04-21 12:52:18.167 [http-nio-8080-exec-7] JaxbCfgProcessor - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+[DEBUG] 2018-04-21 12:52:18.655 [http-nio-8080-exec-7] ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[DEBUG] 2018-04-21 12:52:18.781 [http-nio-8080-exec-7] RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[INFO ] 2018-04-21 12:52:18.809 [http-nio-8080-exec-7] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[DEBUG] 2018-04-21 12:52:18.920 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@3733bd7a
+[DEBUG] 2018-04-21 12:52:18.921 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@3733bd7a
+[DEBUG] 2018-04-21 12:52:18.921 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@3733bd7a
+[DEBUG] 2018-04-21 12:52:18.924 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@1bc8185e
+[DEBUG] 2018-04-21 12:52:18.927 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@15250057
+[DEBUG] 2018-04-21 12:52:18.928 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@1ae1c258
+[DEBUG] 2018-04-21 12:52:18.933 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@1c8d9ab
+[DEBUG] 2018-04-21 12:52:18.933 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@1c8d9ab
+[DEBUG] 2018-04-21 12:52:18.933 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@1c8d9ab
+[DEBUG] 2018-04-21 12:52:18.937 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@77038b1d
+[DEBUG] 2018-04-21 12:52:18.937 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@77038b1d
+[DEBUG] 2018-04-21 12:52:18.937 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@77038b1d
+[DEBUG] 2018-04-21 12:52:18.942 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@6461980e
+[DEBUG] 2018-04-21 12:52:18.942 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@6461980e
+[DEBUG] 2018-04-21 12:52:18.942 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@6461980e
+[DEBUG] 2018-04-21 12:52:18.945 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@7503416c
+[DEBUG] 2018-04-21 12:52:18.945 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@7503416c
+[DEBUG] 2018-04-21 12:52:18.945 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@7503416c
+[DEBUG] 2018-04-21 12:52:18.949 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@2cc4dbaa
+[DEBUG] 2018-04-21 12:52:18.949 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@2cc4dbaa
+[DEBUG] 2018-04-21 12:52:18.949 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@2cc4dbaa
+[DEBUG] 2018-04-21 12:52:18.954 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@144589c0
+[DEBUG] 2018-04-21 12:52:18.954 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@144589c0
+[DEBUG] 2018-04-21 12:52:18.954 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@144589c0
+[DEBUG] 2018-04-21 12:52:18.959 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@7b290574
+[DEBUG] 2018-04-21 12:52:18.959 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@7b290574
+[DEBUG] 2018-04-21 12:52:18.959 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@7b290574
+[DEBUG] 2018-04-21 12:52:18.966 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@636a2c4d
+[DEBUG] 2018-04-21 12:52:18.966 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@636a2c4d
+[DEBUG] 2018-04-21 12:52:18.967 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@5b5ee311
+[DEBUG] 2018-04-21 12:52:18.967 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@5b5ee311
+[DEBUG] 2018-04-21 12:52:18.970 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@64373f5e
+[DEBUG] 2018-04-21 12:52:18.970 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@64373f5e
+[DEBUG] 2018-04-21 12:52:18.971 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@112dbf64
+[DEBUG] 2018-04-21 12:52:18.973 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@4b5e3c33
+[DEBUG] 2018-04-21 12:52:18.976 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@6cb97ffb
+[DEBUG] 2018-04-21 12:52:18.979 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@6cb97ffb
+[DEBUG] 2018-04-21 12:52:18.984 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@7ca0453e
+[DEBUG] 2018-04-21 12:52:18.984 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@7ca0453e
+[DEBUG] 2018-04-21 12:52:19.036 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@567b9597
+[DEBUG] 2018-04-21 12:52:19.036 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@567b9597
+[DEBUG] 2018-04-21 12:52:19.041 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@77f74d24
+[DEBUG] 2018-04-21 12:52:19.041 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@77f74d24
+[DEBUG] 2018-04-21 12:52:19.049 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@3af7dd74
+[DEBUG] 2018-04-21 12:52:19.050 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@3af7dd74
+[DEBUG] 2018-04-21 12:52:19.053 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@764f355
+[DEBUG] 2018-04-21 12:52:19.054 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@764f355
+[DEBUG] 2018-04-21 12:52:19.109 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@289494db
+[DEBUG] 2018-04-21 12:52:19.109 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@289494db
+[DEBUG] 2018-04-21 12:52:19.115 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@7fb3da13
+[DEBUG] 2018-04-21 12:52:19.115 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@7fb3da13
+[DEBUG] 2018-04-21 12:52:19.131 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@63b000e2
+[DEBUG] 2018-04-21 12:52:19.132 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@63b000e2
+[DEBUG] 2018-04-21 12:52:19.135 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@35748729
+[DEBUG] 2018-04-21 12:52:19.135 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@35748729
+[DEBUG] 2018-04-21 12:52:19.138 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@12d4d220
+[DEBUG] 2018-04-21 12:52:19.138 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@12d4d220
+[DEBUG] 2018-04-21 12:52:19.142 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@2daee804
+[DEBUG] 2018-04-21 12:52:19.143 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@2daee804
+[DEBUG] 2018-04-21 12:52:19.143 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@2daee804
+[DEBUG] 2018-04-21 12:52:19.147 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@6eaa2da7
+[DEBUG] 2018-04-21 12:52:19.157 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@69dd763f
+[DEBUG] 2018-04-21 12:52:19.157 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@69dd763f
+[DEBUG] 2018-04-21 12:52:19.157 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@69dd763f
+[DEBUG] 2018-04-21 12:52:19.158 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@9158d70
+[DEBUG] 2018-04-21 12:52:19.160 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@14cee05c
+[DEBUG] 2018-04-21 12:52:19.160 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@14cee05c
+[DEBUG] 2018-04-21 12:52:19.164 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@4c0d288e
+[DEBUG] 2018-04-21 12:52:19.173 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@4c0d288e
+[DEBUG] 2018-04-21 12:52:19.175 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@78e0d5e5
+[DEBUG] 2018-04-21 12:52:19.176 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@78e0d5e5
+[DEBUG] 2018-04-21 12:52:19.179 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@71907082
+[DEBUG] 2018-04-21 12:52:19.180 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@71907082
+[DEBUG] 2018-04-21 12:52:19.184 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@3b035705
+[DEBUG] 2018-04-21 12:52:19.184 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@3b035705
+[DEBUG] 2018-04-21 12:52:19.185 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@7a2d802b
+[DEBUG] 2018-04-21 12:52:19.191 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@7a1e365d
+[DEBUG] 2018-04-21 12:52:19.192 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@7a1e365d
+[DEBUG] 2018-04-21 12:52:19.192 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@7a1e365d
+[DEBUG] 2018-04-21 12:52:19.193 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@6aae1dd6
+[DEBUG] 2018-04-21 12:52:19.193 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@6aae1dd6
+[DEBUG] 2018-04-21 12:52:19.193 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@6aae1dd6
+[DEBUG] 2018-04-21 12:52:19.195 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@14ca0cbf
+[DEBUG] 2018-04-21 12:52:19.201 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@2654152a
+[DEBUG] 2018-04-21 12:52:19.202 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@f00c9d2
+[DEBUG] 2018-04-21 12:52:19.202 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@f00c9d2
+[DEBUG] 2018-04-21 12:52:19.202 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@f00c9d2
+[DEBUG] 2018-04-21 12:52:19.204 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@18d9b621
+[DEBUG] 2018-04-21 12:52:19.204 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@18d9b621
+[DEBUG] 2018-04-21 12:52:19.204 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@18d9b621
+[DEBUG] 2018-04-21 12:52:19.206 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@4395625e
+[DEBUG] 2018-04-21 12:52:19.209 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@4cb2e05f
+[DEBUG] 2018-04-21 12:52:19.223 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@2ce72456
+[DEBUG] 2018-04-21 12:52:19.223 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@2ce72456
+[DEBUG] 2018-04-21 12:52:19.224 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@27713aee
+[DEBUG] 2018-04-21 12:52:19.235 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@1d27466b
+[DEBUG] 2018-04-21 12:52:19.237 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@1d27466b
+[DEBUG] 2018-04-21 12:52:19.246 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@98567f9
+[DEBUG] 2018-04-21 12:52:19.246 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@98567f9
+[DEBUG] 2018-04-21 12:52:19.248 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@cfaea79
+[DEBUG] 2018-04-21 12:52:19.249 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@2a8a05bd
+[DEBUG] 2018-04-21 12:52:19.253 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@64557760
+[DEBUG] 2018-04-21 12:52:19.262 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@6b65b64
+[DEBUG] 2018-04-21 12:52:19.262 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@6b65b64
+[DEBUG] 2018-04-21 12:52:19.263 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@4f849cec
+[DEBUG] 2018-04-21 12:52:19.263 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@9f444ad
+[DEBUG] 2018-04-21 12:52:19.263 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@6d619a75
+[DEBUG] 2018-04-21 12:52:19.263 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@7a873314
+[DEBUG] 2018-04-21 12:52:19.263 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@118fa354
+[DEBUG] 2018-04-21 12:52:19.263 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@3af55ce4
+[DEBUG] 2018-04-21 12:52:19.263 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@5b26cbfd
+[DEBUG] 2018-04-21 12:52:19.263 [http-nio-8080-exec-7] BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@187a5c1e
+[INFO ] 2018-04-21 12:52:19.299 [http-nio-8080-exec-7] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/puppy_playtime_test
+[INFO ] 2018-04-21 12:52:19.299 [http-nio-8080-exec-7] C3P0ConnectionProvider - HHH10001001: Connection properties: {user=root, password=****}
+[INFO ] 2018-04-21 12:52:19.299 [http-nio-8080-exec-7] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
+[INFO ] 2018-04-21 12:52:19.855 [http-nio-8080-exec-7] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
+[DEBUG] 2018-04-21 12:52:20.817 [http-nio-8080-exec-7] JdbcEnvironmentInitiator - Database ->
+       name : MySQL
+    version : 5.7.21-0ubuntu0.16.04.1
+      major : 5
+      minor : 7
+[DEBUG] 2018-04-21 12:52:20.824 [http-nio-8080-exec-7] JdbcEnvironmentInitiator - Driver ->
+       name : MySQL Connector Java
+    version : mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad )
+      major : 5
+      minor : 1
+[DEBUG] 2018-04-21 12:52:20.824 [http-nio-8080-exec-7] JdbcEnvironmentInitiator - JDBC version : 4.0
+[INFO ] 2018-04-21 12:52:20.913 [http-nio-8080-exec-7] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[DEBUG] 2018-04-21 12:52:21.004 [http-nio-8080-exec-7] IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in more than one case
+[DEBUG] 2018-04-21 12:52:21.008 [http-nio-8080-exec-7] IdentifierHelperBuilder - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+[DEBUG] 2018-04-21 12:52:21.097 [http-nio-8080-exec-7] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[DEBUG] 2018-04-21 12:52:21.098 [http-nio-8080-exec-7] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[DEBUG] 2018-04-21 12:52:21.100 [http-nio-8080-exec-7] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2018-04-21 12:52:21.100 [http-nio-8080-exec-7] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2018-04-21 12:52:21.100 [http-nio-8080-exec-7] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[DEBUG] 2018-04-21 12:52:21.101 [http-nio-8080-exec-7] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[DEBUG] 2018-04-21 12:52:21.106 [http-nio-8080-exec-7] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[DEBUG] 2018-04-21 12:52:21.110 [http-nio-8080-exec-7] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2018-04-21 12:52:21.113 [http-nio-8080-exec-7] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[DEBUG] 2018-04-21 12:52:21.113 [http-nio-8080-exec-7] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[DEBUG] 2018-04-21 12:52:21.114 [http-nio-8080-exec-7] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[DEBUG] 2018-04-21 12:52:21.114 [http-nio-8080-exec-7] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[DEBUG] 2018-04-21 12:52:21.114 [http-nio-8080-exec-7] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2018-04-21 12:52:21.115 [http-nio-8080-exec-7] DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[DEBUG] 2018-04-21 12:52:21.196 [http-nio-8080-exec-7] Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[DEBUG] 2018-04-21 12:52:21.269 [http-nio-8080-exec-7] AnnotationBinder - Binding entity from annotated class: com.choinoski.entity.Pack
+[DEBUG] 2018-04-21 12:52:21.324 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2018-04-21 12:52:21.340 [http-nio-8080-exec-7] EntityBinder - Import with entity name Pack
+[DEBUG] 2018-04-21 12:52:21.345 [http-nio-8080-exec-7] EntityBinder - Bind entity com.choinoski.entity.Pack on table pack
+[DEBUG] 2018-04-21 12:52:21.400 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=pack_nr, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.408 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property packNumber with lazy=false
+[DEBUG] 2018-04-21 12:52:21.411 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:packNumber]
+[DEBUG] 2018-04-21 12:52:21.413 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for packNumber
+[DEBUG] 2018-04-21 12:52:21.416 [http-nio-8080-exec-7] PropertyBinder - Building property packNumber
+[DEBUG] 2018-04-21 12:52:21.429 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=address, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.429 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property address with lazy=false
+[DEBUG] 2018-04-21 12:52:21.429 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:address]
+[DEBUG] 2018-04-21 12:52:21.429 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for address
+[DEBUG] 2018-04-21 12:52:21.430 [http-nio-8080-exec-7] PropertyBinder - Building property address
+[DEBUG] 2018-04-21 12:52:21.430 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=dao, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.430 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property dao with lazy=false
+[DEBUG] 2018-04-21 12:52:21.430 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:dao]
+[DEBUG] 2018-04-21 12:52:21.431 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for dao
+[DEBUG] 2018-04-21 12:52:21.431 [http-nio-8080-exec-7] PropertyBinder - Building property dao
+[DEBUG] 2018-04-21 12:52:21.431 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=email_address, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.432 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property emailAddress with lazy=false
+[DEBUG] 2018-04-21 12:52:21.432 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:emailAddress]
+[DEBUG] 2018-04-21 12:52:21.433 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for emailAddress
+[DEBUG] 2018-04-21 12:52:21.433 [http-nio-8080-exec-7] PropertyBinder - Building property emailAddress
+[DEBUG] 2018-04-21 12:52:21.433 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=first_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.433 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property firstName with lazy=false
+[DEBUG] 2018-04-21 12:52:21.433 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:firstName]
+[DEBUG] 2018-04-21 12:52:21.433 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for firstName
+[DEBUG] 2018-04-21 12:52:21.433 [http-nio-8080-exec-7] PropertyBinder - Building property firstName
+[DEBUG] 2018-04-21 12:52:21.433 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=last_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.433 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property lastName with lazy=false
+[DEBUG] 2018-04-21 12:52:21.434 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:lastName]
+[DEBUG] 2018-04-21 12:52:21.434 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for lastName
+[DEBUG] 2018-04-21 12:52:21.434 [http-nio-8080-exec-7] PropertyBinder - Building property lastName
+[DEBUG] 2018-04-21 12:52:21.435 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='pack'}
+[DEBUG] 2018-04-21 12:52:21.435 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=members, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.437 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.457 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.459 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=members_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.460 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='members_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2018-04-21 12:52:21.465 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='pack'}
+[DEBUG] 2018-04-21 12:52:21.465 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='pack'}
+[DEBUG] 2018-04-21 12:52:21.466 [http-nio-8080-exec-7] CollectionBinder - Collection role: com.choinoski.entity.Pack.members
+[DEBUG] 2018-04-21 12:52:21.476 [http-nio-8080-exec-7] PropertyBinder - Building property members
+[DEBUG] 2018-04-21 12:52:21.479 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=pack_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.479 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property packName with lazy=false
+[DEBUG] 2018-04-21 12:52:21.479 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:packName]
+[DEBUG] 2018-04-21 12:52:21.479 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for packName
+[DEBUG] 2018-04-21 12:52:21.479 [http-nio-8080-exec-7] PropertyBinder - Building property packName
+[DEBUG] 2018-04-21 12:52:21.483 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=password, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.484 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property password with lazy=false
+[DEBUG] 2018-04-21 12:52:21.484 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:password]
+[DEBUG] 2018-04-21 12:52:21.484 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for password
+[DEBUG] 2018-04-21 12:52:21.484 [http-nio-8080-exec-7] PropertyBinder - Building property password
+[DEBUG] 2018-04-21 12:52:21.484 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=phone_number, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.484 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property phoneNumber with lazy=false
+[DEBUG] 2018-04-21 12:52:21.484 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Pack:phoneNumber]
+[DEBUG] 2018-04-21 12:52:21.484 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for phoneNumber
+[DEBUG] 2018-04-21 12:52:21.484 [http-nio-8080-exec-7] PropertyBinder - Building property phoneNumber
+[DEBUG] 2018-04-21 12:52:21.484 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='pack'}
+[DEBUG] 2018-04-21 12:52:21.484 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=roles, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.484 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.485 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.485 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack), mappingColumn=roles_KEY, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.485 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='roles_KEY', referencedColumn='null', mappedBy='null'}
+[DEBUG] 2018-04-21 12:52:21.485 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='pack'}
+[DEBUG] 2018-04-21 12:52:21.485 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='pack'}
+[DEBUG] 2018-04-21 12:52:21.485 [http-nio-8080-exec-7] CollectionBinder - Collection role: com.choinoski.entity.Pack.roles
+[DEBUG] 2018-04-21 12:52:21.486 [http-nio-8080-exec-7] PropertyBinder - Building property roles
+[DEBUG] 2018-04-21 12:52:21.490 [http-nio-8080-exec-7] AnnotationBinder - Binding entity from annotated class: com.choinoski.entity.PackMember
+[DEBUG] 2018-04-21 12:52:21.490 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2018-04-21 12:52:21.490 [http-nio-8080-exec-7] EntityBinder - Import with entity name PackMember
+[DEBUG] 2018-04-21 12:52:21.490 [http-nio-8080-exec-7] EntityBinder - Bind entity com.choinoski.entity.PackMember on table pack_member
+[DEBUG] 2018-04-21 12:52:21.516 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_member), mappingColumn=pack_member_nr, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.516 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property packMemberNumber with lazy=false
+[DEBUG] 2018-04-21 12:52:21.516 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackMember:packMemberNumber]
+[DEBUG] 2018-04-21 12:52:21.516 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for packMemberNumber
+[DEBUG] 2018-04-21 12:52:21.516 [http-nio-8080-exec-7] PropertyBinder - Building property packMemberNumber
+[DEBUG] 2018-04-21 12:52:21.516 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_member), mappingColumn=breed, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.516 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property breed with lazy=false
+[DEBUG] 2018-04-21 12:52:21.516 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackMember:breed]
+[DEBUG] 2018-04-21 12:52:21.516 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for breed
+[DEBUG] 2018-04-21 12:52:21.516 [http-nio-8080-exec-7] PropertyBinder - Building property breed
+[DEBUG] 2018-04-21 12:52:21.516 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_member), mappingColumn=create_date, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.517 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property createDate with lazy=false
+[DEBUG] 2018-04-21 12:52:21.517 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackMember:createDate]
+[DEBUG] 2018-04-21 12:52:21.520 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for createDate
+[DEBUG] 2018-04-21 12:52:21.520 [http-nio-8080-exec-7] PropertyBinder - Building property createDate
+[DEBUG] 2018-04-21 12:52:21.542 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_member), mappingColumn=date_of_birth, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.542 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property dateOfBirth with lazy=false
+[DEBUG] 2018-04-21 12:52:21.542 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackMember:dateOfBirth]
+[DEBUG] 2018-04-21 12:52:21.546 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for dateOfBirth
+[DEBUG] 2018-04-21 12:52:21.546 [http-nio-8080-exec-7] PropertyBinder - Building property dateOfBirth
+[DEBUG] 2018-04-21 12:52:21.546 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_member), mappingColumn=intact, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.546 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property intact with lazy=false
+[DEBUG] 2018-04-21 12:52:21.546 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackMember:intact]
+[DEBUG] 2018-04-21 12:52:21.546 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for intact
+[DEBUG] 2018-04-21 12:52:21.546 [http-nio-8080-exec-7] PropertyBinder - Building property intact
+[DEBUG] 2018-04-21 12:52:21.546 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_member), mappingColumn=last_modified_date, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.546 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property lastModifiedDate with lazy=false
+[DEBUG] 2018-04-21 12:52:21.546 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackMember:lastModifiedDate]
+[DEBUG] 2018-04-21 12:52:21.547 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for lastModifiedDate
+[DEBUG] 2018-04-21 12:52:21.547 [http-nio-8080-exec-7] PropertyBinder - Building property lastModifiedDate
+[DEBUG] 2018-04-21 12:52:21.548 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_member), mappingColumn=name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.549 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property name with lazy=false
+[DEBUG] 2018-04-21 12:52:21.550 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackMember:name]
+[DEBUG] 2018-04-21 12:52:21.552 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for name
+[DEBUG] 2018-04-21 12:52:21.552 [http-nio-8080-exec-7] PropertyBinder - Building property name
+[DEBUG] 2018-04-21 12:52:21.553 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='pack_nr', referencedColumn='', mappedBy=''}
+[DEBUG] 2018-04-21 12:52:21.554 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_member), mappingColumn=pack, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.557 [http-nio-8080-exec-7] PropertyBinder - Building property pack
+[DEBUG] 2018-04-21 12:52:21.559 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_member), mappingColumn=sex, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.559 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property sex with lazy=false
+[DEBUG] 2018-04-21 12:52:21.559 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackMember:sex]
+[DEBUG] 2018-04-21 12:52:21.559 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for sex
+[DEBUG] 2018-04-21 12:52:21.559 [http-nio-8080-exec-7] PropertyBinder - Building property sex
+[DEBUG] 2018-04-21 12:52:21.559 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_member), mappingColumn=size, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.560 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property size with lazy=false
+[DEBUG] 2018-04-21 12:52:21.560 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackMember:size]
+[DEBUG] 2018-04-21 12:52:21.560 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for size
+[DEBUG] 2018-04-21 12:52:21.560 [http-nio-8080-exec-7] PropertyBinder - Building property size
+[DEBUG] 2018-04-21 12:52:21.560 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_member), mappingColumn=weight, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.560 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property weight with lazy=false
+[DEBUG] 2018-04-21 12:52:21.560 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackMember:weight]
+[DEBUG] 2018-04-21 12:52:21.560 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for weight
+[DEBUG] 2018-04-21 12:52:21.560 [http-nio-8080-exec-7] PropertyBinder - Building property weight
+[DEBUG] 2018-04-21 12:52:21.560 [http-nio-8080-exec-7] AnnotationBinder - Binding entity from annotated class: com.choinoski.entity.PackLeader
+[DEBUG] 2018-04-21 12:52:21.561 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2018-04-21 12:52:21.561 [http-nio-8080-exec-7] EntityBinder - Import with entity name PackLeader
+[DEBUG] 2018-04-21 12:52:21.563 [http-nio-8080-exec-7] EntityBinder - Bind entity com.choinoski.entity.PackLeader on table pack_leader
+[DEBUG] 2018-04-21 12:52:21.566 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_leader), mappingColumn=pack_leader_nr, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.566 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property packLeaderNumber with lazy=false
+[DEBUG] 2018-04-21 12:52:21.566 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackLeader:packLeaderNumber]
+[DEBUG] 2018-04-21 12:52:21.566 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for packLeaderNumber
+[DEBUG] 2018-04-21 12:52:21.567 [http-nio-8080-exec-7] PropertyBinder - Building property packLeaderNumber
+[DEBUG] 2018-04-21 12:52:21.567 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_leader), mappingColumn=address, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.567 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property address with lazy=false
+[DEBUG] 2018-04-21 12:52:21.567 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackLeader:address]
+[DEBUG] 2018-04-21 12:52:21.567 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for address
+[DEBUG] 2018-04-21 12:52:21.567 [http-nio-8080-exec-7] PropertyBinder - Building property address
+[DEBUG] 2018-04-21 12:52:21.567 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_leader), mappingColumn=create_date, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.567 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property createDate with lazy=false
+[DEBUG] 2018-04-21 12:52:21.567 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackLeader:createDate]
+[DEBUG] 2018-04-21 12:52:21.567 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for createDate
+[DEBUG] 2018-04-21 12:52:21.567 [http-nio-8080-exec-7] PropertyBinder - Building property createDate
+[DEBUG] 2018-04-21 12:52:21.567 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_leader), mappingColumn=email_address, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.571 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property emailAddress with lazy=false
+[DEBUG] 2018-04-21 12:52:21.571 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackLeader:emailAddress]
+[DEBUG] 2018-04-21 12:52:21.571 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for emailAddress
+[DEBUG] 2018-04-21 12:52:21.571 [http-nio-8080-exec-7] PropertyBinder - Building property emailAddress
+[DEBUG] 2018-04-21 12:52:21.571 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_leader), mappingColumn=last_modified_date, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.571 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property lastModifiedDate with lazy=false
+[DEBUG] 2018-04-21 12:52:21.571 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackLeader:lastModifiedDate]
+[DEBUG] 2018-04-21 12:52:21.573 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for lastModifiedDate
+[DEBUG] 2018-04-21 12:52:21.573 [http-nio-8080-exec-7] PropertyBinder - Building property lastModifiedDate
+[DEBUG] 2018-04-21 12:52:21.574 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='pack_nr', referencedColumn='', mappedBy=''}
+[DEBUG] 2018-04-21 12:52:21.574 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_leader), mappingColumn=pack, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.574 [http-nio-8080-exec-7] PropertyBinder - Building property pack
+[DEBUG] 2018-04-21 12:52:21.574 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_leader), mappingColumn=pack_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.574 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property packName with lazy=false
+[DEBUG] 2018-04-21 12:52:21.574 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackLeader:packName]
+[DEBUG] 2018-04-21 12:52:21.574 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for packName
+[DEBUG] 2018-04-21 12:52:21.574 [http-nio-8080-exec-7] PropertyBinder - Building property packName
+[DEBUG] 2018-04-21 12:52:21.574 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(pack_leader), mappingColumn=phone_number, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.574 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property phoneNumber with lazy=false
+[DEBUG] 2018-04-21 12:52:21.575 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.PackLeader:phoneNumber]
+[DEBUG] 2018-04-21 12:52:21.575 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for phoneNumber
+[DEBUG] 2018-04-21 12:52:21.575 [http-nio-8080-exec-7] PropertyBinder - Building property phoneNumber
+[DEBUG] 2018-04-21 12:52:21.575 [http-nio-8080-exec-7] AnnotationBinder - Binding entity from annotated class: com.choinoski.entity.Role
+[DEBUG] 2018-04-21 12:52:21.575 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[DEBUG] 2018-04-21 12:52:21.576 [http-nio-8080-exec-7] EntityBinder - Import with entity name Role
+[DEBUG] 2018-04-21 12:52:21.576 [http-nio-8080-exec-7] EntityBinder - Bind entity com.choinoski.entity.Role on table role
+[DEBUG] 2018-04-21 12:52:21.586 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=roleID, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.586 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property roldId with lazy=false
+[DEBUG] 2018-04-21 12:52:21.586 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Role:roldId]
+[DEBUG] 2018-04-21 12:52:21.586 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for roldId
+[DEBUG] 2018-04-21 12:52:21.586 [http-nio-8080-exec-7] PropertyBinder - Building property roldId
+[DEBUG] 2018-04-21 12:52:21.587 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=createDate, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.587 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property createDate with lazy=false
+[DEBUG] 2018-04-21 12:52:21.601 [http-nio-8080-exec-7] SimpleValueBinder - Starting applyAttributeConverter [com.choinoski.entity.Role:createDate]
+[DEBUG] 2018-04-21 12:52:21.602 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for createDate
+[DEBUG] 2018-04-21 12:52:21.602 [http-nio-8080-exec-7] PropertyBinder - Building property createDate
+[DEBUG] 2018-04-21 12:52:21.602 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=pack_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.602 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property login with lazy=false
+[DEBUG] 2018-04-21 12:52:21.602 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Role:login]
+[DEBUG] 2018-04-21 12:52:21.602 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for login
+[DEBUG] 2018-04-21 12:52:21.602 [http-nio-8080-exec-7] PropertyBinder - Building property login
+[DEBUG] 2018-04-21 12:52:21.602 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='pack_nr', referencedColumn='', mappedBy=''}
+[DEBUG] 2018-04-21 12:52:21.603 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=pack, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.603 [http-nio-8080-exec-7] PropertyBinder - Building property pack
+[DEBUG] 2018-04-21 12:52:21.603 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=role_name, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.603 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property roleName with lazy=false
+[DEBUG] 2018-04-21 12:52:21.603 [http-nio-8080-exec-7] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.choinoski.entity.Role:roleName]
+[DEBUG] 2018-04-21 12:52:21.603 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for roleName
+[DEBUG] 2018-04-21 12:52:21.603 [http-nio-8080-exec-7] PropertyBinder - Building property roleName
+[DEBUG] 2018-04-21 12:52:21.603 [http-nio-8080-exec-7] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(role), mappingColumn=updateDate, insertable=true, updatable=true, unique=false}
+[DEBUG] 2018-04-21 12:52:21.603 [http-nio-8080-exec-7] PropertyBinder - MetadataSourceProcessor property updateDate with lazy=false
+[DEBUG] 2018-04-21 12:52:21.606 [http-nio-8080-exec-7] SimpleValueBinder - Starting applyAttributeConverter [com.choinoski.entity.Role:updateDate]
+[DEBUG] 2018-04-21 12:52:21.606 [http-nio-8080-exec-7] SimpleValueBinder - building SimpleValue for updateDate
+[DEBUG] 2018-04-21 12:52:21.606 [http-nio-8080-exec-7] PropertyBinder - Building property updateDate
+[DEBUG] 2018-04-21 12:52:21.607 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for packNumber
+[DEBUG] 2018-04-21 12:52:21.607 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for address
+[DEBUG] 2018-04-21 12:52:21.608 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for dao
+[DEBUG] 2018-04-21 12:52:21.608 [http-nio-8080-exec-7] ClassLoaderAccessImpl - Not known whether passed class name [com.choinoski.persistence.GenericDao] is safe
+[DEBUG] 2018-04-21 12:52:21.608 [http-nio-8080-exec-7] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.choinoski.persistence.GenericDao
+[DEBUG] 2018-04-21 12:52:21.608 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for emailAddress
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for firstName
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for lastName
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for packName
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for password
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for phoneNumber
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for packMemberNumber
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for breed
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for createDate
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for dateOfBirth
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for intact
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for lastModifiedDate
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for name
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for sex
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for size
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for weight
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for packLeaderNumber
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for address
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for createDate
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for emailAddress
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for lastModifiedDate
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for packName
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for phoneNumber
+[DEBUG] 2018-04-21 12:52:21.610 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for roldId
+[DEBUG] 2018-04-21 12:52:21.611 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for createDate
+[DEBUG] 2018-04-21 12:52:21.611 [http-nio-8080-exec-7] SimpleValueBinder - Applying JPA AttributeConverter [org.hibernate.boot.internal.AttributeConverterDescriptorImpl@764bcd46] to [com.choinoski.entity.Role:createDate]
+[DEBUG] 2018-04-21 12:52:21.628 [http-nio-8080-exec-7] AttributeConverterTypeAdapter - Created AttributeConverterTypeAdapter -> converted::com.choinoski.util.TimestampAttributeConverter
+[DEBUG] 2018-04-21 12:52:21.630 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for login
+[DEBUG] 2018-04-21 12:52:21.632 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for roleName
+[DEBUG] 2018-04-21 12:52:21.632 [http-nio-8080-exec-7] SimpleValueBinder - Starting fillSimpleValue for updateDate
+[DEBUG] 2018-04-21 12:52:21.632 [http-nio-8080-exec-7] SimpleValueBinder - Applying JPA AttributeConverter [org.hibernate.boot.internal.AttributeConverterDescriptorImpl@39b11a75] to [com.choinoski.entity.Role:updateDate]
+[DEBUG] 2018-04-21 12:52:21.633 [http-nio-8080-exec-7] AttributeConverterTypeAdapter - Created AttributeConverterTypeAdapter -> converted::com.choinoski.util.TimestampAttributeConverter
+[DEBUG] 2018-04-21 12:52:21.663 [http-nio-8080-exec-7] PrimaryKey - Forcing column [pack_nr] to be non-null as it is part of the primary key for table [pack]
+[DEBUG] 2018-04-21 12:52:21.663 [http-nio-8080-exec-7] PrimaryKey - Forcing column [pack_member_nr] to be non-null as it is part of the primary key for table [pack_member]
+[DEBUG] 2018-04-21 12:52:21.665 [http-nio-8080-exec-7] PrimaryKey - Forcing column [pack_leader_nr] to be non-null as it is part of the primary key for table [pack_leader]
+[DEBUG] 2018-04-21 12:52:21.671 [http-nio-8080-exec-7] PrimaryKey - Forcing column [roleid] to be non-null as it is part of the primary key for table [role]
+[DEBUG] 2018-04-21 12:52:21.671 [http-nio-8080-exec-7] CollectionSecondPass - Second pass for collection: com.choinoski.entity.Pack.members
+[DEBUG] 2018-04-21 12:52:21.673 [http-nio-8080-exec-7] CollectionBinder - Binding a OneToMany: com.choinoski.entity.Pack.members through a foreign key
+[DEBUG] 2018-04-21 12:52:21.674 [http-nio-8080-exec-7] CollectionBinder - Mapping collection: com.choinoski.entity.Pack.members -> pack_member
+[DEBUG] 2018-04-21 12:52:21.677 [http-nio-8080-exec-7] TableBinder - Retrieving property com.choinoski.entity.PackMember.pack
+[DEBUG] 2018-04-21 12:52:21.677 [http-nio-8080-exec-7] CollectionSecondPass - Mapped collection key: pack_nr, one-to-many: com.choinoski.entity.PackMember
+[DEBUG] 2018-04-21 12:52:21.677 [http-nio-8080-exec-7] CollectionSecondPass - Second pass for collection: com.choinoski.entity.Pack.roles
+[DEBUG] 2018-04-21 12:52:21.677 [http-nio-8080-exec-7] CollectionBinder - Binding a OneToMany: com.choinoski.entity.Pack.roles through a foreign key
+[DEBUG] 2018-04-21 12:52:21.677 [http-nio-8080-exec-7] CollectionBinder - Mapping collection: com.choinoski.entity.Pack.roles -> role
+[DEBUG] 2018-04-21 12:52:21.677 [http-nio-8080-exec-7] TableBinder - Retrieving property com.choinoski.entity.Role.pack
+[DEBUG] 2018-04-21 12:52:21.677 [http-nio-8080-exec-7] CollectionSecondPass - Mapped collection key: pack_nr, one-to-many: com.choinoski.entity.Role
+[DEBUG] 2018-04-21 12:52:21.677 [http-nio-8080-exec-7] InFlightMetadataCollectorImpl - Resolving reference to class: com.choinoski.entity.Pack
+[DEBUG] 2018-04-21 12:52:21.677 [http-nio-8080-exec-7] InFlightMetadataCollectorImpl - Resolving reference to class: com.choinoski.entity.Pack
+[DEBUG] 2018-04-21 12:52:21.677 [http-nio-8080-exec-7] InFlightMetadataCollectorImpl - Resolving reference to class: com.choinoski.entity.Pack
+[DEBUG] 2018-04-21 12:52:21.678 [http-nio-8080-exec-7] InFlightMetadataCollectorImpl - Resolving reference to class: com.choinoski.entity.Pack
+[DEBUG] 2018-04-21 12:52:21.678 [http-nio-8080-exec-7] InFlightMetadataCollectorImpl - Resolving reference to class: com.choinoski.entity.Pack
+[DEBUG] 2018-04-21 12:52:21.679 [http-nio-8080-exec-7] InFlightMetadataCollectorImpl - Resolving reference to class: com.choinoski.entity.Pack
