@@ -5,3 +5,8 @@
 [DEBUG] 2018-04-21 13:12:24.360 [http-nio-8080-exec-6] GenericDao - Selecting rows by 7
 [DEBUG] 2018-04-21 13:52:46.146 [http-nio-8080-exec-2] GenericDao - Searching for user with packName = user
 [DEBUG] 2018-04-21 13:57:57.194 [http-nio-8080-exec-6] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-21 14:07:47.451 [http-nio-8080-exec-10] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-21 14:10:03.006 [http-nio-8080-exec-7] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-21 14:10:03.085 [http-nio-8080-exec-7] GenericDao - Selecting rows by 8
+[DEBUG] 2018-04-21 14:16:52.656 [http-nio-8080-exec-6] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-21 14:19:18.967 [http-nio-8080-exec-2] GenericDao - Searching for user with packName = user

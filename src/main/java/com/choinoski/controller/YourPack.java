@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 
 /**
  *  This servlet sets HTTP request data and forwards it to a JSP
@@ -56,6 +57,8 @@ public class YourPack extends HttpServlet {
         }
 
         session.setAttribute("userPack", userPack);
+
+        Set myMembers = userPack.getMembers();
 
         String url = "/jsp/yourPack.jsp";
 

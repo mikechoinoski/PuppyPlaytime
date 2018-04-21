@@ -52,12 +52,6 @@ public class PackMember {
             foreignKey = @ForeignKey(name = "pack_foreign_key"))
     private Pack pack;
 
-    @Transient
-    private int age;
-
-    @Transient
-    private String size;
-
     /**
      * Instantiates a new Pack Member.
      */
@@ -75,8 +69,6 @@ public class PackMember {
         this.dateOfBirth = dateOfBirth;
         this.intact = intact;
 
-        calculateSize();
-        calculateAge();
     }
 
     /**
@@ -129,13 +121,9 @@ public class PackMember {
      * @return the size
      */
     public String getSize() {
-        return size;
-    }
 
-    /**
-     * Sets size.
-     */
-    private void calculateSize() {
+        String size =  null;
+
         if (weight < 10) {
             size = "XS";
         } else if (weight < 25) {
@@ -147,6 +135,8 @@ public class PackMember {
         } else {
             size = "XL";
         }
+
+        return size;
     }
 
     /**
@@ -199,12 +189,7 @@ public class PackMember {
      * @return the age
      */
     public int getAge() {
-
-        return age;
-    }
-
-    private void calculateAge() {
-        age = (int) ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
+        return (int) ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
     }
 
     /**
@@ -284,10 +269,10 @@ public class PackMember {
         return "PackMember{" +
                 "packMemberNumber=" + packMemberNumber +
                 ", name='" + name + '\'' +
-                ", size='" + size + '\'' +
+                ", size='" + getSize() + '\'' +
                 ", breed='" + breed + '\'' +
                 ", sex=" + sex +
-                ", dateOfBirth=" + dateOfBirth +
+                ", age=" + getAge() +
                 ", intact=" + intact +
                 ", createDate=" + createDate +
                 ", lastModifiedDate=" + lastModifiedDate +
@@ -305,17 +290,17 @@ public class PackMember {
         PackMember packMember = (PackMember) o;
         return  Objects.equals( packMemberNumber, packMember.packMemberNumber ) &&
                 Objects.equals( name, packMember.name ) &&
-                Objects.equals( size, packMember.size ) &&
+                Objects.equals( getSize(), packMember.getSize() ) &&
                 Objects.equals( breed, packMember.breed ) &&
                 Objects.equals( sex, packMember.sex ) &&
                 Objects.equals( intact, packMember.intact ) &&
-                Objects.equals( dateOfBirth, packMember.dateOfBirth );
+                Objects.equals( getAge(), packMember.getAge() );
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash( packMemberNumber, name, size, breed, sex, intact, dateOfBirth,
+        return Objects.hash( packMemberNumber, name, breed, sex, intact, dateOfBirth,
                              createDate, lastModifiedDate);
 
     }

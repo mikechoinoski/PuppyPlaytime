@@ -8,7 +8,7 @@
 <center>
 
     <h2>Your Pack</h2>
-    <br><br>
+    <br>
 
     <table>
         <tr>
@@ -37,26 +37,27 @@
         </tr>
     </table>
 
-    <br>
+    <br><br>
     <h3>Pack Members</h3>
     <br>
 
     <table>
         <tr>
             <th width="100">Name</th>
+            <th width="50">Age</th>
             <th width="50">Size</th>
             <th width="100">Breed</th>
             <th width="50">Gender</th>
             <th width="50">Intact</th>
         </tr>
-        <c:forEach var="userPack" items="${members}">
+        <c:forEach var="userMembers" items="${userPack.members}">
             <tr>
-                <td width="100" align="center">${currentUser.name}</td>
-                <td width="50" align="center">${currentUser.age}</td>
-                <td width="50" align="center">${currentUser.size}</td>
-                <td width="100" align="center">${currentUser.breed}</td>
-                <td width="50" align="center">${currentUser.sex}</td>
-                <td width="50" align="center">${currentUser.intact}</td>
+                <td width="100" align="center">${userMembers.name}</td>
+                <td width="50" align="center">${userMembers.age}</td>
+                <td width="50" align="center">${userMembers.size}</td>
+                <td width="100" align="center">${userMembers.breed}</td>
+                <td width="50" align="center">${userMembers.sex}</td>
+                <td width="50" align="center">${userMembers.intact}</td>
             </tr>
         </c:forEach>
     </table>

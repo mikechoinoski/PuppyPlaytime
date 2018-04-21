@@ -2,8 +2,6 @@
 <body>
 <div class="container">
     <div class="navigation">
-        <a href="#.html" title="Home">Home</a>
-        &nbsp;&nbsp;<img style="vertical-align:middle" src="images/paw.png" height="15" width="15">&nbsp;&nbsp;
         <a href="searchMembers" title="Playmates">Playmates</a>
         &nbsp;&nbsp;<img style="vertical-align:middle" src="images/paw.png" height="15" width="15">&nbsp;&nbsp;
         <a href="#.html" title="Playdates">Playdates</a>

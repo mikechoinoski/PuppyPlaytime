@@ -45,8 +45,8 @@ public class Pack implements Serializable {
 
     private String password;
 
-    @OneToMany(mappedBy = "pack", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JsonIgnore
+    @OneToMany(mappedBy = "pack", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<PackMember> members = new HashSet<PackMember>();
 
     @OneToMany(mappedBy = "pack", cascade = CascadeType.ALL,
