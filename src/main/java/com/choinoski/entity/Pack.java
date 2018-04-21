@@ -160,10 +160,10 @@ public class Pack implements Serializable {
      */
     public void addMember(PackMember member) {
         dao = new GenericDao(PackMember.class);
+        member.setPack(this);
         int id = dao.insert(member);
         PackMember newMember = (PackMember) dao.getById(id);
         members.add(newMember);
-        newMember.setPack(this);
     }
 
     public Set<Role> getRoles() {
