@@ -21,7 +21,7 @@ public class FileUtilities {
 
     }
 
-    public boolean uploadFile(String folderLocation, HttpServletRequest request) {
+    public void uploadFile(String folderLocation, HttpServletRequest request) throws FileUploadException, Exception {
 
         // Create a factory for disk-based file items
         DiskFileItemFactory factory = new DiskFileItemFactory();
@@ -44,32 +44,22 @@ public class FileUtilities {
         // Set overall request size constraint
         upload.setSizeMax(MAX_REQUEST_SIZE);
 
-        try {
             // Parse the request
-            List items = upload.parseRequest(request);
-            Iterator iter = items.iterator();
-            while (iter.hasNext()) {
-                FileItem item = (FileItem) iter.next();
+        List items = upload.parseRequest(request);
+        Iterator iter = items.iterator();
+        while (iter.hasNext()) {
+            FileItem item = (FileItem) iter.next();
 
-                if (!item.isFormField()) {
-                    String fileName = new File(item.getName()).getName();
-                    String filePath = folderLocation + File.separator + fileName;
-                    File uploadedFile = new File(filePath);
-                    System.out.println(filePath);
+            if (!item.isFormField()) {
+                String fileName = new File(item.getName()).getName();
+                String filePath = folderLocation + File.separator + fileName;
+                File uploadedFile = new File(filePath);
+                //System.out.println(filePath);
                     // saves the file to upload directory
-                    item.write(uploadedFile);
-                }
+                item.write(uploadedFile);
             }
-
-            return true;
-
-        } catch (FileUploadException ex) {
-            throw new ServletException(ex);
-        } catch (Exception ex) {
-            throw new ServletException(ex);
         }
+
     }
-
-
 
 }

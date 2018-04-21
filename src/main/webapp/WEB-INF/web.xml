@@ -78,12 +78,25 @@
         <url-pattern>/UploadServlet</url-pattern>
     </servlet-mapping>
 
+  <servlet>
+    <description></description>
+    <display-name>CreateMember</display-name>
+    <servlet-name>CreateMemberInsertServlet</servlet-name>
+    <servlet-class>com.choinoski.controller.CreateMemberInsertServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateMemberInsertServlet</servlet-name>
+    <url-pattern>/CreateMember</url-pattern>
+  </servlet-mapping>
+
+
+
   <!-- ********************************************************************* -->
   <!-- Home Page *********************************************************** -->
   <!-- ********************************************************************* -->
 
   <welcome-file-list>
-    <welcome-file>/jsp/yourPack.jsp</welcome-file>
+    <welcome-file>yourPack</welcome-file>
   </welcome-file-list>
 
 </web-app>

@@ -23,10 +23,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
  * @author mrchoinoski
  * @since  November 19, 2017
  */
-@WebServlet(
-        name = "createNewMember",
-        urlPatterns = { "/createNewMember" }
-)
+@javax.servlet.annotation.MultipartConfig
 public class CreateMemberInsertServlet extends HttpServlet {
 
     /**
@@ -38,7 +35,8 @@ public class CreateMemberInsertServlet extends HttpServlet {
      *@exception ServletException if there is a Servlet failure
      *@exception IOException if there is an IO failure
      */
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
+
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         ServletContext servletContext = getServletContext();
@@ -46,8 +44,8 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
         Pack userPack = (Pack) session.getAttribute("userPack");
 
-        String intactData = toUpperCase(request.getParameter("memberIntact"));
-        String genderData = toUpperCase(request.getParameter("memberGender"));
+        String intactData = request.getParameter("memberIntact");
+        String genderData = request.getParameter("memberGender");
 
         boolean uploadPicture = false;
 
@@ -76,15 +74,6 @@ public class CreateMemberInsertServlet extends HttpServlet {
         } else {
             noErrorsFound = false;
         }
-
-        // Create a new file upload handler
-        ServletFileUpload upload = new ServletFileUpload(factory);
-
-        // Set overall request size constraint
-        upload.setSizeMax(MAX_REQUEST_SIZE);
-        List items = upload.parseRequest(request);
-
-
 
         if (noErrorsFound) {
             PackMember newMember = new PackMember(request.getParameter("packName"),

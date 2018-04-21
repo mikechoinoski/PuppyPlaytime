@@ -9,7 +9,7 @@
     <br>
 
     <div class="blackborder">
-        <form method="post" action="UploadServlet" enctype="multipart/form-data">
+        <form method="post" action="CreateMember" enctype="multipart/form-data">
         <table>
             <tr>
                 <th align="left">Name</th>
