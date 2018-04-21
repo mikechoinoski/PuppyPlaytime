@@ -58,7 +58,7 @@ public class YourPack extends HttpServlet {
 
         session.setAttribute("userPack", userPack);
 
-        Set myMembers = userPack.getMembers();
+        //Set myMembers = userPack.getMembers();
 
         String url = "/jsp/yourPack.jsp";
 
@@ -96,9 +96,6 @@ public class YourPack extends HttpServlet {
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
-
-        //String url = "jsp/yourPack.jsp";
-        //response.sendRedirect(url);
 
     }
 

@@ -87,7 +87,7 @@ public class CreateMemberInsertServlet extends HttpServlet {
             userPack.addMember(newMember);
         }
 
-        String url = "/yourPack";
+        String url = "/jsp/yourPack.jsp";
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);
