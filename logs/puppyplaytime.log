@@ -135,3 +135,9 @@
 [DEBUG] 2018-04-21 23:46:08.793 [http-nio-8080-exec-8] GenericDao - Inserting into com.choinoski.entity.PackMember
 [DEBUG] 2018-04-21 23:46:08.920 [http-nio-8080-exec-8] GenericDao - Selecting rows by 13
 [DEBUG] 2018-04-21 23:46:14.048 [http-nio-8080-exec-10] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-04-21 23:48:03.335 [http-nio-8080-exec-3] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-21 23:48:43.598 [http-nio-8080-exec-2] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-21 23:48:43.827 [http-nio-8080-exec-2] GenericDao - Selecting rows by 14
+[DEBUG] 2018-04-21 23:48:51.069 [http-nio-8080-exec-3] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-04-21 23:53:50.938 [http-nio-8080-exec-10] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-22 00:09:20.850 [http-nio-8080-exec-3] GenericDao - Selecting all rows from a table
