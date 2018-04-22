@@ -23,7 +23,10 @@ import java.util.Set;
 
 public class YourPackUpdateServlet extends HttpServlet {
 
-    private GenericDao dao = null;
+    private GenericDao dao;
+
+    private Boolean    updatesMade;
+    private Boolean    removeMembers;
 
     /**
      * Handles HTTP GET requests. Sets data for the HTTP request
@@ -38,7 +41,7 @@ public class YourPackUpdateServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        HttpSession session  = request.getSession();
+        HttpSession session     = request.getSession();
 
         Pack   userPack         = (Pack) session.getAttribute("userPack");
 
@@ -51,10 +54,9 @@ public class YourPackUpdateServlet extends HttpServlet {
         String memberGender     = null;
         String memberIntact     = null;
 
-        Boolean updatesMade     = false;
-        Boolean removeMembers   = false;
-
         dao = new GenericDao(PackMember.class);
+
+
 
         //List membersToRemove = new ArrayList();
 
@@ -66,6 +68,8 @@ public class YourPackUpdateServlet extends HttpServlet {
 
         for (PackMember currentMember: memberSet) {
 
+            updatesMade    = false;
+            removeMembers  = false;
             memberNumberText = Integer.toString(currentMember.getPackMemberNumber());
 
             String checkBoxValue = request.getParameter("memberToRemove" + memberNumberText);
@@ -75,33 +79,21 @@ public class YourPackUpdateServlet extends HttpServlet {
                 userPack.removeMember(currentMember);
                 //removeMembers = true;
             } else {
-                memberName     = request.getParameter("memberName" + memberNumberText);
-                memberBirthday = request.getParameter("memberBirthday" + memberNumberText);
-                memberBreed    = request.getParameter("memberBreed" + memberNumberText);
 
-                LocalDate convertedBirthday = LocalDate.parse(request.getParameter("memberBirthDate"),
-                        DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+                memberName     = request.getParameter("memberName");
+                memberBirthday = request.getParameter("memberBirthday");
+                memberWeight   = request.getParameter("memberWeight");
+                memberBreed    = request.getParameter("memberBreed");
+                memberGender   = request.getParameter("memberGender");
+                memberIntact   = request.getParameter("memberIntact");
 
-                if (!memberName.equals(currentMember.getName())) {
-                    currentMember.setName(request.getParameter("memberName"));
-                    updatesMade = true;
-                }
-                if (!memberBirthday.equals(currentMember.getDateOfBirth())) {
-                    currentMember.setDateOfBirth(convertedBirthday);
-                    updatesMade = true;
-                }
-                if (!memberWeight.equals(currentMember.getWeight())) {
-                    currentMember.setWeight(request.getParameter("memberWeight"));
-                    updatesMade = true;
-                }
-                if (!memberBreed.equals(currentMember.getBreed())) {
-                    currentMember.setBreed(request.getParameter("memberBreed"));
-                    updatesMade = true;
-                }
-                //BooleanUtils.toStringYesNo(myBoolean)
+                updatePackMember(currentMember, memberName, memberBirthday, memberWeight, memberBreed, memberGender,
+                        memberIntact);
+
                 if (updatesMade) {
                     dao.saveOrUpdate(currentMember);
                 }
+
             }
 
             //if (removeMembers) {
@@ -137,5 +129,42 @@ public class YourPackUpdateServlet extends HttpServlet {
         dispatcher.forward(request, response);
 
     }
+
+    public void updatePackMember(PackMember member, String name, String birthday, String weight, String breed,
+                                 String gender, String intact) {
+
+        String memberNumberText = Integer.toString(member.getPackMemberNumber());
+
+        Integer.parseInt(weight);
+
+        LocalDate convertedBirthday = LocalDate.parse(birthday, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+
+
+        if (!(name + memberNumberText).equals(member.getName())) {
+            member.setName(name);
+            updatesMade = true;
+        }
+        if (!memberBirthday.equals(currentMember.getDateOfBirth())) {
+            currentMember.setDateOfBirth(convertedBirthday);
+            updatesMade = true;
+        }
+        if (!memberWeight.equals(currentMember.getWeight())) {
+            currentMember.setWeight(request.getParameter("memberWeight"));
+            updatesMade = true;
+        }
+        if (!memberBreed.equals(currentMember.getBreed())) {
+            currentMember.setBreed(request.getParameter("memberBreed"));
+            updatesMade = true;
+        }
+        //BooleanUtils.toStringYesNo(myBoolean)
+
+
+
+    }
+
+
+
+
+
 
 }
