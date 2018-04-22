@@ -58,6 +58,18 @@ public class PackMember {
     public PackMember() {
     }
 
+    public PackMember(PackMember memberToCopy) {
+
+        this.packMemberNumber = memberToCopy.getPackMemberNumber();
+        this.name             = memberToCopy.getName();
+        this.weight           = memberToCopy.getWeight();
+        this.breed            = memberToCopy.getBreed();
+        this.sex              = memberToCopy.getSex();
+        this.dateOfBirth      = memberToCopy.getDateOfBirth();
+        this.intact           = memberToCopy.isIntact();
+
+    }
+
     public PackMember(String name, int weight, String breed, char sex, LocalDate dateOfBirth, boolean intact) {
 
         setName(name);
@@ -79,7 +91,6 @@ public class PackMember {
         setIntact(intact);
 
     }
-
     /**
      * Gets pack member number.
      *

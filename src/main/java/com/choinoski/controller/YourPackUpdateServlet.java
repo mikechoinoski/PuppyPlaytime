@@ -133,60 +133,36 @@ public class YourPackUpdateServlet extends HttpServlet {
     public void updatePackMember(PackMember member, String name, String birthday, String weight, String breed,
                                  String gender, String intact) {
 
-        String    memberNumberText  = Integer.toString(member.getPackMemberNumber());
-        int       convertedWeight   = Integer.parseInt(weight);
-        LocalDate convertedBirthday = LocalDate.parse(birthday, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        PackMember updatedMember = new PackMember(member);
 
-        char   convertedGender      = ' ';
+        updatedMember.setName(name);
+        updatedMember.setBreed(breed);
 
-        if (intact.equals("Yes")) {
-            convertedGender  = 'M';
-        } else if (intact.equals("No")) {
-            convertedGender  = 'F';
+        int convertedWeight = 0;
+        LocalDate convertedBirthday = null;
+        char convertedGender = ' ';
+        Boolean convertedIntact = null;
+
+        if (weight != null) {
+            updatedMember.setWeight(convertedWeight = Integer.parseInt(weight));
         }
-
-        Boolean   convertedIntact   = null;
-
-        if (intact.equals("Yes")) {
-            convertedIntact = true;
-        } else if (intact.equals("No")) {
-            convertedIntact = false;
+        if (birthday != null) {
+            updatedMember.setDateOfBirth(LocalDate.parse(birthday, DateTimeFormatter.ofPattern("yyyy-MM-dd")));
         }
-
-
-        if (!name.equals(member.getName())) {
-            member.setName(name);
-            updatesMade = true;
+        if (gender != null) {
+            if (intact.equals("Yes")) {
+                updatedMember.setSex('M');
+            } else if (intact.equals("No")) {
+                updatedMember.setSex('F');
+            }
         }
-        if (!convertedBirthday.equals(member.getDateOfBirth())) {
-            member.setDateOfBirth(convertedBirthday);
-            updatesMade = true;
+        if (intact != null) {
+            if (intact.equals("Yes")) {
+                updatedMember.setIntact(true);
+            } else if (intact.equals("No")) {
+                updatedMember.setIntact(false);
+            }
         }
-        if (!weight.equals(member.getWeight())) {
-            member.setWeight(convertedWeight);
-            updatesMade = true;
-        }
-        if (!breed.equals(member.getBreed())) {
-            member.setBreed(breed);
-            updatesMade = true;
-        }
-        if (!(convertedGender == member.getSex())) {
-            member.setBreed(breed);
-            updatesMade = true;
-        }
-        if (!convertedIntact.equals(member.isIntact())) {
-            member.setBreed(breed);
-            updatesMade = true;
-        }
-        //BooleanUtils.toStringYesNo(myBoolean)
-
-
-
     }
-
-
-
-
-
 
 }
