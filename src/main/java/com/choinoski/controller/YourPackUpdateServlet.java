@@ -56,23 +56,16 @@ public class YourPackUpdateServlet extends HttpServlet {
 
         dao = new GenericDao(PackMember.class);
 
-
-
-        //List membersToRemove = new ArrayList();
-
         Set<PackMember> memberSet = new HashSet<>(userPack.getMembers());
-
-        //for (PackMember currentMember: userPack.getMembers()) {
-         //   memberSet.add(currentMember);
-        //}
 
         for (PackMember currentMember: memberSet) {
 
-            updatesMade    = false;
-            removeMembers  = false;
-            memberNumberText = Integer.toString(currentMember.getPackMemberNumber());
+            String checkBoxValue     = request.getParameter("memberToRemove" + memberNumberText);
+            PackMember updatedMember = null;
 
-            String checkBoxValue = request.getParameter("memberToRemove" + memberNumberText);
+            updatesMade      = false;
+            removeMembers    = false;
+            memberNumberText = Integer.toString(currentMember.getPackMemberNumber());
 
             if (!(checkBoxValue == null)) {
                 //membersToRemove.add(currentMember);
@@ -87,38 +80,15 @@ public class YourPackUpdateServlet extends HttpServlet {
                 memberGender   = request.getParameter("memberGender" + memberNumberText);
                 memberIntact   = request.getParameter("memberIntact" + memberNumberText);
 
-                updatePackMember(currentMember, memberName, memberBirthday, memberWeight, memberBreed, memberGender,
-                        memberIntact);
+                updatedMember = updatePackMember(currentMember, memberName, memberBirthday, memberWeight, memberBreed,
+                        memberGender, memberIntact);
 
-                if (updatesMade) {
+                if (!updatedMember.equals(currentMember)) {
+                    currentMember.copyDemographicData(updatedMember);
                     dao.saveOrUpdate(currentMember);
                 }
 
             }
-
-            //if (removeMembers) {
-            //    for (PackMember currentMember: userPack.getMembers())
-            //}
-
-            //isSelected()
-
-            //if(MemberToRemove)
-
-            //request.getParameter("memberIntact" + memberNumberText);
-            //request.getParameter("memberGender" + memberNumberText);
-
-            //LocalDate memberDob = LocalDate.parse(request.getParameter("memberDateOfBirth"),
-             //       DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-
-
-
-
-            //if (!request.getParameter("memberIntact" + memberNumberText).equals(currentMember.isIntact())) {
-
-            //}
-
-
-
 
         }
 
@@ -130,7 +100,7 @@ public class YourPackUpdateServlet extends HttpServlet {
 
     }
 
-    public void updatePackMember(PackMember member, String name, String birthday, String weight, String breed,
+    public PackMember updatePackMember(PackMember member, String name, String birthday, String weight, String breed,
                                  String gender, String intact) {
 
         PackMember updatedMember = new PackMember(member);
@@ -138,17 +108,14 @@ public class YourPackUpdateServlet extends HttpServlet {
         updatedMember.setName(name);
         updatedMember.setBreed(breed);
 
-        int convertedWeight = 0;
-        LocalDate convertedBirthday = null;
-        char convertedGender = ' ';
-        Boolean convertedIntact = null;
-
         if (weight != null) {
-            updatedMember.setWeight(convertedWeight = Integer.parseInt(weight));
+            updatedMember.setWeight(Integer.parseInt(weight));
         }
+
         if (birthday != null) {
             updatedMember.setDateOfBirth(LocalDate.parse(birthday, DateTimeFormatter.ofPattern("yyyy-MM-dd")));
         }
+
         if (gender != null) {
             if (intact.equals("Yes")) {
                 updatedMember.setSex('M');
@@ -156,6 +123,7 @@ public class YourPackUpdateServlet extends HttpServlet {
                 updatedMember.setSex('F');
             }
         }
+
         if (intact != null) {
             if (intact.equals("Yes")) {
                 updatedMember.setIntact(true);
@@ -163,6 +131,9 @@ public class YourPackUpdateServlet extends HttpServlet {
                 updatedMember.setIntact(false);
             }
         }
+
+        return updatedMember;
+
     }
 
 }

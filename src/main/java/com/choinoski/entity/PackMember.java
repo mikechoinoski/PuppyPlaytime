@@ -304,31 +304,34 @@ public class PackMember {
                 '}';
     }
 
+    public void copyDemographicData(PackMember memberToCopy) {
+
+        this.name             = memberToCopy.getName();
+        this.weight           = memberToCopy.getWeight();
+        this.breed            = memberToCopy.getBreed();
+        this.sex              = memberToCopy.getSex();
+        this.dateOfBirth      = memberToCopy.getDateOfBirth();
+        this.intact           = memberToCopy.isIntact();
+
+    }
+
     @Override
     public boolean equals(Object o) {
-        if ( this == o ) {
-            return true;
-        }
-        if ( o == null || getClass() != o.getClass() ) {
-            return false;
-        }
-        PackMember packMember = (PackMember) o;
-        return  Objects.equals( packMemberNumber, packMember.packMemberNumber ) &&
-                Objects.equals( name, packMember.name ) &&
-                Objects.equals( getSize(), packMember.getSize() ) &&
-                Objects.equals( breed, packMember.breed ) &&
-                Objects.equals( sex, packMember.sex ) &&
-                Objects.equals( intact, packMember.intact ) &&
-                Objects.equals( getAge(), packMember.getAge() );
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PackMember that = (PackMember) o;
+        return weight == that.weight &&
+                sex == that.sex &&
+                intact == that.intact &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(breed, that.breed) &&
+                Objects.equals(dateOfBirth, that.dateOfBirth);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash( packMemberNumber, name, breed, sex, intact, dateOfBirth,
-                             createDate, lastModifiedDate);
-
+        return Objects.hash(name, weight, breed, sex, dateOfBirth, intact);
     }
-
 }
 
