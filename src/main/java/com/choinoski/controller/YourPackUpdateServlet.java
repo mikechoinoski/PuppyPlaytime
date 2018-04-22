@@ -69,9 +69,8 @@ public class YourPackUpdateServlet extends HttpServlet {
             checkBoxValue    = request.getParameter("memberToRemove" + memberNumberText);
 
             if (!(checkBoxValue == null)) {
-                //membersToRemove.add(currentMember);
                 userPack.removeMember(currentMember);
-                //removeMembers = true;
+                dao.delete(currentMember);
             } else {
 
                 memberName     = request.getParameter("memberName" + memberNumberText);
@@ -87,11 +86,15 @@ public class YourPackUpdateServlet extends HttpServlet {
                 if (!updatedMember.equals(currentMember)) {
                     currentMember.copyDemographicData(updatedMember);
                     dao.saveOrUpdate(currentMember);
+                } else {
+                    updatedMember = null;
                 }
 
             }
 
         }
+
+        //session.setAttribute("userPack", userPack);
 
         String url = "/jsp/yourPack.jsp";
 
