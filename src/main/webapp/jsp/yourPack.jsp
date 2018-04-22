@@ -80,12 +80,12 @@
                 <td width="40" align="center">
                     <c:choose>
 
-                        <c:when test = "${userMembers.intact = 'true'}">
+                        <c:when test = "${userMembers.intact}">
                             <input type="text" name="memberIntact${userMembers.packMemberNumber}"
                                    value="Yes" style="width:40px">
                         </c:when>
 
-                        <c:when test = "${userMembers.intact = 'false'}">
+                        <c:when test = "${!userMembers.intact}">
                             <input type="text" name="memberIntact${userMembers.packMemberNumber}"
                                    value="No" style="width:40px">
                         </c:when>
@@ -94,10 +94,9 @@
                             <input type="text" name="memberIntact${userMembers.packMemberNumber}"
                                    style="width:40px">
                         </c:otherwise>
+
                     </c:choose>
 
-                    <input type="text" name="memberIntact${userMembers.packMemberNumber}"
-                           value=${userMembers.intact} style="width:40px">
                 </td>
                 <td width="50" align="center">
                     <input type="checkbox" name="memberToRemove${userMembers.packMemberNumber}">
