@@ -101,6 +101,14 @@
       <version>2.10.0</version>
     </dependency>
 
+    <!-- Dependency for boolean conversion to yes or no -->
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.6</version>
+    </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
     <dependency>
       <groupId>org.hibernate</groupId>
@@ -204,6 +212,8 @@
       <artifactId>aws-java-sdk-rekognition</artifactId>
       <version>1.11.305</version>
     </dependency>
+
+
 
   </dependencies>
 

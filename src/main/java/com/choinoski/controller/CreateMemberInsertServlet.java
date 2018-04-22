@@ -78,7 +78,7 @@ public class CreateMemberInsertServlet extends HttpServlet {
         if (noErrorsFound) {
             PackMember newMember = new PackMember(
                     request.getParameter("memberName"),
-                    Integer.parseInt(request.getParameter("memberWeight")),
+                    request.getParameter("memberWeight"),
                     request.getParameter("memberBreed"),
                     maleOrFemale,
                     memberDob,

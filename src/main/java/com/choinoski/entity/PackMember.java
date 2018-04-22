@@ -60,14 +60,23 @@ public class PackMember {
 
     public PackMember(String name, int weight, String breed, char sex, LocalDate dateOfBirth, boolean intact) {
 
-        String size;
+        setName(name);
+        setWeight(weight);
+        setBreed(breed);
+        setSex(sex);
+        setDateOfBirth(dateOfBirth);
+        setIntact(intact);
 
-        this.name = name;
-        this.weight = weight;
-        this.breed = breed;
-        this.sex = sex;
-        this.dateOfBirth = dateOfBirth;
-        this.intact = intact;
+    }
+
+    public PackMember(String name, String weight, String breed, char sex, LocalDate dateOfBirth, boolean intact) {
+
+        setName(name);
+        setWeight(weight);
+        setBreed(breed);
+        setSex(sex);
+        setDateOfBirth(dateOfBirth);
+        setIntact(intact);
 
     }
 
@@ -114,6 +123,10 @@ public class PackMember {
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = Integer.parseInt(weight);
     }
 
     /**

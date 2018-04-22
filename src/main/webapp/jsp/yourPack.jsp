@@ -62,7 +62,7 @@
                     <input type="text" name="memberName${userMembers.packMemberNumber}" value=${userMembers.name} style="width:100px">
                 </td>
                 <td width="120" align="center">
-                    <input type="date" name="memberDOB${userMembers.packMemberNumber}"
+                    <input type="date" name="memberBirthDate${userMembers.packMemberNumber}"
                            style="width:120px" value=${userMembers.dateOfBirth}>
                 </td>
                 <td width="40" align="center">

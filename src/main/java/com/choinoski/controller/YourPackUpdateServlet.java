@@ -4,6 +4,7 @@ import com.choinoski.entity.Pack;
 import com.choinoski.entity.PackMember;
 import com.choinoski.entity.Role;
 import com.choinoski.persistence.GenericDao;
+import org.apache.commons.lang3.BooleanUtils;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -42,8 +43,13 @@ public class YourPackUpdateServlet extends HttpServlet {
         Pack   userPack         = (Pack) session.getAttribute("userPack");
 
         String memberNumberText = null;
+
         String memberName       = null;
+        String memberBirthday   = null;
+        String memberWeight     = null;
         String memberBreed      = null;
+        String memberGender     = null;
+        String memberIntact     = null;
 
         Boolean updatesMade     = false;
         Boolean removeMembers   = false;
@@ -69,12 +75,30 @@ public class YourPackUpdateServlet extends HttpServlet {
                 userPack.removeMember(currentMember);
                 //removeMembers = true;
             } else {
-                memberName = request.getParameter("memberName" + memberNumberText);
+                memberName     = request.getParameter("memberName" + memberNumberText);
+                memberBirthday = request.getParameter("memberBirthday" + memberNumberText);
+                memberBreed    = request.getParameter("memberBreed" + memberNumberText);
+
+                LocalDate convertedBirthday = LocalDate.parse(request.getParameter("memberBirthDate"),
+                        DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
                 if (!memberName.equals(currentMember.getName())) {
-                    currentMember.setName(memberName);
+                    currentMember.setName(request.getParameter("memberName"));
                     updatesMade = true;
                 }
+                if (!memberBirthday.equals(currentMember.getDateOfBirth())) {
+                    currentMember.setDateOfBirth(convertedBirthday);
+                    updatesMade = true;
+                }
+                if (!memberWeight.equals(currentMember.getWeight())) {
+                    currentMember.setWeight(request.getParameter("memberWeight"));
+                    updatesMade = true;
+                }
+                if (!memberBreed.equals(currentMember.getBreed())) {
+                    currentMember.setBreed(request.getParameter("memberBreed"));
+                    updatesMade = true;
+                }
+                //BooleanUtils.toStringYesNo(myBoolean)
                 if (updatesMade) {
                     dao.saveOrUpdate(currentMember);
                 }
