@@ -60,12 +60,13 @@ public class YourPackUpdateServlet extends HttpServlet {
 
         for (PackMember currentMember: memberSet) {
 
-            String checkBoxValue     = request.getParameter("memberToRemove" + memberNumberText);
+            String     checkBoxValue = null;
             PackMember updatedMember = null;
 
             updatesMade      = false;
             removeMembers    = false;
             memberNumberText = Integer.toString(currentMember.getPackMemberNumber());
+            checkBoxValue    = request.getParameter("memberToRemove" + memberNumberText);
 
             if (!(checkBoxValue == null)) {
                 //membersToRemove.add(currentMember);
