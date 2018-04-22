@@ -41,7 +41,7 @@
     <h3>Pack Members</h3>
     <br>
 
-    <form form method="post" action="DeleteMember">
+    <form form method="post" action="YourPackUpdate">
     <table cellspacing="3">
         <tr>
             <th width="100"></th>
@@ -82,11 +82,13 @@
                            value=${userMembers.intact} style="width:40px">
                 </td>
                 <td width="50" align="center">
-                    <input type="checkbox" name="MemberToRemove" value=${userMembers.packMemberNumber}>
+                    <input type="checkbox" name="memberToRemove${userMembers.packMemberNumber}">
                 </td>
             </tr>
         </c:forEach>
     </table>
+        <br><br>
+        <input type="submit" value="Make My Changes" />
     </form>
 
     <br><br>

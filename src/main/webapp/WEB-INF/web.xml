@@ -67,28 +67,35 @@
     <role-name>user</role-name>
   </security-role>
 
-    <servlet>
-        <description></description>
-        <display-name>UploadServlet</display-name>
-        <servlet-name>UploadServlet</servlet-name>
-        <servlet-class>com.choinoski.controller.UploadServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>UploadServlet</servlet-name>
-        <url-pattern>/UploadServlet</url-pattern>
-    </servlet-mapping>
-
   <servlet>
-    <description></description>
+    <display-name>UploadServlet</display-name>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>com.choinoski.controller.UploadServlet</servlet-class>
+  </servlet>
+  <servlet>
     <display-name>CreateMember</display-name>
     <servlet-name>CreateMemberInsertServlet</servlet-name>
     <servlet-class>com.choinoski.controller.CreateMemberInsertServlet</servlet-class>
   </servlet>
+  <servlet>
+    <display-name>YourPackUpdate</display-name>
+    <servlet-name>YourPackUpdateServlet</servlet-name>
+    <servlet-class>com.choinoski.controller.YourPackUpdateServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/UploadServlet</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>CreateMemberInsertServlet</servlet-name>
     <url-pattern>/CreateMember</url-pattern>
   </servlet-mapping>
 
+  <servlet-mapping>
+    <servlet-name>YourPackUpdateServlet</servlet-name>
+    <url-pattern>/YourPackUpdate</url-pattern>
+  </servlet-mapping>
 
 
   <!-- ********************************************************************* -->

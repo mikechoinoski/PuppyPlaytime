@@ -18,7 +18,6 @@
 
         <mapping class="com.choinoski.entity.Pack"/>
         <mapping class="com.choinoski.entity.PackMember"/>
-        <mapping class="com.choinoski.entity.PackLeader"/>
         <mapping class="com.choinoski.entity.Role"/>
 
     </session-factory>

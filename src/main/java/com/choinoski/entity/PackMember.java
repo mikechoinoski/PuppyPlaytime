@@ -105,6 +105,7 @@ public class PackMember {
      */
     public void setName(String name) {
         this.name = name;
+
     }
 
     public int getWeight() {
