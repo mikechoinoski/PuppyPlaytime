@@ -80,12 +80,12 @@ public class YourPackUpdateServlet extends HttpServlet {
                 //removeMembers = true;
             } else {
 
-                memberName     = request.getParameter("memberName");
-                memberBirthday = request.getParameter("memberBirthday");
-                memberWeight   = request.getParameter("memberWeight");
-                memberBreed    = request.getParameter("memberBreed");
-                memberGender   = request.getParameter("memberGender");
-                memberIntact   = request.getParameter("memberIntact");
+                memberName     = request.getParameter("memberName" + memberNumberText);
+                memberBirthday = request.getParameter("memberBirthday" + memberNumberText);
+                memberWeight   = request.getParameter("memberWeight" + memberNumberText);
+                memberBreed    = request.getParameter("memberBreed" + memberNumberText);
+                memberGender   = request.getParameter("memberGender" + memberNumberText);
+                memberIntact   = request.getParameter("memberIntact" + memberNumberText);
 
                 updatePackMember(currentMember, memberName, memberBirthday, memberWeight, memberBreed, memberGender,
                         memberIntact);
@@ -133,27 +133,49 @@ public class YourPackUpdateServlet extends HttpServlet {
     public void updatePackMember(PackMember member, String name, String birthday, String weight, String breed,
                                  String gender, String intact) {
 
-        String memberNumberText = Integer.toString(member.getPackMemberNumber());
-
-        Integer.parseInt(weight);
-
+        String    memberNumberText  = Integer.toString(member.getPackMemberNumber());
+        int       convertedWeight   = Integer.parseInt(weight);
         LocalDate convertedBirthday = LocalDate.parse(birthday, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
+        char   convertedGender      = ' ';
 
-        if (!(name + memberNumberText).equals(member.getName())) {
+        if (intact.equals("Yes")) {
+            convertedGender  = 'M';
+        } else if (intact.equals("No")) {
+            convertedGender  = 'F';
+        }
+
+        Boolean   convertedIntact   = null;
+
+        if (intact.equals("Yes")) {
+            convertedIntact = true;
+        } else if (intact.equals("No")) {
+            convertedIntact = false;
+        }
+
+
+        if (!name.equals(member.getName())) {
             member.setName(name);
             updatesMade = true;
         }
-        if (!memberBirthday.equals(currentMember.getDateOfBirth())) {
-            currentMember.setDateOfBirth(convertedBirthday);
+        if (!convertedBirthday.equals(member.getDateOfBirth())) {
+            member.setDateOfBirth(convertedBirthday);
             updatesMade = true;
         }
-        if (!memberWeight.equals(currentMember.getWeight())) {
-            currentMember.setWeight(request.getParameter("memberWeight"));
+        if (!weight.equals(member.getWeight())) {
+            member.setWeight(convertedWeight);
             updatesMade = true;
         }
-        if (!memberBreed.equals(currentMember.getBreed())) {
-            currentMember.setBreed(request.getParameter("memberBreed"));
+        if (!breed.equals(member.getBreed())) {
+            member.setBreed(breed);
+            updatesMade = true;
+        }
+        if (!(convertedGender == member.getSex())) {
+            member.setBreed(breed);
+            updatesMade = true;
+        }
+        if (!convertedIntact.equals(member.isIntact())) {
+            member.setBreed(breed);
             updatesMade = true;
         }
         //BooleanUtils.toStringYesNo(myBoolean)
