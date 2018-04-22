@@ -78,6 +78,24 @@
                            value=${userMembers.sex} style="width:50px">
                 </td>
                 <td width="40" align="center">
+                    <c:choose>
+
+                        <c:when test = "${userMembers.intact = 'true'}">
+                            <input type="text" name="memberIntact${userMembers.packMemberNumber}"
+                                   value="Yes" style="width:40px">
+                        </c:when>
+
+                        <c:when test = "${userMembers.intact = 'false'}">
+                            <input type="text" name="memberIntact${userMembers.packMemberNumber}"
+                                   value="No" style="width:40px">
+                        </c:when>
+
+                        <c:otherwise>
+                            <input type="text" name="memberIntact${userMembers.packMemberNumber}"
+                                   style="width:40px">
+                        </c:otherwise>
+                    </c:choose>
+
                     <input type="text" name="memberIntact${userMembers.packMemberNumber}"
                            value=${userMembers.intact} style="width:40px">
                 </td>
