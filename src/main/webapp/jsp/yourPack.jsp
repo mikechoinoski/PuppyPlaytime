@@ -53,7 +53,7 @@
             <th width="60">Intact</th>
             <th width="50"><font color="red">Remove</font></th>
         </tr>
-        <c:forEach var="userMembers" items="${userPack.members}">
+        <c:forEach var="userMembers" items="${sessionScope.userPack.members}">
             <tr>
                 <td width="90" align="center">
                     <img src="./uploadedPhotos/dogPhoto.jpg" height="90" width="90">

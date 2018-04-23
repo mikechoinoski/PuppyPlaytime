@@ -179,10 +179,13 @@ public class Pack implements Serializable {
      *
      * @param member the member
      */
-    public void removeMember(PackMember member) {
+    public boolean removeMember(PackMember member) {
         //dao = new GenericDao(PackMember.class);
 
-        members.remove(member);
+        boolean removed = members.remove(member);
         member.setPack(null);
+
+        return removed;
+
     }
 }

@@ -17,7 +17,7 @@ import java.util.Objects;
  */
 @Entity(name = "PackMember")
 @Table(name = "pack_member")
-public class PackMember {
+public class PackMember{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
@@ -67,6 +67,9 @@ public class PackMember {
         this.sex              = memberToCopy.getSex();
         this.dateOfBirth      = memberToCopy.getDateOfBirth();
         this.intact           = memberToCopy.isIntact();
+        this.createDate       = memberToCopy.getCreateDate();
+        this.lastModifiedDate = memberToCopy.getLastModifiedDate();
+        this.pack             = memberToCopy.getPack();
 
     }
 
@@ -330,8 +333,7 @@ public class PackMember {
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(name, weight, breed, sex, dateOfBirth, intact);
+        return Objects.hash("PackMember", packMemberNumber);
     }
 }
 

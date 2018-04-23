@@ -45,8 +45,6 @@ public class YourPackUpdateServlet extends HttpServlet {
 
         Pack   userPack         = (Pack) session.getAttribute("userPack");
 
-        String memberNumberText = null;
-
         String memberName       = null;
         String memberBirthday   = null;
         String memberWeight     = null;
@@ -57,10 +55,27 @@ public class YourPackUpdateServlet extends HttpServlet {
         dao = new GenericDao(PackMember.class);
 
         Set<PackMember> memberSet = new HashSet<>(userPack.getMembers());
+        String memberNumberText = null;
+        String checkBoxValue    = null;
+
+        //Set<PackMember> memberSet = userPack.getMembers();
+
+        List<PackMember> removeList = new ArrayList();
 
         for (PackMember currentMember: memberSet) {
 
-            String     checkBoxValue = null;
+            memberNumberText = Integer.toString(currentMember.getPackMemberNumber());
+            checkBoxValue    = request.getParameter("memberToRemove" + memberNumberText);
+
+            if (!(checkBoxValue == null)) {
+                boolean removed = userPack.removeMember(currentMember);
+                dao.delete(currentMember);
+            }
+        }
+
+
+        for (PackMember currentMember: memberSet) {
+
             PackMember updatedMember = null;
 
             updatesMade      = false;
@@ -68,32 +83,29 @@ public class YourPackUpdateServlet extends HttpServlet {
             memberNumberText = Integer.toString(currentMember.getPackMemberNumber());
             checkBoxValue    = request.getParameter("memberToRemove" + memberNumberText);
 
-            if (!(checkBoxValue == null)) {
-                userPack.removeMember(currentMember);
-                dao.delete(currentMember);
-            } else {
+            memberName     = request.getParameter("memberName" + memberNumberText);
+            memberBirthday = request.getParameter("memberBirthday" + memberNumberText);
+            memberWeight   = request.getParameter("memberWeight" + memberNumberText);
+            memberBreed    = request.getParameter("memberBreed" + memberNumberText);
+            memberGender   = request.getParameter("memberGender" + memberNumberText);
+            memberIntact   = request.getParameter("memberIntact" + memberNumberText);
 
-                memberName     = request.getParameter("memberName" + memberNumberText);
-                memberBirthday = request.getParameter("memberBirthday" + memberNumberText);
-                memberWeight   = request.getParameter("memberWeight" + memberNumberText);
-                memberBreed    = request.getParameter("memberBreed" + memberNumberText);
-                memberGender   = request.getParameter("memberGender" + memberNumberText);
-                memberIntact   = request.getParameter("memberIntact" + memberNumberText);
-
-                updatedMember = updatePackMember(currentMember, memberName, memberBirthday, memberWeight, memberBreed,
+            updatedMember = updatePackMember(currentMember, memberName, memberBirthday, memberWeight, memberBreed,
                         memberGender, memberIntact);
 
-                if (!updatedMember.equals(currentMember)) {
-                    currentMember.copyDemographicData(updatedMember);
-                    dao.saveOrUpdate(currentMember);
-                } else {
-                    updatedMember = null;
-                }
-
+            if (!updatedMember.equals(currentMember)) {
+                currentMember.copyDemographicData(updatedMember);
+                dao.saveOrUpdate(currentMember);
             }
 
         }
 
+        //for (List memberToRemove : removeList) {
+        //    userPack.removeMember(currentMember);
+        //    dao.delete(currentMember);
+        //}
+
+        //userPack.getMembers().
         //session.setAttribute("userPack", userPack);
 
         String url = "/jsp/yourPack.jsp";
