@@ -42,8 +42,45 @@ public class YourPackUpdateServlet extends HttpServlet {
             throws ServletException, IOException {
 
         HttpSession session     = request.getSession();
+        Pack        userPack    = (Pack) session.getAttribute("userPack");
 
-        Pack   userPack         = (Pack) session.getAttribute("userPack");
+        dao = new GenericDao(PackMember.class);
+
+        Set<PackMember> memberSet = new HashSet<>(userPack.getMembers());
+
+        processDeletes(userPack, memberSet, request);
+        processUpdates(memberSet, request);
+
+        String url = "/jsp/yourPack.jsp";
+
+        RequestDispatcher dispatcher =
+                getServletContext().getRequestDispatcher(url);
+        dispatcher.forward(request, response);
+
+    }
+
+
+    public void processDeletes(Pack theUserPack, Set<PackMember> deleteSet, HttpServletRequest request) {
+
+        String memberNumberText = null;
+        String checkBoxValue    = null;
+
+        for (PackMember currentMember: deleteSet) {
+
+            memberNumberText = Integer.toString(currentMember.getPackMemberNumber());
+            checkBoxValue    = request.getParameter("memberToRemove" + memberNumberText);
+
+            if (!(checkBoxValue == null)) {
+                boolean removed = theUserPack.removeMember(currentMember);
+                dao.delete(currentMember);
+            }
+        }
+
+    }
+
+    public void processUpdates(Set<PackMember> updateSet, HttpServletRequest request) {
+
+        String memberNumberText = null;
 
         String memberName       = null;
         String memberBirthday   = null;
@@ -52,36 +89,13 @@ public class YourPackUpdateServlet extends HttpServlet {
         String memberGender     = null;
         String memberIntact     = null;
 
-        dao = new GenericDao(PackMember.class);
-
-        Set<PackMember> memberSet = new HashSet<>(userPack.getMembers());
-        String memberNumberText = null;
-        String checkBoxValue    = null;
-
-        //Set<PackMember> memberSet = userPack.getMembers();
-
-        List<PackMember> removeList = new ArrayList();
-
-        for (PackMember currentMember: memberSet) {
-
-            memberNumberText = Integer.toString(currentMember.getPackMemberNumber());
-            checkBoxValue    = request.getParameter("memberToRemove" + memberNumberText);
-
-            if (!(checkBoxValue == null)) {
-                boolean removed = userPack.removeMember(currentMember);
-                dao.delete(currentMember);
-            }
-        }
-
-
-        for (PackMember currentMember: memberSet) {
+        for (PackMember currentMember: updateSet) {
 
             PackMember updatedMember = null;
 
             updatesMade      = false;
             removeMembers    = false;
             memberNumberText = Integer.toString(currentMember.getPackMemberNumber());
-            checkBoxValue    = request.getParameter("memberToRemove" + memberNumberText);
 
             memberName     = request.getParameter("memberName" + memberNumberText);
             memberBirthday = request.getParameter("memberBirthday" + memberNumberText);
@@ -91,7 +105,7 @@ public class YourPackUpdateServlet extends HttpServlet {
             memberIntact   = request.getParameter("memberIntact" + memberNumberText);
 
             updatedMember = updatePackMember(currentMember, memberName, memberBirthday, memberWeight, memberBreed,
-                        memberGender, memberIntact);
+                    memberGender, memberIntact);
 
             if (!updatedMember.equals(currentMember)) {
                 currentMember.copyDemographicData(updatedMember);
@@ -99,21 +113,6 @@ public class YourPackUpdateServlet extends HttpServlet {
             }
 
         }
-
-        //for (List memberToRemove : removeList) {
-        //    userPack.removeMember(currentMember);
-        //    dao.delete(currentMember);
-        //}
-
-        //userPack.getMembers().
-        //session.setAttribute("userPack", userPack);
-
-        String url = "/jsp/yourPack.jsp";
-
-        RequestDispatcher dispatcher =
-                getServletContext().getRequestDispatcher(url);
-        dispatcher.forward(request, response);
-
     }
 
     public PackMember updatePackMember(PackMember member, String name, String birthday, String weight, String breed,
