@@ -19,7 +19,24 @@
 | 2/25/18 | Finished AWS Exercise | 5 | |
 | 2/26/18 | Worked on items for project checkpoint 2 | 3 | |
 | 2/27/18 | Worked on items for project checkpoint 2 | 3 | |
-| 3/4/18 | Worked on Authentication Exercise | 3 | |
-| 3/5/18 | Finished on Authentication Exercise | 3 | |
+| 3/04/18 | Worked on Authentication Exercise | 3 | |
+| 3/05/18 | Finished on Authentication Exercise | 3 | |
 | 3/18/18 | Worked on items for project checkpoint 3 | 7 | |
 | 3/19/18 | Finished Week 8 activities | 5 | |
+| 3/26/18 | Team Project - Team meeting. Created GitHub repro. Created problem statement and timelogs for each member | 3  |
+| 3/27/18 | Team Project - Setup structure of repository |3| |
+| 3/28/18 | Team Project - Set up Database and Entities |3| |
+| 4/01/18 | Team Project - Started on Topic classes |2 | |
+| 4/05/18 | Team Project - Worked on Topic Classes and Tests | 2 | |
+| 4/06/18 | Team Project - Got the Topic Get function to return to the webpage | 1 | |
+| 4/09/18 | Team Project - Created JsonParser and added Json Tests | 3| |
+| 4/14/18 | Complete Week 13 Videos/Exercise| 4 | |
+| 4/16/18 | Started on pack creation process | 4 | |
+| 4/18/18 | Started Creating your pack page| 2 | |
+| 4/19/18 | Started on new member creation process| 3 | |
+| 4/20/18 | Continued on new member creation process| 4 | |
+| 4/21/18 | Worked on the insert jsp and servlet for pack members, updated css | 8 | |
+| 4/22/18 | Worked on the the update/delete for pack members (jsp/servlets)| 6 | |
+| 4/23/18 | Finished pack creation process / added Proect Lombok | 4 | |
+
+
