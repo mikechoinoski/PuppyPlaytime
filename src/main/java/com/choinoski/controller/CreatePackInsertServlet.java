@@ -1,6 +1,7 @@
 package com.choinoski.controller;
 
 import com.choinoski.entity.Pack;
+import com.choinoski.entity.Role;
 import com.choinoski.persistence.GenericDao;
 
 import javax.servlet.RequestDispatcher;
@@ -40,10 +41,13 @@ public class CreatePackInsertServlet extends HttpServlet {
 
         GenericDao dao = new GenericDao(Pack.class);
 
+
         ServletContext servletContext = getServletContext();
         HttpSession    session        = request.getSession();
 
-        Pack   newPack   = new Pack(request.getParameter("packName"),
+        String packName = request.getParameter("packName");
+
+        Pack   newPack  = new Pack(packName,
                 request.getParameter("firstName"),
                 request.getParameter("lastName"),
                 request.getParameter("address"),
@@ -52,6 +56,18 @@ public class CreatePackInsertServlet extends HttpServlet {
                 request.getParameter("password"));
 
         int id = dao.insert(newPack);
+
+        Pack insertedPack = (Pack) dao.getById(id);
+
+        Role newPackRole  = null;
+
+        dao = new GenericDao(Role.class);
+
+        newPackRole = new Role("user");
+
+        dao.insert(newPack);
+
+        insertedPack.addRole(newPackRole);
 
         session.setAttribute("packId", id);
 

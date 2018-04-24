@@ -2,11 +2,14 @@ package com.choinoski.entity;
 
 import com.choinoski.util.TimestampAttributeConverter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.Objects;
 
 /**
@@ -22,13 +25,15 @@ public class Role {
     @Column( name = "roleID")
     private int roldId;
 
-    @Convert(converter = TimestampAttributeConverter.class)
+    @CreationTimestamp
+    @Temporal( TemporalType.TIMESTAMP )
     private LocalDateTime createDate;
 
     @Column( name = "role_name")
     private String    roleName;
 
-    @Convert(converter = TimestampAttributeConverter.class)
+    @UpdateTimestamp
+    @Temporal( TemporalType.TIMESTAMP )
     private LocalDateTime updateDate;
 
     @Column( name = "pack_name")
@@ -51,10 +56,13 @@ public class Role {
 
     }
 
-    public Role(LocalDateTime createDate, String roleName, LocalDateTime updateDate, String login, Pack pack) {
-        this.createDate = createDate;
+    public Role(String roleName) {
         this.roleName = roleName;
-        this.updateDate = updateDate;
+    }
+
+    public Role(String roleName, Pack pack) {
+        this.roleName = roleName;
+        this.login = pack.getPackName();
         this.pack = pack;
     }
 

@@ -166,6 +166,20 @@ public class Pack implements Serializable {
         members.add(newMember);
     }
 
+    /**
+     * Remove member.
+     *
+     * @param member the member
+     */
+    public boolean removeMember(PackMember member) {
+
+        boolean removed = members.remove(member);
+        member.setPack(null);
+
+        return removed;
+
+    }
+
     public Set<Role> getRoles() {
         return roles;
     }
@@ -175,15 +189,28 @@ public class Pack implements Serializable {
     }
 
     /**
+     * Add member.
+     *
+     * @param role the role
+     */
+    public void addRole(Role role) {
+        dao = new GenericDao(Role.class);
+        role.setLogin(this.getPackName());
+        role.setPack(this);
+        int id = dao.insert(role);
+        Role newRole = (Role) dao.getById(id);
+        roles.add(newRole);
+    }
+
+    /**
      * Remove member.
      *
-     * @param member the member
+     * @param role the role
      */
-    public boolean removeMember(PackMember member) {
-        //dao = new GenericDao(PackMember.class);
+    public boolean removeRole(Role role) {
 
-        boolean removed = members.remove(member);
-        member.setPack(null);
+        boolean removed = roles.remove(role);
+        role.setPack(null);
 
         return removed;
 
