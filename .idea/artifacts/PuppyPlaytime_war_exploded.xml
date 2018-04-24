@@ -85,6 +85,7 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.6.7" />
           <element id="library" level="project" name="Maven: joda-time:joda-time:2.8.1" />
           <element id="library" level="project" name="Maven: com.amazonaws:jmespath-java:1.11.305" />
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.16.12" />
         </element>
       </element>
       <element id="directory" name="META-INF">

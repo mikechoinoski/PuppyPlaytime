@@ -68,6 +68,11 @@
   </security-role>
 
   <servlet>
+    <display-name>YourPack</display-name>
+    <servlet-name>YourPack</servlet-name>
+    <servlet-class>com.choinoski.controller.YourPack</servlet-class>
+  </servlet>
+  <servlet>
     <display-name>UploadServlet</display-name>
     <servlet-name>UploadServlet</servlet-name>
     <servlet-class>com.choinoski.controller.UploadServlet</servlet-class>
@@ -84,6 +89,10 @@
   </servlet>
 
   <servlet-mapping>
+    <servlet-name>YourPack</servlet-name>
+    <url-pattern>/yourPack</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
     <servlet-name>UploadServlet</servlet-name>
     <url-pattern>/UploadServlet</url-pattern>
   </servlet-mapping>
@@ -91,7 +100,6 @@
     <servlet-name>CreateMemberInsertServlet</servlet-name>
     <url-pattern>/CreateMember</url-pattern>
   </servlet-mapping>
-
   <servlet-mapping>
     <servlet-name>YourPackUpdateServlet</servlet-name>
     <url-pattern>/YourPackUpdate</url-pattern>

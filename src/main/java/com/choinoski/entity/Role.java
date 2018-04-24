@@ -2,6 +2,8 @@ package com.choinoski.entity;
 
 import com.choinoski.util.TimestampAttributeConverter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -12,9 +14,15 @@ import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Objects;
 
+import lombok.Data;
+
 /**
  * The type PackMember.
  */
+
+//@Data
+@Getter
+@Setter
 @Entity(name = "Role")
 @Table(name = "role")
 public class Role {
@@ -27,14 +35,14 @@ public class Role {
 
     @CreationTimestamp
     @Temporal( TemporalType.TIMESTAMP )
-    private LocalDateTime createDate;
+    private Date createDate;
 
     @Column( name = "role_name")
     private String    roleName;
 
     @UpdateTimestamp
     @Temporal( TemporalType.TIMESTAMP )
-    private LocalDateTime updateDate;
+    private Date updateDate;
 
     @Column( name = "pack_name")
     private String    login;
@@ -63,54 +71,6 @@ public class Role {
     public Role(String roleName, Pack pack) {
         this.roleName = roleName;
         this.login = pack.getPackName();
-        this.pack = pack;
-    }
-
-    public int getRoldId() {
-        return roldId;
-    }
-
-    public void setRoldId(int roldId) {
-        this.roldId = roldId;
-    }
-
-    public LocalDateTime getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(LocalDateTime createDate) {
-        this.createDate = createDate;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public String getRoleName() {
-        return roleName;
-    }
-
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
-    }
-
-    public LocalDateTime getUpdateDate() {
-        return updateDate;
-    }
-
-    public void setUpdateDate(LocalDateTime updateDate) {
-        this.updateDate = updateDate;
-    }
-
-    public Pack getPack() {
-        return pack;
-    }
-
-    public void setPack(Pack pack) {
         this.pack = pack;
     }
 

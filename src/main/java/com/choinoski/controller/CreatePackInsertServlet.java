@@ -27,6 +27,8 @@ import java.io.IOException;
 )
 public class CreatePackInsertServlet extends HttpServlet {
 
+    GenericDao dao;
+
     /**
      *  Handles HTTP GET requests. Sets data for the HTTP request
      *  data. Forwards data to a JSP to display.
@@ -39,8 +41,7 @@ public class CreatePackInsertServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        GenericDao dao = new GenericDao(Pack.class);
-
+        dao = new GenericDao(Pack.class);
 
         ServletContext servletContext = getServletContext();
         HttpSession    session        = request.getSession();
@@ -59,23 +60,32 @@ public class CreatePackInsertServlet extends HttpServlet {
 
         Pack insertedPack = (Pack) dao.getById(id);
 
+        processRole(insertedPack);
+
+        session.setAttribute("packId", id);
+
+        //String url = "/YourPack";
+        response.sendRedirect("yourPack");
+        //RequestDispatcher dispatcher =
+        //        getServletContext().getRequestDispatcher(url);
+        //dispatcher.forward(request, response);
+
+        //HttpServletResponse.sendRedirect("/YourPack");
+
+    }
+
+    public void processRole(Pack packForRole) {
+
         Role newPackRole  = null;
 
         dao = new GenericDao(Role.class);
 
         newPackRole = new Role("user");
 
-        dao.insert(newPack);
+        //id = dao.insert(newPackRole);
+        //insertedRole = (Role) dao.getById(id);
 
-        insertedPack.addRole(newPackRole);
-
-        session.setAttribute("packId", id);
-
-        String url = "/jsp/yourPack.jsp";
-
-        RequestDispatcher dispatcher =
-                getServletContext().getRequestDispatcher(url);
-        dispatcher.forward(request, response);
+        packForRole.addRole(newPackRole);
 
     }
 

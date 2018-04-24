@@ -22,10 +22,6 @@ import java.util.Set;
  * @author mrchoinoski
  * @since  November 19, 2017
  */
-@WebServlet(
-        name = "yourPack",
-        urlPatterns = { "/yourPack" }
-)
 public class YourPack extends HttpServlet {
     /**
      *  Handles HTTP GET requests. Sets data for the HTTP request

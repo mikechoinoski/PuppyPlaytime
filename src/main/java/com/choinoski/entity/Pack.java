@@ -8,6 +8,9 @@ import java.util.Set;
 import com.choinoski.persistence.GenericDao;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jdk.nashorn.internal.ir.annotations.Ignore;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
@@ -16,6 +19,7 @@ import javax.persistence.*;
  *
  * @author mchoinoski
  */
+
 @Entity(name = "Pack")
 @Table(name = "pack") // case sensitive!
 public class Pack implements Serializable {
