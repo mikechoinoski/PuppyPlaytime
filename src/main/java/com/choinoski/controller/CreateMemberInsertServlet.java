@@ -129,7 +129,7 @@ public class CreateMemberInsertServlet extends HttpServlet {
                     part.write(sourceFilename);
                 }
                 targetFilename = targetUploadFolder + File.separator + generatedFilename + PERIOD +  fileExtension;
-                File targetFile = new File(sourceFilename);
+                File targetFile = new File(targetFilename);
                 if (!targetFile.exists()) {
                     part.write(targetFilename);
                 }
