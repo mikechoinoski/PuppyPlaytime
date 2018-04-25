@@ -5,18 +5,13 @@ import com.choinoski.entity.Pack;
 import java.io.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Iterator;
-import java.util.List;
+import java.util.Collection;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
-
 import com.choinoski.entity.PackMember;
-import com.choinoski.util.FileUtilities;
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
+
 
 
 /**
@@ -32,6 +27,9 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
                  maxFileSize=1024*1024*50,      	// 50 MB
                  maxRequestSize=1024*1024*100)   	// 100 MB
 public class CreateMemberInsertServlet extends HttpServlet {
+
+    String sourceUploadFolder
+    String uploadFolder2
 
     /**
      *  Handles HTTP GET requests. Sets data for the HTTP request
@@ -51,56 +49,51 @@ public class CreateMemberInsertServlet extends HttpServlet {
         ServletContext servletContext = getServletContext();
         HttpSession    session        = request.getSession();
 
+        boolean noErrorsFound =  true;
+
         Pack userPack = (Pack) session.getAttribute("userPack");
-        String uploadFolder  = (String) session.getAttribute("imageDirectory");
-        String uploadFolder2 = (String) session.getAttribute("imageDirectory2");
+
 
         String intactData = request.getParameter("memberIntact");
-        String genderData = request.getParameter("memberGender");
+        if (!(intactData.equals("yes") || intactData.equals("no"))) {
+            noErrorsFound =  false;
+        }
 
-        boolean memberIntact = false;
-        char    maleOrFemale = ' ';
+        String genderData = request.getParameter("memberGender");
+        if (!(genderData.equals("male") || genderData.equals("female"))) {
+            noErrorsFound =  false;
+        }
 
         LocalDate memberDob = LocalDate.parse(request.getParameter("memberDateOfBirth"),
                 DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
-        boolean noErrorsFound =  true;
 
-        if (intactData.equals("yes")) {
-            memberIntact = true;
-        }
 
-        if (genderData.equals("male")) {
-            maleOrFemale = 'm';
-        } else if (genderData.equals("female")) {
-            maleOrFemale = 'f';
-        } else {
-            noErrorsFound = false;
-        }
 
-        String memberPictureFilename = null;
 
         File fileSaveDir = new File(uploadFolder);
         if (!fileSaveDir.exists()) {
             fileSaveDir.mkdirs();
         }
-        //String fileName = null;
-        for (Part part : request.getParts()) {
-            memberPictureFilename = getFileName(part);
-            if (!memberPictureFilename.equals("")) {
-                part.write(uploadFolder + File.separator + memberPictureFilename);
-                part.write(uploadFolder2 + File.separator + memberPictureFilename);
-            }
-        }
+
+        Collection<Part> headerParts = request.getParts();
+
+
+
+
+
+
+
+
 
         if (noErrorsFound) {
             PackMember newMember = new PackMember(
                     request.getParameter("memberName"),
                     request.getParameter("memberWeight"),
                     request.getParameter("memberBreed"),
-                    maleOrFemale,
+                    convertGender(genderData),
                     memberDob,
-                    memberIntact,
+                    convertIntact(intactData),
                     memberPictureFilename);
 
             userPack.addMember(newMember);
@@ -114,6 +107,54 @@ public class CreateMemberInsertServlet extends HttpServlet {
         dispatcher.forward(request, response);
 
     }
+
+    private void getFilesFromHeader(Collection<Part> parts) {
+
+        String sourceFilename = null;
+        String targetFilename = null;
+        String memberPictureFilename = null;
+
+        for (Part part : parts) {
+            memberPictureFilename = getFileName(part);
+            if (!memberPictureFilename.equals("")) {
+                sourceFilename = uploadFolder + File.separator + memberPictureFilename;
+                File sourceFile = new File(sourceFilename);
+                if (!sourceFile.exists()) {
+                    part.write(sourceFilename);
+                }
+                targetFilename = uploadFolder2 + File.separator + memberPictureFilename;
+                File targetFile = new File(sourceFilename);
+                if (!targetFile.exists())
+                    part.write(targetFilename);
+            }
+        }
+
+    }
+
+    private boolean convertIntact(String intactData) {
+
+        boolean memberIntact = false;
+        if (intactData.equals("yes")) {
+            memberIntact = true;
+        }
+
+        return memberIntact;
+
+    }
+
+    private char convertGender(String gender) {
+        char    maleOrFemale = ' ';
+
+        if (gender.equals("male")) {
+            maleOrFemale = 'm';
+        } else if (gender.equals("female")) {
+            maleOrFemale = 'f';
+        }
+
+        return maleOrFemale;
+
+    }
+
 
     /**
      * Utility method to get file name from HTTP header content-disposition

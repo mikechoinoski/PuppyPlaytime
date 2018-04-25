@@ -26,8 +26,13 @@ import java.util.Set;
  */
 public class YourPack extends HttpServlet {
 
-    private static final String UPLOAD_FOLDER = "/home/student/IdeaProjects/PuppyPlaytime/src/main/webapp/uploadedPhotos";
-    private static final String UPLOAD_FOLDER2 = "/home/student/IdeaProjects/PuppyPlaytime/target/PuppyPlaytime/uploadedPhotos/";
+    private static final String ROOT_FOLDER = "/home/";
+    private static final String LOGGED_IN_USER = System.getProperty("user.name");
+
+    private static final String UPLOAD_FOLDER = ROOT_FOLDER + LOGGED_IN_USER +
+            "/IdeaProjects/PuppyPlaytime/src/main/webapp/uploadedPhotos";
+    private static final String UPLOAD_FOLDER2 = ROOT_FOLDER + LOGGED_IN_USER +
+            "/IdeaProjects/PuppyPlaytime/target/PuppyPlaytime/uploadedPhotos/";
 
     /**
      *  Handles HTTP GET requests. Sets data for the HTTP request
@@ -62,45 +67,12 @@ public class YourPack extends HttpServlet {
         session.setAttribute("imageDirectory", UPLOAD_FOLDER);
         session.setAttribute("imageDirectory2", UPLOAD_FOLDER2);
 
-        //Set myMembers = userPack.getMembers();
-
         String url = "/jsp/yourPack.jsp";
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
-        //String url = "jsp/yourPack.jsp";
-        //response.sendRedirect(url);
+
     }
-    /**
-     *  Handles HTTP GET requests. Sets data for the HTTP request
-     *  data. Forwards data to a JSP to display.
-     *
-     *@param request the HttpServletRequest object
-     *@param response the HttpServletResponse object
-     *@exception ServletException if there is a Servlet failure
-     *@exception IOException if there is an IO failure
-     */
-    //public void doPost(HttpServletRequest request, HttpServletResponse response)
-    //        throws ServletException, IOException {
-
-    //    GenericDao dao = new GenericDao(Pack.class);
-
-    //    ServletContext servletContext = getServletContext();
-    //    HttpSession    session        = request.getSession();
-
-    //    int id = (int) session.getAttribute("packId");
-
-    //    Pack userPack = (Pack) dao.getById(id);
-
-    //    session.setAttribute("userPack", userPack);
-
-    //    String url = "/jsp/yourPack.jsp";
-
-    //    RequestDispatcher dispatcher =
-    //            getServletContext().getRequestDispatcher(url);
-    //    dispatcher.forward(request, response);
-
-    //}
 
 }
