@@ -120,29 +120,32 @@ public class CreateMemberInsertServlet extends HttpServlet {
         verifyFolderExists(sourceUploadFolder);
         verifyFolderExists(sourceUploadFolder);
 
-        String sourceFilename        = null;
-        String targetFilename        = null;
-        String memberPictureFilename = null;
+        String sourceFilename        = "";
+        String targetFilename        = "";
+        String memberPictureFilename = "";
 
         ImageVerifier verifier       = new ImageVerifier();
         FileUtilities convertToBytes = new FileUtilities();
         ByteBuffer    imageBytes     = null;
+        Boolean       imageIsCorrect = false;
 
         for (Part part : parts) {
             memberPictureFilename = getFileName(part);
             if (!memberPictureFilename.equals("")) {
                 imageBytes = convertToBytes.convertPartToBytes(part);
-                verifier.retrieveLabelsLocal(imageBytes,50,"Dog");
-                fileExtension = FilenameUtils.getExtension(memberPictureFilename);
-                sourceFilename = sourceUploadFolder + File.separator + generatedFilename + PERIOD +  fileExtension;
-                File sourceFile = new File(sourceFilename);
-                if (!sourceFile.exists()) {
-                    part.write(sourceFilename);
-                }
-                targetFilename = targetUploadFolder + File.separator + generatedFilename + PERIOD +  fileExtension;
-                File targetFile = new File(targetFilename);
-                if (!targetFile.exists()) {
-                    part.write(targetFilename);
+                imageIsCorrect = verifier.retrieveLabelsLocal(imageBytes,70,"Dog");
+                if (imageIsCorrect) {
+                    fileExtension = FilenameUtils.getExtension(memberPictureFilename);
+                    sourceFilename = sourceUploadFolder + File.separator + generatedFilename + PERIOD +  fileExtension;
+                    File sourceFile = new File(sourceFilename);
+                    if (!sourceFile.exists()) {
+                        part.write(sourceFilename);
+                    }
+                    targetFilename = targetUploadFolder + File.separator + generatedFilename + PERIOD +  fileExtension;
+                    File targetFile = new File(targetFilename);
+                    if (!targetFile.exists()) {
+                        part.write(targetFilename);
+                    }
                 }
             }
         }

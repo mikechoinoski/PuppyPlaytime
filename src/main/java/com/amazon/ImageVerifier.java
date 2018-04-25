@@ -89,7 +89,7 @@ public class ImageVerifier {
                 .withImage(new Image()
                         .withBytes(imageBytes))
                 .withMaxLabels(10)
-                .withMinConfidence(77F);
+                .withMinConfidence(percent);
 
         try {
 
