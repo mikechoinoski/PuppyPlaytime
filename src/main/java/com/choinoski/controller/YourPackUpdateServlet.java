@@ -132,9 +132,9 @@ public class YourPackUpdateServlet extends HttpServlet {
         }
 
         if (gender != null) {
-            if (intact.equals("Yes")) {
+            if (gender.equals("Male")) {
                 updatedMember.setSex('M');
-            } else if (intact.equals("No")) {
+            } else if (gender.equals("Female")) {
                 updatedMember.setSex('F');
             }
         }

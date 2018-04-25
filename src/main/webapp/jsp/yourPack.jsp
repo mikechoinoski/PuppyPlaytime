@@ -44,28 +44,28 @@
     <form form method="post" action="YourPackUpdate">
     <table cellspacing="3">
         <tr>
-            <th width="90"></th>
-            <th width="90">Name</th>
+            <th width="80"></th>
+            <th width="80">Name</th>
             <th width="120">Birth Date</th>
             <th width="50">Weight</th>
             <th width="90">Breed</th>
-            <th width="50">Gender</th>
+            <th width="90">Gender</th>
             <th width="60">Intact</th>
             <th width="50"><font color="red">Remove</font></th>
         </tr>
         <c:forEach var="userMembers" items="${sessionScope.userPack.members}">
             <tr>
-                <td width="90" align="center">
+                <td width="80" align="center">
                     <c:choose>
                         <c:when test="${empty userMembers.pictureFilename}">
-                            <img src="./uploadedPhotos/default_dog.png" height="90" width="90">
+                            <img src="./uploadedPhotos/default_dog.png" height="80" width="80">
                         </c:when>
                         <c:otherwise>
-                            <img src="./uploadedPhotos/${userMembers.pictureFilename}" height="90" width="90">
+                            <img src="./uploadedPhotos/${userMembers.pictureFilename}" height="80" width="80">
                         </c:otherwise>
                     </c:choose>
                 </td>
-                <td width="90" align="center">
+                <td width="80" align="center">
                     <input type="text" name="memberName${userMembers.packMemberNumber}" value=${userMembers.name} style="width:100px">
                 </td>
                 <td width="120" align="center">
@@ -80,9 +80,19 @@
                     <input type="text" name="memberBreed${userMembers.packMemberNumber}"
                            value=${userMembers.breed} style="width:100px">
                 </td>
-                <td width="50" align="center">
-                    <input type="text" name="memberGender${userMembers.packMemberNumber}"
-                           value=${userMembers.sex} style="width:50px">
+                <td width="90" align="center">
+                    <select name="memberGender${userMembers.packMemberNumber}" style="width:90px">
+                        <option value="Yes"
+                                <c:if test="${userMembers.sex.toString() == 'M'}">
+                                    selected="selected"
+                                </c:if>
+                        >Male</option>
+                        <option value="No"
+                                <c:if test="${userMembers.sex.toString() == 'F'}">
+                                    selected="selected"
+                                </c:if>
+                        >Female</option>
+                    </select>
                 </td>
                 <td width="60" align="center">
                     <select name="memberIntact${userMembers.packMemberNumber}" style="width:60px">

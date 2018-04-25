@@ -61,7 +61,9 @@ public class CreateMemberInsertServlet extends HttpServlet {
         ServletContext servletContext = getServletContext();
         HttpSession    session        = request.getSession();
 
-        boolean noErrorsFound =  true;
+        boolean noErrorsFound = true;
+        String  newFileName   = null;
+
 
         String generatedFilename;
 
@@ -88,7 +90,11 @@ public class CreateMemberInsertServlet extends HttpServlet {
         generatedFilename = userPack.getPackName() + "_" + request.getParameter("memberName");
 
         try {
-            getFilesFromHeader(headerParts, generatedFilename);
+            int returnCode = getFilesFromHeader(headerParts, generatedFilename);
+            if (returnCode == 1) {
+                newFileName = generatedFilename + PERIOD + fileExtension;
+            }
+
         } catch (Exception e) {
 
         }
@@ -101,7 +107,7 @@ public class CreateMemberInsertServlet extends HttpServlet {
                     convertGender(genderData),
                     memberDob,
                     convertIntact(intactData),
-                    generatedFilename + PERIOD + fileExtension);
+                    newFileName);
 
             userPack.addMember(newMember);
         }
@@ -115,7 +121,18 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
     }
 
-    private void getFilesFromHeader(Collection<Part> parts, String generatedFilename) throws Exception{
+
+    /**
+     *  Handles HTTP GET requests. Sets data for the HTTP request
+     *  data. Forwards data to a JSP to display.
+     *
+     *@return the status of the upload (1 is correct image found, 0 is incorrect image found, -1 is no image found)
+     *
+     */
+
+    private int getFilesFromHeader(Collection<Part> parts, String generatedFilename) throws Exception{
+
+        int uploadStatus = -1;
 
         verifyFolderExists(sourceUploadFolder);
         verifyFolderExists(sourceUploadFolder);
@@ -127,14 +144,14 @@ public class CreateMemberInsertServlet extends HttpServlet {
         ImageVerifier verifier       = new ImageVerifier();
         FileUtilities convertToBytes = new FileUtilities();
         ByteBuffer    imageBytes     = null;
-        Boolean       imageIsCorrect = false;
+        Boolean       isImageOfDog   = false;
 
         for (Part part : parts) {
             memberPictureFilename = getFileName(part);
             if (!memberPictureFilename.equals("")) {
                 imageBytes = convertToBytes.convertPartToBytes(part);
-                imageIsCorrect = verifier.retrieveLabelsLocal(imageBytes,70,"Dog");
-                if (imageIsCorrect) {
+                isImageOfDog = verifier.retrieveLabelsLocal(imageBytes,70,"Dog");
+                if (isImageOfDog) {
                     fileExtension = FilenameUtils.getExtension(memberPictureFilename);
                     sourceFilename = sourceUploadFolder + File.separator + generatedFilename + PERIOD +  fileExtension;
                     File sourceFile = new File(sourceFilename);
@@ -146,9 +163,14 @@ public class CreateMemberInsertServlet extends HttpServlet {
                     if (!targetFile.exists()) {
                         part.write(targetFilename);
                     }
+                    uploadStatus = 1;
+                } else {
+                    uploadStatus = 0;
                 }
             }
         }
+
+        return uploadStatus;
 
     }
 
@@ -176,9 +198,9 @@ public class CreateMemberInsertServlet extends HttpServlet {
         char    maleOrFemale = ' ';
 
         if (gender.equals("male")) {
-            maleOrFemale = 'm';
+            maleOrFemale = 'M';
         } else if (gender.equals("female")) {
-            maleOrFemale = 'f';
+            maleOrFemale = 'F';
         }
 
         return maleOrFemale;
