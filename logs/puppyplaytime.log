@@ -466,3 +466,210 @@
 [DEBUG] 2018-04-23 21:51:55.598 [http-nio-8080-exec-9] GenericDao - Updating com.choinoski.entity.PackMember
 [DEBUG] 2018-04-23 21:51:58.338 [http-nio-8080-exec-1] GenericDao - Updating com.choinoski.entity.PackMember
 [DEBUG] 2018-04-23 21:54:27.900 [http-nio-8080-exec-4] GenericDao - Searching for user with packName = bean
+[DEBUG] 2018-04-24 18:45:36.487 [http-nio-8080-exec-3] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-04-24 18:45:36.910 [http-nio-8080-exec-3] GenericDao - Selecting rows by 19
+[DEBUG] 2018-04-24 18:45:36.962 [http-nio-8080-exec-3] GenericDao - Inserting into com.choinoski.entity.Role
+[DEBUG] 2018-04-24 18:45:36.989 [http-nio-8080-exec-3] GenericDao - Selecting rows by 10
+[DEBUG] 2018-04-24 18:45:45.449 [http-nio-8080-exec-6] GenericDao - Searching for user with packName = user2
+[DEBUG] 2018-04-24 18:46:29.465 [http-nio-8080-exec-10] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 18:46:29.503 [http-nio-8080-exec-10] GenericDao - Selecting rows by 39
+[DEBUG] 2018-04-24 18:47:14.541 [http-nio-8080-exec-6] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 18:47:21.576 [http-nio-8080-exec-9] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 18:47:33.914 [http-nio-8080-exec-1] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-24 18:50:22.930 [http-nio-8080-exec-4] GenericDao - Searching for user with packName = user2
+[DEBUG] 2018-04-24 18:54:57.796 [http-nio-8080-exec-1] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 18:54:57.819 [http-nio-8080-exec-1] GenericDao - Selecting rows by 40
+[DEBUG] 2018-04-24 18:58:38.113 [http-nio-8080-exec-5] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 18:58:54.418 [http-nio-8080-exec-8] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 18:58:54.446 [http-nio-8080-exec-8] GenericDao - Selecting rows by 41
+[ERROR] 2018-04-24 19:21:44.594 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:21:44.600 [main] GenericDao - Searching for user with packName = Number 4
+[ERROR] 2018-04-24 19:21:45.402 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:21:45.403 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-04-24 19:21:45.496 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:21:45.498 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-04-24 19:21:45.526 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-04-24 19:21:45.641 [main] GenericDao - Selecting rows by 2
+[ERROR] 2018-04-24 19:21:45.680 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:21:45.680 [main] GenericDao - Selecting all rows from a table
+[ERROR] 2018-04-24 19:21:45.807 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:21:45.808 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-04-24 19:21:45.841 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-04-24 19:21:45.874 [main] GenericDao - Selecting rows by 1
+[ERROR] 2018-04-24 19:21:45.938 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:21:45.939 [main] GenericDao - Searching for user with packName = Dawg
+[ERROR] 2018-04-24 19:21:46.040 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:21:46.041 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-04-24 19:21:46.086 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:21:46.087 [main] GenericDao - Selecting all rows from a table
+[ERROR] 2018-04-24 19:21:46.145 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:21:46.145 [main] GenericDao - Searching for user with breed = Boxer
+[ERROR] 2018-04-24 19:21:46.223 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:21:46.223 [main] GenericDao - Searching for user with breed = B
+[ERROR] 2018-04-24 19:21:46.306 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:21:46.306 [main] GenericDao - Selecting rows by 2
+[ERROR] 2018-04-24 19:21:46.360 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:21:46.361 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-04-24 19:21:46.411 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:21:46.412 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-04-24 19:21:46.429 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:21:46.466 [main] GenericDao - Selecting rows by 42
+[DEBUG] 2018-04-24 19:21:46.490 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:21:46.515 [main] GenericDao - Selecting rows by 43
+[ERROR] 2018-04-24 19:31:34.116 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:31:34.120 [main] GenericDao - Searching for user with packName = Number 4
+[ERROR] 2018-04-24 19:31:34.601 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:31:34.603 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-04-24 19:31:34.674 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:31:34.674 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-04-24 19:31:34.683 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-04-24 19:31:34.745 [main] GenericDao - Selecting rows by 2
+[ERROR] 2018-04-24 19:31:34.783 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:31:34.784 [main] GenericDao - Selecting all rows from a table
+[ERROR] 2018-04-24 19:31:34.851 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:31:34.851 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-04-24 19:31:34.858 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-04-24 19:31:34.872 [main] GenericDao - Selecting rows by 1
+[ERROR] 2018-04-24 19:31:34.904 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:31:34.904 [main] GenericDao - Searching for user with packName = Dawg
+[ERROR] 2018-04-24 19:31:34.968 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:31:34.969 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-04-24 19:31:35.011 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:31:35.011 [main] GenericDao - Selecting all rows from a table
+[ERROR] 2018-04-24 19:31:35.056 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:31:35.056 [main] GenericDao - Searching for user with breed = Boxer
+[ERROR] 2018-04-24 19:31:35.123 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:31:35.123 [main] GenericDao - Searching for user with breed = B
+[ERROR] 2018-04-24 19:31:35.175 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:31:35.176 [main] GenericDao - Selecting rows by 2
+[ERROR] 2018-04-24 19:31:35.225 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:31:35.225 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-04-24 19:31:35.258 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:31:35.259 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-04-24 19:31:35.278 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:31:35.304 [main] GenericDao - Selecting rows by 44
+[DEBUG] 2018-04-24 19:31:35.315 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:31:35.322 [main] GenericDao - Selecting rows by 45
+[ERROR] 2018-04-24 19:32:06.928 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:32:06.932 [main] GenericDao - Searching for user with packName = Number 4
+[ERROR] 2018-04-24 19:32:07.483 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:32:07.483 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-04-24 19:32:07.529 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:32:07.530 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-04-24 19:32:07.540 [main] GenericDao - Deleting from com.choinoski.entity.Pack
+[DEBUG] 2018-04-24 19:32:07.593 [main] GenericDao - Selecting rows by 2
+[ERROR] 2018-04-24 19:32:07.620 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:32:07.621 [main] GenericDao - Selecting all rows from a table
+[ERROR] 2018-04-24 19:32:07.676 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:32:07.677 [main] GenericDao - Selecting rows by 1
+[DEBUG] 2018-04-24 19:32:07.683 [main] GenericDao - Updating com.choinoski.entity.Pack
+[DEBUG] 2018-04-24 19:32:07.695 [main] GenericDao - Selecting rows by 1
+[ERROR] 2018-04-24 19:32:07.724 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:32:07.725 [main] GenericDao - Searching for user with packName = Dawg
+[ERROR] 2018-04-24 19:32:07.785 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:32:07.785 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-04-24 19:32:07.828 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:32:07.828 [main] GenericDao - Selecting all rows from a table
+[ERROR] 2018-04-24 19:32:07.881 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:32:07.882 [main] GenericDao - Searching for user with breed = Boxer
+[ERROR] 2018-04-24 19:32:07.936 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:32:07.936 [main] GenericDao - Searching for user with breed = B
+[ERROR] 2018-04-24 19:32:07.996 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:32:07.999 [main] GenericDao - Selecting rows by 2
+[ERROR] 2018-04-24 19:32:08.032 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:32:08.035 [main] GenericDao - Selecting rows by 3
+[ERROR] 2018-04-24 19:32:08.074 [main] Database - java.sql.SQLException: Incorrect integer value: 'S' for column 'weight' at row 1
+[DEBUG] 2018-04-24 19:32:08.075 [main] GenericDao - Selecting rows by 2
+[DEBUG] 2018-04-24 19:32:08.089 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:32:08.113 [main] GenericDao - Selecting rows by 46
+[DEBUG] 2018-04-24 19:32:08.127 [main] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:32:08.139 [main] GenericDao - Selecting rows by 47
+[DEBUG] 2018-04-24 19:44:30.664 [http-nio-8080-exec-2] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 19:44:45.421 [http-nio-8080-exec-8] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:44:45.487 [http-nio-8080-exec-8] GenericDao - Selecting rows by 48
+[DEBUG] 2018-04-24 19:44:57.252 [http-nio-8080-exec-10] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:44:57.310 [http-nio-8080-exec-10] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:44:57.328 [http-nio-8080-exec-10] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:44:57.333 [http-nio-8080-exec-10] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:45:16.260 [http-nio-8080-exec-3] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 19:45:30.472 [http-nio-8080-exec-6] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:45:30.495 [http-nio-8080-exec-6] GenericDao - Selecting rows by 49
+[DEBUG] 2018-04-24 19:45:32.674 [http-nio-8080-exec-8] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:45:32.687 [http-nio-8080-exec-8] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:45:34.620 [http-nio-8080-exec-10] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:45:36.074 [http-nio-8080-exec-3] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:45:59.320 [http-nio-8080-exec-6] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:45:59.335 [http-nio-8080-exec-6] GenericDao - Selecting rows by 50
+[DEBUG] 2018-04-24 19:46:04.211 [http-nio-8080-exec-8] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:46:06.285 [http-nio-8080-exec-10] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:46:23.008 [http-nio-8080-exec-6] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:46:23.024 [http-nio-8080-exec-6] GenericDao - Selecting rows by 51
+[DEBUG] 2018-04-24 19:46:24.699 [http-nio-8080-exec-8] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:46:24.718 [http-nio-8080-exec-8] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:46:50.158 [http-nio-8080-exec-9] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 19:51:00.455 [http-nio-8080-exec-4] GenericDao - Inserting into com.choinoski.entity.Pack
+[DEBUG] 2018-04-24 19:51:00.759 [http-nio-8080-exec-4] GenericDao - Selecting rows by 20
+[DEBUG] 2018-04-24 19:51:00.801 [http-nio-8080-exec-4] GenericDao - Inserting into com.choinoski.entity.Role
+[DEBUG] 2018-04-24 19:51:00.815 [http-nio-8080-exec-4] GenericDao - Selecting rows by 11
+[DEBUG] 2018-04-24 19:51:00.870 [http-nio-8080-exec-4] GenericDao - Searching for user with packName = user2
+[DEBUG] 2018-04-24 19:51:06.226 [http-nio-8080-exec-6] GenericDao - Searching for user with packName = user2
+[DEBUG] 2018-04-24 19:53:13.896 [http-nio-8080-exec-1] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 19:53:13.913 [http-nio-8080-exec-1] GenericDao - Selecting rows by 52
+[DEBUG] 2018-04-24 20:24:18.236 [http-nio-8080-exec-3] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 20:24:46.108 [http-nio-8080-exec-1] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:24:46.191 [http-nio-8080-exec-1] GenericDao - Selecting rows by 53
+[DEBUG] 2018-04-24 20:26:32.610 [http-nio-8080-exec-2] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 20:26:51.103 [http-nio-8080-exec-7] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:26:51.171 [http-nio-8080-exec-7] GenericDao - Selecting rows by 54
+[DEBUG] 2018-04-24 20:28:06.839 [http-nio-8080-exec-5] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 20:28:26.269 [http-nio-8080-exec-9] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:28:26.348 [http-nio-8080-exec-9] GenericDao - Selecting rows by 55
+[DEBUG] 2018-04-24 20:29:59.571 [http-nio-8080-exec-2] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 20:30:20.460 [http-nio-8080-exec-7] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:30:20.548 [http-nio-8080-exec-7] GenericDao - Selecting rows by 56
+[DEBUG] 2018-04-24 20:35:45.236 [http-nio-8080-exec-2] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 20:36:08.581 [http-nio-8080-exec-7] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:36:08.639 [http-nio-8080-exec-7] GenericDao - Selecting rows by 57
+[DEBUG] 2018-04-24 20:40:02.758 [http-nio-8080-exec-2] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 20:40:32.020 [http-nio-8080-exec-8] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:40:32.098 [http-nio-8080-exec-8] GenericDao - Selecting rows by 58
+[DEBUG] 2018-04-24 20:50:05.730 [http-nio-8080-exec-1] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 20:50:12.678 [http-nio-8080-exec-5] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:50:12.807 [http-nio-8080-exec-5] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:50:12.818 [http-nio-8080-exec-5] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:50:12.825 [http-nio-8080-exec-5] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:50:12.868 [http-nio-8080-exec-5] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:50:12.881 [http-nio-8080-exec-5] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:50:12.892 [http-nio-8080-exec-5] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:50:22.571 [http-nio-8080-exec-6] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:50:42.133 [http-nio-8080-exec-10] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:50:42.167 [http-nio-8080-exec-10] GenericDao - Selecting rows by 59
+[DEBUG] 2018-04-24 20:53:10.247 [http-nio-8080-exec-3] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 20:53:32.110 [http-nio-8080-exec-9] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:53:32.214 [http-nio-8080-exec-9] GenericDao - Selecting rows by 60
+[DEBUG] 2018-04-24 20:55:01.823 [http-nio-8080-exec-1] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 20:55:19.523 [http-nio-8080-exec-6] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 20:55:19.635 [http-nio-8080-exec-6] GenericDao - Selecting rows by 61
+[DEBUG] 2018-04-24 21:00:52.955 [http-nio-8080-exec-10] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 21:01:08.815 [http-nio-8080-exec-5] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 21:01:08.912 [http-nio-8080-exec-5] GenericDao - Selecting rows by 62
+[DEBUG] 2018-04-24 21:09:46.955 [http-nio-8080-exec-1] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 21:10:01.417 [http-nio-8080-exec-6] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 21:10:01.552 [http-nio-8080-exec-6] GenericDao - Selecting rows by 63
+[DEBUG] 2018-04-24 21:15:51.709 [http-nio-8080-exec-3] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 21:15:57.520 [http-nio-8080-exec-5] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 21:15:57.711 [http-nio-8080-exec-5] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 21:15:57.727 [http-nio-8080-exec-5] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 21:15:57.743 [http-nio-8080-exec-5] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 21:15:57.758 [http-nio-8080-exec-5] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 21:16:11.694 [http-nio-8080-exec-9] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 21:16:11.727 [http-nio-8080-exec-9] GenericDao - Selecting rows by 64
+[DEBUG] 2018-04-24 21:22:11.683 [http-nio-8080-exec-10] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 21:22:29.138 [http-nio-8080-exec-5] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 21:22:29.213 [http-nio-8080-exec-5] GenericDao - Selecting rows by 65
+[DEBUG] 2018-04-24 21:24:47.109 [http-nio-8080-exec-1] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 21:25:06.052 [http-nio-8080-exec-6] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 21:25:06.141 [http-nio-8080-exec-6] GenericDao - Selecting rows by 66
+[DEBUG] 2018-04-24 21:28:08.058 [http-nio-8080-exec-1] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-24 21:29:14.320 [http-nio-8080-exec-8] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-24 21:29:14.458 [http-nio-8080-exec-8] GenericDao - Selecting rows by 67

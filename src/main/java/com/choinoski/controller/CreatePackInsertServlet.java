@@ -46,7 +46,8 @@ public class CreatePackInsertServlet extends HttpServlet {
         ServletContext servletContext = getServletContext();
         HttpSession    session        = request.getSession();
 
-        String packName = request.getParameter("packName");
+        String packName     = request.getParameter("packName");
+        String packPassword = request.getParameter("password");
 
         Pack   newPack  = new Pack(packName,
                 request.getParameter("firstName"),
@@ -54,7 +55,7 @@ public class CreatePackInsertServlet extends HttpServlet {
                 request.getParameter("address"),
                 request.getParameter("phoneNumber"),
                 request.getParameter("emailAddress"),
-                request.getParameter("password"));
+                packPassword);
 
         int id = dao.insert(newPack);
 
@@ -63,6 +64,8 @@ public class CreatePackInsertServlet extends HttpServlet {
         processRole(insertedPack);
 
         session.setAttribute("packId", id);
+
+        request.login(packName, packPassword);
 
         //String url = "/YourPack";
         response.sendRedirect("yourPack");

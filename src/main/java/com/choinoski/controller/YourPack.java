@@ -73,26 +73,26 @@ public class YourPack extends HttpServlet {
      *@exception ServletException if there is a Servlet failure
      *@exception IOException if there is an IO failure
      */
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    //public void doPost(HttpServletRequest request, HttpServletResponse response)
+    //        throws ServletException, IOException {
 
-        GenericDao dao = new GenericDao(Pack.class);
+    //    GenericDao dao = new GenericDao(Pack.class);
 
-        ServletContext servletContext = getServletContext();
-        HttpSession    session        = request.getSession();
+    //    ServletContext servletContext = getServletContext();
+    //    HttpSession    session        = request.getSession();
 
-        int id = (int) session.getAttribute("packId");
+    //    int id = (int) session.getAttribute("packId");
 
-        Pack userPack = (Pack) dao.getById(id);
+    //    Pack userPack = (Pack) dao.getById(id);
 
-        session.setAttribute("userPack", userPack);
+    //    session.setAttribute("userPack", userPack);
 
-        String url = "/jsp/yourPack.jsp";
+    //    String url = "/jsp/yourPack.jsp";
 
-        RequestDispatcher dispatcher =
-                getServletContext().getRequestDispatcher(url);
-        dispatcher.forward(request, response);
+    //    RequestDispatcher dispatcher =
+    //            getServletContext().getRequestDispatcher(url);
+    //    dispatcher.forward(request, response);
 
-    }
+    //}
 
 }

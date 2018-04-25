@@ -63,7 +63,7 @@
             <tr>
                 <th align="left">Picture</th>
                 <td align="center" colspan="2">
-                    <input type="file" name="dataFile" id="fileChooser"/>
+                    <input type="file" name="fileName">
                 </td>
             </tr>
             <tr>
