@@ -2,16 +2,18 @@ package com.choinoski.controller;
 
 import com.choinoski.entity.Pack;
 
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Collection;
+import javax.imageio.ImageIO;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
 import com.choinoski.entity.PackMember;
-
+import org.apache.commons.io.FilenameUtils;
 
 
 /**
@@ -28,8 +30,11 @@ import com.choinoski.entity.PackMember;
                  maxRequestSize=1024*1024*100)   	// 100 MB
 public class CreateMemberInsertServlet extends HttpServlet {
 
-    String sourceUploadFolder
-    String uploadFolder2
+    String sourceUploadFolder;
+    String targetUploadFolder;
+    Pack   userPack;
+
+    public static final String PERIOD = ".";
 
     /**
      *  Handles HTTP GET requests. Sets data for the HTTP request
@@ -51,8 +56,12 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
         boolean noErrorsFound =  true;
 
-        Pack userPack = (Pack) session.getAttribute("userPack");
+        String generatedFilename;
 
+        userPack = (Pack) session.getAttribute("userPack");
+
+        sourceUploadFolder  = (String) session.getAttribute("imageDirectory");
+        targetUploadFolder = (String) session.getAttribute("imageDirectory2");
 
         String intactData = request.getParameter("memberIntact");
         if (!(intactData.equals("yes") || intactData.equals("no"))) {
@@ -67,18 +76,15 @@ public class CreateMemberInsertServlet extends HttpServlet {
         LocalDate memberDob = LocalDate.parse(request.getParameter("memberDateOfBirth"),
                 DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
-
-
-
-
-        File fileSaveDir = new File(uploadFolder);
-        if (!fileSaveDir.exists()) {
-            fileSaveDir.mkdirs();
-        }
-
         Collection<Part> headerParts = request.getParts();
 
+        generatedFilename = userPack.getPackName() + "_" + request.getParameter("memberName");
 
+        try {
+            getFilesFromHeader(headerParts, generatedFilename);
+        } catch (Exception e) {
+
+        }
 
 
 
@@ -108,21 +114,33 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
     }
 
-    private void getFilesFromHeader(Collection<Part> parts) {
+    private void getFilesFromHeader(Collection<Part> parts, String generatedFilename) throws Exception{
+
+        File sourceFileSaveDir = new File(sourceUploadFolder);
+        if (!sourceFileSaveDir.exists()) {
+            sourceFileSaveDir.mkdirs();
+        }
+
+        File targetFileSaveDir = new File(targetUploadFolder);
+        if (!targetFileSaveDir.exists()) {
+            targetFileSaveDir.mkdirs();
+        }
 
         String sourceFilename = null;
         String targetFilename = null;
         String memberPictureFilename = null;
+        String extension = null;
 
         for (Part part : parts) {
             memberPictureFilename = getFileName(part);
             if (!memberPictureFilename.equals("")) {
-                sourceFilename = uploadFolder + File.separator + memberPictureFilename;
+                extension = FilenameUtils.getExtension(memberPictureFilename);
+                sourceFilename = sourceUploadFolder + File.separator + generatedFilename + PERIOD +  extension;
                 File sourceFile = new File(sourceFilename);
                 if (!sourceFile.exists()) {
                     part.write(sourceFilename);
                 }
-                targetFilename = uploadFolder2 + File.separator + memberPictureFilename;
+                targetFilename = targetUploadFolder + File.separator + generatedFilename + PERIOD +  extension;
                 File targetFile = new File(sourceFilename);
                 if (!targetFile.exists())
                     part.write(targetFilename);
@@ -155,13 +173,11 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
     }
 
-
     /**
      * Utility method to get file name from HTTP header content-disposition
      */
     private String getFileName(Part part) {
         String contentDisp = part.getHeader("content-disposition");
-        System.out.println("content-disposition header= "+contentDisp);
         String[] tokens = contentDisp.split(";");
         for (String token : tokens) {
             if (token.trim().startsWith("filename")) {
@@ -170,5 +186,31 @@ public class CreateMemberInsertServlet extends HttpServlet {
         }
         return "";
     }
+
+    //https://stackoverflow.com/questions/14618953/image-conversion-in-java
+
+    //private File convertImageToJPG(File unconvertedFile) throws Exception {
+    //File inputFile = new File("/path/to/image.png");
+    //File outputFile = new File("Test.jpg");
+    //try (InputStream is = new FileInputStream(inputFile)) {
+    //BufferedImage image = ImageIO.read(is);
+    //try (OutputStream os = new FileOutputStream(outputFile)) {
+    //ImageIO.write(image, "jpg", os);
+    //} catch (Exception exp) {
+    //exp.printStackTrace();
+    //}
+    //} catch (Exception exp) {
+    //exp.printStackTrace();
+    //}
+
+    //return outputFile;
+
+    //}
+
+
+
+
+
+
 
 }
