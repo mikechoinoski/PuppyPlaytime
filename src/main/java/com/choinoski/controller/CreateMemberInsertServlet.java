@@ -89,19 +89,9 @@ public class CreateMemberInsertServlet extends HttpServlet {
             noErrorsFound = false;
         }
 
-        if (noErrorsFound) {
-            PackMember newMember = new PackMember(
-                    request.getParameter("memberName"),
-                    request.getParameter("memberWeight"),
-                    request.getParameter("memberBreed"),
-                    maleOrFemale,
-                    memberDob,
-                    memberIntact);
 
-            userPack.addMember(newMember);
-        }
 
-        String fileName = request.getParameter("fileName");
+        String memberPictureFilename = request.getParameter("fileName");
 
         File fileSaveDir = new File(UPLOAD_FOLDER);
         if (!fileSaveDir.exists()) {
@@ -109,11 +99,25 @@ public class CreateMemberInsertServlet extends HttpServlet {
         }
         //String fileName = null;
         for (Part part : request.getParts()) {
-            fileName = getFileName(part);
-            if (!fileName.equals("")) {
-                part.write(UPLOAD_FOLDER + File.separator + fileName);
+            memberPictureFilename = getFileName(part);
+            if (!memberPictureFilename.equals("")) {
+                part.write(UPLOAD_FOLDER + File.separator + memberPictureFilename);
             }
         }
+
+        if (noErrorsFound) {
+            PackMember newMember = new PackMember(
+                    request.getParameter("memberName"),
+                    request.getParameter("memberWeight"),
+                    request.getParameter("memberBreed"),
+                    maleOrFemale,
+                    memberDob,
+                    memberIntact,
+                    memberPictureFilename);
+
+            userPack.addMember(newMember);
+        }
+
 
         String url = "/jsp/yourPack.jsp";
 

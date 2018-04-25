@@ -1,6 +1,8 @@
 package com.choinoski.entity;
 
 import com.choinoski.persistence.GenericDao;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.*;
 
 import javax.persistence.*;
@@ -15,6 +17,9 @@ import java.util.Objects;
 /**
  * The type PackMember.
  */
+
+@Getter
+@Setter
 @Entity(name = "PackMember")
 @Table(name = "pack_member")
 public class PackMember{
@@ -36,6 +41,9 @@ public class PackMember{
     @Column(columnDefinition = "TINYINT")
     @Type(type = "org.hibernate.type.NumericBooleanType")
     public boolean intact;
+
+    @Column( name = "picture_filename")
+    private String pictureFilename;
 
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
@@ -67,13 +75,15 @@ public class PackMember{
         this.sex              = memberToCopy.getSex();
         this.dateOfBirth      = memberToCopy.getDateOfBirth();
         this.intact           = memberToCopy.isIntact();
+        this.pictureFilename  = memberToCopy.getPictureFilename();
         this.createDate       = memberToCopy.getCreateDate();
         this.lastModifiedDate = memberToCopy.getLastModifiedDate();
         this.pack             = memberToCopy.getPack();
 
     }
 
-    public PackMember(String name, int weight, String breed, char sex, LocalDate dateOfBirth, boolean intact) {
+    public PackMember(String name, int weight, String breed, char sex, LocalDate dateOfBirth, boolean intact,
+                      String pictureFilename) {
 
         setName(name);
         setWeight(weight);
@@ -81,10 +91,12 @@ public class PackMember{
         setSex(sex);
         setDateOfBirth(dateOfBirth);
         setIntact(intact);
+        setPictureFilename(pictureFilename);
 
     }
 
-    public PackMember(String name, String weight, String breed, char sex, LocalDate dateOfBirth, boolean intact) {
+    public PackMember(String name, String weight, String breed, char sex, LocalDate dateOfBirth, boolean intact,
+                      String pictureFilename) {
 
         setName(name);
         setWeight(weight);
@@ -92,55 +104,16 @@ public class PackMember{
         setSex(sex);
         setDateOfBirth(dateOfBirth);
         setIntact(intact);
+        setPictureFilename(pictureFilename);
 
-    }
-    /**
-     * Gets pack member number.
-     *
-     * @return the pack member number
-     */
-    public int getPackMemberNumber() {
-        return packMemberNumber;
-    }
-
-    /**
-     * Sets pack member number.
-     *
-     * @param packMemberNumber the pack member number
-     */
-    public void setPackMemberNumber(int packMemberNumber) {
-        this.packMemberNumber = packMemberNumber;
-    }
-
-    /**
-     * Gets name.
-     *
-     * @return the name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * Sets name.
-     *
-     * @param name the name
-     */
-    public void setName(String name) {
-        this.name = name;
-
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
     }
 
     public void setWeight(String weight) {
         this.weight = Integer.parseInt(weight);
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 
     /**
@@ -168,50 +141,6 @@ public class PackMember{
     }
 
     /**
-     * Gets breed.
-     *
-     * @return the breed
-     */
-    public String getBreed() {
-        return breed;
-    }
-
-    /**
-     * Sets breed.
-     *
-     * @param breed the breed
-     */
-    public void setBreed(String breed) {
-        this.breed = breed;
-    }
-
-    /**
-     * Gets sex.
-     *
-     * @return the sex
-     */
-    public char getSex() {
-        return sex;
-    }
-
-    /**
-     * Sets sex.
-     *
-     * @param sex the sex
-     */
-    public void setSex(char sex) {
-        this.sex = sex;
-    }
-
-    public boolean isIntact() {
-        return intact;
-    }
-
-    public void setIntact(boolean intact) {
-        this.intact = intact;
-    }
-
-        /**
      * Gets age.
      *
      * @return the age
@@ -220,88 +149,17 @@ public class PackMember{
         return (int) ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
     }
 
-    /**
-     * Gets date of birth.
-     *
-     * @return the date of birth
-     */
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    /**
-     * Sets date of birth.
-     *
-     * @param dateOfBirth the date of birth
-     */
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    /**
-     * Gets create date.
-     *
-     * @return the create date
-     */
-    public Date getCreateDate() {
-        return createDate;
-    }
-
-    /**
-     * Sets create date.
-     *
-     * @param createDate the create date
-     */
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
-    }
-
-    /**
-     * Gets last modified date.
-     *
-     * @return the last modified date
-     */
-    public Date getLastModifiedDate() {
-        return lastModifiedDate;
-    }
-
-    /**
-     * Sets last modified date.
-     *
-     * @param lastModifiedDate the last modified date
-     */
-    public void setLastModifiedDate(Date lastModifiedDate) {
-        this.lastModifiedDate = lastModifiedDate;
-    }
-
-    /**
-     * Gets pack.
-     *
-     * @return the pack
-     */
-    public Pack getPack() {
-        return pack;
-    }
-
-    /**
-     * Sets pack.
-     *
-     * @param pack the pack
-     */
-    public void setPack(Pack pack) {
-        this.pack = pack;
-    }
-
     @Override
     public String toString() {
         return "PackMember{" +
                 "packMemberNumber=" + packMemberNumber +
                 ", name='" + name + '\'' +
-                ", size='" + getSize() + '\'' +
+                ", weight=" + weight +
                 ", breed='" + breed + '\'' +
                 ", sex=" + sex +
-                ", age=" + getAge() +
+                ", dateOfBirth=" + dateOfBirth +
                 ", intact=" + intact +
+                ", pictureFilename='" + pictureFilename + '\'' +
                 ", createDate=" + createDate +
                 ", lastModifiedDate=" + lastModifiedDate +
                 '}';
