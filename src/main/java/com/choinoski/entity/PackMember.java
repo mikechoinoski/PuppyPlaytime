@@ -173,7 +173,7 @@ public class PackMember{
         this.sex              = memberToCopy.getSex();
         this.dateOfBirth      = memberToCopy.getDateOfBirth();
         this.intact           = memberToCopy.isIntact();
-
+        this.pictureFilename  = memberToCopy.getPictureFilename();
     }
 
     @Override
@@ -181,17 +181,22 @@ public class PackMember{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PackMember that = (PackMember) o;
-        return weight == that.weight &&
+        return packMemberNumber == that.packMemberNumber &&
+                weight == that.weight &&
                 sex == that.sex &&
                 intact == that.intact &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(breed, that.breed) &&
-                Objects.equals(dateOfBirth, that.dateOfBirth);
+                Objects.equals(dateOfBirth, that.dateOfBirth) &&
+                Objects.equals(pictureFilename, that.pictureFilename) &&
+                Objects.equals(createDate, that.createDate) &&
+                Objects.equals(lastModifiedDate, that.lastModifiedDate);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash("PackMember", packMemberNumber);
     }
+
 }
 

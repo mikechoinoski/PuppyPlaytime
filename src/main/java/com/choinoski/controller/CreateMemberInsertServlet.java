@@ -51,23 +51,11 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
         ServletContext servletContext = getServletContext();
         HttpSession    session        = request.getSession();
-        FileUtilities  fileUpload     = new FileUtilities();
 
         Pack userPack = (Pack) session.getAttribute("userPack");
 
         String intactData = request.getParameter("memberIntact");
         String genderData = request.getParameter("memberGender");
-
-        //boolean isMultipart = ServletFileUpload.isMultipartContent(request);
-
-        //try {
-        //    if (isMultipart) {
-         //       fileUpload.uploadFile(uploadFolder, request);
-        //    }
-        //} catch (Exception exception) {
-//
-        //}
-
 
         boolean memberIntact = false;
         char    maleOrFemale = ' ';
@@ -89,9 +77,7 @@ public class CreateMemberInsertServlet extends HttpServlet {
             noErrorsFound = false;
         }
 
-
-
-        String memberPictureFilename = request.getParameter("fileName");
+        String memberPictureFilename = null;
 
         File fileSaveDir = new File(UPLOAD_FOLDER);
         if (!fileSaveDir.exists()) {
