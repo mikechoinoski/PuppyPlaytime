@@ -34,6 +34,8 @@ public class CreateMemberInsertServlet extends HttpServlet {
     String targetUploadFolder;
     Pack   userPack;
 
+    String fileExtension;
+
     public static final String PERIOD = ".";
 
     /**
@@ -86,12 +88,6 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
         }
 
-
-
-
-
-
-
         if (noErrorsFound) {
             PackMember newMember = new PackMember(
                     request.getParameter("memberName"),
@@ -100,7 +96,7 @@ public class CreateMemberInsertServlet extends HttpServlet {
                     convertGender(genderData),
                     memberDob,
                     convertIntact(intactData),
-                    memberPictureFilename);
+                    generatedFilename + PERIOD + fileExtension);
 
             userPack.addMember(newMember);
         }
@@ -116,38 +112,41 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
     private void getFilesFromHeader(Collection<Part> parts, String generatedFilename) throws Exception{
 
-        File sourceFileSaveDir = new File(sourceUploadFolder);
-        if (!sourceFileSaveDir.exists()) {
-            sourceFileSaveDir.mkdirs();
-        }
+        verifyFolderExists(sourceUploadFolder);
+        verifyFolderExists(sourceUploadFolder);
 
-        File targetFileSaveDir = new File(targetUploadFolder);
-        if (!targetFileSaveDir.exists()) {
-            targetFileSaveDir.mkdirs();
-        }
-
-        String sourceFilename = null;
-        String targetFilename = null;
+        String sourceFilename        = null;
+        String targetFilename        = null;
         String memberPictureFilename = null;
-        String extension = null;
 
         for (Part part : parts) {
             memberPictureFilename = getFileName(part);
             if (!memberPictureFilename.equals("")) {
-                extension = FilenameUtils.getExtension(memberPictureFilename);
-                sourceFilename = sourceUploadFolder + File.separator + generatedFilename + PERIOD +  extension;
+                fileExtension = FilenameUtils.getExtension(memberPictureFilename);
+                sourceFilename = sourceUploadFolder + File.separator + generatedFilename + PERIOD +  fileExtension;
                 File sourceFile = new File(sourceFilename);
                 if (!sourceFile.exists()) {
                     part.write(sourceFilename);
                 }
-                targetFilename = targetUploadFolder + File.separator + generatedFilename + PERIOD +  extension;
+                targetFilename = targetUploadFolder + File.separator + generatedFilename + PERIOD +  fileExtension;
                 File targetFile = new File(sourceFilename);
-                if (!targetFile.exists())
+                if (!targetFile.exists()) {
                     part.write(targetFilename);
+                }
             }
         }
 
     }
+
+    private void verifyFolderExists(String folderPath) {
+
+        File fileDirectory = new File(folderPath);
+        if (!fileDirectory.exists()) {
+            fileDirectory.mkdirs();
+        }
+
+    }
+
 
     private boolean convertIntact(String intactData) {
 
