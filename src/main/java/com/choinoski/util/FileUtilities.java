@@ -1,15 +1,10 @@
 package com.choinoski.util;
 
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileUploadException;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.commons.io.IOUtils;
+import javax.servlet.http.Part;
+import java.io.InputStream;
+import java.nio.ByteBuffer;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import java.io.File;
-import java.util.Iterator;
-import java.util.List;
 
 public class FileUtilities {
     //private static final long serialVersionUID = 1L;
@@ -18,6 +13,17 @@ public class FileUtilities {
     //private static final int MAX_REQUEST_SIZE = 1024 * 1024;
 
     public FileUtilities() {
+
+    }
+
+    public ByteBuffer convertPartToBytes(Part imagePart) throws Exception {
+
+        ByteBuffer imageBytes;
+        try (InputStream inputStream = imagePart.getInputStream()) {
+            imageBytes = ByteBuffer.wrap(IOUtils.toByteArray(inputStream));
+        }
+
+        return imageBytes;
 
     }
 

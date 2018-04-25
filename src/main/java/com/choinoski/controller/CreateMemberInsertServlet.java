@@ -1,9 +1,12 @@
 package com.choinoski.controller;
 
+import com.amazon.ImageVerifier;
+import com.amazon.VerifyImage;
 import com.choinoski.entity.Pack;
 
 import java.awt.image.BufferedImage;
 import java.io.*;
+import java.nio.ByteBuffer;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Collection;
@@ -13,7 +16,9 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
 import com.choinoski.entity.PackMember;
+import com.choinoski.util.FileUtilities;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.IOUtils;
 
 
 /**
@@ -119,9 +124,15 @@ public class CreateMemberInsertServlet extends HttpServlet {
         String targetFilename        = null;
         String memberPictureFilename = null;
 
+        ImageVerifier verifier       = new ImageVerifier();
+        FileUtilities convertToBytes = new FileUtilities();
+        ByteBuffer    imageBytes     = null;
+
         for (Part part : parts) {
             memberPictureFilename = getFileName(part);
             if (!memberPictureFilename.equals("")) {
+                imageBytes = convertToBytes.convertPartToBytes(part);
+                verifier.retrieveLabelsLocal(imageBytes,50,"Dog");
                 fileExtension = FilenameUtils.getExtension(memberPictureFilename);
                 sourceFilename = sourceUploadFolder + File.separator + generatedFilename + PERIOD +  fileExtension;
                 File sourceFile = new File(sourceFilename);
@@ -146,7 +157,6 @@ public class CreateMemberInsertServlet extends HttpServlet {
         }
 
     }
-
 
     private boolean convertIntact(String intactData) {
 
