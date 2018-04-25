@@ -42,7 +42,6 @@ public class CreateMemberInsertServlet extends HttpServlet {
      *@exception ServletException if there is a Servlet failure
      *@exception IOException if there is an IO failure
      */
-    private static final String UPLOAD_FOLDER = "/home/student/IdeaProjects/PuppyPlaytime/uploaded_pictures";
 
     //private static final String UPLOAD_DIR = "/uploaded_pictures";
 
@@ -53,6 +52,8 @@ public class CreateMemberInsertServlet extends HttpServlet {
         HttpSession    session        = request.getSession();
 
         Pack userPack = (Pack) session.getAttribute("userPack");
+        String uploadFolder  = (String) session.getAttribute("imageDirectory");
+        String uploadFolder2 = (String) session.getAttribute("imageDirectory2");
 
         String intactData = request.getParameter("memberIntact");
         String genderData = request.getParameter("memberGender");
@@ -79,7 +80,7 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
         String memberPictureFilename = null;
 
-        File fileSaveDir = new File(UPLOAD_FOLDER);
+        File fileSaveDir = new File(uploadFolder);
         if (!fileSaveDir.exists()) {
             fileSaveDir.mkdirs();
         }
@@ -87,7 +88,8 @@ public class CreateMemberInsertServlet extends HttpServlet {
         for (Part part : request.getParts()) {
             memberPictureFilename = getFileName(part);
             if (!memberPictureFilename.equals("")) {
-                part.write(UPLOAD_FOLDER + File.separator + memberPictureFilename);
+                part.write(uploadFolder + File.separator + memberPictureFilename);
+                part.write(uploadFolder2 + File.separator + memberPictureFilename);
             }
         }
 

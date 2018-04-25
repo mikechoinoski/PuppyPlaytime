@@ -73,11 +73,6 @@
     <servlet-class>com.choinoski.controller.YourPack</servlet-class>
   </servlet>
   <servlet>
-    <display-name>UploadServlet</display-name>
-    <servlet-name>UploadServlet</servlet-name>
-    <servlet-class>com.choinoski.controller.UploadServlet</servlet-class>
-  </servlet>
-  <servlet>
     <display-name>CreateMember</display-name>
     <servlet-name>CreateMemberInsertServlet</servlet-name>
     <servlet-class>com.choinoski.controller.CreateMemberInsertServlet</servlet-class>
@@ -91,10 +86,6 @@
   <servlet-mapping>
     <servlet-name>YourPack</servlet-name>
     <url-pattern>/yourPack</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>UploadServlet</servlet-name>
-    <url-pattern>/UploadServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>CreateMemberInsertServlet</servlet-name>

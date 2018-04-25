@@ -56,7 +56,14 @@
         <c:forEach var="userMembers" items="${sessionScope.userPack.members}">
             <tr>
                 <td width="90" align="center">
-                    <img src="./uploadedPhotos/dogPhoto.jpg" height="90" width="90">
+                    <c:choose>
+                        <c:when test="${empty userMembers.pictureFilename}">
+                            <img src="./uploadedPhotos/default_dog.png" height="90" width="90">
+                        </c:when>
+                        <c:otherwise>
+                            <img src="./uploadedPhotos/${userMembers.pictureFilename}" height="90" width="90">
+                        </c:otherwise>
+                    </c:choose>
                 </td>
                 <td width="90" align="center">
                     <input type="text" name="memberName${userMembers.packMemberNumber}" value=${userMembers.name} style="width:100px">

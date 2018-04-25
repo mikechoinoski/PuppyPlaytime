@@ -64,7 +64,7 @@ class PackMemberDaoTest {
         Pack       pack      = (Pack) packDao.getById(packId);
 
         PackMember newMember = new PackMember("Scout", 80, "Golden Retriever", 'F',
-                               LocalDate.of(2011, Month.MAY, 9),true);
+                               LocalDate.of(2011, Month.MAY, 9),true,null);
 
         pack.addMember(newMember);
 

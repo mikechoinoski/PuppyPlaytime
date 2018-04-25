@@ -19,10 +19,16 @@ import java.util.Set;
  *  This servlet sets HTTP request data and forwards it to a JSP
  *  to display data.
  *
+ * ./uploadedPhotos
+ *
  * @author mrchoinoski
  * @since  November 19, 2017
  */
 public class YourPack extends HttpServlet {
+
+    private static final String UPLOAD_FOLDER = "/home/student/IdeaProjects/PuppyPlaytime/src/main/webapp/uploadedPhotos";
+    private static final String UPLOAD_FOLDER2 = "/home/student/IdeaProjects/PuppyPlaytime/target/PuppyPlaytime/main/webapp/uploadedPhotos";
+
     /**
      *  Handles HTTP GET requests. Sets data for the HTTP request
      *  data. Forwards data to a JSP to display.
@@ -53,6 +59,8 @@ public class YourPack extends HttpServlet {
         }
 
         session.setAttribute("userPack", userPack);
+        session.setAttribute("imageDirectory", UPLOAD_FOLDER);
+        session.setAttribute("imageDirectory2", UPLOAD_FOLDER2);
 
         //Set myMembers = userPack.getMembers();
 
