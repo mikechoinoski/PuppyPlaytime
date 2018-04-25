@@ -27,7 +27,7 @@ import java.util.Set;
 public class YourPack extends HttpServlet {
 
     private static final String UPLOAD_FOLDER = "/home/student/IdeaProjects/PuppyPlaytime/src/main/webapp/uploadedPhotos";
-    private static final String UPLOAD_FOLDER2 = "/home/student/IdeaProjects/PuppyPlaytime/target/PuppyPlaytime/main/webapp/uploadedPhotos";
+    private static final String UPLOAD_FOLDER2 = "/home/student/IdeaProjects/PuppyPlaytime/target/PuppyPlaytime/uploadedPhotos/";
 
     /**
      *  Handles HTTP GET requests. Sets data for the HTTP request
