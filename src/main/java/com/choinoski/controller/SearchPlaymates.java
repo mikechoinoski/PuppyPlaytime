@@ -24,7 +24,7 @@ import java.util.List;
         urlPatterns = {"/searchMembers"}
 )
 
-public class SearchMembers extends HttpServlet {
+public class SearchPlaymates extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
@@ -56,7 +56,7 @@ public class SearchMembers extends HttpServlet {
             req.setAttribute("members", packMembers);
         }
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/jsp/members.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/jsp/searchMembers.jsp");
         dispatcher.forward(req, resp);
     }
 }
