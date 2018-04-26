@@ -21,7 +21,7 @@ import java.util.List;
  */
 
 @WebServlet(
-        urlPatterns = {"/searchMembers"}
+        urlPatterns = {"/SearchPlaymates"}
 )
 
 public class SearchPlaymates extends HttpServlet {
@@ -56,7 +56,7 @@ public class SearchPlaymates extends HttpServlet {
             req.setAttribute("members", packMembers);
         }
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/jsp/searchMembers.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/jsp/searchPlaymates.jsp");
         dispatcher.forward(req, resp);
     }
 }

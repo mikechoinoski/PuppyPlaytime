@@ -823,3 +823,23 @@
 [DEBUG] 2018-04-25 21:04:17.247 [http-nio-8080-exec-4] GenericDao - Searching for user with packName = user
 [DEBUG] 2018-04-25 21:04:33.431 [http-nio-8080-exec-8] GenericDao - Updating com.choinoski.entity.PackMember
 [DEBUG] 2018-04-25 21:04:49.691 [http-nio-8080-exec-10] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-04-25 22:18:39.661 [http-nio-8080-exec-10] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-25 22:19:04.428 [http-nio-8080-exec-7] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-25 22:27:23.145 [http-nio-8080-exec-10] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-25 22:31:30.609 [http-nio-8080-exec-10] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-25 22:34:01.580 [http-nio-8080-exec-10] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-25 22:37:10.267 [http-nio-8080-exec-8] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-25 22:56:06.199 [http-nio-8080-exec-2] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-25 23:02:47.013 [http-nio-8080-exec-6] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-25 23:09:05.604 [http-nio-8080-exec-2] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-25 23:12:49.263 [http-nio-8080-exec-3] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-25 23:14:41.960 [http-nio-8080-exec-10] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-25 23:16:08.981 [http-nio-8080-exec-8] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-04-25 23:17:08.616 [http-nio-8080-exec-4] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-04-25 23:17:08.779 [http-nio-8080-exec-4] GenericDao - Selecting rows by 91
+[DEBUG] 2018-04-25 23:17:12.268 [http-nio-8080-exec-7] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-25 23:18:53.747 [http-nio-8080-exec-10] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-25 23:27:08.291 [http-nio-8080-exec-5] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-25 23:30:53.093 [http-nio-8080-exec-2] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-25 23:36:32.309 [http-nio-8080-exec-7] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-25 23:42:07.555 [http-nio-8080-exec-4] GenericDao - Selecting all rows from a table

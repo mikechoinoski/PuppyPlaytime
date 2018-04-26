@@ -39,30 +39,60 @@
             </tr>
         </table>
         <br><br>
-        <c:forEach var="userMembers" items="${members}">
-            <div class="rcorners">
+        <table>
+            <tr>
+                <td align="center">
+                    <font color="brown" size="3">Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                </td>
+                <td align="center">
+                    <font color="darkred" size="3">Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                </td>
+                <td align="center">
+                    <font color="tan" size="3">Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                </td>
+                </td>
+                <td align="center">
+                    <font color="green" size="3">Intact</font>
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <c:forEach var="singleMember" items="${members}">
+            <div class="blackborder">
                 <table>
                     <tr>
-                        <td><br>
-                            Name: "${currentUser.name}"<br>
-                            Size: "${currentUser.size}"<br>
-                            Breed: "${currentUser.breed}"
+                        <td colspan="5" align="center"><b>${singleMember.name}</b></td>
+                    </tr>
+                    <tr>
+                        <td width="50" align="center">
+                            <font color="brown" size="5"><b>${singleMember.size}</b></font>
                         </td>
-                        <td>
+                        <td width="50" align="center">
+                            <font color="darkred" size="5"><b>${singleMember.age}</b></font>
+                        </td>
+                        <td width="100" align="center">
                             <c:choose>
-                                <c:when test="${empty userMembers.pictureFilename}">
+                                <c:when test="${empty singleMember.pictureFilename}">
                                     <img src="./uploadedPhotos/default_dog.png" height="80" width="80">
                                 </c:when>
                                 <c:otherwise>
-                                    <img src="./uploadedPhotos/${userMembers.pictureFilename}" height="80" width="80">
+                                    <img src="./uploadedPhotos/${singleMember.pictureFilename}" height="80" width="80">
                                 </c:otherwise>
                             </c:choose>
                         </td>
-                        <td><br>
-                            Age: "${currentUser.name}"<br>
-                            Gender: "${currentUser.size}"<br>
-                            Intact: "${currentUser.breed}"
+                        <td width="50" align="center">
+                            <font color="tan" size="5"><b>${singleMember.sex}</b></font>
                         </td>
+                        </td>
+                        <td width="50" align="center"><b>
+                            <font color="green" size="5">
+                                <c:if test="${singleMember.intact}">Y</c:if>
+                                <c:if test="${!singleMember.intact}">N</c:if>
+                            </b></font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" align="center"><b>${singleMember.breed}</b></td>
                     </tr>
                 </table>
             </div>
