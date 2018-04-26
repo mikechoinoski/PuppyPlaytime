@@ -66,19 +66,19 @@
                     </c:choose>
                 </td>
                 <td width="80" align="center">
-                    <input type="text" name="memberName${userMembers.packMemberNumber}" value=${userMembers.name} style="width:100px">
+                    <input type="text" name="memberName${userMembers.packMemberNumber}" value="${userMembers.name}" style="width:100px">
                 </td>
                 <td width="120" align="center">
-                    <input type="date" name="memberBirthDate${userMembers.packMemberNumber}"
-                           style="width:120px" value=${userMembers.dateOfBirth}>
+                    <input type="date" name="memberBirthday${userMembers.packMemberNumber}"
+                           style="width:120px" value="${userMembers.dateOfBirth}">
                 </td>
                 <td width="40" align="center">
                     <input type="number" name="memberWeight${userMembers.packMemberNumber}" min="0" max="300"
-                           value=${userMembers.weight} style="width:40px">
+                           value="${userMembers.weight}" style="width:40px">
                 </td>
                 <td width="90" align="center">
                     <input type="text" name="memberBreed${userMembers.packMemberNumber}"
-                           value=${userMembers.breed} style="width:100px">
+                           value="${userMembers.breed}" style="width:100px">
                 </td>
                 <td width="90" align="center">
                     <select name="memberGender${userMembers.packMemberNumber}" style="width:90px">
