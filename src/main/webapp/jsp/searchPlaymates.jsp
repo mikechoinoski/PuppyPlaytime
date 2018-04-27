@@ -28,9 +28,46 @@
                 </td>
             </tr>
             <tr>
-                <td>Search Term: </td>
-                <td><input type="text" name="searchTerm"
-                           placeholder="Enter Text" /></td>
+                <td>
+                    <select name="${currentCriteria}" style="width:90px">
+                        <option value="Both"
+                                <c:if test="${gender == 'Both'}">
+                                    selected="selected"
+                                </c:if>
+                        >Both</option>
+                        <option value="Male"
+                                <c:if test="${gender == 'Male'}">
+                                    selected="selected"
+                                </c:if>
+                        >Male</option>
+                        <option value="Female"
+                                <c:if test="${gender == 'Female'}">
+                                    selected="selected"
+                                </c:if>
+                        >Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="${currentCriteria}" style="width:60px">
+                        <option value="Both"
+                                <c:if test="${intact == 'Both'}">
+                                    selected="selected"
+                                </c:if>
+                        >Both</option>
+                        <option value="Yes"
+                                <c:if test="${intact == 'Yes'}">
+                                    selected="selected"
+                                </c:if>
+                        >Yes</option>
+                        <option value="No"
+                                <c:if test="${intact == 'No'}">
+                                    selected="selected"
+                                </c:if>
+                        >No</option>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td colspan=2 align="center">
