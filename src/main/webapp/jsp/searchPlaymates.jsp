@@ -14,6 +14,33 @@
 
         <table>
             <tr>
+                <td>Age: </td>
+            </tr>
+            <tr>
+                <td colspan=2 align="center">All
+                    <input type="radio" name="searchType"
+                           value="Return All"/>
+                    Size
+                    <input type="radio" name="searchType"
+                           value="Search by Size"/>
+                    Gender <input type="radio" name="searchType"
+                                  value="Search by Gender" /><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>Search Term: </td>
+                <td><input type="text" name="searchTerm"
+                           placeholder="Enter Text" /></td>
+            </tr>
+            <tr>
+                <td colspan=2 align="center">
+                    <input type="submit" value="Submit Search" />
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
                 <td colspan=2><u>Results to Return:</u></td>
             </tr>
             <tr>

@@ -16,20 +16,25 @@
         <td colspan=2><u>Results to Return:</u></td>
     </tr>
     <tr>
-        <td colspan=2 align="center">All
-            <input type="radio" name="searchType"
-                   value="Return All"/>
-            Size
-            <input type="radio" name="searchType"
-                   value="Search by Size"/>
-            Gender <input type="radio" name="searchType"
-                             value="Search by Gender" /><br><br>
+        <td>
+
         </td>
     </tr>
     <tr>
-        <td>Search Term: </td>
-        <td><input type="text" name="searchTerm"
-                   placeholder="Enter Text" /></td>
+        <td>
+            <select name="memberGender${userMembers.packMemberNumber}" style="width:90px">
+                <option value="Yes"
+                        <c:if test="${searchCriteria.sex.toString() == 'M'}">
+                            selected="selected"
+                        </c:if>
+                >Male</option>
+                <option value="No"
+                        <c:if test="${searchCriteria.sex.toString() == 'F'}">
+                            selected="selected"
+                        </c:if>
+                >Female</option>
+            </select>
+        </td>
     </tr>
     <tr>
         <td colspan=2 align="center">

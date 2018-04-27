@@ -1,6 +1,9 @@
 package com.choinoski.persistence;
 
+import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Properties;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Expression;
@@ -21,7 +24,13 @@ public class GenericDao<T> {
 
     private Class<T> type;
     private final Logger logger = LogManager.getLogger(this.getClass());
-    SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
+    private SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
+
+    private Session session;
+
+    private CriteriaBuilder builder;
+    private CriteriaQuery<T> query;
+    private Root<T> root;
 
     public GenericDao() {
 
@@ -112,12 +121,8 @@ public class GenericDao<T> {
 
         logger.debug("Selecting all rows from a table");
 
-        Session session = sessionFactory.openSession();
+        querySetup();
 
-        CriteriaBuilder builder = session.getCriteriaBuilder();
-
-        CriteriaQuery<T> query = builder.createQuery(type);
-        Root<T> root = query.from(type);
         List<T> list = session.createQuery(query).getResultList();
         session.close();
         return list;
@@ -132,12 +137,59 @@ public class GenericDao<T> {
 
         logger.debug("Searching for user with {} = {}",  propertyName, value);
 
-        Session session = sessionFactory.openSession();
+        querySetup();
 
-        CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<T> query = builder.createQuery(type);
-        Root<T> root = query.from(type);
         query.select(root).where(builder.equal(root.get(propertyName), value));
+        List<T> entities = session.createQuery( query ).getResultList();
+
+        session.close();
+        return entities;
+
+    }
+
+    public List<T> getByPropertyEqual(String propertyName, boolean value) {
+
+        logger.debug("Searching for user with {} = {}",  propertyName, value);
+
+        querySetup();
+
+        query.select(root).where(builder.equal(root.get(propertyName), value));
+        List<T> entities = session.createQuery( query ).getResultList();
+
+        session.close();
+        return entities;
+
+    }
+
+    /**
+     *
+     *
+     */
+    public List<T> getByPropertyBetween(String propertyName, LocalDate beginDate, LocalDate endDate) {
+
+        logger.debug("Searching for user with {} between {} and {}",  propertyName, beginDate, endDate);
+
+        querySetup();
+
+        query.select(root).where(builder.between(root.get(propertyName), beginDate, endDate));
+        List<T> entities = session.createQuery( query ).getResultList();
+
+        session.close();
+        return entities;
+
+    }
+
+    /**
+     *
+     *
+     */
+    public List<T> getByPropertyBetween(String propertyName, int beginNumber, int endNumber) {
+
+        logger.debug("Searching for user with {} between {} and {}",  propertyName, beginNumber, endNumber);
+
+        querySetup();
+
+        query.select(root).where(builder.between(root.get(propertyName), beginNumber, endNumber));
         List<T> entities = session.createQuery( query ).getResultList();
 
         session.close();
@@ -153,11 +205,8 @@ public class GenericDao<T> {
 
         logger.debug("Searching for user with {} = {}",  propertyName, value);
 
-        Session session = sessionFactory.openSession();
+        querySetup();
 
-        CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<T> query = builder.createQuery(type);
-        Root<T> root = query.from(type);
         Expression<String> propertyPath = root.get(propertyName);
 
         query.where(builder.like(propertyPath, "%" + value + "%"));
@@ -165,6 +214,15 @@ public class GenericDao<T> {
         List<T> entities = session.createQuery( query ).getResultList();
         session.close();
         return entities;
+
+    }
+
+    private void querySetup() {
+
+        session = sessionFactory.openSession();
+        builder = session.getCriteriaBuilder();
+        query   = builder.createQuery(type);
+        root    = query.from(type);
 
     }
 
