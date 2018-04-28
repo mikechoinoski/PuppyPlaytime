@@ -8,7 +8,7 @@
 
     <center>
 
-        <h2>Search Results: </h2>
+        <h2>Find Playmates</h2>
 
         <form action="SearchPlaymates" class="form-inline"/>
 
@@ -76,40 +76,12 @@
                         >No</option>
                     </select>
                 </td>
-            </tr>
-            <tr>
-                <td colspan=2 align="center">
-                    <input type="submit" value="Submit Search" />
+                <td align="center">
+                    <input type="submit" class="button" value="Search" />
                 </td>
             </tr>
         </table>
 
-        <table>
-            <tr>
-                <td colspan=2><u>Results to Return:</u></td>
-            </tr>
-            <tr>
-                <td colspan=2 align="center">All
-                    <input type="radio" name="searchType"
-                           value="Return All"/>
-                    Size
-                    <input type="radio" name="searchType"
-                           value="Search by Size"/>
-                    Gender <input type="radio" name="searchType"
-                                  value="Search by Gender" /><br><br>
-                </td>
-            </tr>
-            <tr>
-                <td>Search Term: </td>
-                <td><input type="text" name="searchTerm"
-                           placeholder="Enter Text" /></td>
-            </tr>
-            <tr>
-                <td colspan=2 align="center">
-                    <input type="submit" value="Submit Search" />
-                </td>
-            </tr>
-        </table>
         <br><br>
         <table>
             <tr>
@@ -117,10 +89,11 @@
                     <font color="#f4a460" size="3">Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
                 </td>
                 <td align="center">
-                    <font color="#ff4500" size="3">Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                    <font color="darkred" size="3">Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
                 </td>
                 <td align="center">
-                    <font color="blue" size="3">Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                    <font color="blue" size="3">Gender</font>
+                    <font color="black" size="3">/</font>
                     <font color="#ff1493" size="3">Female&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
                 </td>
                 </td>

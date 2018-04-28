@@ -194,3 +194,14 @@ table.searchtable td{
    make sure you have an empty gif */
     background-image: url(../images/playmateBackground.jpg);
 }
+
+
+.button {
+    background-color: rgba(51, 175, 51, 0.67);
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
