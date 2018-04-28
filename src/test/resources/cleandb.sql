@@ -6,9 +6,9 @@ INSERT INTO pack VALUES (2,'user','Michael','Choinoski','1234 Willow Street','14
 INSERT INTO pack VALUES (3,'Awesome Pack!','Andrew','Cutler','12 Ganderson Court','16081234567','random@yahoo.com','RedBike21');
 INSERT INTO pack VALUES (4,'Number 4',' ',' ',' ',' ',' ','password');
 INSERT INTO pack VALUES (5,'random_pack',' ',' ',' ',' ',' ','randompassword');
-INSERT INTO pack_member VALUES (1,1,'Odo', 56, 'Mixed','M','2016-07-14',1,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
-INSERT INTO pack_member VALUES (2,2,'Boomer', 40, 'Black Lab','M','2013-08-11',0,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
-INSERT INTO pack_member VALUES (3,2,'Pow', 80, 'Black Lab','M','2014-03-22',0,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
+INSERT INTO pack_member VALUES (1,2,'Odo', 56, 'Mixed','M','2016-07-14',1,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
+INSERT INTO pack_member VALUES (2,1,'Boomer', 40, 'Black Lab','M','2013-08-11',0,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
+INSERT INTO pack_member VALUES (3,1,'Pow', 80, 'Black Lab','M','2014-03-22',0,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
 INSERT INTO pack_member VALUES (4,3,'Lexi', 90, 'Beagle','F','2011-12-18',1,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
 INSERT INTO pack_member VALUES (5,3,'Lucy', 100, 'Poodle','F','2016-01-03',0,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
 INSERT INTO pack_member VALUES (6,4,'Dog', 10, 'Boxer','M','2007-01-01',1,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());

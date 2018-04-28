@@ -12,57 +12,65 @@
 
         <form action="SearchPlaymates" class="form-inline"/>
 
-        <table>
+        <table class="searchtable">
             <tr>
-                <td>Age: </td>
-            </tr>
-            <tr>
-                <td colspan=2 align="center">All
-                    <input type="radio" name="searchType"
-                           value="Return All"/>
-                    Size
-                    <input type="radio" name="searchType"
-                           value="Search by Size"/>
-                    Gender <input type="radio" name="searchType"
-                                  value="Search by Gender" /><br><br>
-                </td>
+                <th>Minimum<br>Age</th>
+                <th>Maximum<br>Age</th>
+                <th>Minimum<br>Weight</th>
+                <th>Maximum<br>Weight</th>
+                <th>Gender</th>
+                <th>Fixed</th>
             </tr>
             <tr>
                 <td>
-                    <select name="${currentCriteria}" style="width:90px">
+                    <input type="number" name="${currentCriteria.minimumAge}" min="0" max="30"
+                           value="${currentCriteria.maximumAge}" style="width:40px">
+                </td>
+                <td>
+                    <input type="number" name="memberWeight${currentCriteria.maximumAge}" min="0" max="30"
+                           value="${currentCriteria.maximumAge}" style="width:40px">
+                </td>
+                <td>
+                    <input type="number" name="${currentCriteria.minimumWeight}" min="0" max="300"
+                           value="${currentCriteria.minimumWeight}" style="width:40px">
+                </td>
+                <td>
+                    <input type="number" name="memberWeight${currentCriteria.maximumWeight}" min="0" max="300"
+                           value="${currentCriteria.maximumWeight}" style="width:40px">
+                </td>
+                <td>
+                    <select name="${currentCriteria.gender}" style="width:90px">
                         <option value="Both"
-                                <c:if test="${gender == 'Both'}">
+                                <c:if test="${currentCriteria.gender == 'Both'}">
                                     selected="selected"
                                 </c:if>
                         >Both</option>
                         <option value="Male"
-                                <c:if test="${gender == 'Male'}">
+                                <c:if test="${currentCriteria.gender == 'Male'}">
                                     selected="selected"
                                 </c:if>
                         >Male</option>
                         <option value="Female"
-                                <c:if test="${gender == 'Female'}">
+                                <c:if test="${currentCriteria.gender == 'Female'}">
                                     selected="selected"
                                 </c:if>
                         >Female</option>
                     </select>
                 </td>
-            </tr>
-            <tr>
                 <td>
-                    <select name="${currentCriteria}" style="width:60px">
+                    <select name="${currentCriteria.intact}" style="width:70px">
                         <option value="Both"
-                                <c:if test="${intact == 'Both'}">
+                                <c:if test="${currentCriteria.intact == 'Both'}">
                                     selected="selected"
                                 </c:if>
                         >Both</option>
                         <option value="Yes"
-                                <c:if test="${intact == 'Yes'}">
+                                <c:if test="${currentCriteria.intact == 'Yes'}">
                                     selected="selected"
                                 </c:if>
                         >Yes</option>
                         <option value="No"
-                                <c:if test="${intact == 'No'}">
+                                <c:if test="${currentCriteria.intact == 'No'}">
                                     selected="selected"
                                 </c:if>
                         >No</option>
@@ -106,17 +114,17 @@
         <table>
             <tr>
                 <td align="center">
-                    <font color="brown" size="3">Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                    <font color="#f4a460" size="3">Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
                 </td>
                 <td align="center">
-                    <font color="darkred" size="3">Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                    <font color="#ff4500" size="3">Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
                 </td>
                 <td align="center">
-                    <font color="tan" size="3">Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                    <font color="#a9a9a9" size="3">Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
                 </td>
                 </td>
                 <td align="center">
-                    <font color="green" size="3">Intact</font>
+                    <font color="green" size="3">Fixed</font>
                 </td>
             </tr>
         </table>
@@ -129,10 +137,24 @@
                     </tr>
                     <tr>
                         <td width="50" align="center">
-                            <font color="brown" size="5"><b>${singleMember.size}</b></font>
+                            <c:if test="${singleMember.size == 'XS'}">
+                                <font color="#f4a460" size="3"><b>XS</b></font>
+                            </c:if>
+                            <c:if test="${singleMember.size == 'S'}">
+                                <font color="#f4a460" size="4"><b>S</b></font>
+                            </c:if>
+                            <c:if test="${singleMember.size == 'M'}">
+                                <font color="#f4a460" size="5"><b>M</b></font>
+                            </c:if>
+                            <c:if test="${singleMember.size == 'L'}">
+                                <font color="#f4a460" size="6"><b>L</b></font>
+                            </c:if>
+                            <c:if test="${singleMember.size == 'XL'}">
+                                <font color="#f4a460" size="7"><b>XL</b></font>
+                            </c:if>
                         </td>
                         <td width="50" align="center">
-                            <font color="darkred" size="5"><b>${singleMember.age}</b></font>
+                            <font color="#ff4500" size="5"><b>${singleMember.age}</b></font>
                         </td>
                         <td width="100" align="center">
                             <c:choose>
@@ -145,14 +167,16 @@
                             </c:choose>
                         </td>
                         <td width="50" align="center">
-                            <font color="tan" size="5"><b>${singleMember.sex}</b></font>
+                            <c:if test="${singleMember.sex.toString() == 'M'}">
+                                <font color="blue" size="5"><b>M</b></font>
+                            </c:if>
+                            <c:if test="${singleMember.sex.toString() == 'F'}">
+                                <font color="pink" size="5"><b>F</b></font>
+                            </c:if>
                         </td>
                         </td>
-                        <td width="50" align="center"><b>
-                            <font color="green" size="5">
-                                <c:if test="${singleMember.intact}">Y</c:if>
-                                <c:if test="${!singleMember.intact}">N</c:if>
-                            </b></font>
+                        <td width="50" align="center">
+                                <c:if test="${!singleMember.intact}"><font color="green" size="5"><b>+</b></font></c:if>
                         </td>
                     </tr>
                     <tr>

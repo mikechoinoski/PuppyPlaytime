@@ -151,3 +151,14 @@ h3 {
     width: 600px;
     height: 150px;
 }
+
+table.searchtable th{
+    padding-left:10px;
+    padding-right:10px;
+}
+
+table.searchtable td{
+    text-align: center;
+    padding-left:10px;
+    padding-right:10px;
+}
