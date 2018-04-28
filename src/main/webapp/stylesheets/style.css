@@ -143,15 +143,6 @@ h3 {
     margin-left: 10px;
 }
 
-.rcorners {
-    border-radius: 25px;
-    border: 3px solid #000000;
-    display: inline-block;
-    padding: 10px;
-    width: 600px;
-    height: 150px;
-}
-
 table.searchtable th{
     padding-left:10px;
     padding-right:10px;
@@ -161,4 +152,30 @@ table.searchtable td{
     text-align: center;
     padding-left:10px;
     padding-right:10px;
+}
+
+.playmateContainer {
+    position:relative;
+    border: 3px solid #000000;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.playmateContent{
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.playmateBackground {
+    opacity: 0.5;
+    background-color: rgba(235, 235, 236, 0.63);
+    background-image: url(../images/playmateBackground.jpg);
+    filter: alpha(opacity=50);
 }
