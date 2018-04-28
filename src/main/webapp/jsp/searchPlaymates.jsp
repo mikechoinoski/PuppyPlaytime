@@ -14,29 +14,79 @@
 
         <table class="searchtable">
             <tr>
+                <th>Minimum<br>Size</th>
+                <th>Maximum<br>Size</th>
                 <th>Minimum<br>Age</th>
                 <th>Maximum<br>Age</th>
-                <th>Minimum<br>Weight</th>
-                <th>Maximum<br>Weight</th>
                 <th>Gender</th>
                 <th>Fixed</th>
             </tr>
             <tr>
                 <td>
+                    <select name="${currentCriteria.minimumSize}" style="width:70px">
+                        <option value="XS"
+                                <c:if test="${currentCriteria.minimumSize == 'XS'}">
+                                    selected="selected"
+                                </c:if>
+                        >XS</option>
+                        <option value="S"
+                                <c:if test="${currentCriteria.minimumSize == 'S'}">
+                                    selected="selected"
+                                </c:if>
+                        >S</option>
+                        <option value="M"
+                                <c:if test="${currentCriteria.minimumSize == 'M'}">
+                                    selected="selected"
+                                </c:if>
+                        >M</option>
+                        <option value="L"
+                                <c:if test="${currentCriteria.minimumSize == 'L'}">
+                                    selected="selected"
+                                </c:if>
+                        >L</option>
+                        <option value="XL"
+                                <c:if test="${currentCriteria.minimumSize== 'XL'}">
+                                    selected="selected"
+                                </c:if>
+                        >XL</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="${currentCriteria.maximumSize}" style="width:70px">
+                        <option value="XS"
+                                <c:if test="${currentCriteria.maximumSize == 'XS'}">
+                                    selected="selected"
+                                </c:if>
+                        >XS</option>
+                        <option value="S"
+                                <c:if test="${currentCriteria.maximumSize == 'S'}">
+                                    selected="selected"
+                                </c:if>
+                        >S</option>
+                        <option value="M"
+                                <c:if test="${currentCriteria.maximumSize == 'M'}">
+                                    selected="selected"
+                                </c:if>
+                        >M</option>
+                        <option value="L"
+                                <c:if test="${currentCriteria.maximumSize == 'L'}">
+                                    selected="selected"
+                                </c:if>
+                        >L</option>
+                        <option value="XL"
+                                <c:if test="${currentCriteria.maximumSize == 'XL'}">
+                                    selected="selected"
+                                </c:if>
+                        >XL</option>
+                    </select>
+                </td>
+                <td>
                     <input type="number" name="${currentCriteria.minimumAge}" min="0" max="30"
                            value="${currentCriteria.maximumAge}" style="width:40px">
                 </td>
                 <td>
-                    <input type="number" name="memberWeight${currentCriteria.maximumAge}" min="0" max="30"
+                    <input type="number" name="${currentCriteria.maximumAge}" min="0" max="30"
                            value="${currentCriteria.maximumAge}" style="width:40px">
-                </td>
-                <td>
-                    <input type="number" name="${currentCriteria.minimumWeight}" min="0" max="300"
-                           value="${currentCriteria.minimumWeight}" style="width:40px">
-                </td>
-                <td>
-                    <input type="number" name="memberWeight${currentCriteria.maximumWeight}" min="0" max="300"
-                           value="${currentCriteria.maximumWeight}" style="width:40px">
                 </td>
                 <td>
                     <select name="${currentCriteria.gender}" style="width:90px">
@@ -86,7 +136,7 @@
         <table>
             <tr>
                 <td align="center">
-                    <font color="#f4a460" size="3">Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                    <font color="#b8860b" size="3">Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
                 </td>
                 <td align="center">
                     <font color="darkred" size="3">Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
@@ -112,30 +162,31 @@
                     <tr>
                         <td width="35" align="center">
                             <c:if test="${singleMember.size == 'XS'}">
-                                <font color="#f4a460" size="2"><b>X</b><br></font>
+                                <font color="#b8860b" size="2"><b>X</b><br></font>
                             </c:if>
                             <c:if test="${singleMember.size == 'XS'}">
-                                <font color="#f4a460" size="2"><b>S</b></font>
+                                <font color="#b8860b" size="2"><b>S</b></font>
                             </c:if>
                             <c:if test="${singleMember.size == 'S'}">
-                                <font color="#f4a460" size="3"><b>S</b></font>
+                                <font color="#b8860b" size="3"><b>S</b></font>
                             </c:if>
                             <c:if test="${singleMember.size == 'M'}">
-                                <font color="#f4a460" size="4"><b>M</b></font>
+                                <font color="#b8860b" size="4"><b>M</b></font>
                             </c:if>
                             <c:if test="${singleMember.size == 'L'}">
-                                <font color="#f4a460" size="5"><b>L</b></font>
+                                <font color="#b8860b" size="5"><b>L</b></font>
                             </c:if>
                             <c:if test="${singleMember.size == 'XL'}">
-                                <font color="#f4a460" size="6"><b>X</b><br></font>
+                                <font color="#b8860b" size="6"><b>X</b><br></font>
                             </c:if>
                             <c:if test="${singleMember.size == 'XL'}">
-                                <font color="#f4a460" size="6"><b>L</b></font>
+                                <font color="#b8860b" size="6"><b>L</b></font>
                             </c:if>
                             <br><br>
-                            <font color="#ff4500" size="5"><b>${singleMember.age}</b></font>
+                            <font color="darkred" size="5"><b>${singleMember.age}</b></font>
                         </td>
                         <td width="130" align="center">
+                            <a href="createPlaydate?selectedPackMember=${singleMember.packMemberNumber}"/>
                             <c:choose>
                                 <c:when test="${empty singleMember.pictureFilename}">
                                     <img src="./uploadedPhotos/default_dog.png" height="130" width="130">
@@ -145,6 +196,7 @@
                                          height="130" width="130">
                                 </c:otherwise>
                             </c:choose>
+                            </a>
                         </td>
                         <td width="35" align="center">
                             <c:if test="${singleMember.sex.toString() == 'M'}">

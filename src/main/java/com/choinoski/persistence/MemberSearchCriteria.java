@@ -9,12 +9,11 @@ import java.time.LocalDate;
 @Setter
 public class MemberSearchCriteria {
 
-    private LocalDate minimumBirthday;
-    private LocalDate maximumBirthday;
-    private int       minimumWeight;
-    private int       maximumWeight;
-    private String    gender;
-    private String    intact;
-
+    private int    minimumAge;
+    private int    maximumAge;
+    private String minimumSize;
+    private String maximumSize;
+    private String gender;
+    private String intact;
 
 }
