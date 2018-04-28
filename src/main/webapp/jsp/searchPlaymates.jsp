@@ -120,7 +120,8 @@
                     <font color="#ff4500" size="3">Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
                 </td>
                 <td align="center">
-                    <font color="#a9a9a9" size="3">Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                    <font color="blue" size="3">Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                    <font color="#ff1493" size="3">Female&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
                 </td>
                 </td>
                 <td align="center">
@@ -130,57 +131,60 @@
         </table>
         <br><br>
         <c:forEach var="singleMember" items="${members}">
-            <div class="blackborder">
+            <div class="playmateContainer">
                 <table>
                     <tr>
-                        <td colspan="5" align="center"><b>${singleMember.name}</b></td>
+                        <td colspan="3" align="center"><b>${singleMember.name}</b></td>
                     </tr>
                     <tr>
-                        <td width="50" align="center">
+                        <td width="35" align="center">
                             <c:if test="${singleMember.size == 'XS'}">
-                                <font color="#f4a460" size="3"><b>XS</b></font>
+                                <font color="#f4a460" size="2"><b>X</b><br></font>
+                            </c:if>
+                            <c:if test="${singleMember.size == 'XS'}">
+                                <font color="#f4a460" size="2"><b>S</b></font>
                             </c:if>
                             <c:if test="${singleMember.size == 'S'}">
-                                <font color="#f4a460" size="4"><b>S</b></font>
+                                <font color="#f4a460" size="3"><b>S</b></font>
                             </c:if>
                             <c:if test="${singleMember.size == 'M'}">
-                                <font color="#f4a460" size="5"><b>M</b></font>
+                                <font color="#f4a460" size="4"><b>M</b></font>
                             </c:if>
                             <c:if test="${singleMember.size == 'L'}">
-                                <font color="#f4a460" size="6"><b>L</b></font>
+                                <font color="#f4a460" size="5"><b>L</b></font>
                             </c:if>
                             <c:if test="${singleMember.size == 'XL'}">
-                                <font color="#f4a460" size="7"><b>XL</b></font>
+                                <font color="#f4a460" size="6"><b>X</b><br></font>
                             </c:if>
-                        </td>
-                        <td width="50" align="center">
+                            <c:if test="${singleMember.size == 'XL'}">
+                                <font color="#f4a460" size="6"><b>L</b></font>
+                            </c:if>
+                            <br><br>
                             <font color="#ff4500" size="5"><b>${singleMember.age}</b></font>
                         </td>
-                        <td width="100" align="center">
+                        <td width="130" align="center">
                             <c:choose>
                                 <c:when test="${empty singleMember.pictureFilename}">
-                                    <img src="./uploadedPhotos/default_dog.png" height="80" width="80">
+                                    <img src="./uploadedPhotos/default_dog.png" height="130" width="130">
                                 </c:when>
                                 <c:otherwise>
-                                    <img src="./uploadedPhotos/${singleMember.pictureFilename}" height="80" width="80">
+                                    <img src="./uploadedPhotos/${singleMember.pictureFilename}"
+                                         height="130" width="130">
                                 </c:otherwise>
                             </c:choose>
                         </td>
-                        <td width="50" align="center">
+                        <td width="35" align="center">
                             <c:if test="${singleMember.sex.toString() == 'M'}">
                                 <font color="blue" size="5"><b>M</b></font>
                             </c:if>
                             <c:if test="${singleMember.sex.toString() == 'F'}">
-                                <font color="pink" size="5"><b>F</b></font>
-                            </c:if>
-                        </td>
-                        </td>
-                        <td width="50" align="center">
-                                <c:if test="${!singleMember.intact}"><font color="green" size="5"><b>+</b></font></c:if>
+                                <font color="#ff1493" size="5"><b>F</b></font>
+                            </c:if><br><br>
+                            <c:if test="${!singleMember.intact}"><font color="green" size="5"><b>+</b></font></c:if>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="5" align="center"><b>${singleMember.breed}</b></td>
+                        <td colspan="3" align="center"><b>${singleMember.breed}</b></td>
                     </tr>
                 </table>
             </div>
