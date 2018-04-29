@@ -34,9 +34,6 @@ public class SearchPlaymates extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
 
-        String currentSearchType  = request.getParameter("searchType");
-        String currentSearchTerm  = request.getParameter("searchTerm");
-
         GenericDao dao            = new GenericDao(PackMember.class);
 
         List<PackMember> members  = null;
@@ -55,19 +52,22 @@ public class SearchPlaymates extends HttpServlet {
         //logger.debug("Pack name: " + retrievedPack.getPackName());
 
         HttpSession          session          = request.getSession();
+        //searchParameters = (MemberSearchCriteria) session.getAttribute("currentCriteria");
         if (session.getAttribute("currentCriteria") == null) {
             searchParameters = new MemberSearchCriteria(0,30,"XS",
                     "XL","Both","Both");
             members = dao.getAll();
-            request.setAttribute("currentCriteria", searchParameters);
-            request.setAttribute("members", members);
         } else {
-            searchParameters = (MemberSearchCriteria) session.getAttribute("currentCriteria");
+            //Need to compare the new values to the old values and make updates as needed
+            searchParameters = new MemberSearchCriteria(Integer.parseInt(request.getParameter("minimumAge")),
+                    Integer.parseInt(request.getParameter("maximumAge")),request.getParameter("minimumSize"),
+                    request.getParameter("maximimSize"),request.getParameter("gender"),
+                    request.getParameter("fixed"));
+
             minimumDate      = LocalDate.now().minusYears(searchParameters.getMinimumAge());
             maximumDate      = LocalDate.now().minusYears(searchParameters.getMaximumAge());
             minimumWeight    = searchParameters.getMinimumWeightForSize(searchParameters.getMinimumSize());
             maximumWeight    = searchParameters.getMaximumWeightForSize(searchParameters.getMaximumSize());
-
             gender           = searchParameters.getCharGender(searchParameters.getGender());
             intact           = searchParameters.getIntact(searchParameters.getFixed());
 
@@ -77,6 +77,9 @@ public class SearchPlaymates extends HttpServlet {
                     "sex", gender,
                     "intact",intact);
         }
+
+        session.setAttribute("currentCriteria", searchParameters);
+        request.setAttribute("members", members);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/searchPlaymates.jsp");
         dispatcher.forward(request, resp);

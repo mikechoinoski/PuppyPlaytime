@@ -23,7 +23,7 @@
             </tr>
             <tr>
                 <td>
-                    <select name="${currentCriteria.minimumSize}" style="width:70px">
+                    <select name="minimumSize" style="width:70px">
                         <option value="XS"
                                 <c:if test="${currentCriteria.minimumSize == 'XS'}">
                                     selected="selected"
@@ -52,7 +52,7 @@
                     </select>
                 </td>
                 <td>
-                    <select name="${currentCriteria.maximumSize}" style="width:70px">
+                    <select name="maximumSize" style="width:70px">
                         <option value="XS"
                                 <c:if test="${currentCriteria.maximumSize == 'XS'}">
                                     selected="selected"
@@ -81,15 +81,15 @@
                     </select>
                 </td>
                 <td>
-                    <input type="number" name="${currentCriteria.minimumAge}" min="0" max="30"
+                    <input type="number" name="minimumAge" min="0" max="30"
                            value="${currentCriteria.minimumAge}" style="width:40px">
                 </td>
                 <td>
-                    <input type="number" name="${currentCriteria.maximumAge}" min="0" max="30"
+                    <input type="number" name="maximumAge" min="0" max="30"
                            value="${currentCriteria.maximumAge}" style="width:40px">
                 </td>
                 <td>
-                    <select name="${currentCriteria.gender}" style="width:90px">
+                    <select name="gender" style="width:90px">
                         <option value="Both"
                                 <c:if test="${currentCriteria.gender == 'Both'}">
                                     selected="selected"
@@ -108,7 +108,7 @@
                     </select>
                 </td>
                 <td>
-                    <select name="${currentCriteria.fixed}" style="width:70px">
+                    <select name="fixed" style="width:70px">
                         <option value="Both"
                                 <c:if test="${currentCriteria.fixed == 'Both'}">
                                     selected="selected"
