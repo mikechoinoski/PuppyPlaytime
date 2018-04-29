@@ -35,13 +35,9 @@ public class DeletePacks extends HttpServlet {
         HttpSession session = request.getSession();
         List<Pack> allPacks = (List<Pack>) session.getAttribute("allPacks");
 
-        //dao = new GenericDao(Pack.class);
-
-        //List<Pack> packs = dao.getAll();
-
         processDeletes(allPacks, request);
 
-        String url = "/jsp/deletePacks.jsp";
+        String url = "/jsp/adminPage.jsp";
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);
@@ -51,13 +47,13 @@ public class DeletePacks extends HttpServlet {
 
     public void processDeletes(List<Pack> deleteSet, HttpServletRequest request) {
 
-        String memberNumberText = null;
+        String packNumberText = null;
         String checkBoxValue    = null;
 
         for (Pack currentPack: deleteSet) {
 
-            memberNumberText = Integer.toString(currentPack.getPackNumber());
-            checkBoxValue    = request.getParameter("memberToRemove" + memberNumberText);
+            packNumberText = Integer.toString(currentPack.getPackNumber());
+            checkBoxValue    = request.getParameter("packToRemove" + packNumberText);
 
             if (!(checkBoxValue == null)) {
                 dao.delete(currentPack);
