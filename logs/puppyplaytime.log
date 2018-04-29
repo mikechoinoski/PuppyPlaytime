@@ -68,3 +68,9 @@
 [DEBUG] 2018-04-29 16:01:25.379 [http-nio-8080-exec-6] GenericDao - Deleting from com.choinoski.entity.Pack
 [DEBUG] 2018-04-29 16:03:32.744 [http-nio-8080-exec-9] GenericDao - Selecting all rows from a table
 [DEBUG] 2018-04-29 16:03:34.992 [http-nio-8080-exec-3] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-29 16:07:48.601 [http-nio-8080-exec-2] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-29 16:08:08.865 [http-nio-8080-exec-4] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-29 16:08:15.973 [http-nio-8080-exec-10] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-29 16:18:35.697 [http-nio-8080-exec-2] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-29 16:19:01.748 [http-nio-8080-exec-4] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-04-29 16:19:10.927 [http-nio-8080-exec-6] GenericDao - Selecting all rows from a table

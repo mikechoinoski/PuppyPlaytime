@@ -153,7 +153,7 @@
             </tr>
         </table>
         <br><br>
-        <c:forEach var="singleMember" items="${members}">
+        <c:forEach var="singleMember" items="${searchMembers}">
             <div class="playmateContainer">
                 <table>
                     <tr>
