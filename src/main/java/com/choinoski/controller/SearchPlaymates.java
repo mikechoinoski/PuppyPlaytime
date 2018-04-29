@@ -64,31 +64,27 @@ public class SearchPlaymates extends HttpServlet {
             searchParameters = new MemberSearchCriteria(0,30,"XS",
                     "XL","Both","Both");
             searchMembers = dao.getAll();
-        } else {
-            if ((minimumAgeText == null) && (maximumAgeText == null) && (minimumSizeText == null) &&
-                    (maximumSizeText == null) && (genderText == null) && (fixedText == null)) {
-
-            } else {
-                searchParameters = new MemberSearchCriteria(Integer.parseInt(minimumAgeText),
-                        Integer.parseInt(maximumAgeText),minimumSizeText,
-                        maximumSizeText,genderText,fixedText);
-                minimumDate      = LocalDate.now().minusYears(searchParameters.getMinimumAge());
-                maximumDate      = LocalDate.now().minusYears(searchParameters.getMaximumAge());
-                minimumWeight    = searchParameters.getMinimumWeightForSize(searchParameters.getMinimumSize());
-                maximumWeight    = searchParameters.getMaximumWeightForSize(searchParameters.getMaximumSize());
-                gender           = searchParameters.getCharGender(searchParameters.getGender());
-                intact           = searchParameters.getIntact(searchParameters.getFixed());
-                searchMembers = dao.getByMultipleProperty(
-                        "weight", minimumWeight, maximumWeight,
-                        "dateOfBirth", maximumDate, minimumDate,
-                        "sex", gender,
-                        "intact",intact);
-            }
-
+            session.setAttribute("currentCriteria", searchParameters);
+            session.setAttribute("searchMembers", searchMembers);
+        } else if (!((minimumAgeText == null) && (maximumAgeText == null) && (minimumSizeText == null) &&
+                    (maximumSizeText == null) && (genderText == null) && (fixedText == null))) {
+            searchParameters = new MemberSearchCriteria(Integer.parseInt(minimumAgeText),
+                    Integer.parseInt(maximumAgeText),minimumSizeText,
+                    maximumSizeText,genderText,fixedText);
+            minimumDate      = LocalDate.now().minusYears(searchParameters.getMinimumAge());
+            maximumDate      = LocalDate.now().minusYears(searchParameters.getMaximumAge());
+            minimumWeight    = searchParameters.getMinimumWeightForSize(searchParameters.getMinimumSize());
+            maximumWeight    = searchParameters.getMaximumWeightForSize(searchParameters.getMaximumSize());
+            gender           = searchParameters.getCharGender(searchParameters.getGender());
+            intact           = searchParameters.getIntact(searchParameters.getFixed());
+            searchMembers = dao.getByMultipleProperty(
+                    "weight", minimumWeight, maximumWeight,
+                    "dateOfBirth", maximumDate, minimumDate,
+                    "sex", gender,
+                    "intact",intact);
+            session.setAttribute("currentCriteria", searchParameters);
+            session.setAttribute("searchMembers", searchMembers);
         }
-
-        session.setAttribute("currentCriteria", searchParameters);
-        session.setAttribute("searchMembers", searchMembers);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/searchPlaymates.jsp");
         dispatcher.forward(request, resp);
