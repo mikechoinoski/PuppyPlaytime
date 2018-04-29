@@ -1,13 +1,11 @@
 package com.choinoski.persistence;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Expression;
-import javax.persistence.criteria.Root;
+import javax.persistence.criteria.*;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,6 +13,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.SessionFactory;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 /**
  * A generic DAO somewhat inspired by http://rodrigouchoa.wordpress.com
@@ -217,6 +216,40 @@ public class GenericDao<T> {
 
     }
 
+    /**
+     *
+     *
+     */
+    public List<T> getByMultipleProperty(String propertyOneName, int propertyOneBegin, int propertyOneEnd,
+                                         String propertyTwoName, LocalDate beginDate, LocalDate endDate,
+                                         String propertyThreeName, char propertyThree,
+                                         String propertyFourName, Boolean propertyFour) {
+
+        //logger.debug("Searching for user with {} between {} and {}",  propertyName, beginNumber, endNumber);
+        List<Predicate> predicates = new ArrayList();
+
+        querySetup();
+
+        predicates.add(builder.between(root.get(propertyOneName), propertyOneBegin, propertyOneEnd));
+        predicates.add(builder.between(root.get(propertyTwoName), beginDate, endDate));
+        if (propertyThree != ' ') {
+            predicates.add(builder.equal(root.get(propertyThreeName), propertyThree));
+        }
+        if (propertyFour != null) {
+            predicates.add(builder.equal(root.get(propertyFourName), propertyFour));
+        }
+
+        //Predicate[] allPredicates =  predicates.toArray(new Predicate[predicates.size()]);
+
+        query.select(root).where(builder.and(predicates.toArray(new Predicate[predicates.size()])));
+
+        List<T> entities = session.createQuery( query ).getResultList();
+
+        session.close();
+        return entities;
+
+    }
+
     private void querySetup() {
 
         session = sessionFactory.openSession();
@@ -225,6 +258,9 @@ public class GenericDao<T> {
         root    = query.from(type);
 
     }
+
+
+//https://stackoverflow.com/questions/11138118/really-dynamic-jpa-criteriabuilder
 
 }
 

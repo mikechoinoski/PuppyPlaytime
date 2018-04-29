@@ -48,29 +48,28 @@ public class SearchPlaymates extends HttpServlet {
         HttpSession          session          = request.getSession();
         MemberSearchCriteria searchParameters = (MemberSearchCriteria) session.getAttribute("currentCriteria");
 
-        membersAll = memberDao.getAll();
+        //membersAll = memberDao.getAll();
 
-        LocalDate minimumDate = LocalDate.now().minusYears(searchParameters.getMinimumAge());
-        LocalDate maximumDate = LocalDate.now().minusYears(searchParameters.getMaximumAge());
+        //LocalDate minimumDate = LocalDate.now().minusYears(searchParameters.getMinimumAge());
+        //LocalDate maximumDate = LocalDate.now().minusYears(searchParameters.getMaximumAge());
 
-        membersAge = memberDao.getByPropertyBetween("dateOfBirth", maximumDate, minimumDate);
-
-        results = compareList()
+        //membersAge = memberDao.getByPropertyBetween("dateOfBirth", maximumDate, minimumDate);
 
 
         if(currentSearchType == null) {
-            packMembers = memberDao.getAll();
-            request.setAttribute("members", packMembers);
-        } else if(currentSearchType.equals("Search by Gender")){
-            packMembers = memberDao.getByPropertyEqual("sex", currentSearchTerm);
-            request.setAttribute("members", packMembers);
-        } else if(currentSearchType.equals("Search by Size")){
-            packMembers = memberDao.getByPropertyEqual("size", currentSearchTerm);
-            request.setAttribute("members", packMembers);
-        } else {
-            packMembers = memberDao.getAll();
-            request.setAttribute("members", packMembers);
+            membersAll = memberDao.getAll();
+            request.setAttribute("members", membersAll);
         }
+        //} else if(currentSearchType.equals("Search by Gender")){
+        //    packMembers = memberDao.getByPropertyEqual("sex", currentSearchTerm);
+        //    request.setAttribute("members", packMembers);
+        //} else if(currentSearchType.equals("Search by Size")){
+        //    packMembers = memberDao.getByPropertyEqual("size", currentSearchTerm);
+        //    request.setAttribute("members", packMembers);
+        //} else {
+        //    packMembers = memberDao.getAll();
+        //    request.setAttribute("members", packMembers);
+        //}
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/searchPlaymates.jsp");
         dispatcher.forward(request, resp);

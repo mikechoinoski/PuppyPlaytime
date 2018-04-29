@@ -2,6 +2,7 @@ package com.choinoski.persistence;
 
 import com.choinoski.entity.Pack;
 import com.choinoski.entity.PackMember;
+import com.choinoski.util.SizeAndWeightConverter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -118,4 +119,24 @@ class PackMemberDaoTest {
         List<PackMember> members = dao.getByPropertyLike("breed", "B");
         assertEquals(4, members.size());
     }
+
+    /**
+     * Verify successful get by property (like match)
+     */
+    @Test
+    void getByMultipleProperty() {
+        SizeAndWeightConverter converter = new SizeAndWeightConverter();
+        //boolean intact = false;
+        //Boolean intactObject = intact;
+
+        List<PackMember> members = dao.getByMultipleProperty(
+                "weight", converter.getMinimumWeightForSize("XS"), converter.getMaximumWeightForSize("XL"),
+                "dateOfBirth", LocalDate.now().minusYears(30), LocalDate.now().minusYears(0),
+                "sex", ' ', "intact",null);
+
+
+
+        assertEquals(4, members.size());
+    }
+
 }

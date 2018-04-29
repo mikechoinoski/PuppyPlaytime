@@ -6,12 +6,12 @@ INSERT INTO pack VALUES (2,'user','Michael','Choinoski','1234 Willow Street','14
 INSERT INTO pack VALUES (3,'Awesome Pack!','Andrew','Cutler','12 Ganderson Court','16081234567','random@yahoo.com','RedBike21');
 INSERT INTO pack VALUES (4,'Number 4',' ',' ',' ',' ',' ','password');
 INSERT INTO pack VALUES (5,'random_pack',' ',' ',' ',' ',' ','randompassword');
-INSERT INTO pack_member VALUES (1,2,'Odo', 56, 'Mixed','M','2016-07-14',1,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
-INSERT INTO pack_member VALUES (2,1,'Boomer', 40, 'Black Lab','M','2013-08-11',0,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
-INSERT INTO pack_member VALUES (3,1,'Pow', 80, 'Black Lab','M','2014-03-22',0,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
-INSERT INTO pack_member VALUES (4,3,'Lexi', 90, 'Beagle','F','2011-12-18',1,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
-INSERT INTO pack_member VALUES (5,3,'Lucy', 100, 'Poodle','F','2016-01-03',0,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
-INSERT INTO pack_member VALUES (6,4,'Dog', 10, 'Boxer','M','2007-01-01',1,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
+INSERT INTO pack_member VALUES (1,2,'Odo', 15, 'Mixed','M','2016-07-14',1,"test_odo.jpg",CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
+INSERT INTO pack_member VALUES (2,1,'Boomer', 68, 'Black Lab','M','2012-08-11',0,"test_black_lab.jpg",CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
+INSERT INTO pack_member VALUES (3,1,'Pow', 175, 'Great Dane','M','2014-03-22',0,"test_great_dane.jpg",CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
+INSERT INTO pack_member VALUES (4,3,'Happy', 9, 'Yorkie','M','2009-12-18',0,"test_yorkie.jpg",CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
+INSERT INTO pack_member VALUES (5,3,'Lucy', 7, 'Alaskan Eskimo Dog','F','2018-01-15',1,"test_alaskan_eskimo.jpg",CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
+INSERT INTO pack_member VALUES (6,4,'Enforcer', 205, 'St. Bernard','M','2011-05-08',1,"test_st_bernard.jpg",CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
 INSERT INTO role VALUES (1,CURRENT_TIMESTAMP(),'admin',CURRENT_TIMESTAMP(),'admin',1);
 INSERT INTO role VALUES (2,CURRENT_TIMESTAMP(),'user',CURRENT_TIMESTAMP(),'user',2);
 INSERT INTO role VALUES (3,CURRENT_TIMESTAMP(),'user',CURRENT_TIMESTAMP(),'Awesome Pack!',3);
