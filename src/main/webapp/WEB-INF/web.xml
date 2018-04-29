@@ -85,6 +85,11 @@
     <servlet-name>YourPackUpdateServlet</servlet-name>
     <servlet-class>com.choinoski.controller.YourPackUpdateServlet</servlet-class>
   </servlet>
+  <servlet>
+    <display-name>AdministrativeFunctions</display-name>
+    <servlet-name>AdministrativeFunctions</servlet-name>
+    <servlet-class>com.choinoski.controller.AdministrativeFunctions</servlet-class>
+  </servlet>
 
   <servlet-mapping>
     <servlet-name>YourPack</servlet-name>
@@ -98,6 +103,14 @@
     <servlet-name>YourPackUpdateServlet</servlet-name>
     <url-pattern>/YourPackUpdate</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdministrativeFunctions</servlet-name>
+    <url-pattern>/AdministrativeFunctions</url-pattern>
+  </servlet-mapping>
+
+
+
+
 
 
   <!-- ********************************************************************* -->

@@ -75,7 +75,7 @@ public class YourPack extends HttpServlet {
         } else if (request.isUserInRole("admin")) {
             List<Pack> packs = dao.getAll();
             session.setAttribute("allPacks", packs);
-            url = "/jsp/adminPage.jsp";
+            url = "/jsp/administrativeFunctions.jsp";
         }
 
         RequestDispatcher dispatcher =
