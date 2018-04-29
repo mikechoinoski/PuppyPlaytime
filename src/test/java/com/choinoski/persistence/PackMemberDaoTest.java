@@ -2,12 +2,11 @@ package com.choinoski.persistence;
 
 import com.choinoski.entity.Pack;
 import com.choinoski.entity.PackMember;
-import com.choinoski.util.SizeAndWeightConverter;
+import com.choinoski.util.SearchDataConverter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.List;
 import com.choinoski.test.util.Database;
@@ -125,12 +124,12 @@ class PackMemberDaoTest {
      */
     @Test
     void getByMultipleProperty() {
-        SizeAndWeightConverter converter = new SizeAndWeightConverter();
+        MemberSearchCriteria   searchParameters = new MemberSearchCriteria();
         //boolean intact = false;
         //Boolean intactObject = intact;
 
         List<PackMember> members = dao.getByMultipleProperty(
-                "weight", converter.getMinimumWeightForSize("XS"), converter.getMaximumWeightForSize("XL"),
+                "weight", searchParameters.getMinimumWeightForSize("XS"), searchParameters.getMaximumWeightForSize("XL"),
                 "dateOfBirth", LocalDate.now().minusYears(30), LocalDate.now().minusYears(0),
                 "sex", ' ', "intact",null);
 

@@ -1,10 +1,9 @@
 package com.choinoski.controller;
 
-import com.choinoski.entity.Pack;
 import com.choinoski.entity.PackMember;
 import com.choinoski.persistence.GenericDao;
 import com.choinoski.persistence.MemberSearchCriteria;
-import com.choinoski.util.SizeAndWeightConverter;
+import com.choinoski.util.SearchDataConverter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -44,13 +43,14 @@ public class SearchPlaymates extends HttpServlet {
 
         MemberSearchCriteria   searchParameters = null;
 
-        SizeAndWeightConverter converter        = null;
-
         LocalDate minimumDate = null;
         LocalDate maximumDate = null;
 
         int minimumWeight     = 0;
         int maximumWeight     = 0;
+
+        char gender = ' ';
+        Boolean intact = null;
 
         //logger.debug("Pack name: " + retrievedPack.getPackName());
 
@@ -62,16 +62,20 @@ public class SearchPlaymates extends HttpServlet {
             request.setAttribute("currentCriteria", searchParameters);
             request.setAttribute("members", members);
         } else {
-            converter        = new SizeAndWeightConverter();
             searchParameters = (MemberSearchCriteria) session.getAttribute("currentCriteria");
             minimumDate      = LocalDate.now().minusYears(searchParameters.getMinimumAge());
             maximumDate      = LocalDate.now().minusYears(searchParameters.getMaximumAge());
-            minimumWeight    = converter.getMinimumWeightForSize(searchParameters.getMinimumSize());
-            maximumWeight    = converter.getMaximumWeightForSize(searchParameters.getMaximumSize());
+            minimumWeight    = searchParameters.getMinimumWeightForSize(searchParameters.getMinimumSize());
+            maximumWeight    = searchParameters.getMaximumWeightForSize(searchParameters.getMaximumSize());
+
+            gender           = searchParameters.getCharGender(searchParameters.getGender());
+            intact           = searchParameters.getIntact(searchParameters.getFixed());
+
             members = dao.getByMultipleProperty(
                     "weight", minimumWeight, maximumWeight,
                     "dateOfBirth", maximumDate, minimumDate,
-                    "sex", ' ', "intact",null);
+                    "sex", gender,
+                    "intact",intact);
         }
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/searchPlaymates.jsp");
