@@ -1,12 +1,13 @@
 package com.choinoski.persistence;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
 import java.time.LocalDate;
 
-@Getter
-@Setter
+@Data
+@AllArgsConstructor
+
 public class MemberSearchCriteria {
 
     private int    minimumAge;
@@ -14,6 +15,6 @@ public class MemberSearchCriteria {
     private String minimumSize;
     private String maximumSize;
     private String gender;
-    private String intact;
+    private String fixed;
 
 }

@@ -82,7 +82,7 @@
                 </td>
                 <td>
                     <input type="number" name="${currentCriteria.minimumAge}" min="0" max="30"
-                           value="${currentCriteria.maximumAge}" style="width:40px">
+                           value="${currentCriteria.minimumAge}" style="width:40px">
                 </td>
                 <td>
                     <input type="number" name="${currentCriteria.maximumAge}" min="0" max="30"
@@ -108,19 +108,19 @@
                     </select>
                 </td>
                 <td>
-                    <select name="${currentCriteria.intact}" style="width:70px">
+                    <select name="${currentCriteria.fixed}" style="width:70px">
                         <option value="Both"
-                                <c:if test="${currentCriteria.intact == 'Both'}">
+                                <c:if test="${currentCriteria.fixed == 'Both'}">
                                     selected="selected"
                                 </c:if>
                         >Both</option>
                         <option value="Yes"
-                                <c:if test="${currentCriteria.intact == 'Yes'}">
+                                <c:if test="${currentCriteria.fixed == 'Yes'}">
                                     selected="selected"
                                 </c:if>
                         >Yes</option>
                         <option value="No"
-                                <c:if test="${currentCriteria.intact == 'No'}">
+                                <c:if test="${currentCriteria.fixed == 'No'}">
                                     selected="selected"
                                 </c:if>
                         >No</option>
@@ -204,8 +204,8 @@
                             </c:if>
                             <c:if test="${singleMember.sex.toString() == 'F'}">
                                 <font color="#ff1493" size="5"><b>F</b></font>
-                            </c:if><br><br>
-                            <c:if test="${!singleMember.intact}"><font color="green" size="5"><b>+</b></font></c:if>
+                            </c:if>
+                            <c:if test="${!singleMember.intact}"><br><br><font color="green" size="5"><b>+</b></font></c:if>
                         </td>
                     </tr>
                     <tr>
