@@ -25,9 +25,6 @@ public class YourPackUpdateServlet extends HttpServlet {
 
     private GenericDao dao;
 
-    private Boolean    updatesMade;
-    private Boolean    removeMembers;
-
     /**
      * Handles HTTP GET requests. Sets data for the HTTP request
      * data. Forwards data to a JSP to display.
@@ -93,8 +90,6 @@ public class YourPackUpdateServlet extends HttpServlet {
 
             PackMember updatedMember = null;
 
-            updatesMade      = false;
-            removeMembers    = false;
             memberNumberText = Integer.toString(currentMember.getPackMemberNumber());
 
             memberName     = request.getParameter("memberName" + memberNumberText);

@@ -73,6 +73,8 @@ public class YourPack extends HttpServlet {
 
             url = "/jsp/yourPack.jsp";
         } else if (request.isUserInRole("admin")) {
+            List<Pack> packs = dao.getAll();
+            session.setAttribute("allPacks", packs);
             url = "/jsp/deletePacks.jsp";
         }
 
