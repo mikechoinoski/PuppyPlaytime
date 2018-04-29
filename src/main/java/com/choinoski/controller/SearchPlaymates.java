@@ -61,7 +61,7 @@ public class SearchPlaymates extends HttpServlet {
             //Need to compare the new values to the old values and make updates as needed
             searchParameters = new MemberSearchCriteria(Integer.parseInt(request.getParameter("minimumAge")),
                     Integer.parseInt(request.getParameter("maximumAge")),request.getParameter("minimumSize"),
-                    request.getParameter("maximimSize"),request.getParameter("gender"),
+                    request.getParameter("maximumSize"),request.getParameter("gender"),
                     request.getParameter("fixed"));
 
             minimumDate      = LocalDate.now().minusYears(searchParameters.getMinimumAge());

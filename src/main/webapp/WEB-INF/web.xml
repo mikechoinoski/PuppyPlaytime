@@ -42,6 +42,9 @@
       <web-resource-name>RequiresUserRole</web-resource-name>
       <url-pattern>/admin</url-pattern>
       <url-pattern>/admin.jsp</url-pattern>
+      <url-pattern>/yourPack</url-pattern>
+      <url-pattern>/deletePacks.jsp</url-pattern>
+      <url-pattern>/jsp/yourPack.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>admin</role-name>

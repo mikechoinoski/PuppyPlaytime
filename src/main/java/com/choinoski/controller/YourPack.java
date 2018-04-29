@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.security.Principal;
 import java.util.List;
 import java.util.Set;
 
@@ -50,24 +51,30 @@ public class YourPack extends HttpServlet {
 
         ServletContext servletContext = getServletContext();
         HttpSession    session        = request.getSession();
-        Pack userPack = null;
-        //java.security.Principal getUserPrincipal();
+        Pack   userPack = null;
+        String url      = null;
+        //Principal verifiedUser = request.getUserPrincipal();
+        //verifiedUser.isUserInRole();
         //isUserInRole(java.lang.String role);
         //getRemoteUser();
 
         String packName = request.getUserPrincipal().getName();
 
-        List<Pack> packs = dao.getByPropertyEqual("packName",packName);
+        if (request.isUserInRole("user")) {
+            List<Pack> packs = dao.getByPropertyEqual("packName",packName);
 
-        if (packs.size() == 1) {
-            userPack = packs.get(0);
+            if (packs.size() == 1) {
+                userPack = packs.get(0);
+            }
+
+            session.setAttribute("userPack", userPack);
+            session.setAttribute("imageDirectory", UPLOAD_FOLDER);
+            session.setAttribute("imageDirectory2", UPLOAD_FOLDER2);
+
+            url = "/jsp/yourPack.jsp";
+        } else if (request.isUserInRole("admin")) {
+            url = "/jsp/deletePacks.jsp";
         }
-
-        session.setAttribute("userPack", userPack);
-        session.setAttribute("imageDirectory", UPLOAD_FOLDER);
-        session.setAttribute("imageDirectory2", UPLOAD_FOLDER2);
-
-        String url = "/jsp/yourPack.jsp";
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);
