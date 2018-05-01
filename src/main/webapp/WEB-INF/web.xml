@@ -90,6 +90,16 @@
     <servlet-name>AdministrativeFunctions</servlet-name>
     <servlet-class>com.choinoski.controller.AdministrativeFunctions</servlet-class>
   </servlet>
+  <servlet>
+    <display-name>CreatePlaydateFormServlet</display-name>
+    <servlet-name>CreatePlaydateFormServlet</servlet-name>
+    <servlet-class>com.choinoski.controller.CreatePlaydateFormServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <display-name>CreatePlaydateInsertServlet</display-name>
+    <servlet-name>CreatePlaydateInsertServlet</servlet-name>
+    <servlet-class>com.choinoski.controller.CreatePlaydateInsertServlet</servlet-class>
+  </servlet>
 
   <servlet-mapping>
     <servlet-name>YourPack</servlet-name>
@@ -107,9 +117,14 @@
     <servlet-name>AdministrativeFunctions</servlet-name>
     <url-pattern>/AdministrativeFunctions</url-pattern>
   </servlet-mapping>
-
-
-
+  <servlet-mapping>
+    <servlet-name>CreatePlaydateFormServlet</servlet-name>
+    <url-pattern>/CreatePlatdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreatePlaydateInsertServlet</servlet-name>
+    <url-pattern>/InsertPlatdate</url-pattern>
+  </servlet-mapping>
 
 
 

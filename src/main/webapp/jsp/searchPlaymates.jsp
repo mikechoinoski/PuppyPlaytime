@@ -133,7 +133,7 @@
 
 
         <br><br>
-        <form action="createPlaydate" class="form-inline"/>
+        <form action="CreatePlatdate" class="form-inline"/>
         <table>
             <tr>
                 <td align="center">
