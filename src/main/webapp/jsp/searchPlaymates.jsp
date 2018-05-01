@@ -3,10 +3,8 @@
 <c:import url="/jsp/page_top.jsp" />
 
 <div class="image"></div>
-<div class="content">
+<div class="content" align="center">
     <br>
-
-    <center>
 
         <h2>Find Playmates</h2>
 
@@ -131,8 +129,11 @@
                 </td>
             </tr>
         </table>
+        </form>
+
 
         <br><br>
+        <form action="createPlaydate" class="form-inline"/>
         <table>
             <tr>
                 <td align="center">
@@ -213,8 +214,8 @@
                     </tr>
                 </table>
             </div>
-        </c:forEach>
-
-    </center>
+        </c:forEach><br><br>
+        <input type="submit" class="button" value="Create Playdate" />
+        </form>
 
 <c:import url="/jsp/page_bottom.jsp" />
