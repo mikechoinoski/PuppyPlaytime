@@ -24,20 +24,19 @@ import java.util.Set;
 @Setter
 @Entity(name = "Playdate")
 @Table(name = "playdate") // case sensitive!
-public class Playdate implements Serializable {
+public class PlaydateMember implements Serializable {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
-    @GenericGenerator(name = "native",strategy = "native")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
+    @Column( name = "playdate_member_nr")
+    private int packdateMemberNumber;
+
     @Column( name = "playdate_nr")
     private int playdateNumber;
 
-    @Column( name = "organizing_pack_nr")
-    private int organizingPackNumber;
-
-    private LocalDate date;
-
-    private LocalTime time;
+    @Column( name = "pack_member_nr")
+    private int packMemberNumber;
 
     private String status;
 

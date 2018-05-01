@@ -154,7 +154,7 @@
         </table>
         <br><br>
         <c:forEach var="singleMember" items="${searchMembers}">
-            <div class="playmateContainer">
+            <div class="memberContainer">
                 <table>
                     <tr>
                         <td colspan="3" align="center"><b>${singleMember.name}</b></td>
@@ -192,8 +192,8 @@
                                     <img src="./uploadedPhotos/default_dog.png" height="130" width="130">
                                 </c:when>
                                 <c:otherwise>
-                                    <img src="./uploadedPhotos/${singleMember.pictureFilename}"
-                                         height="130" width="130">
+                                    <input type="checkbox" name="memberCheckBox${singleMember.packMemberNumber}" id="member${singleMember.packMemberNumber}" value="memberCheckBoxValue${singleMember.packMemberNumber}" style="display:none">
+                                    <label for="member${singleMember.packMemberNumber}" style="background:url(./uploadedPhotos/${singleMember.pictureFilename}) no-repeat; background-size: cover; background-position: center;"></label>
                                 </c:otherwise>
                             </c:choose>
                             </a>

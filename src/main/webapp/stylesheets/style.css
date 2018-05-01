@@ -154,9 +154,19 @@ table.searchtable td{
     padding-right:10px;
 }
 
-.playmateContainer {
+.memberContainer {
     background: rgba(235, 235, 236, 0.63);
     border: 3px solid #000000;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.memberSelected {
+    background: rgba(138, 236, 122, 0.38);
+    border: 3px solid #1daf1b;
     display: inline-block;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -200,4 +210,25 @@ table.searchtable td{
     text-align: center;
     font-size: 16px;
     cursor: pointer;
+}
+
+input[type=checkbox] + label {
+    display:inline-block;
+    padding: 0 0 0 0px;
+    height: 125px;
+    width: 125px;
+    border-style: solid;
+    border-color: white;
+    border-width: 4px;
+}
+
+input[type=checkbox]:checked + label {
+    padding: 0 0 0 0px;
+    height: 125px;
+    width: 125px;
+    display:inline-block;
+    border-style: solid;
+    border-color: green;
+    border-width: 4px;
+    opacity: 0.50;
 }
