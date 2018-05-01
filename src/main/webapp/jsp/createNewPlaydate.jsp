@@ -6,10 +6,10 @@
 <div class="content">
     <center>
 
-        <h2>Create Your Pack</h2>
+        <h2>Create Playmate</h2>
         <br><br>
 
-        <form method="post" action="insertNewPack">
+        <form method="post" action="InsertPlaydate">
             <table>
                 <tr>
                     <td>Location:</td>
@@ -33,7 +33,7 @@
 
                <tr>
                    <td>
-                       <c:forEach var="singleMember" items="${yourPackMembers}">
+                       <c:forEach var="singleMember" items="${sessionScope.userPack.members}">
                            <c:choose>
                                <c:when test="${empty singleMember.pictureFilename}">
                                    <div class="memberContainer">
