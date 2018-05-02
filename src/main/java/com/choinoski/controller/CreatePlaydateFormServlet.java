@@ -1,6 +1,7 @@
 package com.choinoski.controller;
 
 import com.choinoski.entity.Pack;
+import com.choinoski.entity.PackMember;
 import com.choinoski.persistence.LoggedInPack;
 
 import javax.servlet.RequestDispatcher;
@@ -30,14 +31,27 @@ public class CreatePlaydateFormServlet extends HttpServlet {
 
         session.setAttribute("userPack", retrievePack.loggedInPackInfo(request));
 
+        //List<Integer> memberNumbers = new ArrayList();
+
         Map<String, String[]> myMap = request.getParameterMap();
+
+        List<PackMember> allSearchedMembers = (List<PackMember>) session.getAttribute("searchMembers");
+
+        List<PackMember> membersForPlaydate = new ArrayList<PackMember>();
 
         for (Map.Entry<String, String[]> entry : myMap.entrySet()) {
 
             String keyStr = entry.getKey().replace("memberCheckBox", "");
+            //memberNumbers.add(Integer.parseInt(keyStr));
+            for (PackMember currentMember: allSearchedMembers) {
+                if (Integer.parseInt(keyStr) == currentMember.getPackMemberNumber()) {
+                    membersForPlaydate.add(currentMember);
+                }
+            }
             //String[] value = (String[])entry.getValue();
-
         }
+
+        session.setAttribute("membersForPlaydate", membersForPlaydate);
 
         String url = "/jsp/createNewPlaydate.jsp";
 
