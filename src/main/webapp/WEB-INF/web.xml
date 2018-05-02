@@ -43,8 +43,11 @@
       <url-pattern>/admin</url-pattern>
       <url-pattern>/admin.jsp</url-pattern>
       <url-pattern>/yourPack</url-pattern>
+      <url-pattern>/CreatePlaydate</url-pattern>
+      <url-pattern>/InsertPlaydate</url-pattern>
       <url-pattern>/jsp/adminPage.jsp</url-pattern>
       <url-pattern>/jsp/yourPack.jsp</url-pattern>
+      <url-pattern>/jsp/.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>admin</role-name>
