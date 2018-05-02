@@ -134,3 +134,28 @@
 [DEBUG] 2018-05-02 02:22:54.844 [http-nio-8080-exec-4] GenericDao - Selecting all rows from a table
 [DEBUG] 2018-05-02 02:29:06.019 [http-nio-8080-exec-4] GenericDao - Selecting all rows from a table
 [DEBUG] 2018-05-02 02:29:26.146 [http-nio-8080-exec-3] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-02 02:35:14.281 [http-nio-8080-exec-7] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-02 02:35:23.884 [http-nio-8080-exec-1] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-05-02 02:35:31.342 [http-nio-8080-exec-2] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-02 03:15:52.222 [http-nio-8080-exec-6] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-05-02 03:32:49.017 [http-nio-8080-exec-7] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-05-02 03:33:09.204 [http-nio-8080-exec-9] GenericDao - Searching for user with packName = dog
+[DEBUG] 2018-05-02 03:33:18.429 [http-nio-8080-exec-2] GenericDao - Searching for user with packName = dog
+[DEBUG] 2018-05-02 03:33:52.933 [http-nio-8080-exec-6] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-05-02 03:33:53.067 [http-nio-8080-exec-6] GenericDao - Selecting rows by 11
+[DEBUG] 2018-05-02 03:34:10.764 [http-nio-8080-exec-1] GenericDao - Searching for user with packName = dog
+[DEBUG] 2018-05-02 03:51:00.458 [http-nio-8080-exec-5] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-05-02 03:51:00.462 [http-nio-8080-exec-2] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-05-02 03:53:26.341 [http-nio-8080-exec-1] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-02 03:54:31.061 [http-nio-8080-exec-5] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-05-02 03:54:50.877 [http-nio-8080-exec-8] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-02 04:04:28.451 [http-nio-8080-exec-2] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-05-02 04:06:37.726 [http-nio-8080-exec-2] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-02 04:25:41.251 [http-nio-8080-exec-3] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-05-02 04:25:41.255 [http-nio-8080-exec-5] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-05-02 04:25:47.183 [http-nio-8080-exec-6] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-02 04:29:13.916 [http-nio-8080-exec-8] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-05-02 04:29:13.928 [http-nio-8080-exec-1] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-05-02 04:29:13.984 [http-nio-8080-exec-7] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-02 04:31:04.634 [http-nio-8080-exec-6] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-05-02 04:32:19.125 [http-nio-8080-exec-4] GenericDao - Searching for user with packName = user

@@ -5,12 +5,11 @@ import com.choinoski.persistence.LoggedInPack;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
-import java.util.List;
+import java.util.*;
+
+import static jdk.nashorn.internal.objects.NativeError.getFileName;
 
 public class CreatePlaydateFormServlet extends HttpServlet {
 
@@ -30,6 +29,14 @@ public class CreatePlaydateFormServlet extends HttpServlet {
         LoggedInPack retrievePack = new LoggedInPack();
 
         session.setAttribute("userPack", retrievePack.loggedInPackInfo(request));
+
+        Map myMap = request.getParameterMap();
+
+        for (Object key : myMap.entrySet()) {
+            String keyStr = (String)key;
+            String[] value = (String[])myMap.get(keyStr);
+            System.out.println("Key" + (String)key + "   :   " + Arrays.toString(value));
+        }
 
         String url = "/jsp/createNewPlaydate.jsp";
 

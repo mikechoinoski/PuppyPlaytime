@@ -28,15 +28,12 @@
                     <td><input type="text" name="playdatePublic"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><br></td>
+                    <td align="center" colspan="2"><br><br></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><h3>Who wants to Play?</h3><br></td>
+                    <td align="center" colspan="2"><h3>Who wants to Play?</h3><br></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><br></td>
-                </tr>
-               <tr>
                    <td colspan="2" align="center">
                        <c:forEach var="singleMember" items="${sessionScope.userPack.members}">
                            <div class="memberPlain">
@@ -63,7 +60,7 @@
                            </div>
                        </c:forEach>
                    </td>
-               </tr>
+                </tr>
                 <tr>
                     <td colspan="2" align="center"><input type="submit" value="Create New Playdate" /></td>
                 </tr>

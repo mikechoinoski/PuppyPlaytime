@@ -188,7 +188,6 @@
                                 <font color="darkred" size="5"><b>${singleMember.age}</b></font>
                             </td>
                             <td width="130" align="center">
-                                <a href="createPlaydate?selectedPackMember=${singleMember.packMemberNumber}"/>
                                 <c:choose>
                                     <c:when test="${empty singleMember.pictureFilename}">
                                         <input type="checkbox" name="memberCheckBox${singleMember.packMemberNumber}" id="member${singleMember.packMemberNumber}" value="memberCheckBoxValue${singleMember.packMemberNumber}" style="display:none">
