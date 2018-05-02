@@ -155,66 +155,68 @@
         </table>
         <br><br>
         <c:forEach var="singleMember" items="${searchMembers}">
-            <div class="memberContainer">
-                <table>
-                    <tr>
-                        <td colspan="3" align="center"><b>${singleMember.name}</b></td>
-                    </tr>
-                    <tr>
-                        <td width="40" align="center">
-                            <c:if test="${singleMember.size == 'XS'}">
-                                <font color="#b8860b" size="2"><b>X</b><br></font>
-                            </c:if>
-                            <c:if test="${singleMember.size == 'XS'}">
-                                <font color="#b8860b" size="2"><b>S</b></font>
-                            </c:if>
-                            <c:if test="${singleMember.size == 'S'}">
-                                <font color="#b8860b" size="3"><b>S</b></font>
-                            </c:if>
-                            <c:if test="${singleMember.size == 'M'}">
-                                <font color="#b8860b" size="4"><b>M</b></font>
-                            </c:if>
-                            <c:if test="${singleMember.size == 'L'}">
-                                <font color="#b8860b" size="5"><b>L</b></font>
-                            </c:if>
-                            <c:if test="${singleMember.size == 'XL'}">
-                                <font color="#b8860b" size="6"><b>X</b><br></font>
-                            </c:if>
-                            <c:if test="${singleMember.size == 'XL'}">
-                                <font color="#b8860b" size="6"><b>L</b></font>
-                            </c:if>
-                            <br><br>
-                            <font color="darkred" size="5"><b>${singleMember.age}</b></font>
-                        </td>
-                        <td width="130" align="center">
-                            <a href="createPlaydate?selectedPackMember=${singleMember.packMemberNumber}"/>
-                            <c:choose>
-                                <c:when test="${empty singleMember.pictureFilename}">
-                                    <input type="checkbox" name="memberCheckBox${singleMember.packMemberNumber}" id="member${singleMember.packMemberNumber}" value="memberCheckBoxValue${singleMember.packMemberNumber}" style="display:none">
-                                    <label for="member${singleMember.packMemberNumber}" style="background:url(./uploadedPhotos/default_dog.png) no-repeat; background-size: cover; background-position: center;"></label>
-                                </c:when>
-                                <c:otherwise>
-                                    <input type="checkbox" name="memberCheckBox${singleMember.packMemberNumber}" id="member${singleMember.packMemberNumber}" value="memberCheckBoxValue${singleMember.packMemberNumber}" style="display:none">
-                                    <label for="member${singleMember.packMemberNumber}" style="background:url('./uploadedPhotos/${singleMember.pictureFilename}') no-repeat; background-size: cover; background-position: center;"></label>
-                                </c:otherwise>
-                            </c:choose>
-                            </a>
-                        </td>
-                        <td width="40" align="center">
-                            <c:if test="${singleMember.sex.toString() == 'M'}">
-                                <font color="blue" size="5"><b>M</b></font>
-                            </c:if>
-                            <c:if test="${singleMember.sex.toString() == 'F'}">
-                                <font color="#ff1493" size="5"><b>F</b></font>
-                            </c:if>
-                            <c:if test="${!singleMember.intact}"><br><br><font color="green" size="5"><b>+</b></font></c:if>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" align="center"><b>${singleMember.breed}</b></td>
-                    </tr>
-                </table>
-            </div>
+            <c:if test="${singleMember.pack.packNumber != userPack.packNumber}">
+                <div class="memberContainer">
+                    <table>
+                        <tr>
+                            <td colspan="3" align="center"><b>${singleMember.name}</b></td>
+                        </tr>
+                        <tr>
+                            <td width="40" align="center">
+                                <c:if test="${singleMember.size == 'XS'}">
+                                    <font color="#b8860b" size="2"><b>X</b><br></font>
+                                </c:if>
+                                <c:if test="${singleMember.size == 'XS'}">
+                                    <font color="#b8860b" size="2"><b>S</b></font>
+                                </c:if>
+                                <c:if test="${singleMember.size == 'S'}">
+                                    <font color="#b8860b" size="3"><b>S</b></font>
+                                </c:if>
+                                <c:if test="${singleMember.size == 'M'}">
+                                    <font color="#b8860b" size="4"><b>M</b></font>
+                                </c:if>
+                                <c:if test="${singleMember.size == 'L'}">
+                                    <font color="#b8860b" size="5"><b>L</b></font>
+                                </c:if>
+                                <c:if test="${singleMember.size == 'XL'}">
+                                    <font color="#b8860b" size="6"><b>X</b><br></font>
+                                </c:if>
+                                <c:if test="${singleMember.size == 'XL'}">
+                                    <font color="#b8860b" size="6"><b>L</b></font>
+                                </c:if>
+                                <br><br>
+                                <font color="darkred" size="5"><b>${singleMember.age}</b></font>
+                            </td>
+                            <td width="130" align="center">
+                                <a href="createPlaydate?selectedPackMember=${singleMember.packMemberNumber}"/>
+                                <c:choose>
+                                    <c:when test="${empty singleMember.pictureFilename}">
+                                        <input type="checkbox" name="memberCheckBox${singleMember.packMemberNumber}" id="member${singleMember.packMemberNumber}" value="memberCheckBoxValue${singleMember.packMemberNumber}" style="display:none">
+                                        <label for="member${singleMember.packMemberNumber}" style="background:url(./uploadedPhotos/default_dog.png) no-repeat; background-size: cover; background-position: center;"></label>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <input type="checkbox" name="memberCheckBox${singleMember.packMemberNumber}" id="member${singleMember.packMemberNumber}" value="memberCheckBoxValue${singleMember.packMemberNumber}" style="display:none">
+                                        <label for="member${singleMember.packMemberNumber}" style="background:url('./uploadedPhotos/${singleMember.pictureFilename}') no-repeat; background-size: cover; background-position: center;"></label>
+                                    </c:otherwise>
+                                </c:choose>
+                                </a>
+                            </td>
+                            <td width="40" align="center">
+                                <c:if test="${singleMember.sex.toString() == 'M'}">
+                                    <font color="blue" size="5"><b>M</b></font>
+                                </c:if>
+                                <c:if test="${singleMember.sex.toString() == 'F'}">
+                                    <font color="#ff1493" size="5"><b>F</b></font>
+                                </c:if>
+                                <c:if test="${!singleMember.intact}"><br><br><font color="green" size="5"><b>+</b></font></c:if>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" align="center"><b>${singleMember.breed}</b></td>
+                        </tr>
+                    </table>
+                </div>
+            </c:if>
         </c:forEach><br><br>
         <input type="submit" class="button" value="Create Playdate" />
         </form>

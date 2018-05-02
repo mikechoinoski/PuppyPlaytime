@@ -35,9 +35,9 @@ public class MemberSearchCriteria {
         } else if (size.equals("M")) {
             minimumWeightForSize = 25;
         } else if (size.equals("L")) {
-            minimumWeightForSize = 60;
+            minimumWeightForSize = 75;
         } else if (size.equals("XL")){
-            minimumWeightForSize = 110;
+            minimumWeightForSize = 130;
         }
 
         return minimumWeightForSize;
@@ -57,9 +57,9 @@ public class MemberSearchCriteria {
         } else if (size.equals("S")) {
             maximumWeightForSize = 24;
         } else if (size.equals("M")) {
-            maximumWeightForSize = 59;
+            maximumWeightForSize = 74;
         } else if (size.equals("L")) {
-            maximumWeightForSize = 109;
+            maximumWeightForSize = 129;
         } else if (size.equals("XL")){
             maximumWeightForSize = 300;
         }
