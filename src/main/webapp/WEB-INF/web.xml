@@ -43,11 +43,8 @@
       <url-pattern>/admin</url-pattern>
       <url-pattern>/admin.jsp</url-pattern>
       <url-pattern>/yourPack</url-pattern>
-      <url-pattern>/CreatePlaydate</url-pattern>
-      <url-pattern>/InsertPlaydate</url-pattern>
       <url-pattern>/jsp/adminPage.jsp</url-pattern>
       <url-pattern>/jsp/yourPack.jsp</url-pattern>
-      <url-pattern>/jsp/.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>admin</role-name>
@@ -59,6 +56,9 @@
       <web-resource-name>RequiresUserRole</web-resource-name>
       <url-pattern>/yourPack</url-pattern>
       <url-pattern>/jsp/yourPack.jsp</url-pattern>
+      <url-pattern>/CreatePlaydate</url-pattern>
+      <url-pattern>/InsertPlaydate</url-pattern>
+      <url-pattern>/jsp/createNewPlaydate.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>user</role-name>
@@ -122,11 +122,11 @@
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>CreatePlaydateFormServlet</servlet-name>
-    <url-pattern>/CreatePlatdate</url-pattern>
+    <url-pattern>/CreatePlaydate</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>CreatePlaydateInsertServlet</servlet-name>
-    <url-pattern>/InsertPlatdate</url-pattern>
+    <url-pattern>/InsertPlaydate</url-pattern>
   </servlet-mapping>
 
 

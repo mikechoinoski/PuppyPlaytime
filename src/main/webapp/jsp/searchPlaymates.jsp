@@ -133,7 +133,7 @@
 
 
         <br><br>
-        <form action="CreatePlatdate" class="form-inline"/>
+        <form action="CreatePlaydate" class="form-inline"/>
         <table>
             <tr>
                 <td align="center">
@@ -161,7 +161,7 @@
                         <td colspan="3" align="center"><b>${singleMember.name}</b></td>
                     </tr>
                     <tr>
-                        <td width="35" align="center">
+                        <td width="40" align="center">
                             <c:if test="${singleMember.size == 'XS'}">
                                 <font color="#b8860b" size="2"><b>X</b><br></font>
                             </c:if>
@@ -190,7 +190,8 @@
                             <a href="createPlaydate?selectedPackMember=${singleMember.packMemberNumber}"/>
                             <c:choose>
                                 <c:when test="${empty singleMember.pictureFilename}">
-                                    <img src="./uploadedPhotos/default_dog.png" height="130" width="130">
+                                    <input type="checkbox" name="memberCheckBox${singleMember.packMemberNumber}" id="member${singleMember.packMemberNumber}" value="memberCheckBoxValue${singleMember.packMemberNumber}" style="display:none">
+                                    <label for="member${singleMember.packMemberNumber}" style="background:url(./uploadedPhotos/default_dog.png) no-repeat; background-size: cover; background-position: center;"></label>
                                 </c:when>
                                 <c:otherwise>
                                     <input type="checkbox" name="memberCheckBox${singleMember.packMemberNumber}" id="member${singleMember.packMemberNumber}" value="memberCheckBoxValue${singleMember.packMemberNumber}" style="display:none">
@@ -199,7 +200,7 @@
                             </c:choose>
                             </a>
                         </td>
-                        <td width="35" align="center">
+                        <td width="40" align="center">
                             <c:if test="${singleMember.sex.toString() == 'M'}">
                                 <font color="blue" size="5"><b>M</b></font>
                             </c:if>

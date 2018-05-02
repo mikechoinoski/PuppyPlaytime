@@ -6,7 +6,7 @@
 <div class="content">
     <center>
 
-        <h2>Create Playmate</h2>
+        <h2>Create Playdate</h2>
         <br><br>
 
         <form method="post" action="InsertPlaydate">
@@ -32,73 +32,27 @@
                 </tr>
 
                <tr>
-                   <td>
+                   <td align="center">
                        <c:forEach var="singleMember" items="${sessionScope.userPack.members}">
-                           <c:choose>
-                               <c:when test="${empty singleMember.pictureFilename}">
-                                   <div class="memberContainer">
-                               </c:when>
-                               <c:otherwise>
-                                   <div class="memberSelected">
-                               </c:otherwise>
-                           </c:choose>
-
+                           <div class="memberContainer">
                                <table>
                                    <tr>
-                                       <td colspan="3" align="center"><b>${singleMember.name}</b></td>
+                                       <td align="center"><b>${singleMember.name}</b></td>
                                    </tr>
                                    <tr>
-                                       <td width="35" align="center">
-                                           <c:if test="${singleMember.size == 'XS'}">
-                                               <font color="#b8860b" size="2"><b>X</b><br></font>
-                                           </c:if>
-                                           <c:if test="${singleMember.size == 'XS'}">
-                                               <font color="#b8860b" size="2"><b>S</b></font>
-                                           </c:if>
-                                           <c:if test="${singleMember.size == 'S'}">
-                                               <font color="#b8860b" size="3"><b>S</b></font>
-                                           </c:if>
-                                           <c:if test="${singleMember.size == 'M'}">
-                                               <font color="#b8860b" size="4"><b>M</b></font>
-                                           </c:if>
-                                           <c:if test="${singleMember.size == 'L'}">
-                                               <font color="#b8860b" size="5"><b>L</b></font>
-                                           </c:if>
-                                           <c:if test="${singleMember.size == 'XL'}">
-                                               <font color="#b8860b" size="6"><b>X</b><br></font>
-                                           </c:if>
-                                           <c:if test="${singleMember.size == 'XL'}">
-                                               <font color="#b8860b" size="6"><b>L</b></font>
-                                           </c:if>
-                                           <br><br>
-                                           <font color="darkred" size="5"><b>${singleMember.age}</b></font>
-                                       </td>
-                                       <td width="130" align="center">
+                                       <td width="150" align="center">
                                            <c:choose>
                                                <c:when test="${empty singleMember.pictureFilename}">
-                                                   <img src="./uploadedPhotos/default_dog.png" height="130" width="130">
+                                                   <input type="checkbox" name="memberCheckBox${singleMember.packMemberNumber}" id="member${singleMember.packMemberNumber}" value="memberCheckBoxValue${singleMember.packMemberNumber}" style="display:none">
+                                                   <label for="member${singleMember.packMemberNumber}" style="background:url(./uploadedPhotos/default_dog.png) no-repeat; background-size: cover; background-position: center;"></label>
                                                </c:when>
                                                <c:otherwise>
-                                                   <img src="./uploadedPhotos/${singleMember.pictureFilename}"
-                                                        height="130" width="130">
+                                                   <input type="checkbox" name="memberCheckBox${singleMember.packMemberNumber}" id="member${singleMember.packMemberNumber}" value="memberCheckBoxValue${singleMember.packMemberNumber}" style="display:none">
+                                                   <label for="member${singleMember.packMemberNumber}" style="background:url(./uploadedPhotos/${singleMember.pictureFilename}) no-repeat; background-size: cover; background-position: center;"></label>
                                                </c:otherwise>
                                            </c:choose>
                                            </a>
-                                           <input type="checkbox" name="selectedPackMember=${singleMember.packMemberNumber}" style="background-image: url(../uploadedPhotos/default_dog.png)">
-
                                        </td>
-                                       <td width="35" align="center">
-                                           <c:if test="${singleMember.sex.toString() == 'M'}">
-                                               <font color="blue" size="5"><b>M</b></font>
-                                           </c:if>
-                                           <c:if test="${singleMember.sex.toString() == 'F'}">
-                                               <font color="#ff1493" size="5"><b>F</b></font>
-                                           </c:if>
-                                           <c:if test="${!singleMember.intact}"><br><br><font color="green" size="5"><b>+</b></font></c:if>
-                                       </td>
-                                   </tr>
-                                   <tr>
-                                       <td colspan="3" align="center"><b>${singleMember.breed}</b></td>
                                    </tr>
                                </table>
                            </div>
@@ -106,7 +60,7 @@
                    </td>
                </tr>
                 <tr>
-                    <td colspan="2" align="center"><input type="submit" value="Create New Pack" /></td>
+                    <td colspan="2" align="center"><input type="submit" value="Create New Playdate" /></td>
                 </tr>
             </table>
         </form>

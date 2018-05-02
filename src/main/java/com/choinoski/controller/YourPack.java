@@ -2,6 +2,7 @@ package com.choinoski.controller;
 
 import com.choinoski.entity.Pack;
 import com.choinoski.persistence.GenericDao;
+import com.choinoski.persistence.LoggedInPack;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -51,7 +52,7 @@ public class YourPack extends HttpServlet {
 
         ServletContext servletContext = getServletContext();
         HttpSession    session        = request.getSession();
-        Pack   userPack = null;
+        LoggedInPack   retrievePack   = new LoggedInPack();
         String url      = null;
         //Principal verifiedUser = request.getUserPrincipal();
         //verifiedUser.isUserInRole();
@@ -61,13 +62,9 @@ public class YourPack extends HttpServlet {
         String packName = request.getUserPrincipal().getName();
 
         if (request.isUserInRole("user")) {
-            List<Pack> packs = dao.getByPropertyEqual("packName",packName);
 
-            if (packs.size() == 1) {
-                userPack = packs.get(0);
-            }
+            session.setAttribute("userPack", retrievePack.loggedInPackInfo(request));
 
-            session.setAttribute("userPack", userPack);
             session.setAttribute("imageDirectory", UPLOAD_FOLDER);
             session.setAttribute("imageDirectory2", UPLOAD_FOLDER2);
 
