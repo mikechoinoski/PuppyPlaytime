@@ -3,10 +3,8 @@
 <c:import url="/jsp/page_top.jsp" />
 
 <div class="image"></div>
-<div class="content">
+<div class="content" align="center">
     <br>
-
-    <center>
 
         <h2>Find Playmates</h2>
 
@@ -131,8 +129,11 @@
                 </td>
             </tr>
         </table>
+        </form>
+
 
         <br><br>
+        <form action="CreatePlatdate" class="form-inline"/>
         <table>
             <tr>
                 <td align="center">
@@ -154,7 +155,7 @@
         </table>
         <br><br>
         <c:forEach var="singleMember" items="${searchMembers}">
-            <div class="playmateContainer">
+            <div class="memberContainer">
                 <table>
                     <tr>
                         <td colspan="3" align="center"><b>${singleMember.name}</b></td>
@@ -192,8 +193,8 @@
                                     <img src="./uploadedPhotos/default_dog.png" height="130" width="130">
                                 </c:when>
                                 <c:otherwise>
-                                    <img src="./uploadedPhotos/${singleMember.pictureFilename}"
-                                         height="130" width="130">
+                                    <input type="checkbox" name="memberCheckBox${singleMember.packMemberNumber}" id="member${singleMember.packMemberNumber}" value="memberCheckBoxValue${singleMember.packMemberNumber}" style="display:none">
+                                    <label for="member${singleMember.packMemberNumber}" style="background:url(./uploadedPhotos/${singleMember.pictureFilename}) no-repeat; background-size: cover; background-position: center;"></label>
                                 </c:otherwise>
                             </c:choose>
                             </a>
@@ -213,8 +214,8 @@
                     </tr>
                 </table>
             </div>
-        </c:forEach>
-
-    </center>
+        </c:forEach><br><br>
+        <input type="submit" class="button" value="Create Playdate" />
+        </form>
 
 <c:import url="/jsp/page_bottom.jsp" />
