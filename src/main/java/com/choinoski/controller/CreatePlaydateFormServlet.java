@@ -30,12 +30,13 @@ public class CreatePlaydateFormServlet extends HttpServlet {
 
         session.setAttribute("userPack", retrievePack.loggedInPackInfo(request));
 
-        Map myMap = request.getParameterMap();
+        Map<String, String[]> myMap = request.getParameterMap();
 
-        for (Object key : myMap.entrySet()) {
-            String keyStr = (String)key;
-            String[] value = (String[])myMap.get(keyStr);
-            System.out.println("Key" + (String)key + "   :   " + Arrays.toString(value));
+        for (Map.Entry<String, String[]> entry : myMap.entrySet()) {
+
+            String keyStr = entry.getKey();
+            String[] value = (String[])entry.getValue();
+
         }
 
         String url = "/jsp/createNewPlaydate.jsp";
