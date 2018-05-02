@@ -24,17 +24,22 @@
                     <td><input type="time" name="playdateTime"></td>
                 </tr>
                 <tr>
-                    <td>Address:</td>
+                    <td>Access</td>
                     <td><input type="text" name="playdatePublic"></td>
                 </tr>
                 <tr>
                     <td colspan="2"><br></td>
                 </tr>
-
+                <tr>
+                    <td colspan="2"><h3>Who wants to Play?</h3><br></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><br></td>
+                </tr>
                <tr>
-                   <td align="center">
+                   <td colspan="2" align="center">
                        <c:forEach var="singleMember" items="${sessionScope.userPack.members}">
-                           <div class="memberContainer">
+                           <div class="memberPlain">
                                <table>
                                    <tr>
                                        <td align="center"><b>${singleMember.name}</b></td>
@@ -48,7 +53,7 @@
                                                </c:when>
                                                <c:otherwise>
                                                    <input type="checkbox" name="memberCheckBox${singleMember.packMemberNumber}" id="member${singleMember.packMemberNumber}" value="memberCheckBoxValue${singleMember.packMemberNumber}" style="display:none">
-                                                   <label for="member${singleMember.packMemberNumber}" style="background:url(./uploadedPhotos/${singleMember.pictureFilename}) no-repeat; background-size: cover; background-position: center;"></label>
+                                                   <label for="member${singleMember.packMemberNumber}" style="background:url('./uploadedPhotos/${singleMember.pictureFilename}') no-repeat; background-size: cover; background-position: center;"></label>
                                                </c:otherwise>
                                            </c:choose>
                                            </a>
