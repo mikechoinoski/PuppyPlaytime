@@ -34,8 +34,8 @@ public class CreatePlaydateFormServlet extends HttpServlet {
 
         for (Map.Entry<String, String[]> entry : myMap.entrySet()) {
 
-            String keyStr = entry.getKey();
-            String[] value = (String[])entry.getValue();
+            String keyStr = entry.getKey().replace("memberCheckBox", "");
+            //String[] value = (String[])entry.getValue();
 
         }
 
