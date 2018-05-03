@@ -57,7 +57,7 @@ public class PackMember{
 
     @ManyToOne
     @JoinColumn(name = "pack_nr",
-            foreignKey = @ForeignKey(name = "playdate_member_playdate_playdate_nr_fk"))
+            foreignKey = @ForeignKey(name = "pack_foreign_key"))
     private Pack pack;
 
     /**

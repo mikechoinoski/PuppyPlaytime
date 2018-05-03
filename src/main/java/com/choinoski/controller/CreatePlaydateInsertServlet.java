@@ -36,6 +36,8 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        HttpSession session         = request.getSession();
+
         String    locationText = request.getParameter("playdateLocation");
         LocalDate dateText     = LocalDate.parse(request.getParameter("playdateDate"),
                 ofPattern("yyyy-MM-dd"));
@@ -47,9 +49,12 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
             privatePlaydate = false;
         }
 
-        Playdate newPlaydate = new Playdate(locationText, dateText, timeText, "pending", privatePlaydate);
+        Pack currentPack = (Pack) session.getAttribute("userPack");
+        Playdate newPlaydate = new Playdate(currentPack.getPackNumber(), locationText, dateText, timeText, "pending", privatePlaydate);
 
         GenericDao dao       = new GenericDao(Playdate.class);
+
+
 
         dao.insert(newPlaydate);
 
@@ -57,7 +62,7 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
 
 
 
-        //HttpSession session         = request.getSession();
+        //
         //LoggedInPack retrievePack   = new LoggedInPack();
         //RequestParameters myRequest = new RequestParameters();
 

@@ -22,8 +22,8 @@ import java.util.Set;
  */
 @Getter
 @Setter
-@Entity(name = "Playdate")
-@Table(name = "playdate") // case sensitive!
+@Entity(name = "PlaydateMember")
+@Table(name = "playdate_member") // case sensitive!
 public class PlaydateMember implements Serializable {
 
     @Id
@@ -52,8 +52,7 @@ public class PlaydateMember implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "playdate_nr",
-            foreignKey = @ForeignKey(name = "pack_foreign_key"))
+            foreignKey = @ForeignKey(name = "playdate_member_playdate_playdate_nr_fk"))
     private Playdate playdate;
-
 
 }

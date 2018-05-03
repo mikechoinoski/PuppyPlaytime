@@ -71,7 +71,9 @@ public class Playdate implements Serializable {
 
     }
 
-    public Playdate(String playdateLocation, LocalDate date, LocalTime time, String status, Boolean privatePlaydate) {
+    public Playdate(int organizingPackNumber, String playdateLocation, LocalDate date, LocalTime time,
+                    String status, Boolean privatePlaydate) {
+        this.organizingPackNumber = organizingPackNumber;
         this.playdateLocation = playdateLocation;
         this.date = date;
         this.time = time;

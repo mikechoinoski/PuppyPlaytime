@@ -16,6 +16,8 @@
         <property name="hibernate.c3p0.max_statements">50</property>
         <property name="hibernate.c3p0.idle_test_period">3000</property>
 
+        <mapping class="com.choinoski.entity.PlaydateMember"/>
+        <mapping class="com.choinoski.entity.Playdate"/>
         <mapping class="com.choinoski.entity.Pack"/>
         <mapping class="com.choinoski.entity.PackMember"/>
         <mapping class="com.choinoski.entity.Role"/>
