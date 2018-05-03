@@ -36,6 +36,9 @@ public class Playdate implements Serializable {
     @Column( name = "organizing_pack_nr")
     private int organizingPackNumber;
 
+    @Column( name = "playdate_location")
+    private String playdateLocation;
+
     private LocalDate date;
 
     private LocalTime time;
@@ -56,4 +59,15 @@ public class Playdate implements Serializable {
     @Column( name = "last_modified_date")
     private Date lastModifiedDate;
 
+    public Playdate() {
+
+    }
+
+    public Playdate(String playdateLocation, LocalDate date, LocalTime time, String status, Boolean privatePlaydate) {
+        this.playdateLocation = playdateLocation;
+        this.date = date;
+        this.time = time;
+        this.status = status;
+        this.privatePlaydate = privatePlaydate;
+    }
 }
