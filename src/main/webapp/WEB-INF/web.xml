@@ -103,6 +103,17 @@
     <servlet-name>CreatePlaydateInsertServlet</servlet-name>
     <servlet-class>com.choinoski.controller.CreatePlaydateInsertServlet</servlet-class>
   </servlet>
+  <servlet>
+    <display-name>ViewPlaydatesServlet</display-name>
+    <servlet-name>ViewPlaydatesServlet</servlet-name>
+    <servlet-class>com.choinoski.controller.ViewPlaydatesServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+  response.sendRedirect("Playdates");
 
   <servlet-mapping>
     <servlet-name>YourPack</servlet-name>
@@ -128,7 +139,10 @@
     <servlet-name>CreatePlaydateInsertServlet</servlet-name>
     <url-pattern>/InsertPlaydate</url-pattern>
   </servlet-mapping>
-
+  <servlet-mapping>
+    <servlet-name>ViewPlaydatesServlet</servlet-name>
+    <url-pattern>/Playdates</url-pattern>
+  </servlet-mapping>
 
 
   <!-- ********************************************************************* -->

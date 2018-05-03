@@ -71,11 +71,11 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
             newPlaydate.addMember(newPlaydateMember);
         }
 
-        String url = "/jsp/Playdate.jsp";
-
-        RequestDispatcher dispatcher =
-                getServletContext().getRequestDispatcher(url);
-        dispatcher.forward(request, response);
+        //String url = "/jsp/viewPlaydates.jsp";
+        response.sendRedirect("Playdates");
+       // RequestDispatcher dispatcher =
+        //        getServletContext().getRequestDispatcher(url);
+        //dispatcher.forward(request, response);
 
     }
 
