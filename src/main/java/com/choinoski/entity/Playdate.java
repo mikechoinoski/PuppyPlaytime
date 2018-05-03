@@ -1,5 +1,6 @@
 package com.choinoski.entity;
 
+import com.choinoski.persistence.GenericDao;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -59,6 +60,13 @@ public class Playdate implements Serializable {
     @Column( name = "last_modified_date")
     private Date lastModifiedDate;
 
+    @OneToMany(mappedBy = "playdate", cascade = CascadeType.ALL,
+            orphanRemoval = true, fetch = FetchType.EAGER, targetEntity = PlaydateMember.class)
+    private Set<PlaydateMember> playdateMembers = new HashSet<PlaydateMember>();
+
+    @Transient
+    private GenericDao dao = null;
+
     public Playdate() {
 
     }
@@ -70,4 +78,50 @@ public class Playdate implements Serializable {
         this.status = status;
         this.privatePlaydate = privatePlaydate;
     }
+
+    /**
+     * Gets orders.
+     *
+     * @return the orders
+     */
+    public Set<PlaydateMember> getMembers() {
+        return playdateMembers;
+    }
+
+    /**
+     * Sets members.
+     *
+     * @param members the members
+     */
+    public void setMember(Set<PackMember> members) {
+        this.playdateMembers = playdateMembers;
+    }
+
+    /**
+     * Add member.
+     *
+     * @param member the member
+     */
+    public void addMember(PlaydateMember member) {
+        dao = new GenericDao(PlaydateMember.class);
+        member.setPlaydate(this);
+        int id = dao.insert(member);
+        PlaydateMember newMember = (PlaydateMember) dao.getById(id);
+        playdateMembers.add(newMember);
+    }
+
+    /**
+     * Remove member.
+     *
+     * @param member the member
+     */
+    public boolean removeMember(PlaydateMember member) {
+
+        boolean removed = playdateMembers.remove(member);
+        member.setPlaydate(null);
+
+        return removed;
+
+    }
+
 }

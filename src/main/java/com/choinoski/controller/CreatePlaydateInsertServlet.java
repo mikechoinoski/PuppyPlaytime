@@ -40,7 +40,7 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
         LocalDate dateText     = LocalDate.parse(request.getParameter("playdateDate"),
                 ofPattern("yyyy-MM-dd"));
         LocalTime timeText    = LocalTime.parse(request.getParameter("playdateTime"));
-        String    privateText = request.getParameter("maximumSize");
+        String    privateText = request.getParameter("playdatePrivate");
         Boolean privatePlaydate = true;
 
         if (privateText.equals("No")) {
@@ -49,7 +49,9 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
 
         Playdate newPlaydate = new Playdate(locationText, dateText, timeText, "pending", privatePlaydate);
 
-        GenericDao dao         = new GenericDao(Playdate.class);
+        GenericDao dao       = new GenericDao(Playdate.class);
+
+        dao.insert(newPlaydate);
 
 
 

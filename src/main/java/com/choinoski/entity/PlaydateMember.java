@@ -50,7 +50,10 @@ public class PlaydateMember implements Serializable {
     @Column( name = "last_modified_date")
     private Date lastModifiedDate;
 
-
+    @ManyToOne
+    @JoinColumn(name = "playdate_nr",
+            foreignKey = @ForeignKey(name = "pack_foreign_key"))
+    private Playdate playdate;
 
 
 }
