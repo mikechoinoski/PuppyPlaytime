@@ -76,7 +76,6 @@
                                                     </label>
                                                 </c:otherwise>
                                             </c:choose>
-                                            </a>
                                         </td>
                                     </tr>
                                 </table>
@@ -110,7 +109,6 @@
                                                     </label>
                                                 </c:otherwise>
                                             </c:choose>
-                                            </a>
                                         </td>
                                     </tr>
                                 </table>

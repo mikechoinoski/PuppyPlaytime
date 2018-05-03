@@ -55,4 +55,12 @@ public class PlaydateMember implements Serializable {
             foreignKey = @ForeignKey(name = "playdate_member_playdate_playdate_nr_fk"))
     private Playdate playdate;
 
+    public PlaydateMember() {
+    }
+
+    public PlaydateMember(int playdateNumber, int packMemberNumber, String status) {
+        this.playdateNumber = playdateNumber;
+        this.packMemberNumber = packMemberNumber;
+        this.status = status;
+    }
 }

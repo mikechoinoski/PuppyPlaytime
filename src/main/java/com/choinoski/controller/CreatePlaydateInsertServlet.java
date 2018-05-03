@@ -3,6 +3,7 @@ package com.choinoski.controller;
 import com.choinoski.entity.Pack;
 import com.choinoski.entity.PackMember;
 import com.choinoski.entity.Playdate;
+import com.choinoski.entity.PlaydateMember;
 import com.choinoski.persistence.GenericDao;
 import com.choinoski.persistence.LoggedInPack;
 import com.choinoski.persistence.RequestParameters;
@@ -49,33 +50,29 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
             privatePlaydate = false;
         }
 
-        Pack currentPack = (Pack) session.getAttribute("userPack");
+        Pack     currentPack = (Pack) session.getAttribute("userPack");
         Playdate newPlaydate = new Playdate(currentPack.getPackNumber(), locationText, dateText, timeText, "pending", privatePlaydate);
 
         GenericDao dao       = new GenericDao(Playdate.class);
 
+        int newPlaydateNumber = dao.insert(newPlaydate);
+
+        LoggedInPack      retrievePack = new LoggedInPack();
+        RequestParameters myRequest    = new RequestParameters();
+
+        Map<String, String[]> checkBoxMappedValues = request.getParameterMap();
+        List<PackMember>      allSearchedMembers   = (List<PackMember>) session.getAttribute("searchMembers");
+
+        List<PackMember> playdateMembers = myRequest.getMembersFromCheckbox(allSearchedMembers,checkBoxMappedValues));
+
+        PlaydateMember newPlaydateMember = null;
 
 
-        dao.insert(newPlaydate);
+        for (PackMember currentMember : playdateMembers) {
+            newPlaydateMember = new PlaydateMember(newPlaydateNumber, currentMember.getPackMemberNumber(),"Pending");
+            newPlaydate.addMember(newPlaydateMember);
+        }
 
-
-
-
-
-        //
-        //LoggedInPack retrievePack   = new LoggedInPack();
-        //RequestParameters myRequest = new RequestParameters();
-
-        //Pack currentPack = (Pack) session.getAttribute("userPack");
-
-        //Map<String, String[]> checkBoxMappedValues = request.getParameterMap();
-        //List<PackMember>      allSearchedMembers   = (List<PackMember>) session.getAttribute("searchMembers");
-
-        //session.setAttribute("playdateMembers",
-        //        myRequest.getMembersFromCheckbox(allSearchedMembers,checkBoxMappedValues));
-
-
-        //privatePlaydate
         String url = "/jsp/Playdate.jsp";
 
         RequestDispatcher dispatcher =
