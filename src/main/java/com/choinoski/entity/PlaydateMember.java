@@ -32,9 +32,6 @@ public class PlaydateMember implements Serializable {
     @Column( name = "playdate_member_nr")
     private int packdateMemberNumber;
 
-    @Column( name = "playdate_nr")
-    private int playdateNumber;
-
     @Column( name = "pack_member_nr")
     private int packMemberNumber;
 
@@ -58,8 +55,7 @@ public class PlaydateMember implements Serializable {
     public PlaydateMember() {
     }
 
-    public PlaydateMember(int playdateNumber, int packMemberNumber, String status) {
-        this.playdateNumber = playdateNumber;
+    public PlaydateMember(int packMemberNumber, String status) {
         this.packMemberNumber = packMemberNumber;
         this.status = status;
     }

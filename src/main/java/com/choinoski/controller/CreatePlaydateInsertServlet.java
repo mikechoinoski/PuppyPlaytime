@@ -7,7 +7,6 @@ import com.choinoski.entity.PlaydateMember;
 import com.choinoski.persistence.GenericDao;
 import com.choinoski.persistence.LoggedInPack;
 import com.choinoski.persistence.RequestParameters;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
 import java.time.LocalDate;
@@ -63,13 +61,13 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
         Map<String, String[]> checkBoxMappedValues = request.getParameterMap();
         List<PackMember>      allSearchedMembers   = (List<PackMember>) session.getAttribute("searchMembers");
 
-        List<PackMember> playdateMembers = myRequest.getMembersFromCheckbox(allSearchedMembers,checkBoxMappedValues));
+        List<PackMember> playdateMembers = myRequest.getMembersFromCheckbox(allSearchedMembers,checkBoxMappedValues,
+                "memberCheckBox");
 
         PlaydateMember newPlaydateMember = null;
 
-
         for (PackMember currentMember : playdateMembers) {
-            newPlaydateMember = new PlaydateMember(newPlaydateNumber, currentMember.getPackMemberNumber(),"Pending");
+            newPlaydateMember = new PlaydateMember(currentMember.getPackMemberNumber(),"Pending");
             newPlaydate.addMember(newPlaydateMember);
         }
 

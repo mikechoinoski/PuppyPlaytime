@@ -209,3 +209,17 @@
 [DEBUG] 2018-05-02 20:59:24.141 [http-nio-8080-exec-3] GenericDao - Selecting all rows from a table
 [DEBUG] 2018-05-02 20:59:48.459 [http-nio-8080-exec-5] GenericDao - Searching for user with packName = user
 [DEBUG] 2018-05-02 21:00:20.476 [http-nio-8080-exec-8] GenericDao - Inserting into com.choinoski.entity.Playdate
+[DEBUG] 2018-05-02 21:38:20.474 [http-nio-8080-exec-1] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-05-02 21:38:40.369 [http-nio-8080-exec-9] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-02 21:39:05.842 [http-nio-8080-exec-1] GenericDao - Inserting into com.choinoski.entity.Playdate
+[DEBUG] 2018-05-02 21:53:15.639 [http-nio-8080-exec-5] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-05-02 21:53:30.646 [http-nio-8080-exec-1] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-02 21:54:07.261 [http-nio-8080-exec-5] GenericDao - Inserting into com.choinoski.entity.Playdate
+[DEBUG] 2018-05-02 21:54:07.469 [http-nio-8080-exec-5] GenericDao - Inserting into com.choinoski.entity.PlaydateMember
+[DEBUG] 2018-05-02 21:54:07.509 [http-nio-8080-exec-5] GenericDao - Selecting rows by 1
+[DEBUG] 2018-05-02 21:54:07.543 [http-nio-8080-exec-5] GenericDao - Inserting into com.choinoski.entity.PlaydateMember
+[DEBUG] 2018-05-02 21:54:07.575 [http-nio-8080-exec-5] GenericDao - Selecting rows by 2
+[DEBUG] 2018-05-02 21:54:07.595 [http-nio-8080-exec-5] GenericDao - Inserting into com.choinoski.entity.PlaydateMember
+[DEBUG] 2018-05-02 21:54:07.632 [http-nio-8080-exec-5] GenericDao - Selecting rows by 3
+[DEBUG] 2018-05-02 21:54:07.647 [http-nio-8080-exec-5] GenericDao - Inserting into com.choinoski.entity.PlaydateMember
+[DEBUG] 2018-05-02 21:54:07.674 [http-nio-8080-exec-5] GenericDao - Selecting rows by 4

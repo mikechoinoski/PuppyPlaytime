@@ -8,17 +8,22 @@ import java.util.Map;
 
 public class RequestParameters {
 
-    public List<PackMember> getMembersFromCheckbox(List<PackMember> members, Map<String, String[]> selectedMembers) {
+    public List<PackMember> getMembersFromCheckbox(List<PackMember> members, Map<String, String[]> selectedMembers,
+                                                   String checkboxName) {
 
         List<PackMember> comparedMembers = new ArrayList<PackMember>();
 
         for (Map.Entry<String, String[]> entry : selectedMembers.entrySet()) {
 
-            String keyStr = entry.getKey().replace("memberCheckBox", "");
-            //memberNumbers.add(Integer.parseInt(keyStr));
-            for (PackMember currentMember : members) {
-                if (Integer.parseInt(keyStr) == currentMember.getPackMemberNumber()) {
-                    comparedMembers.add(currentMember);
+            Boolean isCheckBox = entry.getKey().contains(checkboxName);
+
+            if (isCheckBox) {
+                String keyStr = entry.getKey().replace(checkboxName, "");
+                //memberNumbers.add(Integer.parseInt(keyStr));
+                for (PackMember currentMember : members) {
+                    if (Integer.parseInt(keyStr) == currentMember.getPackMemberNumber()) {
+                        comparedMembers.add(currentMember);
+                    }
                 }
             }
             //String[] value = (String[])entry.getValue();

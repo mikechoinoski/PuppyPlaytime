@@ -38,7 +38,8 @@ public class CreatePlaydateFormServlet extends HttpServlet {
         List<PackMember> allSearchedMembers = (List<PackMember>) session.getAttribute("searchMembers");
 
         session.setAttribute("membersForPlaydate",
-                myRequest.getMembersFromCheckbox(allSearchedMembers,checkBoxMappedValues));
+                myRequest.getMembersFromCheckbox(allSearchedMembers,checkBoxMappedValues,
+                        "memberCheckBox"));
 
         String url = "/jsp/createNewPlaydate.jsp";
 
