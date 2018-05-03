@@ -1224,7 +1224,7 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="238" name="public_fl">
+    <column id="295" parent="238" name="private_fl">
       <Position>7</Position>
       <DataType>tinyint(1)|0</DataType>
       <ColumnKind>normal</ColumnKind>

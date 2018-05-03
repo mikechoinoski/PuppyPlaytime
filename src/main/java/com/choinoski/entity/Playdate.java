@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
@@ -40,6 +41,10 @@ public class Playdate implements Serializable {
     private LocalTime time;
 
     private String status;
+
+    @Type(type = "org.hibernate.type.NumericBooleanType")
+    @Column( name = "private_fl", columnDefinition = "TINYINT")
+    private Boolean privatePlaydate;
 
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)

@@ -1,11 +1,26 @@
 package com.choinoski.controller;
 
+import com.choinoski.entity.Pack;
+import com.choinoski.entity.PackMember;
+import com.choinoski.entity.Playdate;
+import com.choinoski.persistence.GenericDao;
+import com.choinoski.persistence.LoggedInPack;
+import com.choinoski.persistence.RequestParameters;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
+import java.util.Map;
+import java.time.LocalDate;
+
+import static java.time.format.DateTimeFormatter.ofPattern;
 
 public class CreatePlaydateInsertServlet extends HttpServlet {
 
@@ -18,20 +33,35 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
      *@exception ServletException if there is a Servlet failure
      *@exception IOException if there is an IO failure
      */
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        String    locationText = request.getParameter("playdateLocation");
+        LocalDate dateText     = LocalDate.parse(request.getParameter("playdateDate"),
+                ofPattern("yyyy-MM-dd"));
 
+        String    timeText   = request.getParameter("playdateTime");
+        LocalTime timeParsed = LocalTime.parse(timeText);
 
+        String     privateText = request.getParameter("maximumSize");
 
+        GenericDao dao         = new GenericDao(PackMember.class);
 
+        HttpSession session         = request.getSession();
+        LoggedInPack retrievePack   = new LoggedInPack();
+        RequestParameters myRequest = new RequestParameters();
 
+        Pack currentPack = (Pack) session.getAttribute("userPack");
 
+        Map<String, String[]> checkBoxMappedValues = request.getParameterMap();
+        List<PackMember>      allSearchedMembers   = (List<PackMember>) session.getAttribute("searchMembers");
 
+        session.setAttribute("playdateMembers",
+                myRequest.getMembersFromCheckbox(allSearchedMembers,checkBoxMappedValues));
 
-
-        
-        String url = "/jsp/createNewPlaydate.jsp";
+        Playdate newPlaydate = new Playdate();
+        //privatePlaydate
+        String url = "/jsp/Playdate.jsp";
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);

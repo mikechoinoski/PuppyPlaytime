@@ -15,20 +15,27 @@
                     <td align="center">
                         <table>
                             <tr>
-                                <td>Location:</td>
-                                <td><input type="text" name="playdateLocation"></td>
+                                <th align="left">Location</th>
+                                <td colspan="2"><input type="text" name="playdateLocation"></td>
                             </tr>
                             <tr>
-                                <td>Date:</td>
-                                <td><input type="date" name="playdateDate"></td>
+                                <th align="left">Date</th>
+                                <td colspan="2"><input type="date" name="playdateDate"></td>
                             </tr>
                             <tr>
-                                <td>Time:</td>
-                                <td><input type="time" name="playdateTime"></td>
+                                <th align="left">Time</th>
+                                <td colspan="2"><input type="time" name="playdateTime"></td>
                             </tr>
                             <tr>
-                                <td>Access</td>
-                                <td><input type="text" name="playdatePublic"></td>
+                                <th align="left">Private</th>
+                                <td align="center">
+                                    <label for="playdatePrivateYes">Yes</label>
+                                    <input type="radio" id="playdatePrivateYes" name="playdatePrivate" value="yes"/>
+                                </td>
+                                <td align="center">
+                                    <label for="playdatePrivateNo">No</label>
+                                    <input type="radio" id="playdatePrivateNo" name="playdatePrivate" value="no" />
+                                </td>
                             </tr>
                         </table>
                     </td>
