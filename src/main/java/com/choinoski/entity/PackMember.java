@@ -1,18 +1,21 @@
 package com.choinoski.entity;
 
-import com.choinoski.persistence.GenericDao;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.*;
 
 import javax.persistence.*;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ForeignKey;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * The type PackMember.
@@ -22,7 +25,7 @@ import java.util.Objects;
 @Setter
 @Entity(name = "PackMember")
 @Table(name = "pack_member")
-public class PackMember{
+public class PackMember implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
@@ -59,6 +62,10 @@ public class PackMember{
     @JoinColumn(name = "pack_nr",
             foreignKey = @ForeignKey(name = "pack_foreign_key"))
     private Pack pack;
+
+    @OneToMany(mappedBy = "packMember", cascade = CascadeType.ALL,
+            orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<PlaydateMember> playdateMembers = new HashSet<PlaydateMember>();
 
     /**
      * Instantiates a new Pack Member.

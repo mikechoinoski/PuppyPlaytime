@@ -179,27 +179,10 @@ table.searchtable td{
     left:0;
 }
 
-.playmateBackground {
-    opacity: 0.5;
-    background-color: rgba(235, 235, 236, 0.63);
-    background-image: url(../images/playmateBackground.jpg);
-    filter: alpha(opacity=50);
+.playmateImage {
+    width: 100px;
+    height: 100px;
 }
-
-.playmateLink{
-    position:absolute;
-    width:100%;
-    height:100%;
-    top:0;
-    left: 0;
-
-    z-index: 1;
-
-/* fixes overlap error in IE7/8,
-   make sure you have an empty gif */
-    background-image: url(../images/playmateBackground.jpg);
-}
-
 
 .button {
     background-color: rgba(51, 175, 51, 0.67);

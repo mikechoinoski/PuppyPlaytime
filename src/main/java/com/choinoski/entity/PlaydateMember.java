@@ -30,10 +30,7 @@ public class PlaydateMember implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
     @Column( name = "playdate_member_nr")
-    private int packdateMemberNumber;
-
-    @Column( name = "pack_member_nr")
-    private int packMemberNumber;
+    private int playdateMemberNumber;
 
     private String status;
 
@@ -52,11 +49,16 @@ public class PlaydateMember implements Serializable {
             foreignKey = @ForeignKey(name = "playdate_member_playdate_playdate_nr_fk"))
     private Playdate playdate;
 
+    @ManyToOne
+    @JoinColumn(name = "pack_member_nr",
+            foreignKey = @ForeignKey(name = "playdate_member_pack_member_pack_member_nr_fk"))
+    private PackMember packMember;
+
     public PlaydateMember() {
     }
 
-    public PlaydateMember(int packMemberNumber, String status) {
-        this.packMemberNumber = packMemberNumber;
+    public PlaydateMember(String status, PackMember packMember) {
         this.status = status;
+        this.packMember = packMember;
     }
 }

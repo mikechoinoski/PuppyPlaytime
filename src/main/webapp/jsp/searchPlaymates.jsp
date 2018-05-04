@@ -198,7 +198,6 @@
                                         <label for="member${singleMember.packMemberNumber}" style="background:url('./uploadedPhotos/${singleMember.pictureFilename}') no-repeat; background-size: cover; background-position: center;"></label>
                                     </c:otherwise>
                                 </c:choose>
-                                </a>
                             </td>
                             <td width="40" align="center">
                                 <c:if test="${singleMember.sex.toString() == 'M'}">

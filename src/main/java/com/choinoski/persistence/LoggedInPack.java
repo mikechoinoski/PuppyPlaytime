@@ -9,15 +9,17 @@ public class LoggedInPack {
 
     public Pack loggedInPackInfo(HttpServletRequest request) {
 
-        GenericDao dao = new GenericDao(Pack.class);
-        Pack   userPack = null;
+        GenericDao dao      = new GenericDao(Pack.class);
+        Pack       userPack = null;
 
-        String packName = request.getUserPrincipal().getName();
+        if (request.getUserPrincipal() != null) {
+            String packName = request.getUserPrincipal().getName();
 
-        List<Pack> packs = dao.getByPropertyEqual("packName", packName);
+            List<Pack> packs = dao.getByPropertyEqual("packName", packName);
 
-        if (packs.size() == 1) {
-            userPack = packs.get(0);
+            if (packs.size() == 1) {
+                userPack = packs.get(0);
+            }
         }
 
         return userPack;

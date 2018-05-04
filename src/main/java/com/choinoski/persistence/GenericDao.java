@@ -146,6 +146,24 @@ public class GenericDao<T> {
 
     }
 
+    /**
+     *
+     *
+     */
+    public List<T> getByPropertyGreaterDate(String propertyName, LocalDate value) {
+
+        logger.debug("Searching for user with {} = {}",  propertyName, value);
+
+        querySetup();
+
+        query.select(root).where(builder.greaterThan(root.get(propertyName), value));
+        List<T> entities = session.createQuery( query ).getResultList();
+
+        session.close();
+        return entities;
+
+    }
+
     public List<T> getByPropertyEqual(String propertyName, boolean value) {
 
         logger.debug("Searching for user with {} = {}",  propertyName, value);

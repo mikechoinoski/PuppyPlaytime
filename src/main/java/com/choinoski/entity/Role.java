@@ -25,7 +25,7 @@ import lombok.Data;
 @Setter
 @Entity(name = "Role")
 @Table(name = "role")
-public class Role {
+public class Role implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
