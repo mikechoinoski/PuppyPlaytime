@@ -18,14 +18,14 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * A class to represent a pack.
+ * A class to represent a playdate.
  *
  * @author mchoinoski
  */
 @Getter
 @Setter
 @Entity(name = "Playdate")
-@Table(name = "playdate") // case sensitive!
+@Table(name = "playdate")
 public class Playdate implements Serializable {
 
     @Id
@@ -67,10 +67,23 @@ public class Playdate implements Serializable {
     @Transient
     private GenericDao dao = null;
 
+    /**
+     * Instantiates a new Playdate.
+     */
     public Playdate() {
 
     }
 
+    /**
+     * Instantiates a new Playdate.
+     *
+     * @param organizingPackNumber the organizing pack number
+     * @param playdateLocation     the playdate location
+     * @param date                 the date
+     * @param time                 the time
+     * @param status               the status
+     * @param privatePlaydate      the private playdate
+     */
     public Playdate(int organizingPackNumber, String playdateLocation, LocalDate date, LocalTime time,
                     String status, Boolean privatePlaydate) {
         this.organizingPackNumber = organizingPackNumber;
@@ -100,9 +113,9 @@ public class Playdate implements Serializable {
     }
 
     /**
-     * Add member.
+     * Add a member.
      *
-     * @param member the member
+     * @param member the member to add
      */
     public void addMember(PlaydateMember member) {
         dao = new GenericDao(PlaydateMember.class);
@@ -113,9 +126,10 @@ public class Playdate implements Serializable {
     }
 
     /**
-     * Remove member.
+     * Remove a member.
      *
-     * @param member the member
+     * @param member the member to remove
+     * @return if the removal of a member is successful
      */
     public boolean removeMember(PlaydateMember member) {
 

@@ -19,7 +19,8 @@ import javax.persistence.*;
  *
  * @author mchoinoski
  */
-
+@Getter
+@Setter
 @Entity(name = "Pack")
 @Table(name = "pack")
 public class Pack implements Serializable {
@@ -60,10 +61,24 @@ public class Pack implements Serializable {
     @Transient
     private GenericDao dao = null;
 
+    /**
+     * Instantiates a new Pack.
+     */
     public Pack() {
 
     }
 
+    /**
+     * Instantiates a new Pack.
+     *
+     * @param packName     the pack name
+     * @param firstName    the first name
+     * @param lastName     the last name
+     * @param address      the address
+     * @param emailAddress the email address
+     * @param phoneNumber  the phone number
+     * @param password     the password
+     */
     public Pack(String packName, String firstName, String lastName, String address, String emailAddress,
                 String phoneNumber, String password) {
         this.packName = packName;
@@ -72,70 +87,6 @@ public class Pack implements Serializable {
         this.address = address;
         this.emailAddress = emailAddress;
         this.phoneNumber = phoneNumber;
-        this.password = password;
-    }
-
-    public int getPackNumber() {
-        return packNumber;
-    }
-
-    public void setPackNumber(int packNumber) {
-        this.packNumber = packNumber;
-    }
-
-    public String getPackName() {
-        return packName;
-    }
-
-    public void setPackName(String packName) {
-        this.packName = packName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getEmailAddress() {
-        return emailAddress;
-    }
-
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
         this.password = password;
     }
 
@@ -158,9 +109,9 @@ public class Pack implements Serializable {
     }
 
     /**
-     * Add member.
+     * Add a member.
      *
-     * @param member the member
+     * @param member the member to add
      */
     public void addMember(PackMember member) {
         dao = new GenericDao(PackMember.class);
@@ -171,9 +122,10 @@ public class Pack implements Serializable {
     }
 
     /**
-     * Remove member.
+     * Remove a member.
      *
-     * @param member the member
+     * @param member the member to remove
+     * @return the boolean
      */
     public boolean removeMember(PackMember member) {
 
@@ -195,10 +147,20 @@ public class Pack implements Serializable {
 
     }
 
+    /**
+     * Gets roles.
+     *
+     * @return the roles
+     */
     public Set<Role> getRoles() {
         return roles;
     }
 
+    /**
+     * Sets roles.
+     *
+     * @param roles the roles
+     */
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
@@ -222,6 +184,7 @@ public class Pack implements Serializable {
      * Remove a role.
      *
      * @param role the role
+     * @return the boolean
      */
     public boolean removeRole(Role role) {
 

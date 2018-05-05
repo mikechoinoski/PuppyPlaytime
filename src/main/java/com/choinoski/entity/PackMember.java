@@ -17,9 +17,8 @@ import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 /**
- * The type PackMember.
+ * A class to represent a pack member.
  */
-
 @Getter
 @Setter
 @Entity(name = "PackMember")
@@ -75,6 +74,11 @@ public class PackMember implements Serializable {
     public PackMember() {
     }
 
+    /**
+     * Instantiates a new Pack member.
+     *
+     * @param memberToCopy the member to copy
+     */
     public PackMember(PackMember memberToCopy) {
 
         this.packMemberNumber = memberToCopy.getPackMemberNumber();
@@ -91,6 +95,17 @@ public class PackMember implements Serializable {
 
     }
 
+    /**
+     * Instantiates a new Pack member.
+     *
+     * @param name            the name
+     * @param weight          the weight
+     * @param breed           the breed
+     * @param sex             the sex
+     * @param dateOfBirth     the date of birth
+     * @param intact          the intact
+     * @param pictureFilename the picture filename
+     */
     public PackMember(String name, int weight, String breed, char sex, LocalDate dateOfBirth, boolean intact,
                       String pictureFilename) {
 
@@ -104,6 +119,17 @@ public class PackMember implements Serializable {
 
     }
 
+    /**
+     * Instantiates a new Pack member.
+     *
+     * @param name            the name
+     * @param weight          the weight
+     * @param breed           the breed
+     * @param sex             the sex
+     * @param dateOfBirth     the date of birth
+     * @param intact          the intact
+     * @param pictureFilename the picture filename
+     */
     public PackMember(String name, String weight, String breed, char sex, LocalDate dateOfBirth, boolean intact,
                       String pictureFilename) {
 
@@ -117,10 +143,20 @@ public class PackMember implements Serializable {
 
     }
 
+    /**
+     * Sets weight.
+     *
+     * @param weight the weight
+     */
     public void setWeight(String weight) {
         this.weight = Integer.parseInt(weight);
     }
 
+    /**
+     * Sets weight.
+     *
+     * @param weight the weight
+     */
     public void setWeight(int weight) {
         this.weight = weight;
     }
@@ -150,7 +186,17 @@ public class PackMember implements Serializable {
     }
 
 
-
+    /**
+     * This method checks to see if any updates are needed and makes the updates if they are needed.
+     *
+     * @param name     the name
+     * @param birthday the birthday
+     * @param weight   the weight
+     * @param breed    the breed
+     * @param gender   the gender
+     * @param intact   the intact
+     * @return the boolean
+     */
     public boolean updatePackMember(String name, String birthday, String weight, String breed,
                                        String gender, String intact) {
 
@@ -197,9 +243,9 @@ public class PackMember implements Serializable {
 
 
     /**
-     * Gets age.
+     * Gets the age of the pack member.
      *
-     * @return the age
+     * @return the age of the pack member
      */
     public int getAge() {
         return (int) ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
