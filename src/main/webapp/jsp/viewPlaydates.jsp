@@ -10,8 +10,8 @@
     <br><br>
 
     <c:forEach var="singlePlaydate" items="${currentPlaydates}">
-    <div class="memberPlain">
-        <table border="1">
+    <div class="blackborder">
+        <table cellspacing="10">
             <tr align="center">
                 <td><b>Location:</b> ${fn:trim(singlePlaydate.playdateLocation)}</td>
                 <td><b>Date: </b>${fn:trim(singlePlaydate.date)}</td>

@@ -8,6 +8,7 @@ import com.choinoski.persistence.GenericDao;
 import com.choinoski.persistence.LoggedInPack;
 import com.choinoski.persistence.RequestParameters;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,14 +19,24 @@ import java.time.LocalTime;
 import java.util.List;
 import java.util.Map;
 import java.time.LocalDate;
+import java.util.Properties;
 
 import static java.time.format.DateTimeFormatter.ofPattern;
 
+/**
+ *  This servlet is used to create a new playdate. A playdate and the members associated with it are
+ *  inserted into the database.
+ *
+ * @author mrchoinoski
+ */
 public class CreatePlaydateInsertServlet extends HttpServlet {
+
+    private Properties properties;
 
     /**
      *  Handles HTTP GET requests. Sets data for the HTTP request
-     *  data. Forwards data to a JSP to display.
+     *  data. A new playdate is created inserting the playdate and the members associated wtih the
+     *  playdate. A redirect is done to the playdates page.
      *
      *@param request the HttpServletRequest object
      *@param response the HttpServletResponse object
@@ -35,40 +46,53 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        HttpSession session         = request.getSession();
+        GenericDao        dao          = new GenericDao(Playdate.class);
+        LoggedInPack      retrievePack = new LoggedInPack();
+        RequestParameters myRequest    = new RequestParameters();
+
+        LocalDate dateText    = null;
+        Playdate newPlaydate  = null;
+        int newPlaydateNumber = 0;
+
+        ServletContext servletContext = getServletContext();
+        HttpSession    session        = request.getSession();
+
+        Pack     currentPack = (Pack) session.getAttribute("userPack");
+
+        LocalTime timeText        = LocalTime.parse(request.getParameter("playdateTime"));
+        String    privateText     = request.getParameter("playdatePrivate");
+        Boolean   privatePlaydate = true;
 
         String    locationText = request.getParameter("playdateLocation");
-        LocalDate dateText     = LocalDate.parse(request.getParameter("playdateDate"),
-                ofPattern("yyyy-MM-dd"));
-        LocalTime timeText    = LocalTime.parse(request.getParameter("playdateTime"));
-        String    privateText = request.getParameter("playdatePrivate");
-        Boolean privatePlaydate = true;
+
+        properties = (Properties) servletContext.getAttribute("puppyPlaytimeProperties");
+
+        dateText   = LocalDate.parse(request.getParameter("playdateDate"),
+                ofPattern(properties.getProperty("form.date.format")));
 
         if (privateText.equals("No")) {
             privatePlaydate = false;
         }
 
-        Pack     currentPack = (Pack) session.getAttribute("userPack");
-        Playdate newPlaydate = new Playdate(currentPack.getPackNumber(), locationText, dateText, timeText, "pending", privatePlaydate);
+        newPlaydate = new Playdate(currentPack.getPackNumber(), locationText, dateText, timeText, "pending",
+                privatePlaydate);
 
-        GenericDao dao       = new GenericDao(Playdate.class);
+        newPlaydateNumber = dao.insert(newPlaydate);
 
-        int newPlaydateNumber = dao.insert(newPlaydate);
+        if (newPlaydateNumber > 0) {
+            Map<String, String[]> checkBoxMappedValues = request.getParameterMap();
+            List<PackMember>      allSearchedMembers   = (List<PackMember>) session.getAttribute("searchMembers");
 
-        LoggedInPack      retrievePack = new LoggedInPack();
-        RequestParameters myRequest    = new RequestParameters();
+            List<PackMember> playdateMembers = myRequest.getMembersFromCheckbox(allSearchedMembers,checkBoxMappedValues,
+                    "memberCheckBox");
 
-        Map<String, String[]> checkBoxMappedValues = request.getParameterMap();
-        List<PackMember>      allSearchedMembers   = (List<PackMember>) session.getAttribute("searchMembers");
+            PlaydateMember newPlaydateMember = null;
 
-        List<PackMember> playdateMembers = myRequest.getMembersFromCheckbox(allSearchedMembers,checkBoxMappedValues,
-                "memberCheckBox");
-
-        PlaydateMember newPlaydateMember = null;
-
-        for (PackMember currentMember : playdateMembers) {
-            newPlaydateMember = new PlaydateMember("Pending", currentMember);
-            newPlaydate.addMember(newPlaydateMember);
+            for (PackMember currentMember : playdateMembers) {
+                newPlaydateMember = new PlaydateMember(properties.getProperty("playdate.status.pending"),
+                        currentMember);
+                newPlaydate.addMember(newPlaydateMember);
+            }
         }
 
         response.sendRedirect("Playdates");

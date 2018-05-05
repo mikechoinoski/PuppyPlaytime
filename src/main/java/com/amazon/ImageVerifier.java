@@ -31,6 +31,9 @@ public class ImageVerifier {
     private Properties        properties;
     private AmazonRekognition rekognitionClient;
 
+    public ImageVerifier() {
+    }
+
     public ImageVerifier(Properties properties) {
         this.properties = properties;
     }

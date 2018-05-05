@@ -19,7 +19,6 @@ import java.io.IOException;
  *  is successully create, the user is logged into the yourPack page.
  *
  * @author mrchoinoski
- * @since  November 19, 2017
  */
 @WebServlet(
         name = "insertNewPack",

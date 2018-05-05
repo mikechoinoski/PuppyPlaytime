@@ -9,7 +9,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- *  This servlet logs the user out of the application
+ *  This servlet logs the user out of the application.
  *
  * @author mrchoinoski
  */
@@ -37,7 +37,6 @@ public class InvalidateUser extends HttpServlet {
         session.invalidate();
 
         response.sendRedirect("yourPack");
-
 
     }
 

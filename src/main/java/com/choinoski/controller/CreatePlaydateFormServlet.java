@@ -13,11 +13,17 @@ import java.util.*;
 
 import static jdk.nashorn.internal.objects.NativeError.getFileName;
 
+/**
+ *  This servlet displays the page for creating a new playdate. User information is retrieved to
+ *  display.
+ *
+ * @author mrchoinoski
+ */
 public class CreatePlaydateFormServlet extends HttpServlet {
 
     /**
      * Handles HTTP GET requests. Sets data for the HTTP request
-     * data. Forwards data to a JSP to display.
+     * data. Forwards data to a JSP for creating a new playdate.
      *
      * @param request  the HttpServletRequest object
      * @param response the HttpServletResponse object
