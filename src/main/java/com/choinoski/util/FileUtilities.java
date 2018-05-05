@@ -75,4 +75,17 @@ public class FileUtilities {
 
     }
 
+    public void uploadfile(String fileName) {
+
+        File file = new File(fileName);
+
+        if(file.delete()) {
+            logger.debug("File was deleted successfully: " + fileName);
+        }
+        else
+        {
+            logger.debug("File was not deleted: " + fileName);
+        }
+    }
+
 }
