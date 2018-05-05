@@ -1,3 +1,4 @@
+use puppy_playtime_test;
 delete from role;
 delete from pack_member;
 delete from pack;

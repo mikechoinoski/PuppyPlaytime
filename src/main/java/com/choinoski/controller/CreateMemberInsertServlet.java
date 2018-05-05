@@ -1,24 +1,19 @@
 package com.choinoski.controller;
 
 import com.amazon.ImageVerifier;
-import com.amazon.VerifyImage;
 import com.choinoski.entity.Pack;
-
-import java.awt.image.BufferedImage;
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Collection;
-import javax.imageio.ImageIO;
+import java.util.Properties;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
-
 import com.choinoski.entity.PackMember;
 import com.choinoski.util.FileUtilities;
 import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.io.IOUtils;
 
 
 /**
@@ -43,6 +38,8 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
     public static final String PERIOD = ".";
 
+    private Properties properties;
+
     /**
      *  Handles HTTP GET requests. Sets data for the HTTP request
      *  data. Forwards data to a JSP to display.
@@ -60,6 +57,8 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
         ServletContext servletContext = getServletContext();
         HttpSession    session        = request.getSession();
+        properties = (Properties) servletContext.getAttribute("puppyPlaytimeProperties");
+
 
         boolean noErrorsFound = true;
         String  newFileName   = null;
@@ -141,7 +140,7 @@ public class CreateMemberInsertServlet extends HttpServlet {
         String targetFilename        = "";
         String memberPictureFilename = "";
 
-        ImageVerifier verifier       = new ImageVerifier();
+        ImageVerifier verifier       = new ImageVerifier(properties);
         FileUtilities convertToBytes = new FileUtilities();
         ByteBuffer    imageBytes     = null;
         Boolean       isImageOfDog   = false;

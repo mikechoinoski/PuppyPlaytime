@@ -9,18 +9,37 @@ import com.amazonaws.services.rekognition.AmazonRekognition;
 import com.amazonaws.services.rekognition.AmazonRekognitionClientBuilder;
 import com.amazonaws.services.rekognition.model.*;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.Part;
 import java.nio.ByteBuffer;
 import java.util.List;
+import java.util.Properties;
+
+/**
+ * This class verifies that an image is what it should be. AWS Rekognition is used in order to verify the
+ * image.
+ *
+ * @author mchoinoski
+ */
 
 public class ImageVerifier {
 
-    private String bucket = "puppyplaytimebucket";
+    private Properties        properties;
+    private String            bucket;
     private AmazonRekognition rekognitionClient;
+    private List<Label>       labels;
 
-    List<Label> labels = null;
+    public ImageVerifier(Properties properties) {
+        this.properties = properties;
+    }
 
+    /**
+     * This method gets the users credentials from their profile. The default profile is used for AWS. A
+     * amazon rekognition client is built with region and credential information.
+     */
     public void setup() {
+
+        bucket = properties.getProperty("aws.bucket");
 
         AWSCredentials credentials;
 
@@ -44,7 +63,9 @@ public class ImageVerifier {
 
     }
 
-    //label.getConfidence()
+    /**
+     * This method searches though the list of labels and returns if the label specified is found.
+     */
     public boolean searchForLabel(String labelRequired) {
         for (Label label: labels) {
             if (label.getName().equals(labelRequired)) {
@@ -53,31 +74,6 @@ public class ImageVerifier {
         }
         return false;
     }
-
-    public void retrieveLabelsS3(String photo, float percent) throws Exception {
-
-        setup();
-
-        DetectLabelsRequest request = new DetectLabelsRequest()
-                .withImage(new Image().withS3Object(new S3Object().withName(photo).withBucket(bucket)))
-                .withMaxLabels(20)
-                .withMinConfidence(percent);
-
-        try {
-
-            DetectLabelsResult result = rekognitionClient.detectLabels(request);
-            labels = result.getLabels();
-
-            for (Label label: labels) {
-                System.out.println(label.getName() + ": " + label.getConfidence().toString());
-            }
-        } catch(AmazonRekognitionException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-
 
     public boolean retrieveLabelsLocal(ByteBuffer imageBytes, float percent, String labelToCheck) {
 
