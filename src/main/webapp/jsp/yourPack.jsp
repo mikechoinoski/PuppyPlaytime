@@ -120,6 +120,9 @@
 
     <br><br>
     <h3><a href="createNewMember">Add a New Pack Member</a></h3>
+    <br>
+    <br>
+    <h2><a href="logOut"><font color="darkred">Log Out</font></a></h2>
 
 
 </center>

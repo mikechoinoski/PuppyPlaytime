@@ -47,7 +47,6 @@ public class ImageVerifier {
             credentials = new ProfileCredentialsProvider().getCredentials();
         } catch(Exception e) {
             logger.error("Error occurred when retrieving AWS credentials:" + e);
-
         }
 
         rekognitionClient = AmazonRekognitionClientBuilder
@@ -86,7 +85,7 @@ public class ImageVerifier {
             labelFound = searchForLabel(labels, labelToCheck);
 
         } catch(AmazonRekognitionException e) {
-            e.printStackTrace();
+            logger.error("Error occurred when retrieving labels from AWS Rekognition: " + e);
         }
 
         return labelFound;

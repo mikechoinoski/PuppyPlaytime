@@ -59,36 +59,14 @@ public class CreatePackInsertServlet extends HttpServlet {
 
         int id = dao.insert(newPack);
 
-        Pack insertedPack = (Pack) dao.getById(id);
+        if (id > 0) {
+            Pack insertedPack = (Pack) dao.getById(id);
+            insertedPack.addRole("user");
+            session.setAttribute("packId", id);
+            request.login(packName, packPassword);
+        }
 
-        processRole(insertedPack);
-
-        session.setAttribute("packId", id);
-
-        request.login(packName, packPassword);
-
-        //String url = "/YourPack";
         response.sendRedirect("yourPack");
-        //RequestDispatcher dispatcher =
-        //        getServletContext().getRequestDispatcher(url);
-        //dispatcher.forward(request, response);
-
-        //HttpServletResponse.sendRedirect("/YourPack");
-
-    }
-
-    public void processRole(Pack packForRole) {
-
-        Role newPackRole  = null;
-
-        dao = new GenericDao(Role.class);
-
-        newPackRole = new Role("user");
-
-        //id = dao.insert(newPackRole);
-        //insertedRole = (Role) dao.getById(id);
-
-        packForRole.addRole(newPackRole);
 
     }
 

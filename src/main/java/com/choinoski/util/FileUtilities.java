@@ -1,17 +1,21 @@
 package com.choinoski.util;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import javax.servlet.http.Part;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 
 
 public class FileUtilities {
-    //private static final long serialVersionUID = 1L;
 
-    //private static final int MAX_MEMORY_SIZE = 1024 * 1024 * 2;
-    //private static final int MAX_REQUEST_SIZE = 1024 * 1024;
+    private final Logger logger = LogManager.getLogger(this.getClass());
+
+    public static final String PERIOD = ".";
 
     public FileUtilities() {
 
@@ -49,6 +53,26 @@ public class FileUtilities {
             }
         }
         return "";
+    }
+
+    /**
+     * Utility method to upload a file to a folder
+     */
+    public void uploadfile(String folderLocation, String fileName, String fileExtension, Part part) {
+
+        verifyFolderExists(folderLocation);
+
+        String filePath = folderLocation + File.separator + fileName + PERIOD +  fileExtension;
+        File targetFile = new File(filePath);
+        if (!targetFile.exists()) {
+            try {
+                part.write(filePath);
+            } catch (IOException e) {
+                logger.error("Error occurred while uploading a file: " + e);
+            }
+
+        }
+
     }
 
 }

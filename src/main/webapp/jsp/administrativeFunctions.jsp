@@ -36,5 +36,9 @@
             </table>
         </form>
 
+        <br>
+        <br>
+        <h2><a href="logOut"><font color="darkred">Log Out</font></a></h2>
+
     </center>
 <c:import url="/jsp/page_bottom.jsp" />

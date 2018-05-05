@@ -50,11 +50,11 @@
                 <th align="left">Intact</th>
                 <td align="center">
                     <label for="memberIntactYes">Yes</label>
-                    <input type="radio" id="memberIntactYes" name="memberIntact" value="yes"/>
+                    <input type="radio" id="memberIntactYes" name="memberIntact" value="Yes"/>
                 </td>
                 <td align="center">
                     <label for="memberIntactNo">No</label>
-                    <input type="radio" id="memberIntactNo" name="memberIntact" value="no" />
+                    <input type="radio" id="memberIntactNo" name="memberIntact" value="No" />
                 </td>
             </tr>
             <tr>

@@ -15,13 +15,15 @@ import com.choinoski.entity.PackMember;
 import com.choinoski.persistence.DataConverter;
 import com.choinoski.util.FileUtilities;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 /**
- *  This servlet sets HTTP request data and forwards it to a JSP
- *  to display data.
+ *  This servlet is for creating a new user. The user is forwarded to the yourPack page after new
+ *  member is created.
  *
- *  Sources used: https://www.journaldev.com/2122/servlet-3-file-upload-multipartconfig-part
+ *  Sources used as example: https://www.journaldev.com/2122/servlet-3-file-upload-multipartconfig-part
  *
  * @author mrchoinoski
  */
@@ -30,27 +32,24 @@ import org.apache.commons.io.FilenameUtils;
                  maxRequestSize=1024*1024*100)   	// 100 MB
 public class CreateMemberInsertServlet extends HttpServlet {
 
-    String sourceUploadFolder;
-    String targetUploadFolder;
-    Pack   userPack;
+    private final Logger logger = LogManager.getLogger(this.getClass());
 
-    String fileExtension;
+    private Pack userPack;
 
     public static final String PERIOD = ".";
 
     private Properties properties;
 
     /**
-     *  Handles HTTP GET requests. Sets data for the HTTP request
-     *  data. Forwards data to a JSP to display.
+     *  Handles HTTP POST request to create a new member. Information is verified and
+     *  a new member is created. Data is set in the HTTP request. Data is forwarded to
+     *  a JSP to display.
      *
      *@param request the HttpServletRequest object
      *@param response the HttpServletResponse object
      *@exception ServletException if there is a Servlet failure
      *@exception IOException if there is an IO failure
      */
-
-    //private static final String UPLOAD_DIR = "/uploaded_pictures";
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -59,27 +58,26 @@ public class CreateMemberInsertServlet extends HttpServlet {
         HttpSession    session        = request.getSession();
         properties = (Properties) servletContext.getAttribute("puppyPlaytimeProperties");
 
-
         boolean noErrorsFound = true;
         String  newFileName   = null;
 
         DataConverter dataConverter = new DataConverter();
 
-
         String generatedFilename;
+
+        String fileExtension;
+
+        String memberName = request.getParameter("memberName");
 
         userPack = (Pack) session.getAttribute("userPack");
 
-        sourceUploadFolder  = (String) session.getAttribute("imageDirectory");
-        targetUploadFolder = (String) session.getAttribute("imageDirectory2");
-
         String intactData = request.getParameter("memberIntact");
-        if (!(intactData.equals("yes") || intactData.equals("no"))) {
+        if (!(intactData.equals("Yes") || intactData.equals("No"))) {
             noErrorsFound =  false;
         }
 
         String genderData = request.getParameter("memberGender");
-        if (!(genderData.equals("male") || genderData.equals("female"))) {
+        if (!(genderData.equals("Male") || genderData.equals("Female"))) {
             noErrorsFound =  false;
         }
 
@@ -88,16 +86,10 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
         Collection<Part> headerParts = request.getParts();
 
-        generatedFilename = userPack.getPackName() + "_" + request.getParameter("memberName");
-
         try {
-            int returnCode = getFilesFromHeader(headerParts, generatedFilename);
-            if (returnCode == 1) {
-                newFileName = generatedFilename + PERIOD + fileExtension;
-            }
-
+            newFileName = getFilesFromHeader(headerParts, memberName);
         } catch (Exception e) {
-
+            logger.error("Error occurred while uploading a file: " + e);
         }
 
         if (noErrorsFound) {
@@ -107,7 +99,7 @@ public class CreateMemberInsertServlet extends HttpServlet {
                     request.getParameter("memberBreed"),
                     dataConverter.getCharGender(genderData),
                     memberDob,
-                    convertIntact(intactData),
+                    dataConverter.convertIntact(intactData),
                     newFileName);
 
             userPack.addMember(newMember);
@@ -124,73 +116,48 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
 
     /**
-     *  Handles HTTP GET requests. Sets data for the HTTP request
-     *  data. Forwards data to a JSP to display.
+     *  This method processes an image and returns a filename if the image is correct.
      *
-     *@return the status of the upload (1 is correct image found, 0 is incorrect image found, -1 is no image found)
+     * @param parts the parts of the form request
+     * @param nameOfMember the name of the pack member.
+     * @return the filename of the image to be inserted.
      *
      */
-
-    private int getFilesFromHeader(Collection<Part> parts, String generatedFilename) throws Exception{
+    private String getFilesFromHeader(Collection<Part> parts, String nameOfMember) throws Exception{
 
         FileUtilities fileUtility = new FileUtilities();
 
-        int uploadStatus = -1;
+        String     memberPictureFilename = "";
+        String     generatedFilename     = "";
+        String     fullFileName          = null;
+        String     extension             = null;
+        ByteBuffer imageBytes            = null;
+        Boolean    isImageOfDog          = false;
 
-        fileUtility.verifyFolderExists(sourceUploadFolder);
-        fileUtility.verifyFolderExists(sourceUploadFolder);
+        ImageVerifier verifier           = new ImageVerifier(properties);
 
-        String sourceFilename        = "";
-        String targetFilename        = "";
-        String memberPictureFilename = "";
+        String sourceUploadFolder  = properties.getProperty("root.path") + System.getProperty("user.name")
+                + properties.getProperty("source.upload.path");
 
-        ImageVerifier verifier       = new ImageVerifier(properties);
-        FileUtilities convertToBytes = new FileUtilities();
-        ByteBuffer    imageBytes     = null;
-        Boolean       isImageOfDog   = false;
+        String targetUploadFolder = properties.getProperty("root.path") + System.getProperty("user.name")
+                + properties.getProperty("target.upload.path");
 
         for (Part part : parts) {
             memberPictureFilename = fileUtility.getFileName(part);
             if (!memberPictureFilename.equals("")) {
-                imageBytes = convertToBytes.convertPartToBytes(part);
+                imageBytes = fileUtility.convertPartToBytes(part);
                 isImageOfDog = verifier.retrieveLabelsLocal(imageBytes,
                         properties.getProperty("aws.labels.label.to.check"));
                 if (isImageOfDog) {
-                    fileExtension = FilenameUtils.getExtension(memberPictureFilename);
-                    sourceFilename = sourceUploadFolder + File.separator + generatedFilename + PERIOD +  fileExtension;
-                    File sourceFile = new File(sourceFilename);
-                    if (!sourceFile.exists()) {
-                        part.write(sourceFilename);
-                    }
-                    targetFilename = targetUploadFolder + File.separator + generatedFilename + PERIOD +  fileExtension;
-                    File targetFile = new File(targetFilename);
-                    if (!targetFile.exists()) {
-                        part.write(targetFilename);
-                    }
-                    uploadStatus = 1;
-                } else {
-                    uploadStatus = 0;
+                    generatedFilename = userPack.getPackName() + "_" + nameOfMember;
+                    extension = FilenameUtils.getExtension(memberPictureFilename);
+                    fileUtility.uploadfile(sourceUploadFolder, generatedFilename, extension, part);
+                    fileUtility.uploadfile(targetUploadFolder, generatedFilename, extension, part);
+                    fullFileName = generatedFilename + PERIOD + extension;
                 }
             }
         }
-
-        return uploadStatus;
-
+        return fullFileName;
     }
-
-
-
-    private boolean convertIntact(String intactData) {
-
-        boolean memberIntact = false;
-        if (intactData.equals("yes")) {
-            memberIntact = true;
-        }
-
-        return memberIntact;
-
-    }
-
-
 
 }

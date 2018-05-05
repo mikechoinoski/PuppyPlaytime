@@ -78,4 +78,15 @@ public class DataConverter {
 
     }
 
+    public boolean convertIntact(String intactData) {
+
+        boolean memberIntact = false;
+        if (intactData.equals("Yes")) {
+            memberIntact = true;
+        }
+
+        return memberIntact;
+
+    }
+
 }

@@ -193,21 +193,22 @@ public class Pack implements Serializable {
     }
 
     /**
-     * Add member.
+     * Add a role.
      *
-     * @param role the role
+     * @param roleText the role
      */
-    public void addRole(Role role) {
+    public void addRole(String roleText) {
+        Role newRole = new Role(roleText);
         dao = new GenericDao(Role.class);
-        role.setLogin(this.getPackName());
-        role.setPack(this);
-        int id = dao.insert(role);
-        Role newRole = (Role) dao.getById(id);
-        roles.add(newRole);
+        newRole.setLogin(this.getPackName());
+        newRole.setPack(this);
+        int id = dao.insert(newRole);
+        Role roleWithId = (Role) dao.getById(id);
+        roles.add(roleWithId);
     }
 
     /**
-     * Remove member.
+     * Remove a role.
      *
      * @param role the role
      */
