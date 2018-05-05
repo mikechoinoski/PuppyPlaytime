@@ -70,12 +70,12 @@
                         </td>
                         <td width="90" align="center">
                             <select name="memberGender${userMembers.packMemberNumber}" style="width:90px">
-                                <option value="Yes"
+                                <option value="Male"
                                         <c:if test="${userMembers.sex.toString() == 'M'}">
                                             selected="selected"
                                         </c:if>
                                 >Male</option>
-                                <option value="No"
+                                <option value="Female"
                                         <c:if test="${userMembers.sex.toString() == 'F'}">
                                             selected="selected"
                                         </c:if>

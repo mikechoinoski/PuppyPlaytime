@@ -18,11 +18,17 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
+/**
+ *  This servlet allows a user view current playdates.
+ *
+ * @author mrchoinoski
+ */
+
 public class ViewPlaydatesServlet extends HttpServlet {
 
     /**
      *  Handles HTTP GET requests. Sets data for the HTTP request
-     *  data. Forwards data to a JSP to display.
+     *  data. Forwards data to a JSP to display playdate information.
      *
      *@param request the HttpServletRequest object
      *@param response the HttpServletResponse object

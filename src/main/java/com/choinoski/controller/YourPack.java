@@ -15,30 +15,22 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.security.Principal;
 import java.util.List;
+import java.util.Properties;
 import java.util.Set;
 
 /**
- *  This servlet sets HTTP request data and forwards it to a JSP
- *  to display data.
- *
- * ./uploadedPhotos
+ *  This servlet shows the user their pack information and pack members. Administrators are redirected to another
+ *  page that allows admin functions.
  *
  * @author mrchoinoski
- * @since  November 19, 2017
  */
 public class YourPack extends HttpServlet {
 
-    private static final String ROOT_FOLDER = "/home/";
-    private static final String LOGGED_IN_USER = System.getProperty("user.name");
-
-    private static final String UPLOAD_FOLDER = ROOT_FOLDER + LOGGED_IN_USER +
-            "/IdeaProjects/PuppyPlaytime/src/main/webapp/uploadedPhotos";
-    private static final String UPLOAD_FOLDER2 = ROOT_FOLDER + LOGGED_IN_USER +
-            "/IdeaProjects/PuppyPlaytime/target/PuppyPlaytime/uploadedPhotos/";
+    private Properties properties;
 
     /**
      *  Handles HTTP GET requests. Sets data for the HTTP request
-     *  data. Forwards data to a JSP to display.
+     *  data. Forwards data to a JSP to display pack information.
      *
      *@param request the HttpServletRequest object
      *@param response the HttpServletResponse object
@@ -48,31 +40,30 @@ public class YourPack extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        ServletContext servletContext = getServletContext();
+
         GenericDao dao = new GenericDao(Pack.class);
 
-        ServletContext servletContext = getServletContext();
         HttpSession    session        = request.getSession();
         LoggedInPack   retrievePack   = new LoggedInPack();
-        String url      = null;
-        //Principal verifiedUser = request.getUserPrincipal();
-        //verifiedUser.isUserInRole();
-        //isUserInRole(java.lang.String role);
-        //getRemoteUser();
+
+        String url = null;
 
         String packName = request.getUserPrincipal().getName();
 
-        if (request.isUserInRole("user")) {
+        properties = (Properties) servletContext.getAttribute("puppyPlaytimeProperties");
+
+        if (request.isUserInRole(properties.getProperty("role.user"))) {
 
             session.setAttribute("userPack", retrievePack.loggedInPackInfo(request));
-
-            session.setAttribute("imageDirectory", UPLOAD_FOLDER);
-            session.setAttribute("imageDirectory2", UPLOAD_FOLDER2);
-
             url = "/jsp/yourPack.jsp";
-        } else if (request.isUserInRole("admin")) {
+
+        } else if (request.isUserInRole(properties.getProperty("role.admin"))) {
+
             List<Pack> packs = dao.getAll();
             session.setAttribute("allPacks", packs);
             url = "/jsp/administrativeFunctions.jsp";
+
         }
 
         RequestDispatcher dispatcher =

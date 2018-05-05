@@ -99,7 +99,7 @@ public class SearchPlaymates extends HttpServlet {
             if(maximumAgeText != null) {
                 maximumAge = Integer.parseInt(maximumAgeText);
             }
-            searchParameters = new MemberSearchCriteria(minimumAge,maximumAge, minimumSizeText,
+            searchParameters = new MemberSearchCriteria(minimumAge, maximumAge, minimumSizeText,
                     maximumSizeText, genderText, fixedText);
 
             minimumDate      = LocalDate.now().minusYears(searchParameters.getMinimumAge());

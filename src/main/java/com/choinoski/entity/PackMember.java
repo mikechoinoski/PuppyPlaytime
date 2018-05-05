@@ -1,5 +1,6 @@
 package com.choinoski.entity;
 
+import com.choinoski.persistence.DataConverter;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.*;
@@ -11,11 +12,9 @@ import javax.persistence.ForeignKey;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 /**
  * The type PackMember.
@@ -66,6 +65,9 @@ public class PackMember implements Serializable {
     @OneToMany(mappedBy = "packMember", cascade = CascadeType.ALL,
             orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<PlaydateMember> playdateMembers = new HashSet<PlaydateMember>();
+
+    @Transient
+    private Properties properties;
 
     /**
      * Instantiates a new Pack Member.
@@ -149,6 +151,51 @@ public class PackMember implements Serializable {
 
 
 
+    public boolean updatePackMember(String name, String birthday, String weight, String breed,
+                                       String gender, String intact) {
+
+        DataConverter converter = new DataConverter();
+
+        Boolean updatesMade = false;
+
+        if (name != null && !name.equals(this.name)) {
+            setName(name);
+            updatesMade = true;
+        }
+
+        if (breed != null && !breed.equals(this.breed)) {
+            setBreed(breed);
+            updatesMade = true;
+        }
+
+        if (weight != null) {
+            setWeight(Integer.parseInt(weight));
+            updatesMade = true;
+        }
+
+        if (birthday != null) {
+            setDateOfBirth(LocalDate.parse(birthday,
+                    DateTimeFormatter.ofPattern(properties.getProperty("form.date.format"))));
+            updatesMade = true;
+        }
+
+        if (gender != null) {
+            setSex((converter.getCharGender(gender)));
+            updatesMade = true;
+        }
+
+        if (intact != null) {
+            if (intact.equals("Yes") || intact.equals("No")) {
+                setIntact(converter.convertIntact(intact));
+            }
+            updatesMade = true;
+        }
+
+        return updatesMade;
+
+    }
+
+
     /**
      * Gets age.
      *
@@ -172,17 +219,6 @@ public class PackMember implements Serializable {
                 ", createDate=" + createDate +
                 ", lastModifiedDate=" + lastModifiedDate +
                 '}';
-    }
-
-    public void copyDemographicData(PackMember memberToCopy) {
-
-        this.name             = memberToCopy.getName();
-        this.weight           = memberToCopy.getWeight();
-        this.breed            = memberToCopy.getBreed();
-        this.sex              = memberToCopy.getSex();
-        this.dateOfBirth      = memberToCopy.getDateOfBirth();
-        this.intact           = memberToCopy.isIntact();
-        this.pictureFilename  = memberToCopy.getPictureFilename();
     }
 
     @Override

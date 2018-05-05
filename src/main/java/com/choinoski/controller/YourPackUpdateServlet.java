@@ -2,10 +2,8 @@ package com.choinoski.controller;
 
 import com.choinoski.entity.Pack;
 import com.choinoski.entity.PackMember;
-import com.choinoski.entity.Role;
+import com.choinoski.persistence.DataConverter;
 import com.choinoski.persistence.GenericDao;
-import org.apache.commons.lang3.BooleanUtils;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -16,14 +14,21 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
+import java.util.Properties;
 import java.util.Set;
 
+/**
+ *  This servlet shows the user their pack information and pack members. Administrators are redirected to another
+ *  page that allows admin functions.
+ *
+ * @author mrchoinoski
+ */
 public class YourPackUpdateServlet extends HttpServlet {
 
     private GenericDao dao;
+
+    private Properties properties;
 
     /**
      * Handles HTTP GET requests. Sets data for the HTTP request
@@ -44,6 +49,10 @@ public class YourPackUpdateServlet extends HttpServlet {
         dao = new GenericDao(PackMember.class);
 
         Set<PackMember> memberSet = new HashSet<>(userPack.getMembers());
+
+        ServletContext servletContext = getServletContext();
+
+        properties = (Properties) servletContext.getAttribute("puppyPlaytimeProperties");
 
         processDeletes(userPack, memberSet, request);
         processUpdates(memberSet, request);
@@ -88,7 +97,7 @@ public class YourPackUpdateServlet extends HttpServlet {
 
         for (PackMember currentMember: updateSet) {
 
-            PackMember updatedMember = null;
+            currentMember.setProperties(properties);
 
             memberNumberText = Integer.toString(currentMember.getPackMemberNumber());
 
@@ -99,51 +108,47 @@ public class YourPackUpdateServlet extends HttpServlet {
             memberGender   = request.getParameter("memberGender" + memberNumberText);
             memberIntact   = request.getParameter("memberIntact" + memberNumberText);
 
-            updatedMember = updatePackMember(currentMember, memberName, memberBirthday, memberWeight, memberBreed,
-                    memberGender, memberIntact);
+            boolean thereAreUpdates = currentMember.updatePackMember(memberName, memberBirthday, memberWeight,
+                    memberBreed, memberGender, memberIntact);
 
-            if (!updatedMember.equals(currentMember)) {
-                currentMember.copyDemographicData(updatedMember);
+            if (thereAreUpdates) {
                 dao.saveOrUpdate(currentMember);
             }
 
         }
     }
 
-    public PackMember updatePackMember(PackMember member, String name, String birthday, String weight, String breed,
-                                 String gender, String intact) {
-
-        PackMember updatedMember = new PackMember(member);
-
-        updatedMember.setName(name);
-        updatedMember.setBreed(breed);
-
-        if (weight != null) {
-            updatedMember.setWeight(Integer.parseInt(weight));
-        }
-
-        if (birthday != null) {
-            updatedMember.setDateOfBirth(LocalDate.parse(birthday, DateTimeFormatter.ofPattern("yyyy-MM-dd")));
-        }
-
-        if (gender != null) {
-            if (gender.equals("Male")) {
-                updatedMember.setSex('M');
-            } else if (gender.equals("Female")) {
-                updatedMember.setSex('F');
-            }
-        }
-
-        if (intact != null) {
-            if (intact.equals("Yes")) {
-                updatedMember.setIntact(true);
-            } else if (intact.equals("No")) {
-                updatedMember.setIntact(false);
-            }
-        }
-
-        return updatedMember;
-
-    }
+//    public PackMember updatePackMember(PackMember member, String name, String birthday, String weight, String breed,
+//                                 String gender, String intact) {
+//
+//        PackMember updatedMember = new PackMember(member);
+//
+//        DataConverter converter = new DataConverter();
+//
+//        updatedMember.setName(name);
+//        updatedMember.setBreed(breed);
+//
+//        if (weight != null) {
+//            updatedMember.setWeight(Integer.parseInt(weight));
+//        }
+//
+//        if (birthday != null) {
+//            updatedMember.setDateOfBirth(LocalDate.parse(birthday,
+//                    DateTimeFormatter.ofPattern(properties.getProperty("form.date.format"))));
+//        }
+//
+//        if (gender != null) {
+//            converter.getCharGender(gender);
+//        }
+//
+//        if (intact != null) {
+//            if (intact.equals("Yes") || intact.equals("No")) {
+//                converter.getCharGender(intact);
+//            }
+//        }
+//
+//        return updatedMember;
+//
+//    }
 
 }
