@@ -31,8 +31,8 @@ public class YourPackUpdateServlet extends HttpServlet {
     private Properties properties;
 
     /**
-     * Handles HTTP GET requests. Sets data for the HTTP request
-     * data. Forwards data to a JSP to display.
+     * Handles HTTP GET requests. Sets data for the HTTP request data. Processes member updates.
+     * Forwards data to a JSP to display.
      *
      * @param request  the HttpServletRequest object
      * @param response the HttpServletResponse object
@@ -46,16 +46,14 @@ public class YourPackUpdateServlet extends HttpServlet {
         HttpSession session     = request.getSession();
         Pack        userPack    = (Pack) session.getAttribute("userPack");
 
-        dao = new GenericDao(PackMember.class);
-
-        Set<PackMember> memberSet = new HashSet<>(userPack.getMembers());
-
+        Set<PackMember> memberSet     = new HashSet<>(userPack.getMembers());
         ServletContext servletContext = getServletContext();
 
+        dao = new GenericDao(PackMember.class);
         properties = (Properties) servletContext.getAttribute("puppyPlaytimeProperties");
 
-        processDeletes(userPack, memberSet, request);
         processUpdates(memberSet, request);
+        processDeletes(userPack, memberSet, request);
 
         String url = "/jsp/yourPack.jsp";
 
@@ -65,26 +63,40 @@ public class YourPackUpdateServlet extends HttpServlet {
 
     }
 
-
-    public void processDeletes(Pack theUserPack, Set<PackMember> deleteSet, HttpServletRequest request) {
+    /**
+     * Processes deleting Pack Members.
+     *
+     * @param theUserPack the logged in user's pack
+     * @param packMembers all of the user's pack members
+     * @param request the Http Servlet Request
+     *
+     */
+    public void processDeletes(Pack theUserPack, Set<PackMember> packMembers, HttpServletRequest request) {
 
         String memberNumberText = null;
         String checkBoxValue    = null;
 
-        for (PackMember currentMember: deleteSet) {
+        for (PackMember currentMember: packMembers) {
 
             memberNumberText = Integer.toString(currentMember.getPackMemberNumber());
             checkBoxValue    = request.getParameter("memberToRemove" + memberNumberText);
 
             if (!(checkBoxValue == null)) {
-                boolean removed = theUserPack.removeMember(currentMember);
                 dao.delete(currentMember);
+                boolean removed = theUserPack.removeMember(currentMember);
             }
         }
 
     }
 
-    public void processUpdates(Set<PackMember> updateSet, HttpServletRequest request) {
+    /**
+     * Processes updating Pack Members.
+     *
+     * @param packMembers all of the user's pack members
+     * @param request the Http Servlet Request
+     *
+     */
+    public void processUpdates(Set<PackMember> packMembers, HttpServletRequest request) {
 
         String memberNumberText = null;
 
@@ -95,7 +107,7 @@ public class YourPackUpdateServlet extends HttpServlet {
         String memberGender     = null;
         String memberIntact     = null;
 
-        for (PackMember currentMember: updateSet) {
+        for (PackMember currentMember: packMembers) {
 
             currentMember.setProperties(properties);
 
@@ -117,38 +129,5 @@ public class YourPackUpdateServlet extends HttpServlet {
 
         }
     }
-
-//    public PackMember updatePackMember(PackMember member, String name, String birthday, String weight, String breed,
-//                                 String gender, String intact) {
-//
-//        PackMember updatedMember = new PackMember(member);
-//
-//        DataConverter converter = new DataConverter();
-//
-//        updatedMember.setName(name);
-//        updatedMember.setBreed(breed);
-//
-//        if (weight != null) {
-//            updatedMember.setWeight(Integer.parseInt(weight));
-//        }
-//
-//        if (birthday != null) {
-//            updatedMember.setDateOfBirth(LocalDate.parse(birthday,
-//                    DateTimeFormatter.ofPattern(properties.getProperty("form.date.format"))));
-//        }
-//
-//        if (gender != null) {
-//            converter.getCharGender(gender);
-//        }
-//
-//        if (intact != null) {
-//            if (intact.equals("Yes") || intact.equals("No")) {
-//                converter.getCharGender(intact);
-//            }
-//        }
-//
-//        return updatedMember;
-//
-//    }
 
 }
