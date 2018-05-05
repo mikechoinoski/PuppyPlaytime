@@ -410,3 +410,4 @@
 [DEBUG] 2018-05-05 13:42:33.966 [http-nio-8080-exec-4] GenericDao - Searching for user with packName = ZOMG!
 [DEBUG] 2018-05-05 13:44:14.287 [http-nio-8080-exec-9] GenericDao - Inserting into com.choinoski.entity.PackMember
 [DEBUG] 2018-05-05 13:44:14.306 [http-nio-8080-exec-9] GenericDao - Selecting rows by 18
+[DEBUG] 2018-05-05 14:25:12.626 [http-nio-8080-exec-2] GenericDao - Selecting all rows from a table

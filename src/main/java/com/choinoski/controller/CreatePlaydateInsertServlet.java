@@ -54,7 +54,6 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
         Playdate newPlaydate  = null;
         int newPlaydateNumber = 0;
 
-        ServletContext servletContext = getServletContext();
         HttpSession    session        = request.getSession();
 
         Pack     currentPack = (Pack) session.getAttribute("userPack");
@@ -64,6 +63,8 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
         Boolean   privatePlaydate = true;
 
         String    locationText = request.getParameter("playdateLocation");
+
+        ServletContext servletContext = getServletContext();
 
         properties = (Properties) servletContext.getAttribute("puppyPlaytimeProperties");
 
