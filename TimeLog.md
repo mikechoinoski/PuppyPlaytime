@@ -40,3 +40,9 @@
 | 4/23/18 | Finished pack creation process / added Proect Lombok | 4 | |
 
 
+create main database
+populate main database
+
+create tomcat user
+create mikec user
+set up aws credentials
