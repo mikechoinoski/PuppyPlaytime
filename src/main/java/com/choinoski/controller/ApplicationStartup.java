@@ -1,15 +1,9 @@
 package com.choinoski.controller;
 
-import java.io.*;
-import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.util.*;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import com.choinoski.util.*;
-
-import static org.h2.util.SortedProperties.loadProperties;
 
 /**
  *  This servlet sets initializes data used for the entire application. It
@@ -24,11 +18,16 @@ import static org.h2.util.SortedProperties.loadProperties;
 )
 public class ApplicationStartup extends HttpServlet implements PropertiesLoaderInterface {
 
-    private static final String PROPERTY_PATH = "/project4.properties";
+    private static final String PROPERTY_PATH = "/puppyPlaytime.properties";
+
+    /**
+     *  This method does any initialization tasks for the entire application.
+     */
 
     public void init() {
 
         Properties properties  = loadProperties(PROPERTY_PATH);
+
         getServletContext().setAttribute("puppyPlaytimeProperties", properties);
 
     }

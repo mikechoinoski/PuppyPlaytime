@@ -13,6 +13,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *  This servlet provides the administrive functions for the administrators of the site.
+ *
+ * @author mrchoinoski
+ */
 public class AdministrativeFunctions extends HttpServlet {
 
     private GenericDao dao;
@@ -45,13 +50,19 @@ public class AdministrativeFunctions extends HttpServlet {
 
     }
 
+    /**
+     *  This method processes deleting all of the packs that the administrator specifies.
+     *
+     * @param deleteList the list of packs available to delete
+     * @param request the http servlet request
+     */
     public void processDeletes(List<Pack> deleteList, HttpServletRequest request) {
 
         List<Pack> packsToCheck = new ArrayList(deleteList);
 
         String packNumberText = null;
         String checkBoxValue  = null;
-        int position          = 0;
+        int    position       = 0;
 
         for (Pack currentPack: packsToCheck) {
 

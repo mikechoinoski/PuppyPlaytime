@@ -12,6 +12,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import com.choinoski.entity.PackMember;
+import com.choinoski.persistence.DataConverter;
 import com.choinoski.util.FileUtilities;
 import org.apache.commons.io.FilenameUtils;
 
@@ -23,7 +24,6 @@ import org.apache.commons.io.FilenameUtils;
  *  Sources used: https://www.journaldev.com/2122/servlet-3-file-upload-multipartconfig-part
  *
  * @author mrchoinoski
- * @since  November 19, 2017
  */
 @MultipartConfig(fileSizeThreshold=1024*1024*10, 	// 10 MB
                  maxFileSize=1024*1024*50,      	// 50 MB
@@ -62,6 +62,8 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
         boolean noErrorsFound = true;
         String  newFileName   = null;
+
+        DataConverter dataConverter = new DataConverter();
 
 
         String generatedFilename;
@@ -103,7 +105,7 @@ public class CreateMemberInsertServlet extends HttpServlet {
                     request.getParameter("memberName"),
                     request.getParameter("memberWeight"),
                     request.getParameter("memberBreed"),
-                    convertGender(genderData),
+                    dataConverter.getCharGender(genderData),
                     memberDob,
                     convertIntact(intactData),
                     newFileName);
@@ -131,10 +133,12 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
     private int getFilesFromHeader(Collection<Part> parts, String generatedFilename) throws Exception{
 
+        FileUtilities fileUtility = new FileUtilities();
+
         int uploadStatus = -1;
 
-        verifyFolderExists(sourceUploadFolder);
-        verifyFolderExists(sourceUploadFolder);
+        fileUtility.verifyFolderExists(sourceUploadFolder);
+        fileUtility.verifyFolderExists(sourceUploadFolder);
 
         String sourceFilename        = "";
         String targetFilename        = "";
@@ -146,10 +150,11 @@ public class CreateMemberInsertServlet extends HttpServlet {
         Boolean       isImageOfDog   = false;
 
         for (Part part : parts) {
-            memberPictureFilename = getFileName(part);
+            memberPictureFilename = fileUtility.getFileName(part);
             if (!memberPictureFilename.equals("")) {
                 imageBytes = convertToBytes.convertPartToBytes(part);
-                isImageOfDog = verifier.retrieveLabelsLocal(imageBytes,70,"Dog");
+                isImageOfDog = verifier.retrieveLabelsLocal(imageBytes,
+                        properties.getProperty("aws.labels.label.to.check"));
                 if (isImageOfDog) {
                     fileExtension = FilenameUtils.getExtension(memberPictureFilename);
                     sourceFilename = sourceUploadFolder + File.separator + generatedFilename + PERIOD +  fileExtension;
@@ -173,14 +178,7 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
     }
 
-    private void verifyFolderExists(String folderPath) {
 
-        File fileDirectory = new File(folderPath);
-        if (!fileDirectory.exists()) {
-            fileDirectory.mkdirs();
-        }
-
-    }
 
     private boolean convertIntact(String intactData) {
 
@@ -192,57 +190,6 @@ public class CreateMemberInsertServlet extends HttpServlet {
         return memberIntact;
 
     }
-
-    private char convertGender(String gender) {
-        char    maleOrFemale = ' ';
-
-        if (gender.equals("male")) {
-            maleOrFemale = 'M';
-        } else if (gender.equals("female")) {
-            maleOrFemale = 'F';
-        }
-
-        return maleOrFemale;
-
-    }
-
-    /**
-     * Utility method to get file name from HTTP header content-disposition
-     */
-    private String getFileName(Part part) {
-        String contentDisp = part.getHeader("content-disposition");
-        String[] tokens = contentDisp.split(";");
-        for (String token : tokens) {
-            if (token.trim().startsWith("filename")) {
-                return token.substring(token.indexOf("=") + 2, token.length()-1);
-            }
-        }
-        return "";
-    }
-
-    //https://stackoverflow.com/questions/14618953/image-conversion-in-java
-
-    //private File convertImageToJPG(File unconvertedFile) throws Exception {
-    //File inputFile = new File("/path/to/image.png");
-    //File outputFile = new File("Test.jpg");
-    //try (InputStream is = new FileInputStream(inputFile)) {
-    //BufferedImage image = ImageIO.read(is);
-    //try (OutputStream os = new FileOutputStream(outputFile)) {
-    //ImageIO.write(image, "jpg", os);
-    //} catch (Exception exp) {
-    //exp.printStackTrace();
-    //}
-    //} catch (Exception exp) {
-    //exp.printStackTrace();
-    //}
-
-    //return outputFile;
-
-    //}
-
-
-
-
 
 
 

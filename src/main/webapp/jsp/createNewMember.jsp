@@ -39,11 +39,11 @@
                 <th align="left">Gender</th>
                 <td align="center">
                     <label for="memberGenderMale">Male</label>
-                    <input type="radio" id="memberGenderMale" name="memberGender" value="male"/>
+                    <input type="radio" id="memberGenderMale" name="memberGender" value="Male"/>
                 </td>
                 <td align="center">
                     <label for="memberGenderFemale">Female</label>
-                    <input type="radio" id=memberGenderFemale name="memberGender" value="female" />
+                    <input type="radio" id=memberGenderFemale name="memberGender" value="Female" />
                 </td>
             </tr>
             <tr>

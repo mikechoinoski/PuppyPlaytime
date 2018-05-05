@@ -10,10 +10,9 @@ import javax.servlet.annotation.*;
 
 /**
  *  This servlet sets HTTP request data and forwards it to a JSP
- *  to display data.
+ *  to display data for creating a new pack member.
  *
  * @author mrchoinoski
- * @since  November 19, 2017
  */
 @WebServlet(
         name = "createNewMember",

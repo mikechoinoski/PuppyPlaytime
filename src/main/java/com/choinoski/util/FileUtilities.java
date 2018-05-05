@@ -2,6 +2,7 @@ package com.choinoski.util;
 
 import org.apache.commons.io.IOUtils;
 import javax.servlet.http.Part;
+import java.io.File;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 
@@ -27,45 +28,27 @@ public class FileUtilities {
 
     }
 
-    //public void uploadFile(String folderLocation, HttpServletRequest request) throws FileUploadException, Exception {
+    public void verifyFolderExists(String folderPath) {
 
-        // Create a factory for disk-based file items
-     //   DiskFileItemFactory factory = new DiskFileItemFactory();
+        File fileDirectory = new File(folderPath);
+        if (!fileDirectory.exists()) {
+            fileDirectory.mkdirs();
+        }
 
-        // Sets the size threshold beyond which files are written directly to
-        // disk.
-    //    factory.setSizeThreshold(MAX_MEMORY_SIZE);
+    }
 
-        // Sets the directory used to temporarily store files that are larger
-        // than the configured size threshold. We use temporary directory for
-        // java
-     //   factory.setRepository(new File(System.getProperty("java.io.tmpdir")));
-
-        // constructs the folder where uploaded file will be stored
-        //String uploadFolder = "/home/student/IdeaProjects/PuppyPlaytime/uploaded_pictures";
-
-        // Create a new file upload handler
-     //   ServletFileUpload upload = new ServletFileUpload(factory);
-
-        // Set overall request size constraint
-    //    upload.setSizeMax(MAX_REQUEST_SIZE);
-
-            // Parse the request
-     //   List items = upload.parseRequest(request);
-     //   Iterator iter = items.iterator();
-    //    while (iter.hasNext()) {
-     //       FileItem item = (FileItem) iter.next();
-
-     //       if (!item.isFormField()) {
-     //           String fileName = new File(item.getName()).getName();
-     //           String filePath = folderLocation + File.separator + fileName;
-     //           File uploadedFile = new File(filePath);
-                //System.out.println(filePath);
-                    // saves the file to upload directory
-      //          item.write(uploadedFile);
-       //     }
-       // }
-
-    //}
+    /**
+     * Utility method to get file name from HTTP header content-disposition
+     */
+    public String getFileName(Part part) {
+        String contentDisp = part.getHeader("content-disposition");
+        String[] tokens = contentDisp.split(";");
+        for (String token : tokens) {
+            if (token.trim().startsWith("filename")) {
+                return token.substring(token.indexOf("=") + 2, token.length()-1);
+            }
+        }
+        return "";
+    }
 
 }
