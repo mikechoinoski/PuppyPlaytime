@@ -102,6 +102,9 @@ A.footerl:hover {
 
 .content {
     padding: 5px;
+    margin: auto;
+    text-align: center;
+    align-content: center;
 }
 
 .leftcontent {
@@ -113,6 +116,20 @@ h3 {
     color: #A2A2A3;
     padding: 0;
     margin: 0 0 5px 0;
+}
+
+.pageHeader {
+    color: green;
+}
+
+form {
+    display: inline-block;
+    text-align: center;
+}
+
+table {
+    display: inline-block;
+    text-align: center;
 }
 
 .footer {

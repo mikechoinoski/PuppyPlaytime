@@ -4,9 +4,8 @@
 
 <div class="image"></div>
 <div class="content">
-    <center>
 
-        <h2>Create Playdate</h2>
+        <h2 class="pageHeader">Create Playdate</h2>
         <br><br>
 
         <form method="post" action="InsertPlaydate">
@@ -122,5 +121,4 @@
             </table>
         </form>
 
-    </center>
 <c:import url="/jsp/page_bottom.jsp" />

@@ -21,7 +21,7 @@ import javax.persistence.*;
  */
 
 @Entity(name = "Pack")
-@Table(name = "pack") // case sensitive!
+@Table(name = "pack")
 public class Pack implements Serializable {
 
     @Id
@@ -181,6 +181,17 @@ public class Pack implements Serializable {
         member.setPack(null);
 
         return removed;
+
+    }
+
+    /**
+     * Returns how many members are in the pack
+     *
+     * @return the number of members in a pack
+     */
+    public int getPackSize() {
+
+        return members.size();
 
     }
 

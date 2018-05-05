@@ -15,8 +15,8 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- *  This servlet sets HTTP request data and forwards it to a JSP
- *  to display data.
+ *  This servlet creates a new pack from the information provided by a form. If the pack
+ *  is successully create, the user is logged into the yourPack page.
  *
  * @author mrchoinoski
  * @since  November 19, 2017
@@ -27,11 +27,26 @@ import java.io.IOException;
 )
 public class CreatePackInsertServlet extends HttpServlet {
 
-    GenericDao dao;
+    /**
+     *  Handles HTTP Get requests. Sets data for the HTTP request
+     *  data. Redirects data to another servlet to display yourPack page.
+     *
+     *@param request the HttpServletRequest object
+     *@param response the HttpServletResponse object
+     *@exception ServletException if there is a Servlet failure
+     *@exception IOException if there is an IO failure
+     */
+
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        response.sendRedirect("yourPack");
+
+    }
 
     /**
-     *  Handles HTTP GET requests. Sets data for the HTTP request
-     *  data. Forwards data to a JSP to display.
+     *  Handles HTTP Post requests. Sets data for the HTTP request
+     *  data. Redirects data to another servlet to display yourPack page.
      *
      *@param request the HttpServletRequest object
      *@param response the HttpServletResponse object
@@ -41,7 +56,7 @@ public class CreatePackInsertServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        dao = new GenericDao(Pack.class);
+        GenericDao dao = new GenericDao(Pack.class);
 
         ServletContext servletContext = getServletContext();
         HttpSession    session        = request.getSession();
