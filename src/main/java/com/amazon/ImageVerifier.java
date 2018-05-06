@@ -47,20 +47,14 @@ public class ImageVerifier {
      */
     public void setup() {
 
-        AWSCredentials credentials = null;
-        BasicAWSCredentials awsCreds = new BasicAWSCredentials ("AKIAI7DHREGINJDL6KLA",
-                "gQtyFLk1AfcKeOIfJTP83SgazrTc6Px+BB2Q3uj3");
 
-        try {
-            credentials = new ProfileCredentialsProvider().getCredentials();
-        } catch(Exception e) {
-            logger.error("Error occurred when retrieving AWS credentials:" + e);
-        }
+        BasicAWSCredentials credentials = new BasicAWSCredentials (properties.getProperty("aws.key"),
+                properties.getProperty("aws.secret.key"));
 
         rekognitionClient = AmazonRekognitionClientBuilder
                 .standard()
                 .withRegion(Regions.US_EAST_2)
-                .withCredentials(new AWSStaticCredentialsProvider(awsCreds))
+                .withCredentials(new AWSStaticCredentialsProvider(credentials))
                 .build();
 
     }

@@ -795,3 +795,16 @@
 [DEBUG] 2018-05-06 04:27:54.243 [http-nio-8080-exec-4] GenericDao - Deleting from com.choinoski.entity.PackMember
 [DEBUG] 2018-05-06 04:28:22.902 [http-nio-8080-exec-8] GenericDao - Inserting into com.choinoski.entity.PackMember
 [DEBUG] 2018-05-06 04:28:22.944 [http-nio-8080-exec-8] GenericDao - Selecting rows by 44
+[DEBUG] 2018-05-06 09:57:41.664 [http-nio-8080-exec-8] GenericDao - Searching for user with packName = user
+[ERROR] 2018-05-06 09:58:06.787 [http-nio-8080-exec-2] CreateMemberInsertServlet - Error occurred while uploading a file: java.lang.IllegalArgumentException: Access key cannot be null.
+[DEBUG] 2018-05-06 09:58:06.787 [http-nio-8080-exec-2] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 09:58:06.934 [http-nio-8080-exec-2] GenericDao - Selecting rows by 45
+[DEBUG] 2018-05-06 10:01:19.694 [http-nio-8080-exec-3] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-06 10:01:48.409 [http-nio-8080-exec-7] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 10:01:48.546 [http-nio-8080-exec-7] GenericDao - Selecting rows by 46
+[DEBUG] 2018-05-06 10:09:14.833 [http-nio-8080-exec-3] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-06 10:15:28.875 [http-nio-8080-exec-2] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-06 10:16:00.273 [http-nio-8080-exec-8] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 10:16:00.444 [http-nio-8080-exec-8] GenericDao - Selecting rows by 47
+[ERROR] 2018-05-06 11:14:04.015 [http-nio-8080-exec-8] CreateMemberInsertServlet - Error occurred while uploading a file: java.lang.IllegalArgumentException: The bucket name parameter must be specified when uploading an object
+[ERROR] 2018-05-06 11:18:16.699 [http-nio-8080-exec-1] CreateMemberInsertServlet - Error occurred while uploading a file: java.lang.IllegalArgumentException: The bucket name parameter must be specified when uploading an object

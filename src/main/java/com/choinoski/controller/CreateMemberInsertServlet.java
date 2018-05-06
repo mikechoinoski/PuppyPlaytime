@@ -127,10 +127,6 @@ public class CreateMemberInsertServlet extends HttpServlet {
      */
     private String getFilesFromHeader(Collection<Part> parts, String nameOfMember) throws Exception{
 
-        FileUtilities fileUtility = new FileUtilities();
-
-        UploadImageToS3 uploader = new UploadImageToS3();
-
         String     memberPictureFilename = "";
         String     generatedFilename     = "";
         String     fullFileName          = null;
@@ -138,7 +134,9 @@ public class CreateMemberInsertServlet extends HttpServlet {
         ByteBuffer imageBytes            = null;
         Boolean    isImageOfDog          = false;
 
-        ImageVerifier verifier           = new ImageVerifier(properties);
+        FileUtilities fileUtility = new FileUtilities();
+        UploadImageToS3 uploader  = new UploadImageToS3(properties);
+        ImageVerifier verifier    = new ImageVerifier(properties);
 
         String sourceUploadFolder  = properties.getProperty("root.path") + System.getProperty("user.name")
                 + properties.getProperty("source.upload.path");

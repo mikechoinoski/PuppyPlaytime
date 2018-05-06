@@ -22,7 +22,7 @@ public class UploadFileTest {
     @Test
     void setUp() {
 
-        UploadImageToS3 uploader = new UploadImageToS3();
+        //UploadImageToS3 uploader = new UploadImageToS3();
 
         //uploader.transferFile("newfile.jpg", null);
 
