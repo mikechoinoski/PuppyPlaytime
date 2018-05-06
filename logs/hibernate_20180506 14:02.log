@@ -1,2 +1,0 @@
-[ERROR] 2018-05-06 14:02:56.346 [http-nio-8080-exec-5] SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`puppy_playtime_main`.`playdate`, CONSTRAINT `playdate_pack_pack_nr_fk` FOREIGN KEY (`organizing_pack_nr`) REFERENCES `pack` (`pack_nr`))
-[ERROR] 2018-05-06 14:02:56.368 [http-nio-8080-exec-5] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]

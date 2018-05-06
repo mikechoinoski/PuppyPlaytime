@@ -68,17 +68,20 @@ public class AdministrativeFunctions extends HttpServlet {
         String checkBoxValue  = null;
         int    position       = 0;
 
+        List<Integer> deletes = new ArrayList();
+
         for (Pack currentPack: packsToCheck) {
 
             packNumberText = Integer.toString(currentPack.getPackNumber());
             checkBoxValue  = request.getParameter("packToRemove" + packNumberText);
 
             if (!(checkBoxValue == null)) {
+
                 for (Pack packToRemove: deleteList) {
                     if(packToRemove.getPackNumber() == currentPack.getPackNumber()) {
                         processPlaydateMemberDeletes(packToRemove);
+                        deletes.add(packToRemove.getPackNumber());
                         deleteList.remove(packToRemove);
-                        dao.delete(currentPack);
                         break;
                     }
                 }
@@ -87,11 +90,41 @@ public class AdministrativeFunctions extends HttpServlet {
             position++;
         }
 
+        for (Integer deletePackNr : deletes) {
+            Pack packToDelete = (Pack) dao.getById(deletePackNr);
+            dao.delete(packToDelete);
+        }
+
+
+
+//        for (Pack currentPack: packsToCheck) {
+//
+//            packNumberText = Integer.toString(currentPack.getPackNumber());
+//            checkBoxValue  = request.getParameter("packToRemove" + packNumberText);
+//
+//            if (!(checkBoxValue == null)) {
+//                for (Pack packToRemove: deleteList) {
+//                    int packNumber = packToRemove.getPackNumber();
+//                    int comparePackNumber = currentPack.getPackNumber();
+//                    if (packNumber == comparePackNumber) {
+//                        dao.delete(packToRemove);
+//                        deleteList.remove(packToRemove);
+//                        break;
+//                    }
+//                }
+//            }
+//            position++;
+//        }
+
+
+
     }
 
     public void processPlaydateMemberDeletes(Pack packToRemove) {
 
-        for (PackMember member: packToRemove.getMembers()){
+        Set<PackMember> memberSet = new HashSet<>(packToRemove.getMembers());
+
+        for (PackMember member: memberSet) {
 
             Set<PlaydateMember> playdateMemberSet = new HashSet<>(member.getPlaydateMembers());
             for (PlaydateMember currentPlaydateMember: playdateMemberSet) {
