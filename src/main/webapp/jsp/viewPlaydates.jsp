@@ -26,7 +26,7 @@
                                 <img src="./uploadedPhotos/default_dog.png" class="playmateImage">
                             </c:when>
                             <c:otherwise>
-                                <img src="./uploadedPhotos/${singlePlaymate.packMember.pictureFilename}"
+                                <img src="https://s3.us-east-2.amazonaws.com/puppyplaytimebucket/${singlePlaymate.packMember.pictureFilename}"
                                      class="playmateImage">
                             </c:otherwise>
                         </c:choose>

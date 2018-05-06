@@ -230,6 +230,21 @@ public class PackMember implements Serializable {
         return (int) ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
     }
 
+    /**
+     * Remove a playdate member.
+     *
+     * @param member the playdate member to remove
+     * @return the boolean
+     */
+    public boolean removeMember(PlaydateMember member) {
+
+        boolean removed = playdateMembers.remove(member);
+        member.setPackMember(null);
+
+        return removed;
+
+    }
+
     @Override
     public String toString() {
         return "PackMember{" +

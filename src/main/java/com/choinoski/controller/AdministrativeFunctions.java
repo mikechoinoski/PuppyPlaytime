@@ -1,6 +1,8 @@
 package com.choinoski.controller;
 
 import com.choinoski.entity.Pack;
+import com.choinoski.entity.PackMember;
+import com.choinoski.entity.PlaydateMember;
 import com.choinoski.persistence.GenericDao;
 
 import javax.servlet.RequestDispatcher;
@@ -11,7 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  *  This servlet provides the administrive functions for the administrators of the site.
@@ -70,15 +74,31 @@ public class AdministrativeFunctions extends HttpServlet {
             checkBoxValue  = request.getParameter("packToRemove" + packNumberText);
 
             if (!(checkBoxValue == null)) {
-                dao.delete(currentPack);
                 for (Pack packToRemove: deleteList) {
                     if(packToRemove.getPackNumber() == currentPack.getPackNumber()) {
+                        processPlaydateMemberDeletes(packToRemove);
                         deleteList.remove(packToRemove);
+                        dao.delete(currentPack);
                         break;
                     }
                 }
             }
+
             position++;
+        }
+
+    }
+
+    public void processPlaydateMemberDeletes(Pack packToRemove) {
+
+        for (PackMember member: packToRemove.getMembers()){
+
+            Set<PlaydateMember> playdateMemberSet = new HashSet<>(member.getPlaydateMembers());
+            for (PlaydateMember currentPlaydateMember: playdateMemberSet) {
+
+                dao.delete(currentPlaydateMember);
+                boolean removed = member.removeMember(currentPlaydateMember);
+            }
         }
 
     }

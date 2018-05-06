@@ -8,6 +8,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * A class to represent a pack.
@@ -63,5 +64,11 @@ public class PlaydateMember implements Serializable {
     public PlaydateMember(String status, PackMember packMember) {
         this.status = status;
         this.packMember = packMember;
+    }
+
+
+    @Override
+    public int hashCode() {
+        return Objects.hash("PlayDateMember=" + playdateMemberNumber);
     }
 }

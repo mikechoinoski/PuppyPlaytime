@@ -1,4 +1,6 @@
-use puppy_playtime_test;
+use puppy_playtime_main;
+delete from playdate_member;
+delete from playdate;
 delete from role;
 delete from pack_member;
 delete from pack;
@@ -23,3 +25,7 @@ INSERT INTO role VALUES (3,CURRENT_TIMESTAMP(),'user',CURRENT_TIMESTAMP(),'Aweso
 INSERT INTO role VALUES (4,CURRENT_TIMESTAMP(),'user',CURRENT_TIMESTAMP(),'Number 4',4);
 INSERT INTO role VALUES (5,CURRENT_TIMESTAMP(),'user',CURRENT_TIMESTAMP(),'random_pack',5);
 INSERT INTO role VALUES (6,CURRENT_TIMESTAMP(),'user',CURRENT_TIMESTAMP(),'dog',6);
+INSERT INTO playdate values (1,3,"Barky Park",CURRENT_DATE(),CURRENT_TIME(),"Pending",1,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
+INSERT INTO playdate values (2,4,"Wooded Marsh",CURRENT_DATE(),CURRENT_TIME(),"Pending",0,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
+INSERT INTO playdate_member VALUES (1,1,2,"Pending",CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
+INSERT INTO playdate_member VALUES (2,1,4,"Pending",CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());

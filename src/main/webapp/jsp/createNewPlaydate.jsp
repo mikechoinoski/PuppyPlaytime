@@ -71,7 +71,7 @@
                                                            id="member${singleMember.packMemberNumber}" checked
                                                            value="memberCheckBoxValue${singleMember.packMemberNumber}"
                                                            style="display:none">
-                                                    <label for="member${singleMember.packMemberNumber}" style="background:url('./uploadedPhotos/${singleMember.pictureFilename}') no-repeat; background-size: cover; background-position: center;">
+                                                    <label for="member${singleMember.packMemberNumber}" style="background:url('https://s3.us-east-2.amazonaws.com/puppyplaytimebucket/${singleMember.pictureFilename}') no-repeat; background-size: cover; background-position: center;">
                                                     </label>
                                                 </c:otherwise>
                                             </c:choose>
@@ -104,7 +104,7 @@
                                                            id="member${singleMember.packMemberNumber}" checked
                                                            value="memberCheckBoxValue${singleMember.packMemberNumber}"
                                                            style="display:none">
-                                                    <label for="member${singleMember.packMemberNumber}" style="background:url('./uploadedPhotos/${singleMember.pictureFilename}') no-repeat; background-size: cover; background-position: center;">
+                                                    <label for="member${singleMember.packMemberNumber}" style="background:url('https://s3.us-east-2.amazonaws.com/puppyplaytimebucket/${singleMember.pictureFilename}') no-repeat; background-size: cover; background-position: center;">
                                                     </label>
                                                 </c:otherwise>
                                             </c:choose>

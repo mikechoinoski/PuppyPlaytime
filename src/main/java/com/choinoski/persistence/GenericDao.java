@@ -206,7 +206,7 @@ public class GenericDao<T> {
 
 
     /**
-     * Retrieves entities based on multiple properties.
+     * Retrieves entities based on multiple property.
      *
      * @param propertyOneName   the property one name
      * @param propertyOneBegin  the property one range begin

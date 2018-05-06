@@ -11,38 +11,54 @@ import java.io.InputStream;
 import java.nio.ByteBuffer;
 
 
+/**
+ * A class of utilities for files.
+ *
+ * @author mchoinoski
+ */
 public class FileUtilities {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
+    /**
+     * The constant PERIOD.
+     */
     public static final String PERIOD = ".";
 
+    /**
+     * Instantiates a new File utilities.
+     */
     public FileUtilities() {
 
     }
 
-    public ByteBuffer convertPartToBytes(Part imagePart) throws Exception {
+    /**
+     * Convert part to a byte buffer.
+     *
+     * @param imagePart the image part
+     * @return the byte buffer
+     * @throws Exception the exception
+     */
+    public ByteBuffer convertPartToBytes(Part imagePart)  {
 
-        ByteBuffer imageBytes;
+        ByteBuffer imageBytes = null;
+
         try (InputStream inputStream = imagePart.getInputStream()) {
             imageBytes = ByteBuffer.wrap(IOUtils.toByteArray(inputStream));
+        } catch (IOException e) {
+            logger.error("An IO Exception occurred when reading an input stream and " +
+                    "converting it to bytes: " + e);
         }
 
         return imageBytes;
 
     }
 
-    public void verifyFolderExists(String folderPath) {
-
-        File fileDirectory = new File(folderPath);
-        if (!fileDirectory.exists()) {
-            fileDirectory.mkdirs();
-        }
-
-    }
-
     /**
      * Utility method to get file name from HTTP header content-disposition
+     *
+     * @param part the part
+     * @return the file name
      */
     public String getFileName(Part part) {
         String contentDisp = part.getHeader("content-disposition");
@@ -53,39 +69,6 @@ public class FileUtilities {
             }
         }
         return "";
-    }
-
-    /**
-     * Utility method to upload a file to a folder
-     */
-    public void uploadfile(String folderLocation, String fileName, String fileExtension, Part part) {
-
-        verifyFolderExists(folderLocation);
-
-        String filePath = folderLocation + File.separator + fileName + PERIOD +  fileExtension;
-        File targetFile = new File(filePath);
-        if (!targetFile.exists()) {
-            try {
-                part.write(filePath);
-            } catch (IOException e) {
-                logger.error("Error occurred while uploading a file: " + e);
-            }
-
-        }
-
-    }
-
-    public void uploadfile(String fileName) {
-
-        File file = new File(fileName);
-
-        if(file.delete()) {
-            logger.debug("File was deleted successfully: " + fileName);
-        }
-        else
-        {
-            logger.debug("File was not deleted: " + fileName);
-        }
     }
 
 }

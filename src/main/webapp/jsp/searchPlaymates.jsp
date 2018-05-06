@@ -188,12 +188,17 @@
                 <td width="130" align="center">
                     <c:choose>
                         <c:when test="${empty singleMember.pictureFilename}">
-                            <input type="checkbox" name="memberCheckBox${singleMember.packMemberNumber}" id="member${singleMember.packMemberNumber}" value="memberCheckBoxValue${singleMember.packMemberNumber}" style="display:none">
+                            <input type="checkbox" name="memberCheckBox${singleMember.packMemberNumber}"
+                                   id="member${singleMember.packMemberNumber}"
+                                   value="memberCheckBoxValue${singleMember.packMemberNumber}" style="display:none">
                             <label for="member${singleMember.packMemberNumber}" style="background:url(./uploadedPhotos/default_dog.png) no-repeat; background-size: cover; background-position: center;"></label>
                         </c:when>
                         <c:otherwise>
-                            <input type="checkbox" name="memberCheckBox${singleMember.packMemberNumber}" id="member${singleMember.packMemberNumber}" value="memberCheckBoxValue${singleMember.packMemberNumber}" style="display:none">
-                            <label for="member${singleMember.packMemberNumber}" style="background:url('./uploadedPhotos/${singleMember.pictureFilename}') no-repeat; background-size: cover; background-position: center;"></label>
+                            <input type="checkbox" name="memberCheckBox${singleMember.packMemberNumber}"
+                                   id="member${singleMember.packMemberNumber}"
+                                   value="memberCheckBoxValue${singleMember.packMemberNumber}" style="display:none">
+                            <label for="member${singleMember.packMemberNumber}"
+                                   style="background:url('https://s3.us-east-2.amazonaws.com/puppyplaytimebucket/${singleMember.pictureFilename}') no-repeat; background-size: cover; background-position: center;"></label>
                         </c:otherwise>
                     </c:choose>
                 </td>
