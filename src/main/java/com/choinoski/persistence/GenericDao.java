@@ -18,6 +18,9 @@ import org.hibernate.criterion.Restrictions;
 /**
  * A generic DAO somewhat inspired by http://rodrigouchoa.wordpress.com
  *
+ * @author mchoinoski
+ *
+ * @param <T> the type parameter
  */
 public class GenericDao<T> {
 
@@ -31,6 +34,9 @@ public class GenericDao<T> {
     private CriteriaQuery<T> query;
     private Root<T> root;
 
+    /**
+     * Instantiates a new Generic dao.
+     */
     public GenericDao() {
 
     }
@@ -46,8 +52,10 @@ public class GenericDao<T> {
 
     /**
      * Gets an entity by id
-     * @param id entity id to search by
-     * @return entity
+     *
+     * @param <T> the type parameter
+     * @param id  entity id to search by
+     * @return entity by id
      */
     public <T> T getById(int id) {
 
@@ -61,8 +69,9 @@ public class GenericDao<T> {
     }
 
     /**
-     * update entity
-     * @param entity the entity to be inserted or updated
+     * Update an entity in the database.
+     *
+     * @param entity the entity to be updated
      */
     public void saveOrUpdate(T entity) {
 
@@ -77,8 +86,10 @@ public class GenericDao<T> {
     }
 
     /**
-     * insert entity
+     * Insert an entity to the database
+     *
      * @param entity the entity to be inserted
+     * @return the id of the newly inserted entity
      */
     public int insert(T entity) {
 
@@ -131,7 +142,8 @@ public class GenericDao<T> {
     /**
      * Get user by property (exact match)
      *
-     *
+     * @param propertyName the property name that is a column in a database
+     * @param value        the value that is compared to the property name
      * @return the entities that match the property
      */
     public List<T> getByPropertyEqual(String propertyName, String value) {
@@ -149,8 +161,11 @@ public class GenericDao<T> {
     }
 
     /**
+     * Returns a list that satisfy the condition of greater than a date
      *
-     *
+     * @param propertyName the property name that is a column in a database
+     * @param value        the value that is compared to the property name
+     * @return the entities that have a property greater than a date
      */
     public List<T> getByPropertyGreaterDate(String propertyName, LocalDate value) {
 
@@ -168,7 +183,10 @@ public class GenericDao<T> {
 
     /**
      * Get user by property (like)
-     * sample usage: getByPropertyLike("lastname", "C")
+     *
+     * @param propertyName the property name that is a column in a database
+     * @param value        the value that is compared to the property name
+     * @return a list of entities that match the like criteria
      */
     public List<T> getByPropertyLike(String propertyName, String value) {
 
@@ -186,9 +204,22 @@ public class GenericDao<T> {
 
     }
 
+
     /**
+     * Retrieves entities based on multiple properties.
      *
+     * @param propertyOneName   the property one name
+     * @param propertyOneBegin  the property one range begin
+     * @param propertyOneEnd    the property one range end
+     * @param propertyTwoName   the property two name
+     * @param beginDate         the begin date
+     * @param endDate           the end date
+     * @param propertyThreeName the property three name
+     * @param propertyThree     the property three
+     * @param propertyFourName  the property four name
+     * @param propertyFour      the property four
      *
+     * @return the by multiple property
      */
     public List<T> getByMultipleProperty(String propertyOneName, int propertyOneBegin, int propertyOneEnd,
                                          String propertyTwoName, LocalDate beginDate, LocalDate endDate,
@@ -217,6 +248,9 @@ public class GenericDao<T> {
 
     }
 
+    /**
+     * Method to set up anything needed to connect to the database.
+     */
     private void querySetup() {
 
         session = sessionFactory.openSession();

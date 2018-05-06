@@ -5,8 +5,19 @@ import com.choinoski.entity.Pack;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
+/**
+ * This class gets the data for a logged in user.
+ *
+ * @author mchoinoski
+ */
 public class LoggedInPack {
 
+    /**
+     * Retrieves the pack that is logged in.
+     *
+     * @param request the request that contains login information
+     * @return the pack logged in
+     */
     public Pack loggedInPackInfo(HttpServletRequest request) {
 
         GenericDao dao      = new GenericDao(Pack.class);

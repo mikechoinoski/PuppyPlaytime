@@ -4,9 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * The type Member search criteria.
+ *
+  @author mchoinoski
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 
 public class MemberSearchCriteria {
 

@@ -84,32 +84,6 @@ public class DataConverter {
     }
 
     /**
-     * Convert weight to size string.
-     *
-     * @param weight the weight
-     * @return the string
-     */
-    public String convertWeightToSize(int weight) {
-
-        String size =  null;
-
-        if (weight <= Integer.parseInt(properties.getProperty("member.size.tier.one.max"))) {
-            size = "XS";
-        } else if (weight <= Integer.parseInt(properties.getProperty("member.size.tier.two.max"))) {
-            size = "S";
-        } else if (weight <= Integer.parseInt(properties.getProperty("member.size.tier.three.max"))) {
-            size = "M";
-        } else if (weight <= Integer.parseInt(properties.getProperty("member.size.tier.four.max"))) {
-            size = "L";
-        } else {
-            size = "XL";
-        }
-
-        return size;
-
-    }
-
-    /**
      * Gets gender in the form of a char.
      *
      * @param genderData the gender data
