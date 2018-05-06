@@ -46,7 +46,7 @@ class PackDaoTest {
 
         Pack retrievedPack = (Pack) dao.getById(3);
         assertNotNull(retrievedPack);
-        assertEquals("Cool Dawgs", retrievedPack.getPackName());
+        assertEquals("Awesome Pack!", retrievedPack.getPackName());
 
     }
 
@@ -67,51 +67,28 @@ class PackDaoTest {
     /**
      * Verify the success of an insert
      */
-    //@Test
-    //void testInsert() {
+    @Test
+    void testInsert() {
 
-     //   Pack newPack = new Pack("Newest Pack", "pack12321", "trickypassword!");
+        Pack newPack = new Pack("Newest Pack","Ramon","Williams",
+                "5122 Spike Way","ramon53324@yahoo.com",
+                "16084254867","R42sf63");
 
-     //   int id = dao.insert(newPack);
+        int id = dao.insert(newPack);
 
-     //   assertNotEquals(0,id);
-    //    Pack insertedPack = (Pack) dao.getById(id);
-     //   assertEquals("Newest Pack", insertedPack.getPackName());
-    //   assertEquals("pack12321", insertedPack.getLogin());
-    //    assertEquals("trickypassword!", insertedPack.getPassword());
-    //}
+        assertNotEquals(0,id);
+        Pack insertedPack = (Pack) dao.getById(id);
+        assertTrue(insertedPack.equals(newPack));
 
-    /**
-     * Verify the success of an insert with a member
-     */
-    //@Test
-    //void testInsertWithMember() {
+    }
 
-    //    Pack newPack       = new Pack("The Shih Tzu Pack", "legoandchewy", "youllneverguessit");
-
-    //    PackMember newMember = new PackMember("Scout", "M", "Golden Retriever", 'F',
-    //            LocalDate.of(2011, Month.MAY, 9),0,
-    //            LocalDateTime.now(), LocalDateTime.now(), newPack);
-
-    //    newPack.addMember(newMember);
-
-    //    int id = dao.insert(newPack);
-
-     //   assertNotEquals(0,id);
-     //   Pack insertedPack = (Pack) dao.getById(id);
-     //   assertTrue(newPack.equals(insertedPack));
-    //    assertEquals(1, insertedPack.getMembers().size());
-
-    //}
-    
-    
     /**
      * Verify the success of a delete
      */
     @Test
     void testDelete() {
-        dao.delete(dao.getById(2));
-        assertNull(dao.getById(2));
+        dao.delete(dao.getById(5));
+        assertNull(dao.getById(5));
     }
 
     /**
@@ -120,7 +97,7 @@ class PackDaoTest {
     @Test
     void testGetAll() {
         List<Pack> packs = dao.getAll();
-        assertEquals(5, packs.size());
+        assertEquals(6, packs.size());
     }
 
     /**

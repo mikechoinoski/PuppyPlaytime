@@ -2,15 +2,19 @@ package com.choinoski.persistence;
 
 import com.choinoski.entity.Pack;
 import com.choinoski.entity.PackMember;
-import com.choinoski.util.SearchDataConverter;
+import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
+import java.util.Properties;
+
 import com.choinoski.test.util.Database;
 
+import static org.h2.util.SortedProperties.loadProperties;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -38,7 +42,7 @@ class PackMemberDaoTest {
     @Test
     void getAllSuccess() {
         List<PackMember> members = dao.getAll();
-        assertEquals(6, members.size());
+        assertEquals(10, members.size());
     }
 
 
@@ -63,18 +67,18 @@ class PackMemberDaoTest {
         GenericDao packDao   = new GenericDao(Pack.class);
         Pack       pack      = (Pack) packDao.getById(packId);
 
-        //PackMember newMember = new PackMember("Scout", 80, "Golden Retriever", 'F',
-        //                       LocalDate.of(2011, Month.MAY, 9),true,null);
+        PackMember newMember = new PackMember("Scout", "80", "Golden Retriever", 'F',
+                               LocalDate.of(2011, Month.MAY, 9),true,null);
 
-        //pack.addMember(newMember);
+        int id = pack.addMember(newMember);
 
         //int id = packDao.insert(newMember);
 
-        //assertNotEquals(0,id);
-        //PackMember insertedMember = (PackMember) dao.getById(id);
-        //assertTrue(newMember.equals(insertedMember));
-        //assertNotNull(insertedMember.getPack());
-        //assertTrue(pack.equals(insertedMember.getPack()));
+        assertNotEquals(0,id);
+        PackMember insertedMember = (PackMember) dao.getById(id);
+        assertTrue(newMember.equals(insertedMember));
+        assertNotNull(insertedMember.getPack());
+        assertTrue(pack.equals(insertedMember.getPack()));
     }
 
 
@@ -105,9 +109,9 @@ class PackMemberDaoTest {
      */
     @Test
     void getByPropertyEqualSuccess() {
-        List<PackMember> members = dao.getByPropertyEqual("breed", "Boxer");
+        List<PackMember> members = dao.getByPropertyEqual("breed", "Chihuahua");
         assertEquals(1, members.size());
-        assertEquals(6, members.get(0).getPackMemberNumber());
+        assertEquals(7, members.get(0).getPackMemberNumber());
     }
 
     /**
@@ -115,27 +119,50 @@ class PackMemberDaoTest {
      */
     @Test
     void getByPropertyLikeSuccess() {
-        List<PackMember> members = dao.getByPropertyLike("breed", "B");
-        assertEquals(4, members.size());
+        List<PackMember> members = dao.getByPropertyLike("breed", "New");
+        assertEquals(2, members.size());
     }
 
     /**
-     * Verify successful get by property (like match)
+     * Verify successful get by property when using multiple properties
      */
     @Test
     void getByMultipleProperty() {
-        MemberSearchCriteria   searchParameters = new MemberSearchCriteria();
-        //boolean intact = false;
-        //Boolean intactObject = intact;
 
-//        List<PackMember> members = dao.getByMultipleProperty(
-//                "weight", searchParameters.getMinimumWeightForSize("XS"), searchParameters.getMaximumWeightForSize("XL"),
-//                "dateOfBirth", LocalDate.now().minusYears(30), LocalDate.now().minusYears(0),
-//                "sex", ' ', "intact",null);
-//
-//
-//
-//        assertEquals(4, members.size());
+        List<PackMember> members = null;
+
+        try {
+            Properties properties = loadProperties("/home/student/IdeaProjects/PuppyPlaytime/src/test/resources/puppyPlaytime.properties");
+            DataConverter converter = new DataConverter(properties);
+            members = dao.getByMultipleProperty(
+                    "weight", converter.getMinimumWeightForSize("XS"), converter.getMaximumWeightForSize("M"),
+                    "dateOfBirth", LocalDate.now().minusYears(5), LocalDate.now().minusYears(0),
+                    "sex", ' ', "intact",null);
+        } catch (IOException e) {
+            Assert.fail();
+        }
+        assertEquals(2, members.size());
+    }
+
+    /**
+     * Verify successful get by property when using multiple properties
+     */
+    @Test
+    void getByMultiplePropertyTwo() {
+
+        List<PackMember> members = null;
+
+        try {
+            Properties properties = loadProperties("/home/student/IdeaProjects/PuppyPlaytime/src/test/resources/puppyPlaytime.properties");
+            DataConverter converter = new DataConverter(properties);
+            members = dao.getByMultipleProperty(
+                    "weight", converter.getMinimumWeightForSize("S"), converter.getMaximumWeightForSize("XL"),
+                    "dateOfBirth", LocalDate.now().minusYears(10), LocalDate.now().minusYears(0),
+                    "sex", 'M', "intact",null);
+        } catch (IOException e) {
+            Assert.fail();
+        }
+        assertEquals(4, members.size());
     }
 
 }

@@ -1,4 +1,4 @@
-use puppy_playtime_main;
+use puppy_playtime_test;
 delete from playdate_member;
 delete from playdate;
 delete from role;
@@ -9,7 +9,7 @@ INSERT INTO pack VALUES (2,'user','Michael','Choinoski','1234 Willow Street','14
 INSERT INTO pack VALUES (3,'Awesome Pack!','Andrew','Cutler','12 Ganderson Court','16081234567','random@yahoo.com','RedBike21');
 INSERT INTO pack VALUES (4,'Number 4',' ',' ',' ',' ',' ','password');
 INSERT INTO pack VALUES (5,'random_pack',' ',' ',' ',' ',' ','randompassword');
-INSERT INTO pack VALUES (6,'dog','Dawg','Boarder','30 Dog Territory Ave.','12622429123','Ilovedogs100@yahoo.com','dog');
+INSERT INTO pack VALUES (6,'Dawg','Donald','Boarder','30 Dog Territory Ave.','12622429123','Ilovedogs100@yahoo.com','dog');
 INSERT INTO pack_member VALUES (1,2,'Odo', 15, 'Mixed','M','2016-07-14',1,"test_odo.jpg",CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
 INSERT INTO pack_member VALUES (2,1,'Boomer', 68, 'Black Lab','M','2012-08-19',0,"test_black_lab.jpg",CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
 INSERT INTO pack_member VALUES (3,1,'Pow', 175, 'Great Dane','M','2014-03-25',0,"test_great_dane.jpg",CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
@@ -19,6 +19,7 @@ INSERT INTO pack_member VALUES (6,5,'Missy', 11, 'Shih Tzu','F','2010-05-08',0,n
 INSERT INTO pack_member VALUES (7,6,'Tiny', 5, 'Chihuahua','F','2005-02-25',1,null,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
 INSERT INTO pack_member VALUES (8,6,'Grumpy', 120, 'Rottweiler','M','2011-07-17',0,null,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
 INSERT INTO pack_member VALUES (9,6,'Seymour', 25, 'New Guinea Singing Dog ','M','1988-07-17',0,null,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
+INSERT INTO pack_member VALUES (10,6,'Sally', 100, 'Newfoundland','F','2016-08-11',1,null,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
 INSERT INTO role VALUES (1,CURRENT_TIMESTAMP(),'admin',CURRENT_TIMESTAMP(),'admin',1);
 INSERT INTO role VALUES (2,CURRENT_TIMESTAMP(),'user',CURRENT_TIMESTAMP(),'user',2);
 INSERT INTO role VALUES (3,CURRENT_TIMESTAMP(),'user',CURRENT_TIMESTAMP(),'Awesome Pack!',3);

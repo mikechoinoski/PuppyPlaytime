@@ -1,0 +1,1 @@
+[ERROR] 2018-05-06 18:07:44.632 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.HibernateException: Don't change the reference to a collection with delete-orphan enabled : com.choinoski.entity.PackMember.playdateMembers]

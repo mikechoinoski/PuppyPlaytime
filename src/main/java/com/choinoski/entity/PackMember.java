@@ -39,6 +39,9 @@ public class PackMember implements Serializable {
     @Column( name = "date_of_birth")
     private LocalDate     dateOfBirth;
 
+    /**
+     * The Intact.
+     */
     @Column(columnDefinition = "TINYINT")
     @Type(type = "org.hibernate.type.NumericBooleanType")
     public boolean intact;
@@ -68,8 +71,59 @@ public class PackMember implements Serializable {
     @Transient
     private Properties properties;
 
+    /**
+     * Instantiates a new Pack member.
+     */
     public PackMember() {
 
+    }
+
+    /**
+     * Instantiates a new Pack member.
+     *
+     * @param packMemberNumber the pack member number
+     * @param name             the name
+     * @param weight           the weight
+     * @param breed            the breed
+     * @param sex              the sex
+     * @param dateOfBirth      the date of birth
+     * @param intact           the intact
+     * @param pictureFilename  the picture filename
+     * @param pack            the pack
+     */
+    public PackMember(int packMemberNumber, String name, int weight, String breed, char sex,
+                      LocalDate dateOfBirth, boolean intact, String pictureFilename, Pack pack) {
+        setPackMemberNumber(packMemberNumber);
+        setName(name);
+        setWeight(weight);
+        setBreed(breed);
+        setSex(sex);
+        setDateOfBirth(dateOfBirth);
+        setIntact(intact);
+        setPictureFilename(pictureFilename);
+        setPack(pack);
+    }
+
+    /**
+     * Instantiates a new Pack member.
+     *
+     * @param name             the name
+     * @param weight           the weight
+     * @param breed            the breed
+     * @param sex              the sex
+     * @param dateOfBirth      the date of birth
+     * @param intact           the intact
+     * @param pictureFilename  the picture filename
+     */
+    public PackMember(String name, String weight, String breed, char sex,
+                      LocalDate dateOfBirth, boolean intact, String pictureFilename) {
+        setName(name);
+        setWeight(weight);
+        setBreed(breed);
+        setSex(sex);
+        setDateOfBirth(dateOfBirth);
+        setIntact(intact);
+        setPictureFilename(pictureFilename);
     }
 
     /**
@@ -82,9 +136,10 @@ public class PackMember implements Serializable {
      * @param dateOfBirth     the date of birth
      * @param intact          the intact
      * @param pictureFilename the picture filename
+     * @param pack            the pack
      */
-    public PackMember(String name, String weight, String breed, char sex, LocalDate dateOfBirth, boolean intact,
-                      String pictureFilename) {
+    public PackMember(String name, int weight, String breed, char sex, LocalDate dateOfBirth, boolean intact,
+                      String pictureFilename, Pack pack) {
         setName(name);
         setWeight(weight);
         setBreed(breed);
@@ -92,6 +147,7 @@ public class PackMember implements Serializable {
         setDateOfBirth(dateOfBirth);
         setIntact(intact);
         setPictureFilename(pictureFilename);
+        setPack(pack);
     }
 
     /**
@@ -133,10 +189,20 @@ public class PackMember implements Serializable {
         this.weight = weight;
     }
 
+    /**
+     * Gets properties.
+     *
+     * @return the properties
+     */
     public Properties getProperties() {
         return properties;
     }
 
+    /**
+     * Sets properties.
+     *
+     * @param properties the properties
+     */
     public void setProperties(Properties properties) {
         this.properties = properties;
     }
@@ -168,12 +234,13 @@ public class PackMember implements Serializable {
     /**
      * This method checks to see if any updates are needed and makes the updates if they are needed.
      *
-     * @param name     the name
-     * @param birthday the birthday
-     * @param weight   the weight
-     * @param breed    the breed
-     * @param gender   the gender
-     * @param intact   the intact
+     * @param name       the name
+     * @param birthday   the birthday
+     * @param weight     the weight
+     * @param breed      the breed
+     * @param gender     the gender
+     * @param intact     the intact
+     * @param dateFormat the date format
      * @return the boolean
      */
     public boolean updatePackMember(String name, String birthday, String weight, String breed,
@@ -266,16 +333,13 @@ public class PackMember implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PackMember that = (PackMember) o;
-        return packMemberNumber == that.packMemberNumber &&
-                weight == that.weight &&
+        return  weight == that.weight &&
                 sex == that.sex &&
                 intact == that.intact &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(breed, that.breed) &&
                 Objects.equals(dateOfBirth, that.dateOfBirth) &&
-                Objects.equals(pictureFilename, that.pictureFilename) &&
-                Objects.equals(createDate, that.createDate) &&
-                Objects.equals(lastModifiedDate, that.lastModifiedDate);
+                Objects.equals(pictureFilename, that.pictureFilename);
     }
 
     @Override

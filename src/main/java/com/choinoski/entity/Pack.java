@@ -2,6 +2,7 @@ package com.choinoski.entity;
 
 import java.io.Serializable;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 import com.choinoski.persistence.GenericDao;
@@ -67,6 +68,30 @@ public class Pack implements Serializable {
     /**
      * Instantiates a new Pack.
      *
+     * @param packNumber   the pack number
+     * @param packName     the pack name
+     * @param firstName    the first name
+     * @param lastName     the last name
+     * @param address      the address
+     * @param emailAddress the email address
+     * @param phoneNumber  the phone number
+     * @param password     the password
+     */
+    public Pack(int packNumber, String packName, String firstName, String lastName, String address, String emailAddress,
+                String phoneNumber, String password) {
+        this.packNumber   = packNumber;
+        this.packName     = packName;
+        this.firstName    = firstName;
+        this.lastName     = lastName;
+        this.address      = address;
+        this.emailAddress = emailAddress;
+        this.phoneNumber  = phoneNumber;
+        this.password     = password;
+    }
+
+    /**
+     * Instantiates a new Pack.
+     *
      * @param packName     the pack name
      * @param firstName    the first name
      * @param lastName     the last name
@@ -85,6 +110,7 @@ public class Pack implements Serializable {
         this.phoneNumber = phoneNumber;
         this.password = password;
     }
+
 
     /**
      * Gets orders.
@@ -108,14 +134,18 @@ public class Pack implements Serializable {
      * Add a member.
      *
      * @param member the member to add
+     * @return the pack member number
      */
-    public void addMember(PackMember member) {
+    public int addMember(PackMember member) {
         dao = new GenericDao(PackMember.class);
         member.setPack(this);
         int id = dao.insert(member);
         PackMember newMember = (PackMember) dao.getById(id);
         members.add(newMember);
+
+        return newMember.getPackMemberNumber();
     }
+
 
     /**
      * Remove a member.
@@ -190,4 +220,19 @@ public class Pack implements Serializable {
         return removed;
 
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pack pack = (Pack) o;
+        return Objects.equals(packName, pack.packName) &&
+                Objects.equals(firstName, pack.firstName) &&
+                Objects.equals(lastName, pack.lastName) &&
+                Objects.equals(address, pack.address) &&
+                Objects.equals(emailAddress, pack.emailAddress) &&
+                Objects.equals(phoneNumber, pack.phoneNumber) &&
+                Objects.equals(password, pack.password);
+    }
+
 }

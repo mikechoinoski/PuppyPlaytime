@@ -95,31 +95,14 @@ public class AdministrativeFunctions extends HttpServlet {
             dao.delete(packToDelete);
         }
 
-
-
-//        for (Pack currentPack: packsToCheck) {
-//
-//            packNumberText = Integer.toString(currentPack.getPackNumber());
-//            checkBoxValue  = request.getParameter("packToRemove" + packNumberText);
-//
-//            if (!(checkBoxValue == null)) {
-//                for (Pack packToRemove: deleteList) {
-//                    int packNumber = packToRemove.getPackNumber();
-//                    int comparePackNumber = currentPack.getPackNumber();
-//                    if (packNumber == comparePackNumber) {
-//                        dao.delete(packToRemove);
-//                        deleteList.remove(packToRemove);
-//                        break;
-//                    }
-//                }
-//            }
-//            position++;
-//        }
-
-
-
     }
 
+
+    /**
+     *  This method processes deleting playdate rows for members
+     *
+     * @param packToRemove the pack that needs to have rows removed from the playdate table
+     */
     public void processPlaydateMemberDeletes(Pack packToRemove) {
 
         Set<PackMember> memberSet = new HashSet<>(packToRemove.getMembers());

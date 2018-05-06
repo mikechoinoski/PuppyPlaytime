@@ -1,0 +1,1 @@
+[ERROR] 2018-05-06 17:38:48.453 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1]
