@@ -49,7 +49,7 @@
                                     <img src="./uploadedPhotos/default_dog.png" height="80" width="80">
                                 </c:when>
                                 <c:otherwise>
-                                    <img src="/home/puppyImages/${userMembers.pictureFilename}" height="80" width="80">
+                                    <img src="https://s3.us-east-2.amazonaws.com/puppyplaytimebucket/${userMembers.pictureFilename}" height="80" width="80">
                                 </c:otherwise>
                             </c:choose>
                         </td>
