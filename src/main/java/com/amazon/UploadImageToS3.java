@@ -42,7 +42,7 @@ public class UploadImageToS3 {
     /**
      * Get the s3 bucket and credentials and create an s3 client.
      */
-    public void setup() {
+    private void setup() {
 
         bucket = properties.getProperty("aws.bucket.name");
 
@@ -74,8 +74,8 @@ public class UploadImageToS3 {
 
             ObjectMetadata metadata = new ObjectMetadata();
             metadata.setContentLength(contentLength);
-            metadata.setContentType("application/octet-stream");
-            metadata.addUserMetadata("x-amz-meta-title", "someTitle");
+            metadata.setContentType(properties.getProperty("aws.file.type"));
+            metadata.addUserMetadata("x-amz-meta-title", "PictureData");
 
             request.setMetadata(metadata);
             s3Client.putObject(request.withCannedAcl(CannedAccessControlList.PublicRead));

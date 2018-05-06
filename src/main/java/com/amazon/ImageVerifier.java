@@ -27,15 +27,10 @@ import java.util.Properties;
 
 public class ImageVerifier {
 
-    private String bucket = "puppyplaytimebucket";
-
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     private Properties        properties;
     private AmazonRekognition rekognitionClient;
-
-    public ImageVerifier() {
-    }
 
     public ImageVerifier(Properties properties) {
         this.properties = properties;
@@ -45,7 +40,7 @@ public class ImageVerifier {
      * This method gets the users credentials from their profile. The default profile is used for AWS. A
      * amazon rekognition client is built with region and credential information.
      */
-    public void setup() {
+    private void setup() {
 
 
         BasicAWSCredentials credentials = new BasicAWSCredentials (properties.getProperty("aws.key"),
