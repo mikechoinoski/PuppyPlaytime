@@ -68,10 +68,30 @@ public class PackMember implements Serializable {
     @Transient
     private Properties properties;
 
-    /**
-     * Instantiates a new Pack Member.
-     */
     public PackMember() {
+
+    }
+
+    /**
+     * Instantiates a new Pack member.
+     *
+     * @param name            the name
+     * @param weight          the weight
+     * @param breed           the breed
+     * @param sex             the sex
+     * @param dateOfBirth     the date of birth
+     * @param intact          the intact
+     * @param pictureFilename the picture filename
+     */
+    public PackMember(String name, String weight, String breed, char sex, LocalDate dateOfBirth, boolean intact,
+                      String pictureFilename) {
+        setName(name);
+        setWeight(weight);
+        setBreed(breed);
+        setSex(sex);
+        setDateOfBirth(dateOfBirth);
+        setIntact(intact);
+        setPictureFilename(pictureFilename);
     }
 
     /**
@@ -96,54 +116,6 @@ public class PackMember implements Serializable {
     }
 
     /**
-     * Instantiates a new Pack member.
-     *
-     * @param name            the name
-     * @param weight          the weight
-     * @param breed           the breed
-     * @param sex             the sex
-     * @param dateOfBirth     the date of birth
-     * @param intact          the intact
-     * @param pictureFilename the picture filename
-     */
-    public PackMember(String name, int weight, String breed, char sex, LocalDate dateOfBirth, boolean intact,
-                      String pictureFilename) {
-
-        setName(name);
-        setWeight(weight);
-        setBreed(breed);
-        setSex(sex);
-        setDateOfBirth(dateOfBirth);
-        setIntact(intact);
-        setPictureFilename(pictureFilename);
-
-    }
-
-    /**
-     * Instantiates a new Pack member.
-     *
-     * @param name            the name
-     * @param weight          the weight
-     * @param breed           the breed
-     * @param sex             the sex
-     * @param dateOfBirth     the date of birth
-     * @param intact          the intact
-     * @param pictureFilename the picture filename
-     */
-    public PackMember(String name, String weight, String breed, char sex, LocalDate dateOfBirth, boolean intact,
-                      String pictureFilename) {
-
-        setName(name);
-        setWeight(weight);
-        setBreed(breed);
-        setSex(sex);
-        setDateOfBirth(dateOfBirth);
-        setIntact(intact);
-        setPictureFilename(pictureFilename);
-
-    }
-
-    /**
      * Sets weight.
      *
      * @param weight the weight
@@ -161,6 +133,14 @@ public class PackMember implements Serializable {
         this.weight = weight;
     }
 
+    public Properties getProperties() {
+        return properties;
+    }
+
+    public void setProperties(Properties properties) {
+        this.properties = properties;
+    }
+
     /**
      * Gets size.
      *
@@ -176,7 +156,7 @@ public class PackMember implements Serializable {
             size = "S";
         } else if (weight < 60) {
             size = "M";
-        } else if (weight < 110) {
+        } else if (weight < 130) {
             size = "L";
         } else {
             size = "XL";
@@ -184,7 +164,6 @@ public class PackMember implements Serializable {
 
         return size;
     }
-
 
     /**
      * This method checks to see if any updates are needed and makes the updates if they are needed.
@@ -198,9 +177,9 @@ public class PackMember implements Serializable {
      * @return the boolean
      */
     public boolean updatePackMember(String name, String birthday, String weight, String breed,
-                                       String gender, String intact) {
+                                       String gender, String intact, String dateFormat) {
 
-        DataConverter converter = new DataConverter();
+        DataConverter converter = new DataConverter(properties);
 
         Boolean updatesMade = false;
 
@@ -221,7 +200,7 @@ public class PackMember implements Serializable {
 
         if (birthday != null) {
             setDateOfBirth(LocalDate.parse(birthday,
-                    DateTimeFormatter.ofPattern(properties.getProperty("form.date.format"))));
+                    DateTimeFormatter.ofPattern(dateFormat)));
             updatesMade = true;
         }
 

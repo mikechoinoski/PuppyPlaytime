@@ -61,7 +61,7 @@ public class CreateMemberInsertServlet extends HttpServlet {
         boolean noErrorsFound = true;
         String  newFileName   = null;
 
-        DataConverter dataConverter = new DataConverter();
+        DataConverter dataConverter = new DataConverter(properties);
 
         String generatedFilename;
 

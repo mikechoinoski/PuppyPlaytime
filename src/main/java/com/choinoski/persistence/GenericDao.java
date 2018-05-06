@@ -130,7 +130,9 @@ public class GenericDao<T> {
 
     /**
      * Get user by property (exact match)
-     * sample usage: getByPropertyEqual("lastname", "Curry")
+     *
+     *
+     * @return the entities that match the property
      */
     public List<T> getByPropertyEqual(String propertyName, String value) {
 
@@ -157,56 +159,6 @@ public class GenericDao<T> {
         querySetup();
 
         query.select(root).where(builder.greaterThan(root.get(propertyName), value));
-        List<T> entities = session.createQuery( query ).getResultList();
-
-        session.close();
-        return entities;
-
-    }
-
-    public List<T> getByPropertyEqual(String propertyName, boolean value) {
-
-        logger.debug("Searching for user with {} = {}",  propertyName, value);
-
-        querySetup();
-
-        query.select(root).where(builder.equal(root.get(propertyName), value));
-        List<T> entities = session.createQuery( query ).getResultList();
-
-        session.close();
-        return entities;
-
-    }
-
-    /**
-     *
-     *
-     */
-    public List<T> getByPropertyBetween(String propertyName, LocalDate beginDate, LocalDate endDate) {
-
-        logger.debug("Searching for user with {} between {} and {}",  propertyName, beginDate, endDate);
-
-        querySetup();
-
-        query.select(root).where(builder.between(root.get(propertyName), beginDate, endDate));
-        List<T> entities = session.createQuery( query ).getResultList();
-
-        session.close();
-        return entities;
-
-    }
-
-    /**
-     *
-     *
-     */
-    public List<T> getByPropertyBetween(String propertyName, int beginNumber, int endNumber) {
-
-        logger.debug("Searching for user with {} between {} and {}",  propertyName, beginNumber, endNumber);
-
-        querySetup();
-
-        query.select(root).where(builder.between(root.get(propertyName), beginNumber, endNumber));
         List<T> entities = session.createQuery( query ).getResultList();
 
         session.close();
@@ -243,7 +195,6 @@ public class GenericDao<T> {
                                          String propertyThreeName, char propertyThree,
                                          String propertyFourName, Boolean propertyFour) {
 
-        //logger.debug("Searching for user with {} between {} and {}",  propertyName, beginNumber, endNumber);
         List<Predicate> predicates = new ArrayList();
 
         querySetup();
@@ -256,8 +207,6 @@ public class GenericDao<T> {
         if (propertyFour != null) {
             predicates.add(builder.equal(root.get(propertyFourName), propertyFour));
         }
-
-        //Predicate[] allPredicates =  predicates.toArray(new Predicate[predicates.size()]);
 
         query.select(root).where(builder.and(predicates.toArray(new Predicate[predicates.size()])));
 
@@ -276,9 +225,6 @@ public class GenericDao<T> {
         root    = query.from(type);
 
     }
-
-
-//https://stackoverflow.com/questions/11138118/really-dynamic-jpa-criteriabuilder
 
 }
 

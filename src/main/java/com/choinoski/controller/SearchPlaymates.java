@@ -1,9 +1,9 @@
 package com.choinoski.controller;
 
 import com.choinoski.entity.PackMember;
+import com.choinoski.persistence.DataConverter;
 import com.choinoski.persistence.GenericDao;
 import com.choinoski.persistence.MemberSearchCriteria;
-import com.choinoski.util.SearchDataConverter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -70,6 +70,8 @@ public class SearchPlaymates extends HttpServlet {
         char    gender = ' ';
         Boolean intact = null;
 
+        DataConverter converter = new DataConverter(properties);
+
         HttpSession          session          = request.getSession();
 
         ServletContext servletContext = getServletContext();
@@ -104,10 +106,10 @@ public class SearchPlaymates extends HttpServlet {
 
             minimumDate      = LocalDate.now().minusYears(searchParameters.getMinimumAge());
             maximumDate      = LocalDate.now().minusYears(searchParameters.getMaximumAge());
-            minimumWeight    = searchParameters.getMinimumWeightForSize(searchParameters.getMinimumSize());
-            maximumWeight    = searchParameters.getMaximumWeightForSize(searchParameters.getMaximumSize());
-            gender           = searchParameters.getCharGender(searchParameters.getGender());
-            intact           = searchParameters.getIntact(searchParameters.getFixed());
+            minimumWeight    = converter.getMinimumWeightForSize(searchParameters.getMinimumSize());
+            maximumWeight    = converter.getMaximumWeightForSize(searchParameters.getMaximumSize());
+            gender           = converter.getCharGender(searchParameters.getGender());
+            intact           = converter.getIntact(searchParameters.getFixed());
             searchMembers = dao.getByMultipleProperty(
                     "weight", minimumWeight, maximumWeight,
                     "dateOfBirth", maximumDate, minimumDate,

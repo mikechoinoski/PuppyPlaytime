@@ -109,8 +109,6 @@ public class YourPackUpdateServlet extends HttpServlet {
 
         for (PackMember currentMember: packMembers) {
 
-            currentMember.setProperties(properties);
-
             memberNumberText = Integer.toString(currentMember.getPackMemberNumber());
 
             memberName     = request.getParameter("memberName" + memberNumberText);
@@ -121,7 +119,7 @@ public class YourPackUpdateServlet extends HttpServlet {
             memberIntact   = request.getParameter("memberIntact" + memberNumberText);
 
             boolean thereAreUpdates = currentMember.updatePackMember(memberName, memberBirthday, memberWeight,
-                    memberBreed, memberGender, memberIntact);
+                    memberBreed, memberGender, memberIntact, properties.getProperty("form.date.format"));
 
             if (thereAreUpdates) {
                 dao.saveOrUpdate(currentMember);
