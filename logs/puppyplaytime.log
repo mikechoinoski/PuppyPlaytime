@@ -670,3 +670,71 @@
 [DEBUG] 2018-05-05 21:56:21.752 [http-nio-8080-exec-10] GenericDao - Selecting all rows from a table
 [DEBUG] 2018-05-05 22:11:44.243 [http-nio-8080-exec-1] GenericDao - Selecting all rows from a table
 [DEBUG] 2018-05-05 22:23:09.493 [http-nio-8080-exec-3] GenericDao - Selecting all rows from a table
+[DEBUG] 2018-05-05 23:14:27.902 [http-nio-8080-exec-5] GenericDao - Searching for user with packName = user
+[ERROR] 2018-05-05 23:15:10.872 [http-nio-8080-exec-1] FileUtilities - Error occurred while uploading a file: java.io.IOException: java.io.FileNotFoundException: /home/studentsrc/main/webapp/uploadedPhotos/user_goofy.jpg (No such file or directory)
+[ERROR] 2018-05-05 23:15:10.883 [http-nio-8080-exec-1] FileUtilities - Error occurred while uploading a file: java.io.IOException: java.io.FileNotFoundException: /home/studenttarget/PuppyPlaytime/uploadedPhotos/user_goofy.jpg (No such file or directory)
+[DEBUG] 2018-05-05 23:15:10.885 [http-nio-8080-exec-1] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-05-05 23:15:11.635 [http-nio-8080-exec-1] GenericDao - Selecting rows by 26
+[DEBUG] 2018-05-05 23:33:07.677 [http-nio-8080-exec-2] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-05 23:33:39.030 [http-nio-8080-exec-8] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-05-05 23:33:39.418 [http-nio-8080-exec-8] GenericDao - Selecting rows by 27
+[DEBUG] 2018-05-05 23:38:25.429 [http-nio-8080-exec-3] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-06 00:28:14.061 [http-nio-8080-exec-6] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-06 00:31:02.637 [http-nio-8080-exec-7] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 00:31:04.287 [http-nio-8080-exec-7] GenericDao - Selecting rows by 28
+[DEBUG] 2018-05-06 00:35:30.347 [http-nio-8080-exec-4] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-06 00:40:27.521 [http-nio-8080-exec-2] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 00:40:29.427 [http-nio-8080-exec-2] GenericDao - Selecting rows by 29
+[DEBUG] 2018-05-06 00:42:09.224 [http-nio-8080-exec-2] GenericDao - Searching for user with packName = user
+[ERROR] 2018-05-06 00:42:50.281 [http-nio-8080-exec-8] CreateMemberInsertServlet - Error occurred while uploading a file: java.lang.IllegalArgumentException: The key parameter must be specified when uploading an object
+[DEBUG] 2018-05-06 00:42:50.282 [http-nio-8080-exec-8] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 00:42:50.574 [http-nio-8080-exec-8] GenericDao - Selecting rows by 30
+[DEBUG] 2018-05-06 00:49:10.548 [http-nio-8080-exec-3] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-06 01:07:53.849 [http-nio-8080-exec-2] GenericDao - Searching for user with packName = user
+[ERROR] 2018-05-06 01:12:22.889 [http-nio-8080-exec-9] CreateMemberInsertServlet - Error occurred while uploading a file: java.lang.IllegalArgumentException: The key parameter must be specified when uploading an object
+[DEBUG] 2018-05-06 01:12:22.903 [http-nio-8080-exec-9] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:12:25.212 [http-nio-8080-exec-9] GenericDao - Selecting rows by 31
+[DEBUG] 2018-05-06 01:15:53.633 [http-nio-8080-exec-1] GenericDao - Searching for user with packName = user
+[ERROR] 2018-05-06 01:17:30.080 [http-nio-8080-exec-10] CreateMemberInsertServlet - Error occurred while uploading a file: java.lang.IllegalArgumentException: The key parameter must be specified when uploading an object
+[DEBUG] 2018-05-06 01:17:30.081 [http-nio-8080-exec-10] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:17:30.229 [http-nio-8080-exec-10] GenericDao - Selecting rows by 32
+[DEBUG] 2018-05-06 01:23:29.160 [http-nio-8080-exec-3] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-06 01:23:35.805 [http-nio-8080-exec-7] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:23:36.167 [http-nio-8080-exec-7] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:23:36.210 [http-nio-8080-exec-7] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:23:36.255 [http-nio-8080-exec-7] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:23:36.323 [http-nio-8080-exec-7] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:23:36.359 [http-nio-8080-exec-7] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:23:36.460 [http-nio-8080-exec-7] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:23:36.531 [http-nio-8080-exec-7] GenericDao - Updating com.choinoski.entity.PackMember
+[ERROR] 2018-05-06 01:24:04.306 [http-nio-8080-exec-3] CreateMemberInsertServlet - Error occurred while uploading a file: java.lang.IllegalArgumentException: The key parameter must be specified when uploading an object
+[DEBUG] 2018-05-06 01:24:04.307 [http-nio-8080-exec-3] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:24:04.364 [http-nio-8080-exec-3] GenericDao - Selecting rows by 33
+[DEBUG] 2018-05-06 01:50:49.347 [http-nio-8080-exec-4] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-06 01:55:29.546 [http-nio-8080-exec-4] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-06 01:55:46.074 [http-nio-8080-exec-8] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:55:46.352 [http-nio-8080-exec-8] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:55:46.403 [http-nio-8080-exec-8] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:55:46.476 [http-nio-8080-exec-8] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:55:46.557 [http-nio-8080-exec-8] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:55:46.607 [http-nio-8080-exec-8] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:55:46.654 [http-nio-8080-exec-8] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:55:46.701 [http-nio-8080-exec-8] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:55:46.739 [http-nio-8080-exec-8] GenericDao - Updating com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:55:46.769 [http-nio-8080-exec-8] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:55:46.827 [http-nio-8080-exec-8] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:55:46.848 [http-nio-8080-exec-8] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:55:46.880 [http-nio-8080-exec-8] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:55:46.896 [http-nio-8080-exec-8] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:55:46.914 [http-nio-8080-exec-8] GenericDao - Deleting from com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:56:18.384 [http-nio-8080-exec-2] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 01:56:18.486 [http-nio-8080-exec-2] GenericDao - Selecting rows by 34
+[DEBUG] 2018-05-06 02:08:19.983 [http-nio-8080-exec-5] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-06 02:25:38.130 [http-nio-8080-exec-1] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 02:25:39.362 [http-nio-8080-exec-1] GenericDao - Selecting rows by 35
+[DEBUG] 2018-05-06 02:32:33.684 [http-nio-8080-exec-5] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-06 02:33:17.771 [http-nio-8080-exec-1] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 02:33:17.972 [http-nio-8080-exec-1] GenericDao - Selecting rows by 36
+[DEBUG] 2018-05-06 02:41:11.938 [http-nio-8080-exec-5] GenericDao - Searching for user with packName = user
+[DEBUG] 2018-05-06 02:42:03.251 [http-nio-8080-exec-3] GenericDao - Inserting into com.choinoski.entity.PackMember
+[DEBUG] 2018-05-06 02:42:03.813 [http-nio-8080-exec-3] GenericDao - Selecting rows by 37

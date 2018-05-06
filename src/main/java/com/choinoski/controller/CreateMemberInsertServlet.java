@@ -1,6 +1,7 @@
 package com.choinoski.controller;
 
 import com.amazon.ImageVerifier;
+import com.amazon.UploadImageToS3;
 import com.choinoski.entity.Pack;
 import java.io.*;
 import java.nio.ByteBuffer;
@@ -15,6 +16,7 @@ import com.choinoski.entity.PackMember;
 import com.choinoski.persistence.DataConverter;
 import com.choinoski.util.FileUtilities;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.IOUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -127,6 +129,8 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
         FileUtilities fileUtility = new FileUtilities();
 
+        UploadImageToS3 uploader = new UploadImageToS3();
+
         String     memberPictureFilename = "";
         String     generatedFilename     = "";
         String     fullFileName          = null;
@@ -151,9 +155,16 @@ public class CreateMemberInsertServlet extends HttpServlet {
                 if (isImageOfDog) {
                     generatedFilename = userPack.getPackName() + "_" + nameOfMember;
                     extension = FilenameUtils.getExtension(memberPictureFilename);
-                    fileUtility.uploadfile(sourceUploadFolder, generatedFilename, extension, part);
-                    fileUtility.uploadfile(targetUploadFolder, generatedFilename, extension, part);
+                    //fileUtility.uploadfile(sourceUploadFolder, generatedFilename, extension, part);
+                    //fileUtility.uploadfile(targetUploadFolder, generatedFilename, extension, part);
                     fullFileName = generatedFilename + PERIOD + extension;
+
+                    try (InputStream inputStream = part.getInputStream()) {
+                        uploader.transferFile(fullFileName, inputStream);
+                    }
+
+
+
                 }
             }
         }

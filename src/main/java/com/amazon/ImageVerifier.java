@@ -26,6 +26,8 @@ import java.util.Properties;
 
 public class ImageVerifier {
 
+    private String bucket = "puppyplaytimebucket";
+
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     private Properties        properties;

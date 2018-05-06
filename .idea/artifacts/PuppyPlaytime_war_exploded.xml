@@ -86,6 +86,8 @@
           <element id="library" level="project" name="Maven: joda-time:joda-time:2.8.1" />
           <element id="library" level="project" name="Maven: com.amazonaws:jmespath-java:1.11.305" />
           <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.16.12" />
+          <element id="library" level="project" name="Maven: com.amazonaws:aws-java-sdk-s3:1.11.323" />
+          <element id="library" level="project" name="Maven: com.amazonaws:aws-java-sdk-kms:1.11.323" />
         </element>
       </element>
       <element id="directory" name="META-INF">
