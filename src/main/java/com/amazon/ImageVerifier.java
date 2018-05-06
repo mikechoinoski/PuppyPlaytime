@@ -3,6 +3,7 @@ package com.amazon;
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
+import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.rekognition.AmazonRekognition;
@@ -47,6 +48,8 @@ public class ImageVerifier {
     public void setup() {
 
         AWSCredentials credentials = null;
+        BasicAWSCredentials awsCreds = new BasicAWSCredentials ("AKIAI7DHREGINJDL6KLA",
+                "gQtyFLk1AfcKeOIfJTP83SgazrTc6Px+BB2Q3uj3");
 
         try {
             credentials = new ProfileCredentialsProvider().getCredentials();
@@ -57,7 +60,7 @@ public class ImageVerifier {
         rekognitionClient = AmazonRekognitionClientBuilder
                 .standard()
                 .withRegion(Regions.US_EAST_2)
-                .withCredentials(new AWSStaticCredentialsProvider(credentials))
+                .withCredentials(new AWSStaticCredentialsProvider(awsCreds))
                 .build();
 
     }

@@ -2,10 +2,10 @@ package com.amazon;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
+import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
-import javassist.bytecode.ByteArray;
 import org.apache.commons.io.IOUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -32,6 +32,9 @@ public class UploadImageToS3 {
 
         AWSCredentials credentials = null;
 
+        BasicAWSCredentials awsCreds = new BasicAWSCredentials ("AKIAI7DHREGINJDL6KLA",
+                "gQtyFLk1AfcKeOIfJTP83SgazrTc6Px+BB2Q3uj3");
+
         try {
             credentials = new ProfileCredentialsProvider().getCredentials();
         } catch(Exception e) {
@@ -40,7 +43,7 @@ public class UploadImageToS3 {
 
         s3Client = AmazonS3ClientBuilder.standard()
                 .withRegion(Regions.US_EAST_2)
-                .withCredentials(new AWSStaticCredentialsProvider(credentials))
+                .withCredentials(new AWSStaticCredentialsProvider(awsCreds))
                 .build();
     }
 
@@ -59,7 +62,7 @@ public class UploadImageToS3 {
             Long contentLength = Long.valueOf(byteArray.length);
             ObjectMetadata metadata = new ObjectMetadata();
             metadata.setContentLength(contentLength);
-            metadata.setContentType("image/jpg");
+            metadata.setContentType("application/octet-stream");
             metadata.addUserMetadata("x-amz-meta-title", "someTitle");
             //ContentType: file.mimetype, ACL: 'public-read'
             request.setMetadata(metadata);
