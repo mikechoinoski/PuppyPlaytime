@@ -2,13 +2,10 @@ package com.choinoski.entity;
 
 import java.io.Serializable;
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 import com.choinoski.persistence.GenericDao;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jdk.nashorn.internal.ir.annotations.Ignore;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
@@ -50,7 +47,6 @@ public class Pack implements Serializable {
 
     private String password;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "pack", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<PackMember> members = new HashSet<PackMember>();
 

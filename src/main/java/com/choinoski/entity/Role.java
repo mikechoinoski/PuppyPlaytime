@@ -1,7 +1,5 @@
 package com.choinoski.entity;
 
-import com.choinoski.util.TimestampAttributeConverter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -10,17 +8,14 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Objects;
 
-import lombok.Data;
-
 /**
- * The type PackMember.
+ * A class to represent a role.
+ *
+ * @author mchoinoski
  */
-
-//@Data
 @Getter
 @Setter
 @Entity(name = "Role")
@@ -50,24 +45,30 @@ public class Role implements Serializable {
     @ManyToOne
     @JoinColumn(name = "pack_nr",
             foreignKey = @ForeignKey(name = "pack_foreign_key"))
-    @JsonIgnore
     private Pack pack;
 
-    //@Column( name = "pack_nr")
-    //private int packNumber;
-
-    //@ManyToOne(fetch = FetchType.LAZY)
-    //@JoinColumn(name = "login", referencedColumnName = "login")
-    //private Pack pack;
-
+    /**
+     * Instantiates a new Role.
+     */
     public Role() {
 
     }
 
+    /**
+     * Instantiates a new Role.
+     *
+     * @param roleName the role name
+     */
     public Role(String roleName) {
         this.roleName = roleName;
     }
 
+    /**
+     * Instantiates a new Role.
+     *
+     * @param roleName the role name
+     * @param pack     the pack
+     */
     public Role(String roleName, Pack pack) {
         this.roleName = roleName;
         this.login = pack.getPackName();

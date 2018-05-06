@@ -5,15 +5,9 @@ import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
-
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
 
 /**
  * A class to represent a pack.
@@ -23,7 +17,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity(name = "PlaydateMember")
-@Table(name = "playdate_member") // case sensitive!
+@Table(name = "playdate_member")
 public class PlaydateMember implements Serializable {
 
     @Id
@@ -54,9 +48,18 @@ public class PlaydateMember implements Serializable {
             foreignKey = @ForeignKey(name = "playdate_member_pack_member_pack_member_nr_fk"))
     private PackMember packMember;
 
+    /**
+     * Instantiates a new Playdate member.
+     */
     public PlaydateMember() {
     }
 
+    /**
+     * Instantiates a new Playdate member.
+     *
+     * @param status     the status
+     * @param packMember the pack member
+     */
     public PlaydateMember(String status, PackMember packMember) {
         this.status = status;
         this.packMember = packMember;
