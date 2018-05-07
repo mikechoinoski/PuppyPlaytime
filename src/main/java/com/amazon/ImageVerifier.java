@@ -43,8 +43,13 @@ public class ImageVerifier {
     private void setup() {
 
 
-        BasicAWSCredentials credentials = new BasicAWSCredentials (properties.getProperty("aws.key"),
-                properties.getProperty("aws.secret.key"));
+        AWSCredentials credentials = null;
+
+        try {
+            credentials = new ProfileCredentialsProvider().getCredentials();
+        } catch(Exception e) {
+            logger.error("Could not retrieve credentials for aws " + e);
+        }
 
         rekognitionClient = AmazonRekognitionClientBuilder
                 .standard()

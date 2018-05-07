@@ -14,6 +14,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -137,6 +138,19 @@ public class Playdate implements Serializable {
 
         return removed;
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Playdate playdate = (Playdate) o;
+        return organizingPackNumber == playdate.organizingPackNumber &&
+                Objects.equals(playdateLocation, playdate.playdateLocation) &&
+                Objects.equals(date, playdate.date) &&
+                Objects.equals(time, playdate.time) &&
+                Objects.equals(status, playdate.status) &&
+                Objects.equals(privatePlaydate, playdate.privatePlaydate);
     }
 
 }

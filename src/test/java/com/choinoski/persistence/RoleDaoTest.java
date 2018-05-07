@@ -1,29 +1,28 @@
 package com.choinoski.persistence;
 
 import com.choinoski.entity.Pack;
-import com.choinoski.entity.PackMember;
 import com.choinoski.entity.Role;
+import com.choinoski.test.util.Database;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import com.choinoski.test.util.Database;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.Month;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 /**
- * A class to test the pack dao.
+ * A class to test the generic dao for roles
  *
  * @author mchoinoski
  */
-class PackDaoTest {
+public class RoleDaoTest {
 
-    GenericDao dao;
+    private final Logger logger = LogManager.getLogger(this.getClass());
+    private GenericDao dao;
 
     /**
      * Run set up tasks before each test:
@@ -32,7 +31,7 @@ class PackDaoTest {
      */
     @BeforeEach
     void setUp() {
-        dao = new GenericDao(Pack.class);
+        dao = new GenericDao(Role.class);
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
@@ -44,9 +43,9 @@ class PackDaoTest {
     @Test
     void testGetById() {
 
-        Pack retrievedPack = (Pack) dao.getById(3);
-        assertNotNull(retrievedPack);
-        assertEquals("Awesome Pack!", retrievedPack.getPackName());
+        Role retrievedRole = (Role) dao.getById(1);
+        assertNotNull(retrievedRole);
+        assertEquals("admin", retrievedRole.getRoleName());
 
     }
 
@@ -55,30 +54,32 @@ class PackDaoTest {
      */
     @Test
     void testSaveOrUpdate() {
-        String newPackName = "The Best Pack Ever";
-        Pack packToUpdate = (Pack) dao.getById(1);
-        packToUpdate.setPackName(newPackName);
+        String newRoleName = "Down the Street";
+        Role packToUpdate = (Role) dao.getById(4);
+        packToUpdate.setRoleName(newRoleName);
         dao.saveOrUpdate(packToUpdate);
 
-        Pack retrievedPack = (Pack) dao.getById(1);
-        assertEquals(newPackName, retrievedPack.getPackName());
+        Role retrievedRole = (Role) dao.getById(4);
+        assertEquals(newRoleName, retrievedRole.getRoleName());
     }
-    
+
     /**
      * Verify the success of an insert
      */
     @Test
     void testInsert() {
 
-        Pack newPack = new Pack("Newest Pack","Ramon","Williams",
-                "5122 Spike Way","ramon53324@yahoo.com",
-                "16084254867","R42sf63");
+        GenericDao packDao = new GenericDao(Pack.class);
 
-        int id = dao.insert(newPack);
+        Pack retrievedPack = (Pack) packDao.getById(6);
+
+        Role newRole = new Role("admin",retrievedPack);
+
+        int id = dao.insert(newRole);
 
         assertNotEquals(0,id);
-        Pack insertedPack = (Pack) dao.getById(id);
-        assertTrue(insertedPack.equals(newPack));
+        Role insertedRole = (Role) dao.getById(id);
+        assertTrue(insertedRole.equals(newRole));
 
     }
 
@@ -87,8 +88,8 @@ class PackDaoTest {
      */
     @Test
     void testDelete() {
-        dao.delete(dao.getById(5));
-        assertNull(dao.getById(5));
+        dao.delete(dao.getById(4));
+        assertNull(dao.getById(4));
     }
 
     /**
@@ -96,8 +97,8 @@ class PackDaoTest {
      */
     @Test
     void testGetAll() {
-        List<Pack> packs = dao.getAll();
-        assertEquals(6, packs.size());
+        List<Role> roles = dao.getAll();
+        assertEquals(6, roles.size());
     }
 
     /**
@@ -105,7 +106,7 @@ class PackDaoTest {
      */
     @Test
     void testGetByPropertyEqual() {
-        List<Pack> packs = dao.getByPropertyEqual("packName", "Number 4");
+        List<Pack> packs = dao.getByPropertyEqual("login", "random_pack");
         assertEquals(1, packs.size());
     }
 
@@ -114,8 +115,7 @@ class PackDaoTest {
      */
     @Test
     void testGetByPropertyLike() {
-        List<Pack> packs = dao.getByPropertyLike("packName", "Dawg");
+        List<Pack> packs = dao.getByPropertyLike("login", "rando");
         assertEquals(1, packs.size());
     }
-
 }

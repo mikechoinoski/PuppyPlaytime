@@ -1,7 +1,9 @@
 package com.amazon;
 
+import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
 import org.apache.commons.io.IOUtils;
@@ -46,8 +48,13 @@ public class UploadImageToS3 {
 
         bucket = properties.getProperty("aws.bucket.name");
 
-        BasicAWSCredentials credentials = new BasicAWSCredentials (properties.getProperty("aws.key"),
-                properties.getProperty("aws.secret.key"));
+        AWSCredentials credentials = null;
+
+        try {
+            credentials = new ProfileCredentialsProvider().getCredentials();
+        } catch(Exception e) {
+            logger.error("Could not retrieve credentials for aws " + e);
+        }
 
         s3Client = AmazonS3ClientBuilder.standard()
                 .withRegion(Regions.US_EAST_2)

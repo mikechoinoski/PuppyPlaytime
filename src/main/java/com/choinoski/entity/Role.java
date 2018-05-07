@@ -91,10 +91,7 @@ public class Role implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Role role = (Role) o;
-        return roldId == role.roldId &&
-                Objects.equals(createDate, role.createDate) &&
-                Objects.equals(roleName, role.roleName) &&
-                Objects.equals(updateDate, role.updateDate) &&
+        return Objects.equals(roleName, role.roleName) &&
                 Objects.equals(login, role.login);
     }
 
