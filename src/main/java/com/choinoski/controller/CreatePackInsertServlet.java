@@ -30,7 +30,7 @@ import java.util.regex.Pattern;
 )
 public class CreatePackInsertServlet extends HttpServlet {
 
-    private ArrayList errors = new ArrayList();
+    private ArrayList errors;
 
     /**
      *  Handles HTTP Get requests. Sets data for the HTTP request
@@ -74,56 +74,92 @@ public class CreatePackInsertServlet extends HttpServlet {
         String emailText        = request.getParameter("emailAddress");
         String packPasswordText = request.getParameter("password");
 
-        Boolean validationSuccessful = validateFormData(packNameText, firstNameText, lastNameText,
+        Boolean validationSuccessful = false;
+        session.removeAttribute("errorList");
+        session.removeAttribute("packName");
+        session.removeAttribute("firstName");
+        session.removeAttribute("lastName");
+        session.removeAttribute("address");
+        session.removeAttribute("phoneNumber");
+        session.removeAttribute("emailAddress");
+        session.removeAttribute("password");
+
+        errors = new ArrayList();
+
+        validationSuccessful = validateFormData(packNameText, firstNameText, lastNameText,
                 addressText, phoneText, emailText, packPasswordText);
 
+        if (validationSuccessful) {
+            Pack   newPack  = new Pack(packNameText,
+                    firstNameText,
+                    lastNameText,
+                    addressText,
+                    phoneText,
+                    emailText,
+                    packPasswordText);
 
-        Pack   newPack  = new Pack(packNameText,
-                firstNameText,
-                lastNameText,
-                addressText,
-                phoneText,
-                emailText,
-                packPasswordText);
+            int id = dao.insert(newPack);
 
-        int id = dao.insert(newPack);
+            if (id > 0) {
+                Pack insertedPack = (Pack) dao.getById(id);
+                insertedPack.addRole("user");
+                session.setAttribute("packId", id);
+                request.login(packNameText, packPasswordText);
+            }
 
-        if (id > 0) {
-            Pack insertedPack = (Pack) dao.getById(id);
-            insertedPack.addRole("user");
-            session.setAttribute("packId", id);
-            request.login(packName, packPassword);
+            response.sendRedirect("yourPack");
+
+        } else {
+            session.setAttribute("errorList", errors);
+
+            session.setAttribute("packName",request.getParameter("packName"));
+            session.setAttribute("firstName",request.getParameter("firstName"));
+            session.setAttribute("lastName" ,request.getParameter("lastName"));
+            session.setAttribute("address" ,request.getParameter("address"));
+            session.setAttribute("phoneNumber" ,request.getParameter("phoneNumber"));
+            session.setAttribute("emailAddress",request.getParameter("emailAddress"));
+            session.setAttribute("password",request.getParameter("password"));
+
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/createNewPack.jsp");
+            dispatcher.forward(request, response);
         }
 
-        response.sendRedirect("yourPack");
+
 
     }
 
     private boolean validateFormData(String packName, String firstName, String lastName,
-    String address, String phoneNumber, String emailAddress, String password) {
+            String address, String phoneNumber, String emailAddress, String password) {
 
         boolean validationSuccess = true;
 
         if (!InputValidator.nameValidation(packName)) {
-            errors.add("Incorrect PackName");
+            errors.add("Invalid PackName");
+            validationSuccess = false;
         }
         if (!InputValidator.nameValidation(firstName)) {
-            errors.add("Incorrect First Name");
+            errors.add("Invalid First Name");
+            validationSuccess = false;
         }
         if (!InputValidator.nameValidation(lastName)) {
-            errors.add("Incorrect Last Name");
+            errors.add("Invalid Last Name");
+            validationSuccess = false;
         }
         if (!InputValidator.addressValidation(address)) {
-            errors.add("Incorrect Address");
+            errors.add("Invalid Address");
+            validationSuccess = false;
         }
         if (!InputValidator.phoneValidation(phoneNumber)) {
-            errors.add("Incorrect Phone Number");
+            errors.add("Invalid Phone Number");
+            validationSuccess = false;
         }
         if (!InputValidator.emailValidation( emailAddress)) {
-            errors.add("Incorrect Phone Number");
+            errors.add("Invalid Email Address");
+            validationSuccess = false;
         }
         if (!InputValidator.passwordValidation(password)) {
-            errors.add("Incorrect Phone Number");
+            errors.add("Invalid Password");
+            validationSuccess = false;
         }
 
         return validationSuccess;
