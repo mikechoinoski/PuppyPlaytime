@@ -91,7 +91,7 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
 
             for (PackMember currentMember : playdateMembers) {
                 newPlaydateMember = new PlaydateMember(properties.getProperty("playdate.status.pending"),
-                        currentMember);
+                        currentMember, newPlaydate);
                 newPlaydate.addMember(newPlaydateMember);
             }
         }

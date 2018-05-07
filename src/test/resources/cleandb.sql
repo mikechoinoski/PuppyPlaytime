@@ -51,4 +51,4 @@ INSERT INTO playdate_member (playdate_member_nr, playdate_nr, pack_member_nr, st
 INSERT INTO playdate_member (playdate_member_nr, playdate_nr, pack_member_nr, status, create_date, last_modified_date) VALUES (98, 26, 2, 'Pending', '2018-05-06 15:46:42', '2018-05-06 15:46:42');
 INSERT INTO playdate_member (playdate_member_nr, playdate_nr, pack_member_nr, status, create_date, last_modified_date) VALUES (99, 26, 3, 'Pending', '2018-05-06 15:46:42', '2018-05-06 15:46:42');
 INSERT INTO playdate_member (playdate_member_nr, playdate_nr, pack_member_nr, status, create_date, last_modified_date) VALUES (100, 26, 4, 'Pending', '2018-05-06 15:46:42', '2018-05-06 15:46:42');
-INSERT INTO playdate_member (playdate_member_nr, playdate_nr, pack_member_nr, status, create_date, last_modified_date) VALUES (101, 26, 5, 'Pending', '2018-05-06 15:46:43', '2018-05-06 15:46:43');
+INSERT INTO playdate_member (playdate_member_nr, playdate_nr, pack_member_nr, status, create_date, last_modified_date) VALUES (101, 26, 5, 'Special', '2018-05-06 15:46:43', '2018-05-06 15:46:43');

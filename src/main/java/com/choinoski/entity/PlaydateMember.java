@@ -60,12 +60,24 @@ public class PlaydateMember implements Serializable {
      *
      * @param status     the status
      * @param packMember the pack member
+     * @param playdate   the playdate
      */
-    public PlaydateMember(String status, PackMember packMember) {
+    public PlaydateMember(String status, PackMember packMember, Playdate playdate) {
         this.status = status;
         this.packMember = packMember;
+        this.playdate = playdate;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PlaydateMember that = (PlaydateMember) o;
+        return playdateMemberNumber == that.playdateMemberNumber &&
+                Objects.equals(status, that.status) &&
+                Objects.equals(playdate, that.playdate) &&
+                Objects.equals(packMember, that.packMember);
+    }
 
     @Override
     public int hashCode() {

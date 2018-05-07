@@ -1,20 +1,15 @@
 package com.choinoski.persistence;
 
-import com.choinoski.entity.Pack;
+
 import com.choinoski.entity.Playdate;
-import com.choinoski.entity.Role;
 import com.choinoski.test.util.Database;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
-
-import static java.time.format.DateTimeFormatter.ofPattern;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
@@ -106,8 +101,8 @@ public class PlaydateDaoTest {
      */
     @Test
     void testGetByPropertyEqual() {
-        List<Playdate> packs = dao.getByPropertyEqual("playdateLocation", "Lagoon Ave");
-        assertEquals(1, packs.size());
+        List<Playdate> playdates = dao.getByPropertyEqual("playdateLocation", "Lagoon Ave");
+        assertEquals(1, playdates.size());
     }
 
     /**
@@ -115,8 +110,8 @@ public class PlaydateDaoTest {
      */
     @Test
     void testGetByPropertyLike() {
-        List<Playdate> packs = dao.getByPropertyLike("playdateLocation", "Lagoo");
-        assertEquals(1, packs.size());
+        List<Playdate> playdates = dao.getByPropertyLike("playdateLocation", "Lagoo");
+        assertEquals(1, playdates.size());
     }
 
 }

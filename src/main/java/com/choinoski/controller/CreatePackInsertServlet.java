@@ -3,6 +3,7 @@ package com.choinoski.controller;
 import com.choinoski.entity.Pack;
 import com.choinoski.entity.Role;
 import com.choinoski.persistence.GenericDao;
+import com.choinoski.persistence.InputValidator;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -13,10 +14,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 /**
  *  This servlet creates a new pack from the information provided by a form. If the pack
  *  is successully create, the user is logged into the yourPack page.
+ *
  *
  * @author mrchoinoski
  */
@@ -25,6 +29,8 @@ import java.io.IOException;
         urlPatterns = { "/insertNewPack" }
 )
 public class CreatePackInsertServlet extends HttpServlet {
+
+    private ArrayList errors = new ArrayList();
 
     /**
      *  Handles HTTP Get requests. Sets data for the HTTP request
@@ -60,16 +66,25 @@ public class CreatePackInsertServlet extends HttpServlet {
         ServletContext servletContext = getServletContext();
         HttpSession    session        = request.getSession();
 
-        String packName     = request.getParameter("packName");
-        String packPassword = request.getParameter("password");
+        String packNameText     = request.getParameter("packName");
+        String firstNameText    = request.getParameter("firstName");
+        String lastNameText     = request.getParameter("lastName");
+        String addressText      = request.getParameter("address");
+        String phoneText        = request.getParameter("phoneNumber");
+        String emailText        = request.getParameter("emailAddress");
+        String packPasswordText = request.getParameter("password");
 
-        Pack   newPack  = new Pack(packName,
-                request.getParameter("firstName"),
-                request.getParameter("lastName"),
-                request.getParameter("address"),
-                request.getParameter("phoneNumber"),
-                request.getParameter("emailAddress"),
-                packPassword);
+        Boolean validationSuccessful = validateFormData(packNameText, firstNameText, lastNameText,
+                addressText, phoneText, emailText, packPasswordText);
+
+
+        Pack   newPack  = new Pack(packNameText,
+                firstNameText,
+                lastNameText,
+                addressText,
+                phoneText,
+                emailText,
+                packPasswordText);
 
         int id = dao.insert(newPack);
 
@@ -81,6 +96,37 @@ public class CreatePackInsertServlet extends HttpServlet {
         }
 
         response.sendRedirect("yourPack");
+
+    }
+
+    private boolean validateFormData(String packName, String firstName, String lastName,
+    String address, String phoneNumber, String emailAddress, String password) {
+
+        boolean validationSuccess = true;
+
+        if (!InputValidator.nameValidation(packName)) {
+            errors.add("Incorrect PackName");
+        }
+        if (!InputValidator.nameValidation(firstName)) {
+            errors.add("Incorrect First Name");
+        }
+        if (!InputValidator.nameValidation(lastName)) {
+            errors.add("Incorrect Last Name");
+        }
+        if (!InputValidator.addressValidation(address)) {
+            errors.add("Incorrect Address");
+        }
+        if (!InputValidator.phoneValidation(phoneNumber)) {
+            errors.add("Incorrect Phone Number");
+        }
+        if (!InputValidator.emailValidation( emailAddress)) {
+            errors.add("Incorrect Phone Number");
+        }
+        if (!InputValidator.passwordValidation(password)) {
+            errors.add("Incorrect Phone Number");
+        }
+
+        return validationSuccess;
 
     }
 
