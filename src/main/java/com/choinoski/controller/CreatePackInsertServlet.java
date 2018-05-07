@@ -63,7 +63,6 @@ public class CreatePackInsertServlet extends HttpServlet {
 
         GenericDao dao = new GenericDao(Pack.class);
 
-        ServletContext servletContext = getServletContext();
         HttpSession    session        = request.getSession();
 
         String packNameText     = request.getParameter("packName");
