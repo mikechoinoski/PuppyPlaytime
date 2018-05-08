@@ -7,6 +7,7 @@ import java.io.*;
 import java.nio.ByteBuffer;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Properties;
 import javax.servlet.*;
@@ -42,6 +43,8 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
     private Properties properties;
 
+    private ArrayList errorList;
+
     /**
      *  Handles HTTP POST request to create a new member. Information is verified and
      *  a new member is created. Data is set in the HTTP request. Data is forwarded to
@@ -63,6 +66,9 @@ public class CreateMemberInsertServlet extends HttpServlet {
         boolean noErrorsFound = true;
         String  newFileName   = null;
         DataConverter dataConverter = null;
+        String memberNameText = request.getParameter("memberName");
+        String breedText = request.getParameter("memberBreed");
+        request.getParameter("memberWeight");
         String intactData   = null;
         String genderData   = null;
         LocalDate memberDob = null;
@@ -72,13 +78,19 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
         userPack = (Pack) session.getAttribute("userPack");
 
+        ,
+                ,
+                r,
+
         intactData = request.getParameter("memberIntact");
         if (!(intactData.equals("Yes") || intactData.equals("No"))) {
+            errorList.add("Please select a value for Intact");
             noErrorsFound =  false;
         }
 
         genderData = request.getParameter("memberGender");
         if (!(genderData.equals("Male") || genderData.equals("Female"))) {
+            errorList.add("Please select a value for Gender");
             noErrorsFound =  false;
         }
 
