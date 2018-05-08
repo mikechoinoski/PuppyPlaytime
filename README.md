@@ -27,7 +27,7 @@ Dogs can get in trouble if they don't have positive things to keep them busy and
   * Amazon Rekognition
   * Amazon S3
   * Project Lombok
-* Unit Testing
+* Unit Testing (jUnit)
 * IDE: IntelliJ IDEA
 
 
