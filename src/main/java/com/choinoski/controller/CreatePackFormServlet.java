@@ -29,6 +29,17 @@ public class CreatePackFormServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        HttpSession    session        = request.getSession();
+
+        session.removeAttribute("errorList");
+        session.removeAttribute("packName");
+        session.removeAttribute("firstName");
+        session.removeAttribute("lastName");
+        session.removeAttribute("address");
+        session.removeAttribute("phoneNumber");
+        session.removeAttribute("emailAddress");
+        session.removeAttribute("password");
+
         String url = "/jsp/createNewPack.jsp";
 
         RequestDispatcher  dispatcher =

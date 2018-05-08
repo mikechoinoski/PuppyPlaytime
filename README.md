@@ -12,25 +12,22 @@ Dogs can get in trouble if they don't have positive things to keep them busy and
   * Tomcat's JDBC Realm Authentication
 * Database
   * MySQL
-  * Store owners and dogs
-  * Store locations for meetups
+  * Store owners, dogs and playdates
 * ORM Framework
   * Hibernate 5
 * Dependency Management
   * Maven
 * CSS 
-  * Bootstrap
 * Data Validation
-  * Explore Hibernate's validation
 * Logging
   * Configurable logging using Log4J2. In production, only errors will normally be logged, but logging at a debug level can be turned on to facilitate trouble-shooting. 
 * Hosting
   * AWS
 * Independent Research Topic/s
   * Amazon Rekognition
-  * Google Maps Api
+  * Amazon S3
+  * Project Lombok
 * Unit Testing
-  * JUnit tests to achieve 80%+ code coverage 
 * IDE: IntelliJ IDEA
 
 
@@ -46,3 +43,6 @@ Dogs can get in trouble if they don't have positive things to keep them busy and
 
 ### Project Plan
 [Tasks to Accomplish Weekly](ProjectPlan.md)
+
+### Presentation Link
+[Final Presentation](https://youtu.be/wOW_oLgh3ZU)

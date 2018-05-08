@@ -96,3 +96,4 @@
 [ERROR] 2018-05-07 23:59:57.112 [http-nio-8080-exec-7] CreateMemberInsertServlet - An exception occurred when converting an input part to bytes: com.amazonaws.SdkClientException: Unable to execute HTTP request: rekognition.us-east-2.amazonaws.com
 [ERROR] 2018-05-07 23:59:57.258 [http-nio-8080-exec-7] CreateMemberInsertServlet - Error occurred while uploading a file: java.lang.NullPointerException
 [ERROR] 2018-05-08 00:14:52.789 [http-nio-8080-exec-6] CreateMemberInsertServlet - Error occurred while uploading a file: java.lang.NullPointerException
+[ERROR] 2018-05-08 02:14:44.891 [http-nio-8080-exec-7] CreateMemberInsertServlet - Error occurred while uploading a file: java.lang.NullPointerException
