@@ -1,4 +1,4 @@
-package com.choinoski.persistence;
+package com.amazon;
 
 import com.amazon.ImageVerifier;
 import com.amazonaws.services.rekognition.model.Label;
@@ -58,13 +58,14 @@ public class ImageVerifierTest {
         allLabels.add(labelThree);
 
         assertTrue(!verifier.searchForLabel( allLabels, "Dog"));
+
     }
 
     /**
      * Verify when a label is in a list
      */
     @Test
-    void ttestSearchForLabelWhenFound() {
+    void testSearchForLabelWhenFound() {
 
         List<Label> allLabels = new ArrayList();
 
@@ -82,4 +83,5 @@ public class ImageVerifierTest {
 
         assertTrue(verifier.searchForLabel(allLabels, "Dog"));
     }
+
 }

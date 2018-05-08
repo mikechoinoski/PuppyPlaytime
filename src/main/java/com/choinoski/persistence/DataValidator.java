@@ -28,7 +28,7 @@ public class DataValidator {
             errorList.add("Invalid Breed");
         }
 
-        if (birthday.isBefore(LocalDate.now())) {
+        if (birthday.isAfter(LocalDate.now())) {
             errorList.add("Invalid Birthdate");
         }
 

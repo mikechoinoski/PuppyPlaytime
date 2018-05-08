@@ -19,9 +19,6 @@ public class DataConverter {
     private final Logger logger = LogManager.getLogger(this.getClass());
     private Properties properties;
 
-
-
-
     public DataConverter(Properties properties) {
         this.properties = properties;
     }
