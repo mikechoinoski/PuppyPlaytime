@@ -45,4 +45,5 @@ Dogs can get in trouble if they don't have positive things to keep them busy and
 [Tasks to Accomplish Weekly](ProjectPlan.md)
 
 ### Presentation Link
-[Final Presentation](https://youtu.be/wOW_oLgh3ZU)
+[Main Functionality](https://youtu.be/wOW_oLgh3ZU)
+[Login](https://youtu.be/Yfj9Nq-dhhM)
