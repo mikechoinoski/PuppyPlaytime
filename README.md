@@ -39,11 +39,11 @@ Dogs can get in trouble if they don't have positive things to keep them busy and
 
 ### Time Log
 
-[Time Log](TimeLog.md)
+* [Time Log](TimeLog.md)
 
 ### Project Plan
-[Tasks to Accomplish Weekly](ProjectPlan.md)
+* [Tasks to Accomplish Weekly](ProjectPlan.md)
 
 ### Presentation Link
-[Main Functionality](https://youtu.be/wOW_oLgh3ZU)
-[Login](https://youtu.be/Yfj9Nq-dhhM)
+* [Main Functionality](https://youtu.be/wOW_oLgh3ZU)
+* [Login](https://youtu.be/Yfj9Nq-dhhM)
