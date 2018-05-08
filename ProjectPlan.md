@@ -51,52 +51,52 @@
 - [x] Create Pack Leader unit tests
 - [x] Create login servlet and jsp
 ### Week 10
-- [ ] Weekly journal entry
-- [ ] Add the Playmate entity
-- [ ] Create Playmate unit tests
-- [ ] Add Playmate servlet and jsp
-- [ ] Create add new pack servlet and jsp
-- [ ] Create pack information servlet and page
-- [ ] Research and add amazon rekognition
-- [ ] Unit test amazon rekognition
-- [ ] Add password reset/reminder functionality
+- [x] Weekly journal entry
+- [x] Add the Playmate entity
+- [x] Create Playmate unit tests
+- [x] Add Playmate servlet and jsp
+- [x] Create add new pack servlet and jsp
+- [x] Create pack information servlet and page
+- [x] Research and add amazon rekognition
+- [x] Unit test amazon rekognition
+- [x] Add password reset/reminder functionality
 ### Week 11 
 - Team project work week
-- [ ] Weekly journal entry
-- [ ] Add the Playdate entity
-- [ ] Create Playdate unit tests
-- [ ] Add the PlaydateMember entity
-- [ ] Create PlaydateMember unit tests
-- [ ] Add the PlaydateInvite entity
-- [ ] Create PlaydateInvite unit tests
-- [ ] Add the PlaydateInviteMember entity
-- [ ] Create PlaydateInviteMember unit tests
-- [ ] Add Playdate servlet and jsp
+- [x] Weekly journal entry
+- [x] Add the Playdate entity
+- [x] Create Playdate unit tests
+- [x] Add the PlaydateMember entity
+- [x] Create PlaydateMember unit tests
+- [x] Add the PlaydateInvite entity
+- [x] Create PlaydateInvite unit tests
+- [x] Add the PlaydateInviteMember entity
+- [x] Create PlaydateInviteMember unit tests
+- [x] Add Playdate servlet and jsp
 ### Week 12 
 - Team project due
-- [ ] Weekly journal entry
-- [ ] Add the PackMemberReview entity
-- [ ] Create PackMemberReview unit tests
-- [ ] Add Playmate review servlet and jsp
+- [x] Weekly journal entry
+- [x] Add the PackMemberReview entity
+- [x] Create PackMemberReview unit tests
+- [x] Add Playmate review servlet and jsp
 ### Week 13
-- [ ] Weekly journal entry
-- [ ] Add the NeighboringPack entity
-- [ ] Create NeighboringPack unit tests
-- [ ] Possibly add google maps api to the playdates section
-- [ ] Prepare for week 13 peer code reviews
-- [ ] Code quality check
-- [ ] Review rubric to make sure I'm on target
+- [x] Weekly journal entry
+- [x] Add the NeighboringPack entity
+- [x] Create NeighboringPack unit tests
+- [x] Possibly add google maps api to the playdates section
+- [x] Prepare for week 13 peer code reviews
+- [x] Code quality check
+- [x] Review rubric to make sure I'm on target
 ### Week 14
-- [ ] Weekly journal entry
-- [ ] Create final presentation
+- [x] Weekly journal entry
+- [x] Create final presentation
 ### Week 15
-- [ ] Final Presentation
-- [ ] Create video
-- [ ] Finalize all documentation
-- [ ] Code quality check
+- [x] Final Presentation
+- [x] Create video
+- [x] Finalize all documentation
+- [x] Code quality check
 ### Week 16
-- [ ] Weekly journal entry
-- [ ] Final touches before code complete
+- [x] Weekly journal entry
+- [x] Final touches before code complete
 
 
 

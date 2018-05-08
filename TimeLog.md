@@ -37,12 +37,16 @@
 | 4/20/18 | Continued on new member creation process| 4 | |
 | 4/21/18 | Worked on the insert jsp and servlet for pack members, updated css | 8 | |
 | 4/22/18 | Worked on the the update/delete for pack members (jsp/servlets)| 6 | |
-| 4/23/18 | Finished pack creation process / added Proect Lombok | 4 | |
-
-
-create main database
-populate main database
-
-create tomcat user
-create mikec user
-set up aws credentials
+| 4/23/18 | Worked on adding playdates / added Proect Lombok | 4 | |
+| 4/25/18 | Finished adding AWS Rekognition | 8 | |
+| 4/26/18 | Finished pack creation process / added Proect Lombok | 4 | |
+| 4/27/18 | Playmates layout and functionality | 4 | 
+| 4/28/18 | Searchmember updates | 5 | 
+| 4/29/18 | Search Pages, Admin Page | 8 | 
+| 4/30/18 | Custom Checkboxes | 4 | 
+| 5/1/18 | Create Playdate servlets | 4 | 
+| 5/2/18 | Playdate updates and playmate search fix| 8 | |
+| 5/3/18 | Finished pack creation process / added Proect Lombok | 4 | |
+| 5/4/18 | Added S3 storage and admin fixes, refactoring classes, database cleanup | 10 | |
+| 5/5/18 | Added Tests and bug fixes, Your Pack updates, css updates | 8 | |
+| 5/6/18 | Added Validation and bug fixes| 8 | |
