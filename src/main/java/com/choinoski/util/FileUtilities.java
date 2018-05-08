@@ -37,7 +37,6 @@ public class FileUtilities {
      *
      * @param imagePart the image part
      * @return the byte buffer
-     * @throws Exception the exception
      */
     public ByteBuffer convertPartToBytes(Part imagePart)  {
 

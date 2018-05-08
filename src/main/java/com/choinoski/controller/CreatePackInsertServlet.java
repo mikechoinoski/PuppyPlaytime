@@ -91,8 +91,8 @@ public class CreatePackInsertServlet extends HttpServlet {
                     firstNameText,
                     lastNameText,
                     addressText,
-                    phoneText,
                     emailText,
+                    phoneText,
                     packPasswordText);
 
             int id = dao.insert(newPack);

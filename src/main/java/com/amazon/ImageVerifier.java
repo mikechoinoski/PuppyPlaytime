@@ -24,7 +24,6 @@ import java.util.Properties;
  *
  * @author mchoinoski
  */
-
 public class ImageVerifier {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -32,6 +31,11 @@ public class ImageVerifier {
     private Properties        properties;
     private AmazonRekognition rekognitionClient;
 
+    /**
+     * Instantiates a new Image verifier.
+     *
+     * @param properties the properties
+     */
     public ImageVerifier(Properties properties) {
         this.properties = properties;
     }
@@ -63,8 +67,10 @@ public class ImageVerifier {
      * This method retrieves the list of labels for a local file. The image is converted into bytes and
      * then sent to AWS Rekognition to retrieve the labels. A Detect Labels Request is created in order to
      * do this. The max number of labels is specified as well as the confidence percentage needed.
-     * @param imageBytes an image that has been converted into bytes
+     *
+     * @param imageBytes   an image that has been converted into bytes
      * @param labelToCheck the label that the should be checked for within the image
+     * @return the boolean
      */
     public boolean retrieveLabelsLocal(ByteBuffer imageBytes, String labelToCheck) {
 
@@ -96,7 +102,8 @@ public class ImageVerifier {
 
     /**
      * This method searches though the list of labels and returns if the label specified is found.
-     * @param allLabels the complete list of labels retrieved from AWS Rekognition
+     *
+     * @param allLabels     the complete list of labels retrieved from AWS Rekognition
      * @param labelRequired the label that should be searched for in the list of labels
      * @return if the label is found or not found
      */

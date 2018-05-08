@@ -15,9 +15,15 @@ import static junit.framework.TestCase.assertTrue;
 import static org.h2.util.SortedProperties.loadProperties;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * The type Image verifier test class.
+ */
 public class ImageVerifierTest {
 
     private Properties properties;
+    /**
+     * The Verifier.
+     */
     ImageVerifier verifier;
 
     /**

@@ -99,7 +99,7 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
         try {
             newFileName = getFilesFromHeader(headerParts, memberNameText);
-            if (newFileName .equals("invalid")) {
+            if (newFileName.equals("invalid")) {
                 errorMembers.add("Invalid Picture");
             }
         } catch (Exception e) {

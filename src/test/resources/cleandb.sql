@@ -1,4 +1,4 @@
-use puppy_playtime_test;
+use puppy_playtime_main;
 delete from playdate_member;
 delete from playdate;
 delete from role;

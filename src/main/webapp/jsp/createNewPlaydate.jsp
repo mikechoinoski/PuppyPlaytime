@@ -15,27 +15,38 @@
                         <table>
                             <tr>
                                 <th align="left">Location</th>
-                                <td colspan="2"><input type="text" name="playdateLocation" required></td>
+                                <td colspan="2"><input type="text" name="playdateLocation" required
+                                                       value="${playdateLocation}"></td>
                             </tr>
                             <tr>
                                 <th align="left">Date</th>
-                                <td colspan="2"><input type="date" name="playdateDate" required></td>
+                                <td colspan="2">
+                                    <input type="date" name="playdateDate" required value="${playdateDate}">
+                                </td>
                             </tr>
                             <tr>
                                 <th align="left">Time</th>
-                                <td colspan="2"><input type="time" name="playdateTime" required></td>
+                                <td colspan="2">
+                                    <input type="time" name="playdateTime" required value="${playdateTime}">
+                                </td>
                             </tr>
                             <tr>
                                 <th align="left">Private</th>
                                 <td align="center">
                                     <label for="playdatePrivateYes">Yes</label>
                                     <input type="radio" id="playdatePrivateYes" name="playdatePrivate" value="yes"
-                                           required/>
+                                            <c:if test="${playdatePrivate == 'yes'}">
+                                                checked="checked"
+                                            </c:if>
+                                    required/>
                                 </td>
                                 <td align="center">
                                     <label for="playdatePrivateNo">No</label>
                                     <input type="radio" id="playdatePrivateNo" name="playdatePrivate" value="no"
-                                           required/>
+                                            <c:if test="${playdatePrivate == 'no'}">
+                                                checked="checked"
+                                            </c:if>
+                                    required/>
                                 </td>
                             </tr>
                         </table>
@@ -122,5 +133,9 @@
                 </tr>
             </table>
         </form>
+<br><br>
+    <c:forEach var="oneError" items="${errorListPlaydate}">
+        <font color="red">${oneError}</font><br>
+    </c:forEach>
 
 <c:import url="/jsp/page_bottom.jsp" />

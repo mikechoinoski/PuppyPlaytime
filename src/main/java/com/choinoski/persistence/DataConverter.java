@@ -19,6 +19,11 @@ public class DataConverter {
     private final Logger logger = LogManager.getLogger(this.getClass());
     private Properties properties;
 
+    /**
+     * Instantiates a new Data converter.
+     *
+     * @param properties the properties
+     */
     public DataConverter(Properties properties) {
         this.properties = properties;
     }
@@ -26,6 +31,7 @@ public class DataConverter {
     /**
      * Gets the minimum weight for a size.
      *
+     * @param size the size
      * @return the minimum weight for a size
      */
     public int getMinimumWeightForSize(String size) {
@@ -43,9 +49,11 @@ public class DataConverter {
         }
         return minimumWeightForSize;
     }
+
     /**
      * Gets the minimum weight for a size.
      *
+     * @param size the size
      * @return the minimum weight for a size
      */
     public int getMaximumWeightForSize(String size) {

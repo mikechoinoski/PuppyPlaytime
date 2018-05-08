@@ -5,6 +5,7 @@ import com.choinoski.entity.PackMember;
 import com.choinoski.entity.Playdate;
 import com.choinoski.entity.PlaydateMember;
 import com.choinoski.persistence.GenericDao;
+import com.choinoski.persistence.InputValidator;
 import com.choinoski.persistence.LoggedInPack;
 import com.choinoski.persistence.RequestParameters;
 import javax.servlet.RequestDispatcher;
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.time.LocalDate;
@@ -66,6 +68,14 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
 
         ServletContext servletContext = getServletContext();
 
+        ArrayList errors = new ArrayList();
+
+        session.removeAttribute("playdateLocation");
+        session.removeAttribute("errorListPlaydate");
+        session.removeAttribute("playdateDate");
+        session.removeAttribute("playdateTime");
+        session.removeAttribute("playdatePrivate");
+
         properties = (Properties) servletContext.getAttribute("puppyPlaytimeProperties");
 
         dateText   = LocalDate.parse(request.getParameter("playdateDate"),
@@ -75,28 +85,58 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
             privatePlaydate = false;
         }
 
-        newPlaydate = new Playdate(currentPack.getPackNumber(), locationText, dateText, timeText, "pending",
-                privatePlaydate);
-
-        newPlaydateNumber = dao.insert(newPlaydate);
-
-        if (newPlaydateNumber > 0) {
-            Map<String, String[]> checkBoxMappedValues = request.getParameterMap();
-            List<PackMember>      allSearchedMembers   = (List<PackMember>) session.getAttribute("searchMembers");
-
-            List<PackMember> playdateMembers = myRequest.getMembersFromCheckbox(allSearchedMembers,checkBoxMappedValues,
-                    "memberCheckBox");
-
-            PlaydateMember newPlaydateMember = null;
-
-            for (PackMember currentMember : playdateMembers) {
-                newPlaydateMember = new PlaydateMember(properties.getProperty("playdate.status.pending"),
-                        currentMember, newPlaydate);
-                newPlaydate.addMember(newPlaydateMember);
-            }
+        if (!InputValidator.nameValidation(locationText)) {
+            errors.add("Location is invalid");
         }
 
-        response.sendRedirect("Playdates");
+        if (!dateText.isAfter(LocalDate.now())) {
+            errors.add("Date is invalid");
+        }
+
+        Map<String, String[]> checkBoxMappedValues = request.getParameterMap();
+        List<PackMember>      allSearchedMembers   = (List<PackMember>) session.getAttribute("searchMembers");
+
+        List<PackMember> playdateMembers = myRequest.getMembersFromCheckbox(allSearchedMembers,checkBoxMappedValues,
+                "memberCheckBox");
+
+        if (playdateMembers.size() > 1 && InputValidator.nameValidation(locationText) &&
+                dateText.isAfter(LocalDate.now())) {
+
+            newPlaydate = new Playdate(currentPack.getPackNumber(), locationText, dateText, timeText, "pending",
+                privatePlaydate);
+
+            newPlaydateNumber = dao.insert(newPlaydate);
+
+            if (newPlaydateNumber > 0) {
+                PlaydateMember newPlaydateMember = null;
+
+                for (PackMember currentMember : playdateMembers) {
+                    newPlaydateMember = new PlaydateMember(properties.getProperty("playdate.status.pending"),
+                            currentMember, newPlaydate);
+                    newPlaydate.addMember(newPlaydateMember);
+                }
+
+            }
+
+        } else if (playdateMembers.size() < 2) {
+
+            errors.add("Add more than 1 pack member");
+
+        }
+
+        if (errors.size() == 0) {
+            response.sendRedirect("Playdates");
+        } else {
+            session.setAttribute("errorListPlaydate", errors);
+            session.setAttribute("playdateLocation",request.getParameter("playdateLocation"));
+            session.setAttribute("playdateDate",request.getParameter("playdateDate"));
+            session.setAttribute("playdateTime",request.getParameter("playdateTime"));
+            session.setAttribute("playdatePrivate",request.getParameter("playdatePrivate"));
+
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/createNewPlaydate.jsp");
+            dispatcher.forward(request, response);
+        }
+
 
     }
 
