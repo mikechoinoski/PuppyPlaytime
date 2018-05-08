@@ -4,9 +4,8 @@
 
 <div class="image"></div>
 <div class="content">
-    <center>
-
-        <h2>Admin Page</h2>
+    <br>
+        <h2 class="pageHeader">Administrative Functions</h2>
         <br><br>
         <h3>Packs</h3>
         <br><br>

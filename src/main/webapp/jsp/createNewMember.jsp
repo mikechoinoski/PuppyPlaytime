@@ -4,8 +4,8 @@
 
 <div class="image"></div>
 <div class="content">
-    <center>
-    <h2>Add a Pack Member</h2>
+    <br>
+    <h2 class="pageHeader">Add Pack Member</h2>
     <br>
 
     <div class="blackborder">

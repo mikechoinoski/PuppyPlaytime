@@ -5,7 +5,7 @@
 
 <div class="image"></div>
 <div class="content">
-
+    <br>
     <h2 class="pageHeader">Current Playdates</h2>
     <br><br>
 

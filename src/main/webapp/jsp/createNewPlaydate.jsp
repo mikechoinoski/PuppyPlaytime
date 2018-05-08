@@ -4,7 +4,7 @@
 
 <div class="image"></div>
 <div class="content">
-
+    <br>
         <h2 class="pageHeader">Create Playdate</h2>
         <br><br>
 
@@ -15,25 +15,27 @@
                         <table>
                             <tr>
                                 <th align="left">Location</th>
-                                <td colspan="2"><input type="text" name="playdateLocation"></td>
+                                <td colspan="2"><input type="text" name="playdateLocation" required></td>
                             </tr>
                             <tr>
                                 <th align="left">Date</th>
-                                <td colspan="2"><input type="date" name="playdateDate"></td>
+                                <td colspan="2"><input type="date" name="playdateDate" required></td>
                             </tr>
                             <tr>
                                 <th align="left">Time</th>
-                                <td colspan="2"><input type="time" name="playdateTime"></td>
+                                <td colspan="2"><input type="time" name="playdateTime" required></td>
                             </tr>
                             <tr>
                                 <th align="left">Private</th>
                                 <td align="center">
                                     <label for="playdatePrivateYes">Yes</label>
-                                    <input type="radio" id="playdatePrivateYes" name="playdatePrivate" value="yes"/>
+                                    <input type="radio" id="playdatePrivateYes" name="playdatePrivate" value="yes"
+                                           required/>
                                 </td>
                                 <td align="center">
                                     <label for="playdatePrivateNo">No</label>
-                                    <input type="radio" id="playdatePrivateNo" name="playdatePrivate" value="no" />
+                                    <input type="radio" id="playdatePrivateNo" name="playdatePrivate" value="no"
+                                           required/>
                                 </td>
                             </tr>
                         </table>

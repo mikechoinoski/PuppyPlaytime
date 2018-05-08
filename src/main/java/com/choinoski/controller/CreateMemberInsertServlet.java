@@ -74,6 +74,14 @@ public class CreateMemberInsertServlet extends HttpServlet {
         ArrayList errorMembers = null;
         DataValidator validator = new DataValidator();
 
+        session.removeAttribute("errorMembers");
+        session.removeAttribute("memberName");
+        session.removeAttribute("memberBreed");
+        session.removeAttribute("memberWeight");
+        session.removeAttribute("memberIntact");
+        session.removeAttribute("memberGender");
+        session.removeAttribute("memberDateOfBirth");
+
         userPack = (Pack) session.getAttribute("userPack");
 
         intactData = request.getParameter("memberIntact");
