@@ -1,5 +1,6 @@
 package com.choinoski.controller;
 
+import com.choinoski.entity.Pack;
 import com.choinoski.entity.PackMember;
 import com.choinoski.persistence.DataConverter;
 import com.choinoski.persistence.GenericDao;
@@ -118,6 +119,12 @@ public class SearchPlaymates extends HttpServlet {
             session.setAttribute("currentCriteria", searchParameters);
             session.setAttribute("searchMembers", searchMembers);
 
+        }
+
+        if (request.isUserInRole(properties.getProperty("role.user"))) {
+            session.setAttribute("userRole", "user");
+        } else if (request.isUserInRole(properties.getProperty("role.admin"))) {
+            session.setAttribute("userRole", "admin");
         }
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/searchPlaymates.jsp");

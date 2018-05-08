@@ -219,7 +219,9 @@
     </div>
     </c:if>
     </c:forEach><br><br>
-    <input type="submit" class="button" value="Create Playdate" />
+    <c:if test="${userRole == 'user'}">
+        <input type="submit" class="button" value="Create Playdate" />
+    </c:if>
     </form>
 
 <c:import url="/jsp/page_bottom.jsp" />

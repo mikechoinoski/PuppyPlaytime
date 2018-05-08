@@ -61,6 +61,7 @@ public class YourPack extends HttpServlet {
         } else if (request.isUserInRole(properties.getProperty("role.admin"))) {
 
             List<Pack> packs = dao.getAll();
+            session.setAttribute("userPack", retrievePack.loggedInPackInfo(request));
             session.setAttribute("allPacks", packs);
             url = "/jsp/administrativeFunctions.jsp";
 

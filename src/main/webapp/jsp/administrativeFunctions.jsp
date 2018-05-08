@@ -17,17 +17,19 @@
                     <th>Remove</th>
                 </tr>
                 <c:forEach var="packToRemove" items="${allPacks}">
-                    <tr>
-                        <td width="80" align="center">
-                            ${packToRemove.packNumber}
-                        </td>
-                        <td width="80" align="center">
-                            ${packToRemove.packName}
-                        </td>
-                        <td width="50" align="center">
-                            <input type="checkbox" name="packToRemove${packToRemove.packNumber}">
-                        </td>
-                    </tr>
+                    <c:if test="${packToRemove.packNumber != userPack.packNumber}">
+                        <tr>
+                            <td width="80" align="center">
+                                    ${packToRemove.packNumber}
+                            </td>
+                            <td width="80" align="center">
+                                    ${packToRemove.packName}
+                            </td>
+                            <td width="50" align="center">
+                                <input type="checkbox" name="packToRemove${packToRemove.packNumber}">
+                            </td>
+                        </tr>
+                    </c:if>
                 </c:forEach>
                 <tr>
                     <td colspan="3" align="center"><input type="submit" value="Remove Users" /></td>

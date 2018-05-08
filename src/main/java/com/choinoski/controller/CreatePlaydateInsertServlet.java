@@ -49,6 +49,7 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
             throws ServletException, IOException {
 
         GenericDao        dao          = new GenericDao(Playdate.class);
+        GenericDao        memberDao    = new GenericDao(PackMember.class);
         LoggedInPack      retrievePack = new LoggedInPack();
         RequestParameters myRequest    = new RequestParameters();
 
@@ -94,7 +95,7 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
         }
 
         Map<String, String[]> checkBoxMappedValues = request.getParameterMap();
-        List<PackMember>      allSearchedMembers   = (List<PackMember>) session.getAttribute("searchMembers");
+        List<PackMember>      allSearchedMembers   = (List<PackMember>) memberDao.getAll();
 
         List<PackMember> playdateMembers = myRequest.getMembersFromCheckbox(allSearchedMembers,checkBoxMappedValues,
                 "memberCheckBox");
@@ -102,8 +103,8 @@ public class CreatePlaydateInsertServlet extends HttpServlet {
         if (playdateMembers.size() > 1 && InputValidator.nameValidation(locationText) &&
                 dateText.isAfter(LocalDate.now())) {
 
-            newPlaydate = new Playdate(currentPack.getPackNumber(), locationText, dateText, timeText, "pending",
-                privatePlaydate);
+            newPlaydate = new Playdate(currentPack.getPackNumber(), locationText, dateText, timeText,
+                    properties.getProperty("playdate.status.pending"), privatePlaydate);
 
             newPlaydateNumber = dao.insert(newPlaydate);
 
