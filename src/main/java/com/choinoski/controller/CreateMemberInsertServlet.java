@@ -91,6 +91,9 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
         try {
             newFileName = getFilesFromHeader(headerParts, memberNameText);
+            if (newFileName .equals("invalid")) {
+                errorMembers.add("Invalid Picture");
+            }
         } catch (Exception e) {
             logger.error("Error occurred while uploading a file: " + e);
         }
@@ -162,6 +165,8 @@ public class CreateMemberInsertServlet extends HttpServlet {
                             uploader.transferFile(fullFileName, inputStream);
                         }
 
+                    } else {
+                        fullFileName = "invalid";
                     }
                 }
             }

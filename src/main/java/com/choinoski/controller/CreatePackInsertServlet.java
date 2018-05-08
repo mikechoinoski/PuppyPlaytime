@@ -74,7 +74,6 @@ public class CreatePackInsertServlet extends HttpServlet {
 
         ArrayList errors = null;
 
-        Boolean validationSuccessful = false;
         session.removeAttribute("errorList");
         session.removeAttribute("packName");
         session.removeAttribute("firstName");
@@ -87,7 +86,7 @@ public class CreatePackInsertServlet extends HttpServlet {
         errors = validator.validateFormPackData(packNameText, firstNameText, lastNameText,
                 addressText, phoneText, emailText, packPasswordText);
 
-        if (validationSuccessful) {
+        if (errors.size() == 0) {
             Pack   newPack  = new Pack(packNameText,
                     firstNameText,
                     lastNameText,
@@ -108,6 +107,7 @@ public class CreatePackInsertServlet extends HttpServlet {
             response.sendRedirect("yourPack");
 
         } else {
+
             session.setAttribute("errorList", errors);
 
             session.setAttribute("packName",request.getParameter("packName"));

@@ -34,10 +34,6 @@ public class DataConverterTest {
             Assert.fail();
         }
 
-        //dao = new GenericDao(Pack.class);
-
-        //Database database = Database.getInstance();
-        //database.runSQL("cleandb.sql");
     }
 
     /**

@@ -3,8 +3,19 @@ package com.choinoski.persistence;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+/**
+ * The type Data validator.
+ */
 public class DataValidator {
 
+    /**
+     * Validate form data when adding a member
+     *
+     * @param memberName the member name
+     * @param breed      the breed
+     * @param birthday   the birthday
+     * @return the array list
+     */
     public ArrayList<String> validateFormMemberData(String memberName, String breed, LocalDate birthday) {
 
         ArrayList<String> errorList = new ArrayList();
@@ -25,6 +36,18 @@ public class DataValidator {
 
     }
 
+    /**
+     * Validate form data when adding a pack
+     *
+     * @param packName     the pack name
+     * @param firstName    the first name
+     * @param lastName     the last name
+     * @param address      the address
+     * @param phoneNumber  the phone number
+     * @param emailAddress the email address
+     * @param password     the password
+     * @return the array list
+     */
     public ArrayList<String> validateFormPackData(String packName, String firstName, String lastName,
                                      String address, String phoneNumber, String emailAddress, String password) {
 
