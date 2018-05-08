@@ -15,9 +15,9 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import com.choinoski.entity.PackMember;
 import com.choinoski.persistence.DataConverter;
+import com.choinoski.persistence.DataValidator;
 import com.choinoski.util.FileUtilities;
 import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.io.IOUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -43,8 +43,6 @@ public class CreateMemberInsertServlet extends HttpServlet {
 
     private Properties properties;
 
-    private ArrayList errorList;
-
     /**
      *  Handles HTTP POST request to create a new member. Information is verified and
      *  a new member is created. Data is set in the HTTP request. Data is forwarded to
@@ -63,65 +61,62 @@ public class CreateMemberInsertServlet extends HttpServlet {
         HttpSession    session        = request.getSession();
         properties = (Properties) servletContext.getAttribute("puppyPlaytimeProperties");
 
-        boolean noErrorsFound = true;
         String  newFileName   = null;
         DataConverter dataConverter = null;
         String memberNameText = request.getParameter("memberName");
         String breedText = request.getParameter("memberBreed");
-        request.getParameter("memberWeight");
+        String weightText = request.getParameter("memberWeight");
         String intactData   = null;
         String genderData   = null;
         LocalDate memberDob = null;
+        String url          = null;
         Collection<Part> headerParts = null;
-
-        String memberName = request.getParameter("memberName");
+        ArrayList errorMembers = null;
+        DataValidator validator = new DataValidator();
 
         userPack = (Pack) session.getAttribute("userPack");
 
-        ,
-                ,
-                r,
-
         intactData = request.getParameter("memberIntact");
-        if (!(intactData.equals("Yes") || intactData.equals("No"))) {
-            errorList.add("Please select a value for Intact");
-            noErrorsFound =  false;
-        }
 
         genderData = request.getParameter("memberGender");
-        if (!(genderData.equals("Male") || genderData.equals("Female"))) {
-            errorList.add("Please select a value for Gender");
-            noErrorsFound =  false;
-        }
 
         memberDob = LocalDate.parse(request.getParameter("memberDateOfBirth"),
                 DateTimeFormatter.ofPattern(properties.getProperty("form.date.format")));
+
+        errorMembers = validator.validateFormMemberData(memberNameText, breedText, memberDob);
 
         headerParts = request.getParts();
 
         dataConverter = new DataConverter(properties);
 
         try {
-            newFileName = getFilesFromHeader(headerParts, memberName);
+            newFileName = getFilesFromHeader(headerParts, memberNameText);
         } catch (Exception e) {
             logger.error("Error occurred while uploading a file: " + e);
         }
 
-        if (noErrorsFound) {
+        if (errorMembers.size() == 0) {
             PackMember newMember = new PackMember(
-                    request.getParameter("memberName"),
-                    request.getParameter("memberWeight"),
-                    request.getParameter("memberBreed"),
-                    dataConverter.getCharGender(genderData),
-                    memberDob,
-                    dataConverter.convertIntact(intactData),
-                    newFileName);
+                    memberNameText, weightText, breedText, dataConverter.getCharGender(genderData),
+                    memberDob, dataConverter.convertIntact(intactData), newFileName);
 
             userPack.addMember(newMember);
+
+            url = "/jsp/yourPack.jsp";
+
+        } else {
+
+            session.setAttribute("errorMembers", errorMembers);
+            session.setAttribute("memberName",request.getParameter("memberName"));
+            session.setAttribute("memberWeight",request.getParameter("memberWeight"));
+            session.setAttribute("memberBreed" ,request.getParameter("memberBreed"));
+            session.setAttribute("memberIntact" ,request.getParameter("memberIntact"));
+            session.setAttribute("memberGender" ,request.getParameter("memberGender"));
+            session.setAttribute("memberDateOfBirth",request.getParameter("memberDateOfBirth"));
+
+            url = "/jsp/createNewMember.jsp";
+
         }
-
-
-        String url = "/jsp/yourPack.jsp";
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);

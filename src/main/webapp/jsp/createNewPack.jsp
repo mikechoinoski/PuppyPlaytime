@@ -12,31 +12,31 @@
         <table>
             <tr>
                 <td>Pack Name:</td>
-                <td><input type="text" name="packName" value="${packName}"></td>
+                <td><input type="text" name="packName" value="${packName}" required></td>
             </tr>
             <tr>
                 <td>First Name:</td>
-                <td><input type="text" name="firstName" value="${firstName}"></td>
+                <td><input type="text" name="firstName" value="${firstName}" required></td>
             </tr>
             <tr>
                 <td>Last Name:</td>
-                <td><input type="text" name="lastName" value="${lastName}"></td>
+                <td><input type="text" name="lastName" value="${lastName}" required></td>
             </tr>
             <tr>
                 <td>Address:</td>
-                <td><input type="text" name="address" value="${address}"></td>
+                <td><input type="text" name="address" value="${address}" required></td>
             </tr>
             <tr>
                 <td>Phone Number:</td>
-                <td><input type="text" name="phoneNumber" value="${phoneNumber}"></td>
+                <td><input type="text" name="phoneNumber" value="${phoneNumber}" required></td>
             </tr>
             <tr>
                 <td>Email Address:</td>
-                <td><input type="text" name="emailAddress" value="${emailAddress}"></td>
+                <td><input type="text" name="emailAddress" value="${emailAddress}" required></td>
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><input type="text" name="password" value="${password}"></td>
+                <td><input type="text" name="password" value="${password}" required></td>
             </tr>
             <tr>
                 <td colspan="2"><br></td>
@@ -51,7 +51,7 @@
     <br><br>
 
     <c:forEach var="oneError" items="${errorList}">
-    <font color="red">${oneError}</font><br>
+        <font color="red">${oneError}</font><br>
     </c:forEach>
 
 

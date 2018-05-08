@@ -2,6 +2,7 @@ package com.choinoski.controller;
 
 import com.choinoski.entity.Pack;
 import com.choinoski.entity.Role;
+import com.choinoski.persistence.DataValidator;
 import com.choinoski.persistence.GenericDao;
 import com.choinoski.persistence.InputValidator;
 
@@ -29,8 +30,6 @@ import java.util.regex.Pattern;
         urlPatterns = { "/insertNewPack" }
 )
 public class CreatePackInsertServlet extends HttpServlet {
-
-    private ArrayList errors;
 
     /**
      *  Handles HTTP Get requests. Sets data for the HTTP request
@@ -62,7 +61,7 @@ public class CreatePackInsertServlet extends HttpServlet {
             throws ServletException, IOException {
 
         GenericDao dao = new GenericDao(Pack.class);
-
+        DataValidator validator = new DataValidator();
         HttpSession    session        = request.getSession();
 
         String packNameText     = request.getParameter("packName");
@@ -72,6 +71,8 @@ public class CreatePackInsertServlet extends HttpServlet {
         String phoneText        = request.getParameter("phoneNumber");
         String emailText        = request.getParameter("emailAddress");
         String packPasswordText = request.getParameter("password");
+
+        ArrayList errors = null;
 
         Boolean validationSuccessful = false;
         session.removeAttribute("errorList");
@@ -83,9 +84,7 @@ public class CreatePackInsertServlet extends HttpServlet {
         session.removeAttribute("emailAddress");
         session.removeAttribute("password");
 
-        errors = new ArrayList();
-
-        validationSuccessful = validateFormData(packNameText, firstNameText, lastNameText,
+        errors = validator.validateFormPackData(packNameText, firstNameText, lastNameText,
                 addressText, phoneText, emailText, packPasswordText);
 
         if (validationSuccessful) {
@@ -127,42 +126,6 @@ public class CreatePackInsertServlet extends HttpServlet {
 
     }
 
-    private boolean validateFormData(String packName, String firstName, String lastName,
-            String address, String phoneNumber, String emailAddress, String password) {
 
-        boolean validationSuccess = true;
-
-        if (!InputValidator.nameValidation(packName)) {
-            errors.add("Invalid PackName");
-            validationSuccess = false;
-        }
-        if (!InputValidator.nameValidation(firstName)) {
-            errors.add("Invalid First Name");
-            validationSuccess = false;
-        }
-        if (!InputValidator.nameValidation(lastName)) {
-            errors.add("Invalid Last Name");
-            validationSuccess = false;
-        }
-        if (!InputValidator.addressValidation(address)) {
-            errors.add("Invalid Address");
-            validationSuccess = false;
-        }
-        if (!InputValidator.phoneValidation(phoneNumber)) {
-            errors.add("Invalid Phone Number");
-            validationSuccess = false;
-        }
-        if (!InputValidator.emailValidation( emailAddress)) {
-            errors.add("Invalid Email Address");
-            validationSuccess = false;
-        }
-        if (!InputValidator.passwordValidation(password)) {
-            errors.add("Invalid Password");
-            validationSuccess = false;
-        }
-
-        return validationSuccess;
-
-    }
 
 }
